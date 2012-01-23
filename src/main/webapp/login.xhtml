@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  User: Dmitry Leontyev
+  Date: 12.12.10
+  Time: 15:09
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Вход в систему</title>
+</h:head>
+<h:body>
+    <h1>Вход на территорию JGeek</h1>
+
+    <h:messages/>
+
+    <h:form prependId="false">
+        <h:panelGrid columns="2">
+            <f:validateBean>
+                <h:outputLabel for="j_username" value="Имя пользователя (логин):"/>
+                <h:inputText id="j_username" required="true"/>
+
+                <h:outputLabel for="j_password" value="Пароль:"/>
+                <h:inputSecret id="j_password" required="true"/>
+
+                <h:selectBooleanCheckbox id="_spring_security_remember_me">Запомнить меня</h:selectBooleanCheckbox>
+            </f:validateBean>
+        </h:panelGrid>
+
+        <h:commandButton action="#{authController.doLogin}" value="Войти" id="login"/>
+    </h:form>
+</h:body>
+</html>

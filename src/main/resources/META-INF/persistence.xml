@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+    <persistence-unit name="JGeekPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+        <class>org.jgeek.website.model.Article</class>
+        <class>org.jgeek.website.model.security.UserAccount</class>
+        <class>org.jgeek.website.model.security.UserPersistentLogin</class>
+        <class>org.jgeek.website.model.security.UserAuthority</class>
+        <class>org.jgeek.website.model.security.UserGroup</class>
+
+    </persistence-unit>
+</persistence>
