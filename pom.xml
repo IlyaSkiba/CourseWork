@@ -11,7 +11,7 @@
 
     <properties>
         <spring.version>3.1.0.RELEASE</spring.version>
-        <spring-webflow.version>2.3.0.RELEASE</spring-webflow.version>
+        <spring-webflow.version>2.2.1.RELEASE</spring-webflow.version>
         <hibernate.version>3.6.9.Final</hibernate.version>
         <dbunit.dataTypeFactoryName>org.dbunit.dataset.datatype.DefaultDataTypeFactory</dbunit.dataTypeFactoryName>
         <dbunit.operation.type>CLEAN_INSERT</dbunit.operation.type>
@@ -208,6 +208,12 @@
             <version>${spring-webflow.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.webflow</groupId>
+            <artifactId>spring-webflow</artifactId>
+            <version>${spring-webflow.version}</version>
+        </dependency>
+
         <!-- aspectJ dependencies -->
         <dependency>
             <groupId>org.aspectj</groupId>
@@ -313,9 +319,5 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
-    <build>
-        <finalName>website</finalName>
-    </build>
 
 </project>

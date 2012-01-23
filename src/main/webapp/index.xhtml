@@ -5,23 +5,28 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
       xmlns:sec="http://www.springframework.org/security/tags">
 <h:head>
     <title>JGeek</title>
 </h:head>
 <h:body>
-    <h:form>
+    <h:form prependId="false">
+        <p:messages showDetail="false" autoUpdate="true"/>
 
-        <h:link outcome="/register.xhtml">Зарегистрироваться</h:link>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <h:link outcome="/login.xhtml">Войти</h:link>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <h:panelGrid columns="2">
+            <f:validateBean>
+                <h:outputLabel for="j_username" value="Имя пользователя (логин):"/>
+                <p:inputText id="j_username" required="true"/>
 
-        <h:commandLink action="#{authController.doLogout}" value="Выйти"
-                       rendered="#{sec:areAnyGranted('ROLE_USER, ROLE_ADMIN')}"/>
-        <br/>
-        #{index.hello}
+                <h:outputLabel for="j_password" value="Пароль:"/>
+                <h:inputSecret id="j_password" required="true"/>
+                <h:outputLabel for="_spring_security_remember_me" value="Запомнить меня:"/>
+                <p:selectBooleanCheckbox id="_spring_security_remember_me"/>
+            </f:validateBean>
+        </h:panelGrid>
 
+        <p:commandButton actionListener="#{authController.doLogin}" value="Войти" id="login" ajax="false"/>
     </h:form>
 </h:body>
 </html>

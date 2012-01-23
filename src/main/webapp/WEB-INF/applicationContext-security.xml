@@ -12,14 +12,17 @@
 
         <remember-me key="jgeekWebSite"/>
 
-        <intercept-url pattern="/secured/**" access="isAuthenticated()"/>
+        <intercept-url pattern="/user/**" access="hasAuthority('USER')"/>
+        <intercept-url pattern="/admin/**" access="hasAuthority('ADMIN')"/>
+        <intercept-url pattern="/teacher/**" access="hasAuthority('TEACHER')"/>
+        <intercept-url pattern="/coursehead/**" access="hasAuthority('COURSE_HEAD')"/>
         <intercept-url pattern="/**" access="permitAll"/>
 
         <form-login
                 login-processing-url="/j_spring_security_check"
-                login-page="/login.xhtml"
+                login-page="/"
                 default-target-url="/"
-                authentication-failure-url="/login.xhtml"/>
+                authentication-failure-url="/"/>
 
         <logout invalidate-session="true"
                 logout-success-url="/"
@@ -27,7 +30,7 @@
 
         <!-- Uncomment to limit the number of sessions a user can have -->
         <session-management>
-            <concurrency-control max-sessions="1" error-if-maximum-exceeded="false"/>
+            <concurrency-control max-sessions="1" error-if-maximum-exceeded="true"/>
         </session-management>
 
     </http>

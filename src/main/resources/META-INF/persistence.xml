@@ -6,11 +6,7 @@
     <persistence-unit name="JGeekPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
-        <class>org.jgeek.website.model.Article</class>
         <class>org.jgeek.website.model.security.UserAccount</class>
-        <class>org.jgeek.website.model.security.UserPersistentLogin</class>
-        <class>org.jgeek.website.model.security.UserAuthority</class>
-        <class>org.jgeek.website.model.security.UserGroup</class>
 
     </persistence-unit>
 </persistence>

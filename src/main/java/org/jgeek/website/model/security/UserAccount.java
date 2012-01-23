@@ -1,6 +1,5 @@
 package org.jgeek.website.model.security;
 
-import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -9,49 +8,32 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Класс содержит информацию о пользовательском аккаунте.
- * <p/>
- * User: Dmitry Leontyev
- * Date: 05.12.2010
- * Time: 23:47:54
  */
 @Entity
-@Table(name = "user")
+@Table(name = "user", schema = "public")
 public class UserAccount implements UserDetails, Serializable {
 
     @Id
+    @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @NotBlank
     @Column(length = 50, nullable = false, unique = true, name = "login")
     private String username;
 
     @NotBlank
-    @Column(length = 50, nullable = false,name = "password")
+    @Column(length = 50, nullable = false, name = "password")
     private String password;
 
-    private boolean enabled = true;
-
-    @Column(length = 25, nullable = false)
-    private String salt = "testSalt"; // todo: Тестовые данные не для Production
-
-    private String email;
-
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Collection<UserAuthority> userAuthorities = new HashSet<UserAuthority>();
-
-    @ManyToMany(cascade = CascadeType.ALL)
-    private Set<UserGroup> groups = new HashSet<UserGroup>();
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -63,48 +45,9 @@ public class UserAccount implements UserDetails, Serializable {
         this.password = password;
     }
 
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    public String getSalt() {
-        return salt;
-    }
-
-    public void setSalt(String salt) {
-        this.salt = salt;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Set<UserGroup> getGroups() {
-        return groups;
-    }
-
-    public void setGroups(Set<UserGroup> groups) {
-        this.groups = groups;
-    }
-
-    public Collection<UserAuthority> getUserAuthorities() {
-        return userAuthorities;
-    }
-
-    public void setUserAuthorities(Collection<UserAuthority> userAuthorities) {
-        this.userAuthorities = userAuthorities;
-    }
-
-    //////// Spring Security UserDetails methods implementation
-
-
     @Override
     public Collection<GrantedAuthority> getAuthorities() {
-        return new HashSet<GrantedAuthority>(userAuthorities);
+        return new HashSet<GrantedAuthority>();
     }
 
     @Override
@@ -124,7 +67,7 @@ public class UserAccount implements UserDetails, Serializable {
 
     @Override
     public boolean isEnabled() {
-        return enabled;
+        return true;
     }
 
     @Override
