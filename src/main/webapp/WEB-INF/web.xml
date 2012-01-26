@@ -16,16 +16,6 @@
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>CaptchaServlet</servlet-name>
-        <servlet-class>org.jgeek.website.captcha.CaptchaServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>CaptchaServlet</servlet-name>
-        <url-pattern>/CaptchaImage</url-pattern>
-    </servlet-mapping>
-
     <context-param>
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>

@@ -17,7 +17,7 @@
         <h:panelGrid columns="2">
             <f:validateBean>
                 <h:outputLabel for="j_username" value="Имя пользователя (логин):"/>
-                <p:inputText id="j_username" required="true"/>
+                <p:inputText id="j_username" required="true" value="${userModel.userName}"/>
 
                 <h:outputLabel for="j_password" value="Пароль:"/>
                 <h:inputSecret id="j_password" required="true"/>

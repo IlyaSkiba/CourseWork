@@ -7,6 +7,7 @@
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
         <class>org.jgeek.website.model.security.UserAccount</class>
+        <class>org.jgeek.website.model.security.UserRole</class>
 
     </persistence-unit>
 </persistence>

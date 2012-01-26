@@ -27,6 +27,7 @@ public class JpaUserDetailsService implements UserDetailsService, IChangePasswor
     @Inject
     private PasswordEncoder passwordEncoder;
 
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException, DataAccessException {
         UserDetails userDetails = null;
@@ -52,4 +53,6 @@ public class JpaUserDetailsService implements UserDetailsService, IChangePasswor
 
         em.merge(userDetails);
     }
+
+
 }

@@ -1,10 +1,11 @@
 package org.jgeek.website.security;
 
+import org.jgeek.website.model.global.UserModel;
 import org.springframework.context.annotation.Scope;
 
-import javax.faces.application.FacesMessage;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
+import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -26,6 +27,9 @@ import java.util.logging.Logger;
 public class AuthController {
     private static final Logger LOG = Logger.getLogger(AuthController.class.getName());
 
+    @Inject
+    UserModel userModel;
+
     /**
      * Обрабатывает запрос на аутентификацию.
      *
@@ -39,6 +43,7 @@ public class AuthController {
                 .getRequestDispatcher("/j_spring_security_check");
         dispatcher.forward((ServletRequest) context.getRequest(), (ServletResponse) context.getResponse());
         FacesContext.getCurrentInstance().responseComplete();
+        userModel.initializeByUsername();
         return null;
     }
 

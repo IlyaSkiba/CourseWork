@@ -8,6 +8,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Класс содержит информацию о пользовательском аккаунте.
@@ -29,6 +30,27 @@ public class UserAccount implements UserDetails, Serializable {
     @Column(length = 50, nullable = false, name = "password")
     private String password;
 
+    @NotBlank
+    @Column(nullable = false, name = "f_name")
+    private String firstName;
+
+    @NotBlank
+    @Column(nullable = false, name = "l_name")
+    private String lastName;
+
+    @NotBlank
+    @Column(name = "m_name")
+    private String middleName;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "user_role_list",
+            joinColumns =
+            @JoinColumn(name = "user_id", referencedColumnName = "user_id"),
+            inverseJoinColumns =
+            @JoinColumn(name = "role_id", referencedColumnName = "role_id")
+    )
+    private Set<UserRole> userRoles;
+
     public Integer getId() {
         return id;
     }
@@ -47,7 +69,14 @@ public class UserAccount implements UserDetails, Serializable {
 
     @Override
     public Collection<GrantedAuthority> getAuthorities() {
-        return new HashSet<GrantedAuthority>();
+        if (userRoles != null) {
+            HashSet<GrantedAuthority> res = new HashSet<GrantedAuthority>(userRoles.size());
+            for (UserRole role : userRoles) {
+                res.add(role);
+            }
+            return res;
+        }
+        return null;
     }
 
     @Override
@@ -78,5 +107,37 @@ public class UserAccount implements UserDetails, Serializable {
     @Override
     public String getPassword() {
         return password;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public Set<UserRole> getUserRoles() {
+        return userRoles;
+    }
+
+    public void setUserRoles(Set<UserRole> userRoles) {
+        this.userRoles = userRoles;
     }
 }
