@@ -6,8 +6,91 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" name="Default" comment="">
+    <list default="true" id="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_3_0_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_binding_2_2_1_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_faces_2_2_1_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_js_2_2_1_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_js_resources_2_2_1_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_webflow_2_2_1_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/additional/header.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/global.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/student/structure.xhtml" />
+      <change type="DELETED" beforePath="D:\Temp\CourseWork\.idea\libraries\Maven__org_springframework_spring_webmvc_3_0_5_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Temp\CourseWork\.idea\libraries\Maven__org_springframework_webflow_spring_binding_2_3_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Temp\CourseWork\.idea\libraries\Maven__org_springframework_webflow_spring_faces_2_3_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Temp\CourseWork\.idea\libraries\Maven__org_springframework_webflow_spring_js_2_3_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Temp\CourseWork\.idea\libraries\Maven__org_springframework_webflow_spring_js_resources_2_3_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Temp\CourseWork\.idea\libraries\Maven__org_springframework_webflow_spring_webflow_2_3_0_RELEASE.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/website_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/website_war.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/website_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/website_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_2_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_2_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_faces_jsf_api_2_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_faces_jsf_api_2_0_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_faces_jsf_impl_2_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_faces_jsf_impl_2_0_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javassist_javassist_3_12_0_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javassist_javassist_3_12_0_GA.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_jta_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_jta_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_0_0_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_0_0_GA.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_8_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_15.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_15.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_3_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_3_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_3_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_3_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_6_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_6_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjtools_1_6_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjtools_1_6_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_6_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_6_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_annotation_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_annotation_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_commons_annotations_3_2_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_commons_annotations_3_2_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_3_6_9_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_3_6_9_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_3_6_9_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_3_6_9_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_search_3_3_0_CR1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_search_3_3_0_CR1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_search_analyzers_3_3_0_CR1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_search_analyzers_3_3_0_CR1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_4_1_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_4_1_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_primefaces_primefaces_3_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_primefaces_primefaces_3_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_jdk14_1_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_jdk14_1_6_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_asm_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_asm_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_0_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_0_6_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_1_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__postgresql_postgresql_9_1_901_jdbc4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__postgresql_postgresql_9_1_901_jdbc4.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/jgeek/website/model/global/UserModel.java" afterPath="$PROJECT_DIR$/src/main/java/org/jgeek/website/model/global/UserModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/jgeek/website/model/student/TheoreticTesting/TheoreticTestingModel.java" afterPath="$PROJECT_DIR$/src/main/java/org/jgeek/website/model/student/TheoreticTesting/TheoreticTestingModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/jgeek/website/service/JpaUserDetailsService.java" afterPath="$PROJECT_DIR$/src/main/java/org/jgeek/website/service/JpaUserDetailsService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/student/main.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/student/main.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/student/teoretic_main.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/student/teoretic_main.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website.iml" afterPath="$PROJECT_DIR$/website.iml" />
     </list>
     <ignored path="$USER_HOME$/.griffon/" />
     <ignored path="$USER_HOME$/.grails/" />
@@ -65,34 +148,32 @@
     <ui_properties />
   </component>
   <component name="FavoritesManager">
-    <favorites_list name="org.jgeek.website">
-      <favorite_root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.0.5.RELEASE/spring-security-core-3.0.5.RELEASE-sources.jar!/org/springframework/security/provisioning/JdbcUserDetailsManager.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-    </favorites_list>
+    <favorites_list name="org.jgeek.website" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserAccount.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jgeek/website/model/security/UserAccount.java">
+      <file leaf-file-name="structure.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/student/structure.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.0">
+            <state line="49" column="43" selection-start="2182" selection-end="2182" vertical-scroll-proportion="-12.230769">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserAuthority.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jgeek/website/model/security/UserAuthority.java">
+      <file leaf-file-name="header.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/additional/header.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="28" selection-start="534" selection-end="534" vertical-scroll-proportion="0.35051546">
+            <state line="6" column="20" selection-start="368" selection-end="368" vertical-scroll-proportion="-3.9230769">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDetails.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.1.0.RELEASE/spring-security-core-3.1.0.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetails.java">
+      <file leaf-file-name="main.xhtml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/student/main.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="17" selection-start="1617" selection-end="1617" vertical-scroll-proportion="0.0">
+            <state line="12" column="19" selection-start="497" selection-end="497" vertical-scroll-proportion="1.030303">
               <folding />
             </state>
           </provider>
@@ -116,22 +197,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/jgeek/website/captcha/SimpleCaptcha.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/jgeek/website/captcha/RandomString.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/jgeek/website/captcha/BlueFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/jgeek/website/captcha/CaptchaServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/jgeek/website/captcha/Captcha.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/jgeek/website/service/Register.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/jgeek/website/captcha/validator/CaptchaValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/jgeek/website/captcha/validator/Captcha.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/ValidationMessage.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/register.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext-security.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/jgeek/website/model/security/UserAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/jgeek/website/model/security/UserAuthority.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/jgeek/website/service/JpaUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/jgeek/website/model/global/UserModel.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/structure.xhtml.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/additional.html" />
+        <option value="$PROJECT_DIR$/src/main/java/org/jgeek/website/model/student/TheoreticTesting/TheoreticTestingModel.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/teoretic_main.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/main.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/css/global.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/structure.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/additional/header.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/global.css" />
       </list>
     </option>
   </component>
@@ -191,8 +272,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -237,6 +318,16 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.jgeek.website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,18 +342,126 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
+              <option name="myItemId" value="CourseWork" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="org.jgeek.website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CourseWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CourseWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CourseWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CourseWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CourseWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -287,6 +486,7 @@
     <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="DefaultHtmlFileTemplate" value="Xhtml" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -474,6 +674,17 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" runner="idea" />
       <module name="" />
@@ -524,7 +735,7 @@
       </method>
     </configuration>
     <configuration default="false" name="JGeek Tomcat 7.0.2" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 6">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/jsf/" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -640,36 +851,36 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32550693" sideWeight="0.4465479" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55345213" sideWeight="0.0" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23596358" sideWeight="0.62969285" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.552901" sideWeight="0.0" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3089431" sideWeight="0.24207012" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20935412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26393142" sideWeight="0.6289753" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3518931" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38566554" sideWeight="0.0" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.6691569" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.6691569" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2607362" sideWeight="0.0" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.3271078" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20521542" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36525613" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29674795" sideWeight="0.77974087" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20477815" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26555386" sideWeight="0.37030718" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36302894" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22195122" sideWeight="0.6584217" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26574174" sideWeight="0.64587975" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22198506" sideWeight="0.4465479" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35412025" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3089431" sideWeight="0.24207012" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29674795" sideWeight="0.77974087" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26479515" sideWeight="0.44709897" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21927163" sideWeight="0.44709897" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41638225" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36525613" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JPA Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20935412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26393142" sideWeight="0.4157833" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -732,146 +943,1093 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/jgeek/website/captcha/BlueFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/jgeek/website/service/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="18" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.33333334">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="29" selection-start="539" selection-end="539" vertical-scroll-proportion="0.18127961">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.jsf.ui.FacesConfigEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/3.1.0.RELEASE/spring-security-config-3.1.0.RELEASE.jar!/org/springframework/security/config/spring-security-3.1.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/3.1.0.RELEASE/spring-security-config-3.1.0.RELEASE.jar!/org/springframework/security/config/spring-security-3.0.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="29" selection-start="9592" selection-end="9592" vertical-scroll-proportion="0.3488806">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext-security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="57" selection-start="897" selection-end="897" vertical-scroll-proportion="0.40270728">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="61" selection-start="4593" selection-end="4593" vertical-scroll-proportion="0.5798923">
-          <folding>
-            <element signature="tag#dependency#1;tag#dependencies#0;tag#project#0" expanded="false" />
-            <element signature="tag#dependency#2;tag#dependencies#0;tag#project#0" expanded="false" />
-            <element signature="tag#dependency#3;tag#dependencies#0;tag#project#0" expanded="false" />
-            <element signature="tag#dependency#4;tag#dependencies#0;tag#project#0" expanded="false" />
-            <element signature="tag#dependency#5;tag#dependencies#0;tag#project#0" expanded="false" />
-            <element signature="tag#dependency#6;tag#dependencies#0;tag#project#0" expanded="false" />
-            <element signature="tag#dependency#32;tag#dependencies#0;tag#project#0" expanded="false" />
-            <element signature="tag#dependency#33;tag#dependencies#0;tag#project#0" expanded="false" />
-            <element signature="tag#repository#0;tag#repositories#0;tag#project#0" expanded="false" />
-            <element signature="tag#repository#1;tag#repositories#0;tag#project#0" expanded="false" />
-            <element signature="tag#pluginRepository#0;tag#pluginRepositories#0;tag#project#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="315" column="77" selection-start="10677" selection-end="10677" vertical-scroll-proportion="0.56569344" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/jgeek/website/model/global/UserModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="43" selection-start="792" selection-end="792" vertical-scroll-proportion="-13.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/webflow/spring-faces/2.3.0.RELEASE/spring-faces-2.3.0.RELEASE-sources.jar!/org/springframework/faces/security/FaceletsAuthorizeTagUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="26" selection-start="1541" selection-end="1541" vertical-scroll-proportion="0.33213645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/springsecurity.taglib.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="42" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="215" selection-end="235" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="22" column="55" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0729927" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="55" selection-start="766" selection-end="766" vertical-scroll-proportion="-11.05">
-          <folding>
-            <element signature="e#1469#1491#0" expanded="true" />
-            <element signature="e#1904#1929#0" expanded="true" />
-            <element signature="e#1967#1980#0" expanded="true" />
-            <element signature="e#2023#2041#0" expanded="true" />
-            <element signature="e#2084#2102#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
       <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.1.0.RELEASE/spring-security-core-3.1.0.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="17" selection-start="1617" selection-end="1617" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/jgeek/website/model/security/UserAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.0">
+        <state line="62" column="17" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.44476745" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/jgeek/website/service/JpaUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="37" selection-start="992" selection-end="992" vertical-scroll-proportion="0.051359516" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/jgeek/website/model/student/TheoreticTesting/TheoreticTestingModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="8" selection-start="698" selection-end="698" vertical-scroll-proportion="0.6060606" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="4" selection-start="575" selection-end="575" vertical-scroll-proportion="0.33333334" />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/org.jgeek:website:1.0.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>org.jgeek:website:1.0.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="270.0" y="1026.0">org.hibernate:hibernate-search:jar:3.3.0.CR1/org.slf4j:slf4j-api:jar:1.6.1</node>
+            <node x="270.0" y="950.0">org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final</node>
+            <node x="387.0" y="3952.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE</node>
+            <node x="453.0" y="2850.0">org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context-support:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE</node>
+            <node x="235.0" y="1786.0">org.springframework:spring-web:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE</node>
+            <node x="108.0" y="1064.0">org.slf4j:slf4j-jdk14:jar:1.6.1</node>
+            <node x="108.0" y="76.0">com.sun.faces:jsf-api:jar:2.0.3</node>
+            <node x="422.0" y="1596.0">org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-expression:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE</node>
+            <node x="393.0" y="3572.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-asm:jar:3.0.4.RELEASE</node>
+            <node x="108.0" y="722.0">org.hibernate:hibernate-validator:jar:4.1.0.Final</node>
+            <node x="256.0" y="1520.0">org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE</node>
+            <node x="393.0" y="3648.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-context:jar:3.0.4.RELEASE</node>
+            <node x="356.0" y="4104.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-context:jar:3.0.4.RELEASE</node>
+            <node x="258.0" y="4522.0">org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE</node>
+            <node x="108.0" y="38.0">junit:junit:jar:4.8.1</node>
+            <node x="242.0" y="3344.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="256.0" y="2850.0">org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context-support:jar:3.1.0.RELEASE</node>
+            <node x="257.0" y="380.0">org.hibernate:hibernate-core:jar:3.6.9.Final/org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final</node>
+            <node x="288.0" y="1824.0">org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/aopalliance:aopalliance:jar:1.0</node>
+            <node x="108.0" y="266.0">org.hibernate:hibernate-core:jar:3.6.9.Final</node>
+            <node x="317.0" y="646.0">org.hibernate:hibernate-entitymanager:jar:3.6.9.Final/org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final</node>
+            <node x="108.0" y="798.0">org.hibernate:hibernate-search:jar:3.3.0.CR1</node>
+            <node x="356.0" y="4028.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="297.0" y="2280.0">org.springframework.security:spring-security-config:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.0.6.RELEASE</node>
+            <node x="242.0" y="3572.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE</node>
+            <node x="286.0" y="2470.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.0.6.RELEASE</node>
+            <node x="256.0" y="2964.0">org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-test:jar:3.1.0.RELEASE</node>
+            <node x="393.0" y="3762.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-expression:jar:3.0.4.RELEASE</node>
+            <node x="393.0" y="3610.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-beans:jar:3.0.4.RELEASE</node>
+            <node x="381.0" y="1482.0">org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE</node>
+            <node x="256.0" y="1368.0">org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE</node>
+            <node x="317.0" y="684.0">org.hibernate:hibernate-entitymanager:jar:3.6.9.Final/org.slf4j:slf4j-api:jar:1.6.1</node>
+            <node x="108.0" y="190.0">javax.servlet:jstl:jar:1.2</node>
+            <node x="196.0" y="1140.0">javax.mail:mail:jar:1.4/javax.activation:activation:jar:1.1</node>
+            <node x="381.0" y="1444.0">org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE</node>
+            <node x="297.0" y="2242.0">org.springframework.security:spring-security-config:jar:3.1.0.RELEASE/org.springframework.security:spring-security-core:jar:3.1.0.RELEASE</node>
+            <node x="509.0" y="380.0">org.hibernate:hibernate-core:jar:3.6.9.Final/org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final/org.slf4j:slf4j-api:jar:1.5.8</node>
+            <node x="108.0" y="2090.0">org.springframework.security:spring-security-config:jar:3.1.0.RELEASE</node>
+            <node x="317.0" y="570.0">org.hibernate:hibernate-entitymanager:jar:3.6.9.Final/cglib:cglib:jar:2.2</node>
+            <node x="256.0" y="1596.0">org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-expression:jar:3.1.0.RELEASE</node>
+            <node x="258.0" y="4408.0">org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework:spring-expression:jar:3.0.4.RELEASE</node>
+            <node x="381.0" y="1406.0">org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE/org.springframework:spring-asm:jar:3.1.0.RELEASE</node>
+            <node x="242.0" y="4218.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE</node>
+            <node x="108.0" y="2774.0">org.springframework:spring-aspects:jar:3.1.0.RELEASE</node>
+            <node x="393.0" y="3686.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-context-support:jar:3.0.4.RELEASE</node>
+            <node x="242.0" y="3534.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-web:jar:3.0.4.RELEASE</node>
+            <node x="288.0" y="2014.0">org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.0.6.RELEASE</node>
+            <node x="286.0" y="2318.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-tx:jar:3.0.6.RELEASE</node>
+            <node x="480.0" y="2052.0">org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework.security:spring-security-crypto:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.0.6.RELEASE</node>
+            <node x="108.0" y="532.0">org.hibernate:hibernate-entitymanager:jar:3.6.9.Final</node>
+            <node x="393.0" y="3724.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE</node>
+            <node x="317.0" y="532.0">org.hibernate:hibernate-entitymanager:jar:3.6.9.Final/org.hibernate:hibernate-core:jar:3.6.9.Final</node>
+            <node x="235.0" y="3040.0">org.springframework:spring-orm:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE</node>
+            <node x="242.0" y="3458.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE</node>
+            <node x="242.0" y="4028.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE</node>
+            <node x="108.0" y="4750.0">cglib:cglib-nodep:jar:2.2</node>
+            <node x="257.0" y="304.0">org.hibernate:hibernate-core:jar:3.6.9.Final/commons-collections:commons-collections:jar:3.1</node>
+            <node x="394.0" y="1520.0">org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE</node>
+            <node x="258.0" y="4256.0">org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="108.0" y="1102.0">postgresql:postgresql:jar:9.1-901.jdbc4</node>
+            <node x="258.0" y="4560.0">org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE</node>
+            <node x="108.0" y="228.0">javax.servlet:servlet-api:jar:2.5</node>
+            <node x="108.0" y="1824.0">org.springframework.security:spring-security-core:jar:3.1.0.RELEASE</node>
+            <node x="258.0" y="4484.0">org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE</node>
+            <node x="286.0" y="2356.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-web:jar:3.0.6.RELEASE</node>
+            <node x="108.0" y="3002.0">org.springframework:spring-orm:jar:3.1.0.RELEASE</node>
+            <node x="108.0" y="1292.0">org.springframework:spring-core:jar:3.1.0.RELEASE</node>
+            <node x="270.0" y="912.0">org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-core:jar:3.6.0.Final</node>
+            <node x="108.0" y="1254.0">commons-dbcp:commons-dbcp:jar:1.4</node>
+            <node x="286.0" y="2432.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-expression:jar:3.0.6.RELEASE</node>
+            <node x="492.0" y="798.0">org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1/org.apache.lucene:lucene-core:jar:3.0.2</node>
+            <node x="108.0" y="4598.0">org.aspectj:aspectjtools:jar:1.6.7</node>
+            <node x="256.0" y="2774.0">org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE</node>
+            <node x="653.0" y="836.0">org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1/org.apache.lucene:lucene-analyzers:jar:3.0.2/org.apache.lucene:lucene-core:jar:3.0.2</node>
+            <node x="259.0" y="1254.0">commons-dbcp:commons-dbcp:jar:1.4/commons-pool:commons-pool:jar:1.5.4</node>
+            <node x="237.0" y="1330.0">org.springframework:spring-core:jar:3.1.0.RELEASE/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="242.0" y="3420.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-context:jar:3.0.4.RELEASE</node>
+            <node x="288.0" y="1862.0">org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework:spring-expression:jar:3.0.6.RELEASE</node>
+            <node x="108.0" y="1672.0">org.springframework:spring-web:jar:3.1.0.RELEASE</node>
+            <node x="257.0" y="418.0">org.hibernate:hibernate-core:jar:3.6.9.Final/org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final</node>
+            <node x="108.0" y="152.0">org.glassfish:javax.annotation:jar:3.0</node>
+            <node x="257.0" y="456.0">org.hibernate:hibernate-core:jar:3.6.9.Final/javax.transaction:jta:jar:1.1</node>
+            <node x="286.0" y="2394.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/aopalliance:aopalliance:jar:1.0</node>
+            <node x="387.0" y="3838.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="108.0" y="3344.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE</node>
+            <node x="283.0" y="760.0">org.hibernate:hibernate-validator:jar:4.1.0.Final/org.slf4j:slf4j-api:jar:1.5.6</node>
+            <node x="224.0" y="3230.0">org.springframework:spring-tx:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE</node>
+            <node x="387.0" y="3990.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE/org.springframework:spring-expression:jar:3.0.4.RELEASE</node>
+            <node x="108.0" y="1368.0">org.springframework:spring-context:jar:3.1.0.RELEASE</node>
+            <node x="108.0" y="4636.0">org.aspectj:aspectjrt:jar:1.6.7</node>
+            <node x="270.0" y="798.0">org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1</node>
+            <node x="108.0" y="4712.0">asm:asm:jar:3.3</node>
+            <node x="258.0" y="4370.0">org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE</node>
+            <node x="108.0" y="1178.0">javax.activation:activation:jar:1.1.1</node>
+            <node x="297.0" y="2128.0">org.springframework.security:spring-security-config:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.0.6.RELEASE</node>
+            <node x="286.0" y="2660.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.0.6.RELEASE</node>
+            <node x="414.0" y="2546.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-jdbc:jar:3.0.6.RELEASE/org.springframework:spring-beans:jar:3.0.6.RELEASE</node>
+            <node x="108.0" y="4256.0">org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE</node>
+            <node x="235.0" y="1748.0">org.springframework:spring-web:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.1.0.RELEASE</node>
+            <node x="256.0" y="1558.0">org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE</node>
+            <node x="258.0" y="4446.0">org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework:spring-web:jar:3.0.4.RELEASE</node>
+            <node x="286.0" y="2736.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.0.6.RELEASE</node>
+            <node x="224.0" y="3154.0">org.springframework:spring-tx:jar:3.1.0.RELEASE/aopalliance:aopalliance:jar:1.0</node>
+            <node x="242.0" y="3382.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-beans:jar:3.0.4.RELEASE</node>
+            <node x="381.0" y="1368.0">org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE/aopalliance:aopalliance:jar:1.0</node>
+            <node x="414.0" y="2622.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-jdbc:jar:3.0.6.RELEASE/org.springframework:spring-tx:jar:3.0.6.RELEASE</node>
+            <node x="108.0" y="2318.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE</node>
+            <node x="387.0" y="3914.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE/org.springframework:spring-context:jar:3.0.4.RELEASE</node>
+            <node x="224.0" y="3268.0">org.springframework:spring-tx:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.1.0.RELEASE</node>
+            <node x="108.0" y="1216.0">commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="414.0" y="2584.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-jdbc:jar:3.0.6.RELEASE/org.springframework:spring-core:jar:3.0.6.RELEASE</node>
+            <node x="297.0" y="2204.0">org.springframework.security:spring-security-config:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.0.6.RELEASE</node>
+            <node x="521.0" y="4139.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE</node>
+            <node x="258.0" y="4294.0">org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework:spring-beans:jar:3.0.4.RELEASE</node>
+            <node x="453.0" y="2926.0">org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context-support:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE</node>
+            <node x="288.0" y="1938.0">org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.0.6.RELEASE</node>
+            <node x="242.0" y="3496.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-expression:jar:3.0.4.RELEASE</node>
+            <node x="317.0" y="608.0">org.hibernate:hibernate-entitymanager:jar:3.6.9.Final/javassist:javassist:jar:3.12.0.GA</node>
+            <node x="492.0" y="836.0">org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1/org.apache.lucene:lucene-analyzers:jar:3.0.2</node>
+            <node x="108.0" y="4826.0">log4j:log4j:jar:1.2.15</node>
+            <node x="235.0" y="3002.0">org.springframework:spring-orm:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE</node>
+            <node x="257.0" y="266.0">org.hibernate:hibernate-core:jar:3.6.9.Final/antlr:antlr:jar:2.7.6</node>
+            <node x="286.0" y="2546.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-jdbc:jar:3.0.6.RELEASE</node>
+            <node x="235.0" y="3078.0">org.springframework:spring-orm:jar:3.1.0.RELEASE/org.springframework:spring-jdbc:jar:3.1.0.RELEASE</node>
+            <node x="108.0" y="3154.0">org.springframework:spring-tx:jar:3.1.0.RELEASE</node>
+            <node x="108.0" y="4788.0">org.primefaces:primefaces:jar:3.0.1</node>
+            <node x="108.0" y="114.0">com.sun.faces:jsf-impl:jar:2.0.3</node>
+            <node x="288.0" y="2052.0">org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework.security:spring-security-crypto:jar:3.1.0.RELEASE</node>
+            <node x="288.0" y="1976.0">org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.0.6.RELEASE</node>
+            <node x="270.0" y="988.0">org.hibernate:hibernate-search:jar:3.3.0.CR1/org.apache.lucene:lucene-core:jar:3.0.2</node>
+            <node x="224.0" y="3192.0">org.springframework:spring-tx:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE</node>
+            <node x="108.0" y="0.0">javax.inject:javax.inject:jar:1</node>
+            <node x="235.0" y="1710.0">org.springframework:spring-web:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE</node>
+            <node x="237.0" y="1292.0">org.springframework:spring-core:jar:3.1.0.RELEASE/org.springframework:spring-asm:jar:3.1.0.RELEASE</node>
+            <node x="492.0" y="874.0">org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1/org.slf4j:slf4j-api:jar:1.6.1</node>
+            <node x="356.0" y="4066.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-beans:jar:3.0.4.RELEASE</node>
+            <node x="108.0" y="4674.0">org.aspectj:aspectjweaver:jar:1.6.7</node>
+            <node x="283.0" y="722.0">org.hibernate:hibernate-validator:jar:4.1.0.Final/javax.validation:validation-api:jar:1.0.0.GA</node>
+            <node x="242.0" y="3838.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE</node>
+            <node x="258.0" y="4332.0">org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework:spring-context:jar:3.0.4.RELEASE</node>
+            <node x="0.0" y="0.0">org.jgeek:website:1.0.0-SNAPSHOT</node>
+            <node x="233.0" y="1064.0">org.slf4j:slf4j-jdk14:jar:1.6.1/org.slf4j:slf4j-api:jar:1.6.1</node>
+            <node x="286.0" y="2508.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework.security:spring-security-core:jar:3.1.0.RELEASE</node>
+            <node x="235.0" y="3116.0">org.springframework:spring-orm:jar:3.1.0.RELEASE/org.springframework:spring-tx:jar:3.1.0.RELEASE</node>
+            <node x="387.0" y="3876.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE/org.springframework:spring-beans:jar:3.0.4.RELEASE</node>
+            <node x="288.0" y="1900.0">org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.0.6.RELEASE</node>
+            <node x="257.0" y="342.0">org.hibernate:hibernate-core:jar:3.6.9.Final/dom4j:dom4j:jar:1.6.1</node>
+            <node x="407.0" y="570.0">org.hibernate:hibernate-entitymanager:jar:3.6.9.Final/cglib:cglib:jar:2.2/asm:asm:jar:3.1</node>
+            <node x="297.0" y="2090.0">org.springframework.security:spring-security-config:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.0.6.RELEASE</node>
+            <node x="393.0" y="3800.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-web:jar:3.0.4.RELEASE</node>
+            <node x="297.0" y="2166.0">org.springframework.security:spring-security-config:jar:3.1.0.RELEASE/aopalliance:aopalliance:jar:1.0</node>
+            <node x="108.0" y="1140.0">javax.mail:mail:jar:1.4</node>
+            <node x="453.0" y="2888.0">org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context-support:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.1.0.RELEASE</node>
+            <node x="224.0" y="3306.0">org.springframework:spring-tx:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE</node>
+            <node x="257.0" y="494.0">org.hibernate:hibernate-core:jar:3.6.9.Final/org.slf4j:slf4j-api:jar:1.6.1</node>
+            <node x="256.0" y="1634.0">org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-asm:jar:3.1.0.RELEASE</node>
+            <node x="235.0" y="1672.0">org.springframework:spring-web:jar:3.1.0.RELEASE/aopalliance:aopalliance:jar:1.0</node>
+            <node x="286.0" y="2698.0">org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.0.6.RELEASE</node>
+            <node x="356.0" y="4180.0">org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js-resources:jar:2.2.1.RELEASE</node>
+            <node x="256.0" y="2812.0">org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.1.0.RELEASE</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="182.0" y="2674.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="302.5" y="3738.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-web:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="182.0" y="2370.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE/aopalliance:aopalliance:jar:1.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context-support:jar:3.1.0.RELEASE" target="org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context-support:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="339.5" y="2940.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-core:jar:3.6.9.Final/org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final" target="org.hibernate:hibernate-core:jar:3.6.9.Final/org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final/org.slf4j:slf4j-api:jar:1.5.8">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/aopalliance:aopalliance:jar:1.0">
+              <point x="0.0" y="0.0" />
+              <point x="182.0" y="2408.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="183.0" y="1952.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="615.5" y="1534.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-entitymanager:jar:3.6.9.Final" target="org.hibernate:hibernate-entitymanager:jar:3.6.9.Final/javassist:javassist:jar:3.12.0.GA">
+              <point x="0.0" y="0.0" />
+              <point x="197.5" y="622.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-search:jar:3.3.0.CR1" target="org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final">
+              <point x="0.0" y="0.0" />
+              <point x="174.0" y="964.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="javax.inject:javax.inject:jar:1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.slf4j:slf4j-jdk14:jar:1.6.1">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="1078.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="2332.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-context-support:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="302.5" y="3700.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-core:jar:3.6.9.Final" target="org.hibernate:hibernate-core:jar:3.6.9.Final/antlr:antlr:jar:2.7.6">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-tx:jar:3.1.0.RELEASE" target="org.springframework:spring-tx:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="151.0" y="3320.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-core:jar:3.6.9.Final" target="org.hibernate:hibernate-core:jar:3.6.9.Final/org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final">
+              <point x="0.0" y="0.0" />
+              <point x="167.5" y="394.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-expression:jar:3.1.0.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-expression:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-tx:jar:3.1.0.RELEASE" target="org.springframework:spring-tx:jar:3.1.0.RELEASE/aopalliance:aopalliance:jar:1.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="160.0" y="3586.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-expression:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="182.0" y="2446.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-jdbc:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="182.0" y="2560.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="204.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.hibernate:hibernate-validator:jar:4.1.0.Final">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="736.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-core:jar:3.6.9.Final" target="org.hibernate:hibernate-core:jar:3.6.9.Final/dom4j:dom4j:jar:1.6.1">
+              <point x="0.0" y="0.0" />
+              <point x="167.5" y="356.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-validator:jar:4.1.0.Final" target="org.hibernate:hibernate-validator:jar:4.1.0.Final/org.slf4j:slf4j-api:jar:1.5.6">
+              <point x="0.0" y="0.0" />
+              <point x="180.5" y="774.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-core:jar:3.1.0.RELEASE" target="org.springframework:spring-core:jar:3.1.0.RELEASE/commons-logging:commons-logging:jar:1.1.1">
+              <point x="0.0" y="0.0" />
+              <point x="157.5" y="1344.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-jdbc:jar:3.0.6.RELEASE" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-jdbc:jar:3.0.6.RELEASE/org.springframework:spring-tx:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="335.0" y="2636.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="303.5" y="1458.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-web:jar:3.1.0.RELEASE" target="org.springframework:spring-web:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="156.5" y="1800.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-orm:jar:3.1.0.RELEASE" target="org.springframework:spring-orm:jar:3.1.0.RELEASE/org.springframework:spring-tx:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="156.5" y="3130.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.hibernate:hibernate-entitymanager:jar:3.6.9.Final">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="546.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.glassfish:javax.annotation:jar:3.0">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="166.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="168.0" y="4498.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE" target="org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="615.5" y="1306.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework.security:spring-security-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="182.0" y="2522.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-aspects:jar:3.1.0.RELEASE" target="org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-test:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="167.0" y="2978.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="168.0" y="4574.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-config:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-config:jar:3.1.0.RELEASE/org.springframework.security:spring-security-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="187.5" y="2256.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-tx:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-search:jar:3.3.0.CR1" target="org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/commons-logging:commons-logging:jar:1.1.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-web:jar:3.1.0.RELEASE" target="org.springframework:spring-web:jar:3.1.0.RELEASE/aopalliance:aopalliance:jar:1.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE/org.springframework:spring-beans:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="299.5" y="3890.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-tx:jar:3.1.0.RELEASE" target="org.springframework:spring-tx:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="151.0" y="3206.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-aspects:jar:3.1.0.RELEASE" target="org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="167.0" y="2826.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-aspects:jar:3.1.0.RELEASE" target="org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context-support:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="167.0" y="2864.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE" target="org.springframework:spring-tx:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="615.5" y="3320.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1" target="org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1/org.apache.lucene:lucene-core:jar:3.0.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1" target="org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1/org.apache.lucene:lucene-analyzers:jar:3.0.2">
+              <point x="0.0" y="0.0" />
+              <point x="366.0" y="850.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.slf4j:slf4j-jdk14:jar:1.6.1" target="org.slf4j:slf4j-jdk14:jar:1.6.1/org.slf4j:slf4j-api:jar:1.6.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-beans:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="160.0" y="3396.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-web:jar:3.1.0.RELEASE" target="org.springframework:spring-web:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="156.5" y="1724.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="303.5" y="1496.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/commons-logging:commons-logging:jar:1.1.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.hibernate:hibernate-search:jar:3.3.0.CR1">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="812.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.1.0.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-expression:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="615.5" y="1610.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-config:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-config:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="187.5" y="2142.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-expression:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="160.0" y="3510.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework:spring-context:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="168.0" y="4346.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-config:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-config:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="187.5" y="2218.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework.security:spring-security-crypto:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework.security:spring-security-crypto:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE" target="org.springframework:spring-orm:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="615.5" y="3054.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-core:jar:3.6.9.Final" target="org.hibernate:hibernate-core:jar:3.6.9.Final/org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final">
+              <point x="0.0" y="0.0" />
+              <point x="167.5" y="432.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="182.0" y="2750.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-orm:jar:3.1.0.RELEASE" target="org.springframework:spring-orm:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="156.5" y="3054.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-entitymanager:jar:3.6.9.Final" target="org.hibernate:hibernate-entitymanager:jar:3.6.9.Final/org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final">
+              <point x="0.0" y="0.0" />
+              <point x="197.5" y="660.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="junit:junit:jar:4.8.1">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="52.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="182.0" y="2712.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="4270.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/aopalliance:aopalliance:jar:1.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-entitymanager:jar:3.6.9.Final" target="org.hibernate:hibernate-entitymanager:jar:3.6.9.Final/cglib:cglib:jar:2.2">
+              <point x="0.0" y="0.0" />
+              <point x="197.5" y="584.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-jdbc:jar:3.0.6.RELEASE" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-jdbc:jar:3.0.6.RELEASE/org.springframework:spring-core:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="335.0" y="2598.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="postgresql:postgresql:jar:9.1-901.jdbc4">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="1116.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.springframework.security:spring-security-config:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="2104.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.1.0.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-expression:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="167.0" y="1610.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="commons-dbcp:commons-dbcp:jar:1.4" target="commons-dbcp:commons-dbcp:jar:1.4/commons-pool:commons-pool:jar:1.5.4">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-config:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-config:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="187.5" y="2294.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="168.0" y="4536.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.1.0.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="167.0" y="1572.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="javax.mail:mail:jar:1.4">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="1154.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-tx:jar:3.1.0.RELEASE" target="org.springframework:spring-tx:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="151.0" y="3244.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-web:jar:3.1.0.RELEASE" target="org.springframework:spring-web:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="156.5" y="1762.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-context:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="302.5" y="3662.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.aspectj:aspectjrt:jar:1.6.7">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="4650.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-entitymanager:jar:3.6.9.Final/cglib:cglib:jar:2.2" target="org.hibernate:hibernate-entitymanager:jar:3.6.9.Final/cglib:cglib:jar:2.2/asm:asm:jar:3.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-core:jar:3.6.9.Final" target="org.hibernate:hibernate-core:jar:3.6.9.Final/org.slf4j:slf4j-api:jar:1.6.1">
+              <point x="0.0" y="0.0" />
+              <point x="167.5" y="508.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="299.5" y="3966.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-jdbc:jar:3.0.6.RELEASE" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-jdbc:jar:3.0.6.RELEASE/org.springframework:spring-beans:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="log4j:log4j:jar:1.2.15">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="4840.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-validator:jar:4.1.0.Final" target="org.hibernate:hibernate-validator:jar:4.1.0.Final/javax.validation:validation-api:jar:1.0.0.GA">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.springframework:spring-aspects:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="2788.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context-support:jar:3.1.0.RELEASE" target="org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context-support:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="339.5" y="2902.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-search:jar:3.3.0.CR1" target="org.hibernate:hibernate-search:jar:3.3.0.CR1/org.slf4j:slf4j-api:jar:1.6.1">
+              <point x="0.0" y="0.0" />
+              <point x="174.0" y="1040.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-entitymanager:jar:3.6.9.Final" target="org.hibernate:hibernate-entitymanager:jar:3.6.9.Final/org.hibernate:hibernate-core:jar:3.6.9.Final">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-orm:jar:3.1.0.RELEASE" target="org.springframework:spring-orm:jar:3.1.0.RELEASE/org.springframework:spring-jdbc:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="156.5" y="3092.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="183.0" y="1914.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="160.0" y="3852.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="160.0" y="3472.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1" target="org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1/org.slf4j:slf4j-api:jar:1.6.1">
+              <point x="0.0" y="0.0" />
+              <point x="366.0" y="888.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.springframework:spring-tx:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="3168.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.primefaces:primefaces:jar:3.0.1">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="4802.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-beans:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="302.5" y="3624.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-web:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="182.0" y="2484.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-orm:jar:3.1.0.RELEASE" target="org.springframework:spring-orm:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.springframework:spring-context:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="1382.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/commons-logging:commons-logging:jar:1.1.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework:spring-beans:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="168.0" y="4308.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="1838.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE/commons-logging:commons-logging:jar:1.1.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework.security:spring-security-crypto:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="183.0" y="2066.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.springframework:spring-web:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="1686.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-web:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="160.0" y="3548.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework:spring-web:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="168.0" y="4460.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.hibernate:hibernate-core:jar:3.6.9.Final">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="280.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1/org.apache.lucene:lucene-analyzers:jar:3.0.2" target="org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-search-analyzers:jar:3.3.0.CR1/org.apache.lucene:lucene-analyzers:jar:3.0.2/org.apache.lucene:lucene-core:jar:3.0.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-core:jar:3.6.9.Final" target="org.hibernate:hibernate-core:jar:3.6.9.Final/javax.transaction:jta:jar:1.1">
+              <point x="0.0" y="0.0" />
+              <point x="167.5" y="470.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="javax.servlet:servlet-api:jar:2.5">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="242.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="asm:asm:jar:3.3">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="4726.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="javax.activation:activation:jar:1.1.1">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="1192.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-core:jar:3.1.0.RELEASE" target="org.springframework:spring-core:jar:3.1.0.RELEASE/org.springframework:spring-asm:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="com.sun.faces:jsf-impl:jar:2.0.3">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="128.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="com.sun.faces:jsf-api:jar:2.0.3">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="90.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-aspects:jar:3.1.0.RELEASE" target="org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="168.0" y="4384.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-config:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-config:jar:3.1.0.RELEASE/aopalliance:aopalliance:jar:1.0">
+              <point x="0.0" y="0.0" />
+              <point x="187.5" y="2180.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="615.5" y="1496.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-tx:jar:3.1.0.RELEASE" target="org.springframework:spring-tx:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="151.0" y="3282.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-config:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-config:jar:3.1.0.RELEASE/org.springframework:spring-context:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="1306.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="615.5" y="1572.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.aspectj:aspectjweaver:jar:1.6.7">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="4688.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="160.0" y="4232.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="160.0" y="4042.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.springframework:spring-orm:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="3016.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.1.0.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-asm:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="167.0" y="1648.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework:spring-expression:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="183.0" y="1876.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.aspectj:aspectjtools:jar:1.6.7">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="4612.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="commons-logging:commons-logging:jar:1.1.1">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="1230.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js-resources:jar:2.2.1.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="284.0" y="4194.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="183.0" y="2028.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-beans:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="284.0" y="4080.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-aop:jar:3.1.0.RELEASE/org.springframework:spring-asm:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="303.5" y="1420.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE" target="org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context-support:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="615.5" y="2940.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-context:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="284.0" y="4118.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.1.0.RELEASE" target="org.springframework:spring-context:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="167.0" y="1534.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="commons-dbcp:commons-dbcp:jar:1.4">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="1268.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-context:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="160.0" y="3434.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="284.0" y="4156.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-core:jar:3.6.9.Final" target="org.hibernate:hibernate-core:jar:3.6.9.Final/commons-collections:commons-collections:jar:3.1">
+              <point x="0.0" y="0.0" />
+              <point x="167.5" y="318.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="3358.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE/org.springframework:spring-context:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="299.5" y="3928.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-search:jar:3.3.0.CR1" target="org.hibernate:hibernate-search:jar:3.3.0.CR1/org.hibernate:hibernate-core:jar:3.6.0.Final">
+              <point x="0.0" y="0.0" />
+              <point x="174.0" y="926.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE" target="org.springframework:spring-web:jar:3.1.0.RELEASE/org.springframework:spring-core:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="615.5" y="1800.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-expression:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="302.5" y="3776.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.jgeek:website:1.0.0-SNAPSHOT" target="cglib:cglib-nodep:jar:2.2">
+              <point x="0.0" y="0.0" />
+              <point x="39.0" y="4764.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-webflow:jar:2.2.1.RELEASE/org.springframework:spring-expression:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="168.0" y="4422.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context-support:jar:3.1.0.RELEASE" target="org.springframework:spring-aspects:jar:3.1.0.RELEASE/org.springframework:spring-context-support:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.1.0.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-asm:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="javax.mail:mail:jar:1.4" target="javax.mail:mail:jar:1.4/javax.activation:activation:jar:1.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-search:jar:3.3.0.CR1" target="org.hibernate:hibernate-search:jar:3.3.0.CR1/org.apache.lucene:lucene-core:jar:3.0.2">
+              <point x="0.0" y="0.0" />
+              <point x="174.0" y="1002.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-binding:jar:2.2.1.RELEASE/org.springframework:spring-expression:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="299.5" y="4004.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE" target="org.springframework.security:spring-security-core:jar:3.1.0.RELEASE/org.springframework:spring-beans:jar:3.0.6.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="183.0" y="1990.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE" target="org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework:spring-webmvc:jar:3.0.4.RELEASE/org.springframework:spring-web:jar:3.0.4.RELEASE">
+              <point x="0.0" y="0.0" />
+              <point x="302.5" y="3814.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-entitymanager:jar:3.6.9.Final" target="org.hibernate:hibernate-entitymanager:jar:3.6.9.Final/org.slf4j:slf4j-api:jar:1.6.1">
+              <point x="0.0" y="0.0" />
+              <point x="197.5" y="698.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="405.0" y="4161.0" />
+          <SelectedNodes>
+            <node>org.springframework.webflow:spring-faces:jar:2.2.1.RELEASE/org.springframework.webflow:spring-js:jar:2.2.1.RELEASE/org.springframework:spring-core:jar:3.0.4.RELEASE</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/3.0.1/primefaces-3.0.1.jar!/META-INF/primefaces-p.taglib.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7112" column="8" selection-start="260648" selection-end="260648" vertical-scroll-proportion="0.33211678" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JSF/lib/jsf-support.jar!/resources/schemas/ui.taglib.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="789" column="4" selection-start="44827" selection-end="44827" vertical-scroll-proportion="0.33211678" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student/teoretic_main.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="24" selection-start="133" selection-end="134" vertical-scroll-proportion="0.0953271" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.jsf.ui.FacesConfigEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="91" selection-start="429" selection-end="429" vertical-scroll-proportion="0.22537878">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/jgeek/website/model/security/UserAuthority.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/additional/header.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="28" selection-start="534" selection-end="534" vertical-scroll-proportion="0.35051546">
+        <state line="6" column="20" selection-start="368" selection-end="368" vertical-scroll-proportion="-3.9230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student/structure.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="43" selection-start="2182" selection-end="2182" vertical-scroll-proportion="-12.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="47" selection-start="1891" selection-end="1891" vertical-scroll-proportion="0.14141414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student/main.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="19" selection-start="497" selection-end="497" vertical-scroll-proportion="1.030303">
           <folding />
         </state>
       </provider>

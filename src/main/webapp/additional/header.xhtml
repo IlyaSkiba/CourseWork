@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xml:lang="en" lang="en">
+<f:view contentType="text/html">
+    <h:form>
+        <p:menubar styleClass="userMenu">
+            <p:submenu label="#{userModel.firstName}, #{userModel.lastName}" icon="ui-icon-gear">
+                <p:menuitem value="View profile" update="messages" ajax="false"/>
+                <p:menuitem value="Change password" update="messages" ajax="false"/>
+            </p:submenu>
+
+            <p:menuitem value="Quit" url="http://www.primefaces.org" icon="ui-icon-close"/>
+        </p:menubar>
+
+    </h:form>
+</f:view>
+
+</html>

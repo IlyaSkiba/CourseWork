@@ -1,7 +1,6 @@
 package org.jgeek.website.service;
 
 import org.jgeek.website.model.security.UserAccount;
-import org.springframework.dao.DataAccessException;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -29,7 +28,7 @@ public class JpaUserDetailsService implements UserDetailsService, IChangePasswor
 
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException, DataAccessException {
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserDetails userDetails = null;
 
         try {

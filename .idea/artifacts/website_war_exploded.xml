@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="website:war exploded">
-    <output-path>$PROJECT_DIR$/target/website</output-path>
+    <output-path>$PROJECT_DIR$/target/website-1.0.0-SNAPSHOT</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="website/web/Web" />
       <element id="directory" name="WEB-INF">
@@ -55,12 +55,12 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:3.1.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-test:3.1.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.1.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-faces:2.3.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.0.5.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-binding:2.3.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-js:2.3.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-js-resources:2.3.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-webflow:2.3.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-faces:2.2.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-binding:2.2.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-js:2.2.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-js-resources:2.2.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-webflow:2.2.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjtools:1.6.7" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.6.7" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.6.7" />

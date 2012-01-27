@@ -22,7 +22,7 @@ public class TheoreticTestingModel {
     private StudentMainModel studentMainModel;
 
     public void load() {
-        studentMainModel.setMessage(TEMPLATE_URL);
+
 
     }
 

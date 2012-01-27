@@ -2262,18 +2262,8 @@
       <column name="chunk_id" sqlType="oid" length="10" precision="0" nullable="true" jdbcType="-5" />
       <column name="chunk_seq" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
     </table>
-    <table name="group_authority" schema="public" catalog="" type="TABLE">
-      <column name="user_group_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="authorities_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <primary-key name="group_authority_pkey" columns="user_group_id,authorities_id" />
-      <index name="group_authority_authorities_id_key" unique="true" columns="authorities_id" />
-    </table>
-    <table name="group_authority_authorities_id_key" schema="public" catalog="" type="INDEX">
-      <column name="authorities_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
-    </table>
-    <table name="group_authority_pkey" schema="public" catalog="" type="INDEX">
-      <column name="user_group_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
-      <column name="authorities_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+    <table name="role_ID" schema="public" catalog="" type="INDEX">
+      <column name="role_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
     </table>
     <table name="user" schema="public" catalog="" type="TABLE">
       <column name="f_name" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
@@ -2284,25 +2274,34 @@
       <column name="user_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
       <primary-key name="user_pkey" columns="user_id" />
     </table>
-    <table name="user_account_user_authority" schema="public" catalog="" type="TABLE">
-      <column name="user_account_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="userauthorities_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <index name="user_account_user_authority_userauthorities_id_key" unique="true" columns="userauthorities_id" />
-    </table>
-    <table name="user_account_user_authority_userauthorities_id_key" schema="public" catalog="" type="INDEX">
-      <column name="userauthorities_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
-    </table>
-    <table name="user_account_user_group" schema="public" catalog="" type="TABLE">
-      <column name="accounts_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="groups_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <primary-key name="user_account_user_group_pkey" columns="accounts_id,groups_id" />
-    </table>
-    <table name="user_account_user_group_pkey" schema="public" catalog="" type="INDEX">
-      <column name="accounts_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
-      <column name="groups_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
-    </table>
     <table name="user_pkey" schema="public" catalog="" type="INDEX">
       <column name="user_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="user_role_list" schema="public" catalog="" type="TABLE">
+      <column name="user_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="role_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <foreign-key name="user_role_list_user_id_fkey" columns="user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="user_id" />
+      <foreign-key name="user_role_list_role_id_fkey" columns="role_id" ref-table="user_roles" ref-schema="public" ref-catalog="" ref-columns="role_id" />
+    </table>
+    <table name="user_roles" schema="public" catalog="" type="TABLE">
+      <column name="role_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="role_name" sqlType="text" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="role_ID" columns="role_id" />
+      <index name="user_roles_role_name_key" unique="true" columns="role_name" />
+    </table>
+    <table name="user_roles_role_name_key" schema="public" catalog="" type="INDEX">
+      <column name="role_name" sqlType="text" length="2147483647" precision="0" nullable="true" jdbcType="12" />
+    </table>
+    <table name="user_user_roles" schema="public" catalog="" type="TABLE">
+      <column name="user_user_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="userroles_role_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="user_user_roles_pkey" columns="user_user_id,userroles_role_id" />
+      <foreign-key name="fkc2d7463df352fad1" columns="user_user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="user_id" />
+      <foreign-key name="fkc2d7463d6b142e24" columns="userroles_role_id" ref-table="user_roles" ref-schema="public" ref-catalog="" ref-columns="role_id" />
+    </table>
+    <table name="user_user_roles_pkey" schema="public" catalog="" type="INDEX">
+      <column name="user_user_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="userroles_role_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
     </table>
     <procedure name="_pg_char_max_length" schema="information_schema" catalog="" type="2">
       <prototype return="true">
