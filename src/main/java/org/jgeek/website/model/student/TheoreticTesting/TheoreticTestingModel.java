@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Scope;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.util.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -20,10 +21,42 @@ public class TheoreticTestingModel {
     private static final String TEMPLATE_URL = "teoretic_main.xhtml";
     @Inject
     private StudentMainModel studentMainModel;
+    private List<String> courses = Collections.emptyList();
+    private Map<String, List<String>> topics = new HashMap<String, List<String>>();
+    private String selectedCourse;
 
+    //@TODO: переделать под сервисы
     public void load() {
-
-
+        courses = Arrays.asList("Course1", "Course2", "Course2");
+        topics.clear();
+        for (String course : courses) {
+            topics.put(course, Arrays.asList("Topic1", "Topic2"));
+        }
     }
 
+    public List<String> getCourses() {
+        load();
+        return courses;
+    }
+
+    public void setCourses(List<String> courses) {
+        this.courses = courses;
+    }
+
+    public Map<String, List<String>> getTopics() {
+        load();
+        return topics;
+    }
+
+    public void setTopics(Map<String, List<String>> topics) {
+        this.topics = topics;
+    }
+
+    public void setSelectedCourse(String selectedCourse) {
+        this.selectedCourse = selectedCourse;
+    }
+
+    public String getSelectedCourse() {
+        return selectedCourse;
+    }
 }

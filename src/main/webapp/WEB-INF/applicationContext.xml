@@ -30,6 +30,7 @@
     </bean>
 
     <bean id="jpaUserDetailsService" class="org.jgeek.website.service.JpaUserDetailsService"/>
+    <context:component-scan base-package="org.jgeek.website.model.dao"/>
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="${jdbc.driverClassName}"/>

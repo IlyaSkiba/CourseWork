@@ -35,8 +35,10 @@
 
                     <h:form>
                         <p:menu type="sliding" style="width:95%; height:300px;">
+                            <p:menuitem value="Главная" url="main.xhtml"/>
                             <p:submenu label="Теоретическое тестирование">
-                                <p:menuitem value="Пройти тестирование" ajax="false" url="teoretic_main.xhtml"/>
+                                <p:menuitem value="Пройти тестирование" ajax="true" url="teoretic_main.xhtml"
+                                            actionListener="#{theoretic.load}"/>
                                 <p:menuitem value="Дополнительная информация" url="http://www.prime.com.tr"
                                             ajax="false"/>
                             </p:submenu>

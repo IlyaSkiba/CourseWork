@@ -14,7 +14,7 @@
                 <p:menuitem value="Change password" update="messages" ajax="false"/>
             </p:submenu>
 
-            <p:menuitem value="Quit" url="http://www.primefaces.org" icon="ui-icon-close"/>
+            <p:menuitem value="Quit" action="#{authController.doLogout}" icon="ui-icon-close"/>
         </p:menubar>
 
     </h:form>
