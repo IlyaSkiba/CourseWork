@@ -57,6 +57,10 @@ body {
     height: 100%;
 }
 
+button {
+    font-weight: normal !important;
+}
+
 a {
     color: blue;
     outline: none;

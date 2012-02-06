@@ -12,7 +12,6 @@ import java.util.*;
  * User: HomeUser
  * Date: 24.1.12
  * Time: 18.54
- * To change this template use File | Settings | File Templates.
  */
 
 @Scope("session")
@@ -24,13 +23,14 @@ public class TheoreticTestingModel {
     private List<String> courses = Collections.emptyList();
     private Map<String, List<String>> topics = new HashMap<String, List<String>>();
     private String selectedCourse;
+    private String selectedTopic;
 
     //@TODO: переделать под сервисы
     public void load() {
-        courses = Arrays.asList("Course1", "Course2", "Course2");
+        courses = Arrays.asList("Course1", "Course2", "Course3");
         topics.clear();
         for (String course : courses) {
-            topics.put(course, Arrays.asList("Topic1", "Topic2"));
+            topics.put(course, Arrays.asList(course + "->Topic1", course + "->Topic2"));
         }
     }
 
@@ -43,20 +43,26 @@ public class TheoreticTestingModel {
         this.courses = courses;
     }
 
-    public Map<String, List<String>> getTopics() {
+    public List<String> getTopics() {
         load();
-        return topics;
-    }
-
-    public void setTopics(Map<String, List<String>> topics) {
-        this.topics = topics;
+        return topics.get(selectedCourse);
     }
 
     public void setSelectedCourse(String selectedCourse) {
         this.selectedCourse = selectedCourse;
+        selectedTopic = null;
     }
 
     public String getSelectedCourse() {
         return selectedCourse;
     }
+
+    public String getSelectedTopic() {
+        return selectedTopic;
+    }
+
+    public void setSelectedTopic(String selectedTopic) {
+        this.selectedTopic = selectedTopic;
+    }
 }
+
