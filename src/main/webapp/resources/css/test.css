@@ -1,0 +1,9 @@
+.Question {
+    min-height: 300px;
+}
+
+.QuestionNavigationButton {
+    position: relative;
+    right: 5px;
+    float: right;
+}

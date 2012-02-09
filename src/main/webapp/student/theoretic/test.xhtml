@@ -1,0 +1,43 @@
+<html>
+<f:view contentType="text/html"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="global.css"/>
+        <h:outputStylesheet library="css" name="test.css"/>
+    </h:head>
+    <h:body>
+        <h:form id="test">
+
+            <p:panel header="Вопрос">
+                <div class="Question">
+                    <h:outputText value="#{questionModel.question}" escape="false"/>
+                </div>
+            </p:panel>
+
+            <div class="Answers">
+                <p:panel header="Ответ" rendered="#{questionModel.answerType}">
+                    <p:inputTextarea value="#{questionModel.answer}"/>
+                </p:panel>
+                <p:panel header="Ответ" rendered="#{!questionModel.answerType}">
+                    <p:selectManyCheckbox value="#{questionModel.selectedCheck}"
+                                          layout="pageDirection">
+                        <f:selectItems value="#{questionModel.allCheck}"/>
+                    </p:selectManyCheckbox>
+
+                </p:panel>
+            </div>
+            <div class="QuestionNavigationButton">
+                <p:commandButton rendered="#{questionModel.questionNumber!=0}" value="Предыдущий"
+                                 action="#{questionModel.gotoPrev}" update="@form"/>
+                <p:commandButton rendered="#{questionModel.noLast}" value="Следующий" action="#{questionModel.gotoNext}"
+                                 update="@form"/>
+                <p:commandButton rendered="#{!questionModel.noLast}" value="Закончить тест" update="@form"/>
+            </div>
+        </h:form>
+    </h:body>
+</f:view>
+</html>

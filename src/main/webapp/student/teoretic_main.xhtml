@@ -37,7 +37,7 @@
                             </p:selectOneMenu>
                         </div>
                     </p:outputPanel>
-                    <p:commandButton id="passTest" value="Пройти тестирование"
+                    <p:commandButton id="passTest" value="Пройти тестирование" action="#{theoretic.gotoTest}"
                                      rendered="#{(theoretic.selectedTopic!=null)}"/>
                 </h:form>
             </ui:define>
