@@ -2226,6 +2226,7 @@
       <column name="chunk_id" sqlType="oid" length="10" precision="0" nullable="true" jdbcType="-5" />
       <column name="chunk_seq" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
     </table>
+    <table name="pg_toast_16477_index" schema="pg_toast" catalog="" type="SYSTEM TOAST INDEX" />
     <table name="pg_toast_2396_index" schema="pg_toast" catalog="" type="SYSTEM TOAST INDEX">
       <column name="chunk_id" sqlType="oid" length="10" precision="0" nullable="true" jdbcType="-5" />
       <column name="chunk_seq" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
@@ -2262,6 +2263,9 @@
       <column name="chunk_id" sqlType="oid" length="10" precision="0" nullable="true" jdbcType="-5" />
       <column name="chunk_seq" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
     </table>
+    <table name="course" schema="public" catalog="" type="TABLE" />
+    <table name="course_course_id_seq" schema="public" catalog="" type="SEQUENCE" />
+    <table name="course_pkey" schema="public" catalog="" type="INDEX" />
     <table name="role_ID" schema="public" catalog="" type="INDEX">
       <column name="role_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
     </table>

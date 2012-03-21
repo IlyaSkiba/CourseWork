@@ -51,6 +51,7 @@ public class JpaUserDetailsService implements UserDetailsService, IChangePasswor
         userDetails.setPassword(passwordEncoder.encodePassword(newPassword, null));
 
         em.merge(userDetails);
+
     }
 
 

@@ -3,7 +3,10 @@ package org.jgeek.website.model.global;
 import org.jgeek.website.model.security.UserAccount;
 import org.jgeek.website.service.JpaUserDetailsService;
 import org.springframework.context.annotation.Scope;
+import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -20,11 +23,15 @@ public class UserModel {
 
     @Inject
     JpaUserDetailsService userService;
+    @Inject
+    ShaPasswordEncoder passwordEncoder;
 
     private String userName;
     private String firstName;
     private String middleName;
     private String lastName;
+    private String oldPassword;
+    private String newPassword;
 
     public void initializeByUsername() {
         UserAccount userDto = (UserAccount) userService.loadUserByUsername(userName);
@@ -65,8 +72,39 @@ public class UserModel {
         this.lastName = lastName;
     }
 
+    <<<<<<<HEAD
 
     public UserAccount getUser() {
         return (UserAccount) userService.loadUserByUsername(userName);
     }
+
+    =======
+
+    public String getOldPassword() {
+        return oldPassword;
+    }
+
+    public void setOldPassword(String oldPassword) {
+        this.oldPassword = oldPassword;
+    }
+
+    public String getNewPassword() {
+        return newPassword;
+    }
+
+    public void setNewPassword(String newPassword) {
+        this.newPassword = newPassword;
+    }
+
+    public void changePassword() {
+        if (passwordEncoder.isPasswordValid(userService.loadUserByUsername(userName).getPassword(), oldPassword, null)) {
+
+            userService.changePassword(userName, newPassword);
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Пароль успешно сменен", null));
+        } else {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Введенный пароль не верен", null));
+        }
+    }
+
+    >>>>>>>d951fe7aa37681deaef154b86da71e40e38b8c99
 }

@@ -10,7 +10,8 @@
     <h:form>
         <p:menubar styleClass="userMenu">
             <p:submenu label="#{userModel.firstName}, #{userModel.lastName}" icon="ui-icon-gear">
-                <p:menuitem value="View profile" update="messages" ajax="false"/>
+                <p:menuitem value="View profile" update="messages" ajax="false"
+                            url="../secured/account/accountPage.xhtml"/>
                 <p:menuitem value="Change password" update="messages" ajax="false"/>
             </p:submenu>
 
