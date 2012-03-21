@@ -18,7 +18,7 @@
         <intercept-url pattern="/*" access="permitAll"/>
 
         <form-login
-                login-processing-url="/j_spring_security_check"
+                login-processing-url="/login_check"
                 login-page="/index.xhtml"
                 default-target-url="/student/main.xhtml"
                 authentication-failure-url="/index.xhtml"/>
@@ -31,11 +31,17 @@
         <session-management>
             <concurrency-control max-sessions="1" error-if-maximum-exceeded="true"/>
         </session-management>
-
+        <custom-filter ref="authenticationFilter" position="FIRST"/>
     </http>
 
 
     <beans:bean class="org.springframework.security.authentication.encoding.ShaPasswordEncoder" id="passwordEncoder"/>
+    <beans:bean class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter"
+                id="authenticationFilter">
+        <beans:property name="passwordParameter" value="j_password_input"/>
+        <beans:property name="authenticationManager" ref="authenticationManager"/>
+        <beans:property name="filterProcessesUrl" value="/login_check"/>
+    </beans:bean>
 
     <authentication-manager alias="authenticationManager">
         <authentication-provider user-service-ref="jpaUserDetailsService">

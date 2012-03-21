@@ -38,13 +38,8 @@ public class AuthController {
      * @throws ServletException
      */
     public String doLogin() throws IOException, ServletException {
-        ExternalContext context = FacesContext.getCurrentInstance().getExternalContext();
-        RequestDispatcher dispatcher = ((ServletRequest) context.getRequest())
-                .getRequestDispatcher("/j_spring_security_check");
-        dispatcher.forward((ServletRequest) context.getRequest(), (ServletResponse) context.getResponse());
-        FacesContext.getCurrentInstance().responseComplete();
         userModel.initializeByUsername();
-        return null;
+        return String.format("/%1$s/main.xhtml", userModel.getUser().getUserRoles().iterator().next().getRoleName().toLowerCase().replace("role_", ""));
     }
 
     /**

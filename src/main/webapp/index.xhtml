@@ -12,7 +12,7 @@
 </h:head>
 <h:body>
     <h:form prependId="false">
-        <p:messages showDetail="false" autoUpdate="true"/>
+        <p:growl autoUpdate="true"/>
 
         <h:panelGrid columns="2">
             <f:validateBean>
@@ -20,13 +20,14 @@
                 <p:inputText id="j_username" required="true" value="${userModel.userName}"/>
 
                 <h:outputLabel for="j_password" value="Пароль:"/>
-                <h:inputSecret id="j_password" required="true"/>
+                <p:password id="j_password" required="true"/>
                 <h:outputLabel for="_spring_security_remember_me" value="Запомнить меня:"/>
                 <p:selectBooleanCheckbox id="_spring_security_remember_me"/>
             </f:validateBean>
         </h:panelGrid>
 
-        <p:commandButton actionListener="#{authController.doLogin}" value="Войти" id="login" ajax="false"/>
+        <p:commandButton action="#{authController.doLogin}" ajax="false" process="@all" update="@all" value="Войти"
+                         id="login"/>
     </h:form>
 </h:body>
 </html>

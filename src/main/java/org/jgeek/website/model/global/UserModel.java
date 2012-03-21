@@ -64,4 +64,9 @@ public class UserModel {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+
+    public UserAccount getUser() {
+        return (UserAccount) userService.loadUserByUsername(userName);
+    }
 }
