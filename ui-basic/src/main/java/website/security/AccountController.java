@@ -1,5 +1,6 @@
 package website.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -7,7 +8,6 @@ import website.service.IChangePassword;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
@@ -19,7 +19,7 @@ import javax.inject.Named;
 @Scope("request")
 public class AccountController {
 
-    @Inject
+    @Autowired
     private IChangePassword changePasswordDao;
 
     private String newPassword;

@@ -1,8 +1,8 @@
 package website.model.student.TheoreticTesting;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
-import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.IOException;
 import java.util.Arrays;
@@ -16,7 +16,7 @@ import java.util.List;
 @Scope("session")
 @Named()
 public class QuestionModel {
-    @Inject
+    @Autowired
     private TheoreticTestingModel model;
     private String question = "First Question";
     private boolean answerType = false;

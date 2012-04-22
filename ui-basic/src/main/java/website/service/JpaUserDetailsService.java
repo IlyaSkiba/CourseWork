@@ -1,13 +1,13 @@
 package website.service;
 
 import com.bsu.server.dto.security.UserAccount;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
@@ -23,7 +23,7 @@ public class JpaUserDetailsService implements UserDetailsService, IChangePasswor
     @PersistenceContext
     private EntityManager em;
 
-    @Inject
+    @Autowired
     private PasswordEncoder passwordEncoder;
 
 

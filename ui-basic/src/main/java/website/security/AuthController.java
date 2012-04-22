@@ -44,7 +44,7 @@ public class AuthController {
         dispatcher.forward((ServletRequest) context.getRequest(), (ServletResponse) context.getResponse());
         FacesContext.getCurrentInstance().responseComplete();
         userModel.initializeByUsername();
-        return null;
+        return "/student/main.xhtml";
     }
 
     /**

@@ -1,13 +1,13 @@
 package website.model.global;
 
 import com.bsu.server.dto.security.UserAccount;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 import website.service.JpaUserDetailsService;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
@@ -19,9 +19,9 @@ import javax.inject.Named;
 @Named
 public class UserModel {
 
-    @Inject
+    @Autowired
     JpaUserDetailsService userService;
-    @Inject
+    @Autowired
     ShaPasswordEncoder passwordEncoder;
 
     private String userName;

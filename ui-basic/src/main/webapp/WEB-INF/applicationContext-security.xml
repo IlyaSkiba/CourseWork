@@ -20,7 +20,7 @@
         <form-login
                 login-processing-url="/login_check"
                 login-page="/index.xhtml"
-                default-target-url="/student/main.xhtml"
+                authentication-success-handler-ref="redirectController"
                 authentication-failure-url="/index.xhtml"/>
 
         <logout invalidate-session="true"
