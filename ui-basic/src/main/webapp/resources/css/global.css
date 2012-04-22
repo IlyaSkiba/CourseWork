@@ -1,5 +1,5 @@
 .userMenu {
-
+    top: 0px !important;
     position: absolute !important;
     right: 1px !important;
 }
@@ -151,4 +151,14 @@ input {
     background-size: contain;
     width: 100px;
     height: 100px;
+}
+
+.headerText {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+    color: black;
+    height: 100%;
+    top: 30px;
 }

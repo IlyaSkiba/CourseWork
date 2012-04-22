@@ -16,9 +16,13 @@
         <ui:decorate template="../structure.xhtml">
             <ui:define name="content">
                 <div class="endTestHeader">
-                    <h:outputText value="Тест завершен"></h:outputText>
-                    <h:outputText value="Ваш результат:"></h:outputText>
-                    <h:outputText value="#{theoreticResult.mark}"></h:outputText>
+                    <div>
+                        <h:outputText value="Тест завершен"></h:outputText>
+                    </div>
+                    <div>
+                        <h:outputText value="Ваш результат:"></h:outputText>
+                        <h:outputText value="#{theoreticResult.mark}"></h:outputText>
+                    </div>
                 </div>
 
             </ui:define>

@@ -104,4 +104,8 @@ public class QuestionModel {
             return false;
         else return true;
     }
+
+    public String gotoEnd() {
+        return "./end_test.xhtml";
+    }
 }

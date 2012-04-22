@@ -35,7 +35,9 @@
                                  action="#{questionModel.gotoPrev}" update="@form"/>
                 <p:commandButton rendered="#{questionModel.noLast}" value="Следующий" action="#{questionModel.gotoNext}"
                                  update="@form"/>
-                <p:commandButton rendered="#{!questionModel.noLast}" value="Закончить тест" update="@form"/>
+                <p:commandButton rendered="#{!questionModel.noLast}" value="Закончить тест"
+                                 action="#{questionModel.gotoEnd}" ajax="false"/>
+
             </div>
         </h:form>
     </h:body>

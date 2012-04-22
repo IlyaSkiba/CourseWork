@@ -7,25 +7,38 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
 <h:head>
-    <title>JGeek</title>
+    <title>Testing system</title>
+    <h:outputStylesheet library="css" name="start.css"/>
 </h:head>
 <h:body>
+    <div class="headerText ui-widget-header">
+        <h:outputText value="Система проверки знаний студентов"/>
+    </div>
     <h:form prependId="false">
         <p:growl autoUpdate="true"/>
 
-        <h:panelGrid columns="2">
-            <f:validateBean>
-                <h:outputLabel for="j_username" value="Имя пользователя (логин):"/>
-                <p:inputText id="j_username" required="true" value="#{userModel.userName}"/>
+        <div class="imageContainer">
+            <p:imageSwitch effect="fade" styleClass="forImage">
+                <ui:repeat value="#{startPage.images}" var="image">
+                    <p:graphicImage value="/resources/images/startImages/#{image}"/>
+                </ui:repeat>
+            </p:imageSwitch>
+        </div>
 
-                <h:outputLabel for="j_password" value="Пароль:"/>
-                <p:password id="j_password" required="true"/>
-                <h:outputLabel for="_spring_security_remember_me" value="Запомнить меня:"/>
-                <p:selectBooleanCheckbox id="_spring_security_remember_me"/>
-            </f:validateBean>
-        </h:panelGrid>
+        <div class="registerForm">
+            <h:panelGrid columns="2">
+                <f:validateBean>
+                    <h:outputLabel for="j_username" value="Имя пользователя (логин):"/>
+                    <p:inputText id="j_username" required="true" value="#{userModel.userName}"/>
+                    <h:outputLabel for="j_password" value="Пароль:"/>
+                    <p:password id="j_password" required="true"/>
+                    <h:outputLabel for="_spring_security_remember_me" value="Запомнить меня:"/>
+                    <p:selectBooleanCheckbox id="_spring_security_remember_me"/>
+                </f:validateBean>
+            </h:panelGrid>
 
-        <p:commandButton action="#{authController.doLogin}" value="Войти" id="login" ajax="false"/>
+            <p:commandButton action="#{authController.doLogin}" value="Войти" id="login" ajax="false"/>
+        </div>
     </h:form>
 </h:body>
 </html>

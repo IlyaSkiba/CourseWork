@@ -1,0 +1,27 @@
+.registerForm {
+    position: relative;
+    float: right;
+    display: block;
+    width: auto;
+}
+
+.headerText {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+    color: black;
+    height: 100px;
+}
+
+.forImage {
+    text-align: center;
+    left: 50%;
+}
+
+.imageContainer {
+    float: left;
+    width: 80%;
+    height: 70%;
+    min-height: 400px;
+}
