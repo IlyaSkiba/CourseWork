@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html">
+    <h:head>
+        <title>Теоретическое тестирование</title>
+    </h:head>
+    <h:body>
+        <ui:decorate template="structure.xhtml">
+            <ui:define name="content">
+                <h:form>
+                    <div class="elementBlock">
+                        <h:outputLabel for="courses">Выберите курс: </h:outputLabel>
+                        <p:selectOneMenu id="courses" value="#{theoretic.selectedCourse}">
+                            <f:selectItem itemLabel="" itemValue=""/>
+                            <f:selectItems value="#{theoretic.courses}" var="course" itemLabel="#{course}"
+                                           itemValue="#{course}"/>
+                            <p:ajax update="@form"/>
+                        </p:selectOneMenu>
+                    </div>
+
+                    <p:outputPanel id="topicsPanel"
+                                   rendered="#{theoretic.selectedCourse!=null and theoretic.selectedCourse!=''}"
+                                   autoUpdate="true">
+                        <div class="elementBlock">
+                            <h:outputLabel for="topics">Выберите тему: </h:outputLabel>
+                            <p:selectOneMenu id="topics" widgetVar="topics" value="#{theoretic.selectedTopic}">
+                                <f:selectItem itemLabel="" itemValue=""/>
+                                <f:selectItems value="#{theoretic.topics}" var="topic"
+                                               itemLabel="#{topic}"
+                                               itemValue="#{topic}"/>
+                                <p:ajax update="@form"/>
+                            </p:selectOneMenu>
+                        </div>
+                    </p:outputPanel>
+                    <p:commandButton id="passTest" value="Пройти тестирование" action="#{theoretic.gotoTest}"
+                                     rendered="#{(theoretic.selectedTopic!=null)}"/>
+                </h:form>
+            </ui:define>
+        </ui:decorate>
+    </h:body>
+</f:view>
+</html>

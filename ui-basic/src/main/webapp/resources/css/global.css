@@ -1,0 +1,154 @@
+.userMenu {
+
+    position: absolute !important;
+    right: 1px !important;
+}
+
+.ui-state-hover {
+    font-weight: normal !important;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+abbr, acronym {
+    border: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+    height: 100%;
+}
+
+button {
+    font-weight: normal !important;
+}
+
+a {
+    color: blue;
+    outline: none;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    margin: 0 0 18px
+}
+
+img {
+    border: none;
+}
+
+input {
+    vertical-align: middle;
+}
+
+#wrapper {
+    min-width: 1280px;
+    max-width: 1900px;
+    margin: 0 auto;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+    height: 100px;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#middle {
+    width: 100%;
+    padding: 0 0 100px;
+    height: 1%;
+    position: relative;
+}
+
+#middle:after {
+    content: '.';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+#container {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+#content {
+    padding: 0 0 0 270px;
+}
+
+/* Sidebar Left
+-----------------------------------------------------------------------------*/
+#sideLeft {
+    float: left;
+    width: 250px;
+    margin-left: -100%;
+    position: relative;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+    margin: -100px auto 0;
+    min-width: 1280px;
+    max-width: 1900px;
+    height: 50px;
+    position: relative;
+}
+
+.logo {
+    position: relative;
+    float: left;
+    background-image: url("../resources/images/logo.png");
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+}

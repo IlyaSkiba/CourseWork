@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>JGeek</title>
+</h:head>
+<h:body>
+    <h:form prependId="false">
+        <p:growl autoUpdate="true"/>
+
+        <h:panelGrid columns="2">
+            <f:validateBean>
+                <h:outputLabel for="j_username" value="Имя пользователя (логин):"/>
+                <p:inputText id="j_username" required="true" value="#{userModel.userName}"/>
+
+                <h:outputLabel for="j_password" value="Пароль:"/>
+                <p:password id="j_password" required="true"/>
+                <h:outputLabel for="_spring_security_remember_me" value="Запомнить меня:"/>
+                <p:selectBooleanCheckbox id="_spring_security_remember_me"/>
+            </f:validateBean>
+        </h:panelGrid>
+
+        <p:commandButton action="#{authController.doLogin}" value="Войти" id="login" ajax="false"/>
+    </h:form>
+</h:body>
+</html>
