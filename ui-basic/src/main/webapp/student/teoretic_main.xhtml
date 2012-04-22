@@ -19,8 +19,8 @@
                         <h:outputLabel for="courses">Выберите курс: </h:outputLabel>
                         <p:selectOneMenu id="courses" value="#{theoretic.selectedCourse}">
                             <f:selectItem itemLabel="" itemValue=""/>
-                            <f:selectItems value="#{theoretic.courses}" var="course" itemLabel="#{course}"
-                                           itemValue="#{course}"/>
+                            <f:selectItems value="#{theoretic.courses}" var="course" itemLabel="#{course.courseName}"
+                                           itemValue="#{course.id}"/>
                             <p:ajax update="@form"/>
                         </p:selectOneMenu>
                     </div>
@@ -33,8 +33,8 @@
                             <p:selectOneMenu id="topics" widgetVar="topics" value="#{theoretic.selectedTopic}">
                                 <f:selectItem itemLabel="" itemValue=""/>
                                 <f:selectItems value="#{theoretic.topics}" var="topic"
-                                               itemLabel="#{topic}"
-                                               itemValue="#{topic}"/>
+                                               itemLabel="#{topic.name}"
+                                               itemValue="#{topic.id}"/>
                                 <p:ajax update="@form"/>
                             </p:selectOneMenu>
                         </div>

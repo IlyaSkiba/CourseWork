@@ -2,19 +2,18 @@ package com.bsu.server.dto;
 
 import com.bsu.server.dto.security.UserAccount;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 /**
  * User: HomeUser
  * Date: 15.4.12
  * Time: 9.49
  */
-@Entity(name = "theme")
+@Entity
+@Table(name = "theme", schema = "public")
 public class ThemeDto {
     @Id
+    @Column(name = "theme_id")
     private Integer id;
 
     @OneToOne
@@ -23,7 +22,7 @@ public class ThemeDto {
     @Column(name = "theme_name")
     private String name;
 
-    @OneToOne
+    @ManyToOne
     private CourseDto courseDto;
 
 

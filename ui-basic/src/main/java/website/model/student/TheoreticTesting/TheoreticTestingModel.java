@@ -3,13 +3,16 @@ package website.model.student.TheoreticTesting;
 import com.bsu.server.controller.CourseController;
 import com.bsu.server.controller.ThemeController;
 import com.bsu.server.dto.CourseDto;
+import com.bsu.server.dto.ThemeDto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
 import javax.faces.context.FacesContext;
-import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -22,64 +25,57 @@ import java.util.*;
 @Named("theoretic")
 public class TheoreticTestingModel {
     private static final String TEMPLATE_URL = "teoretic_main.xhtml";
-    private List<String> courses = new ArrayList<String>();
-    private Map<String, List<String>> topics = new HashMap<String, List<String>>();
-    private String selectedCourse;
-    private String selectedTopic;
+    private List<CourseDto> courses = new ArrayList<CourseDto>();
+    private List<ThemeDto> topics = new ArrayList<ThemeDto>();
+    private Integer selectedCourse;
+    private Integer selectedTopic;
     private List<StudentAnswer> allStudentAnswer;
     private List<Integer> idQuestionList;
-    @Inject
+    @Autowired
     private CourseController courseController;
-    @Inject
+    @Autowired
     private ThemeController themeController;
 
     public List<StudentAnswer> getAllStudentAnswer() {
         return allStudentAnswer;
     }
 
-    //@TODO: переделать под сервисы
     public void load() {
-        List<CourseDto> courseDtoList = courseController.loadCourseList();
-        if (courses == null) {
-            courses = new ArrayList<String>();
-        } else courses.clear();
-        for (CourseDto courseDto : courseDtoList) {
-            courses.add(courseDto.getCourseName());
-        }
+        courses = courseController.loadCourseList();
         topics.clear();
-        for (String course : courses) {
-            topics.put(course, Arrays.asList(course + "->Topic1", course + "->Topic2"));
+        if (selectedCourse != null) {
+            topics = themeController.getThemesForCourse(selectedCourse);
         }
     }
 
-    public List<String> getCourses() {
-        load();
+    public List<CourseDto> getCourses() {
+        if (courses.isEmpty()) load();
         return courses;
     }
 
-    public void setCourses(List<String> courses) {
+    public void setCourses(List<CourseDto> courses) {
         this.courses = courses;
     }
 
-    public List<String> getTopics() {
+    public List<ThemeDto> getTopics() {
         load();
-        return topics.get(selectedCourse);
+        return topics;
     }
 
-    public void setSelectedCourse(String selectedCourse) {
+    public void setSelectedCourse(Integer selectedCourse) {
         this.selectedCourse = selectedCourse;
         selectedTopic = null;
     }
 
-    public String getSelectedCourse() {
+    public Integer getSelectedCourse() {
         return selectedCourse;
     }
 
-    public String getSelectedTopic() {
+    public Integer getSelectedTopic() {
         return selectedTopic;
     }
 
-    public void setSelectedTopic(String selectedTopic) {
+    public void setSelectedTopic(Integer selectedTopic) {
         this.selectedTopic = selectedTopic;
     }
 
