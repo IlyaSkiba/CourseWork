@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html">
+    <h:head>
+        <title>Teacher page: </title>
+        <h:outputStylesheet library="css" name="global.css"/>
+    </h:head>
+    <h:body>
+
+        <div id="wrapper">
+
+            <div id="header" class="ui-widget-header">
+
+                <ui:include src="../additional/header.xhtml"/>
+            </div>
+            <div id="middle">
+
+                <div id="container">
+                    <div id="content">
+                        <p:growl id="messages"/>
+                        <ui:insert name="content">Default Center</ui:insert>
+                    </div>
+                    <!-- #content-->
+                </div>
+                <!-- #container-->
+
+                <div class="sidebar" id="sideLeft">
+
+                    <h:form>
+                        <p:menu type="sliding" style="width:95%; height:300px;">
+                            <p:menuitem value="Главная" url="/teacher/main.xhtml"/>
+                            <p:submenu label="Теоретическое тестирование">
+                                <p:menuitem value="Предложить тестовое задание" ajax="true"
+                                            url="/teacher/teoretic.xhtml"
+                                            actionListener="#{theoreticTeacher.load}"/>
+                            </p:submenu>
+                            <p:submenu label="Тестирование задачи">
+                                <p:menuitem value="Предложить задачу" update="content" ajax="false"/>
+                                <p:menuitem value="Просмотреть тесты к задаче" update="content" ajax="false"/>
+                                <p:menuitem value="Назначить задачу студенту" update="content" ajax="false"/>
+                            </p:submenu>
+                            <p:submenu label="Управление темами">
+                                <p:menuitem value="Добавить тему" update="content" ajax="true"
+                                            url="/teacher/topics/add_topic.xhtml"/>
+                                <p:menuitem value="Изменить тему" update="content" ajax="true"
+                                            url="/teacher/topics/change_topic.xhtml"/>
+                                <p:menuitem value="Удалить тему" update="content" ajax="true"
+                                            url="/teacher/topics/delete_topic.xhtml"/>
+                            </p:submenu>
+                            <p:submenu label="Статистика">
+                                <p:menuitem value="Результаты по курсу" url="http://www.prime.com.tr"/>
+                                <p:menuitem value="Статистика" url="http://www.primefaces.org"/>
+                            </p:submenu>
+                        </p:menu>
+
+                    </h:form>
+                </div>
+
+            </div>
+            <!-- #middle-->
+
+        </div>
+        <!-- #wrapper -->
+
+        <div id="footer">
+
+            <h:outputText value="South unit content."/>
+        </div>
+    </h:body>
+</f:view>
+</html>
