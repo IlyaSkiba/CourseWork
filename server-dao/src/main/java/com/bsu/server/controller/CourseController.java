@@ -21,6 +21,6 @@ public class CourseController {
     private EntityManager em;
 
     public List<CourseDto> loadCourseList() {
-        return (List<CourseDto>) em.createQuery("from CourseDto order by courseName").getResultList();
+        return em.createQuery("from CourseDto order by courseName", CourseDto.class).getResultList();
     }
 }

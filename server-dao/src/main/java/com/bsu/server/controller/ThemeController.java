@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -23,7 +23,7 @@ public class ThemeController {
 
     public List<ThemeDto> getThemesForCourse(Integer courseId) {
         if (courseId == null) return Collections.emptyList();
-        Query q = em.createQuery("from ThemeDto where courseDto.id in (:courseId)");
+        TypedQuery<ThemeDto> q = em.createQuery("from ThemeDto where courseDto.id in (:courseId)", ThemeDto.class);
         q.setParameter("courseId", Arrays.asList(courseId));
         return q.getResultList();
     }

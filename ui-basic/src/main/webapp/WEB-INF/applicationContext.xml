@@ -10,7 +10,7 @@
 
 
     <context:component-scan base-package="website"/>
-    <context:component-scan base-package="com.bsu.server.controller"/>
+    <context:component-scan base-package="com.bsu.server"/>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
           p:entityManagerFactory-ref="entityManagerFactory"/>
