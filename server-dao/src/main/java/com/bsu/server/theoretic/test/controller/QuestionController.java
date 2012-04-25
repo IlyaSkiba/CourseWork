@@ -17,9 +17,15 @@ public class QuestionController {
     @PersistenceContext
     private EntityManager em;
 
-    public List<Integer> getQuestionIds(Integer themeId) {
+    public List<Integer> getQuestionIds(Integer testId) {
         TypedQuery<Integer> query = em.createQuery("select id from QuestionDto where test.id = :themeId", Integer.class);
-        query.setParameter("themeId", themeId);
+        query.setParameter("themeId", testId);
+        return query.getResultList();
+    }
+
+    public List<QuestionDto> getQuestionsForTest(Integer testId) {
+        TypedQuery<QuestionDto> query = em.createQuery("from QuestionDto where test.id = :themeId", QuestionDto.class);
+        query.setParameter("themeId", testId);
         return query.getResultList();
     }
 

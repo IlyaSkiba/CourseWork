@@ -52,4 +52,8 @@ public class QuestionDto {
     public void setTest(TestDto test) {
         this.test = test;
     }
+
+    public Integer getId() {
+        return id;
+    }
 }
