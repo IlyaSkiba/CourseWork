@@ -19,10 +19,10 @@
             </p:panel>
 
             <div class="Answers">
-                <p:panel header="Ответ" rendered="#{questionModel.answerType}">
-                    <p:inputTextarea value="#{questionModel.answer}"/>
+                <p:panel header="Ответ" styleClass="answer" rendered="#{questionModel.answerType}">
+                    <p:inputText styleClass="field" value="#{questionModel.answer}"/>
                 </p:panel>
-                <p:panel header="Ответ" rendered="#{!questionModel.answerType}">
+                <p:panel header="Ответ" styleClass="answer" rendered="#{!questionModel.answerType}">
                     <p:selectManyCheckbox value="#{questionModel.selectedCheck}"
                                           layout="pageDirection">
                         <f:selectItems value="#{questionModel.allCheck}"/>

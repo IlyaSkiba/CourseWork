@@ -41,14 +41,15 @@
                         </div>
                     </p:outputPanel>
 
-                    <div>
-                        <h:outputText value="Добавьте задание одним из способов:"/>
-                    </div>
-                    <div>
-                        <h:outputText value="1. Добавьте задание вручную:"/>
-                    </div>
+
                     <h:form id="testForm"
                             rendered="#{theoreticTeacher.selectedTopic!=null and theoreticTeacher.selectedTopic!=''}">
+                        <div>
+                            <h:outputText value="Добавьте задание одним из способов:"/>
+                        </div>
+                        <div>
+                            <h:outputText value="1. Добавьте задание вручную:"/>
+                        </div>
                         <p:editor id="editor" value="#{theoreticTeacher.value}" width="600"/>
                         <h:panelGrid columns="2" style="margin-top:10px">
                             <p:commandButton id="submitButton" value="Submit" update="display" oncomplete="dlg.show()"

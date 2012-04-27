@@ -102,13 +102,17 @@ public class QuestionModel {
     }
 
     public void gotoPrev() throws IOException {
+        if (model.getAllStudentAnswer().size() > questionNumber) {
+            model.getAllStudentAnswer().set(questionNumber, saveAnswer());
+        } else {
+            model.getAllStudentAnswer().add(saveAnswer());
+        }
         questionNumber--;
-        model.getAllStudentAnswer().set(questionNumber, saveAnswer());
         initializeQuestion(questionNumber);
         if (isAnswerType()) {
-            setAnswer(model.getAllStudentAnswer().get(questionNumber - 1).getAnsvStr());
+            setAnswer(model.getAllStudentAnswer().get(questionNumber).getAnsvStr());
         } else {
-            setSelectedCheck(model.getAllStudentAnswer().get(questionNumber - 1).getAnsvCheck());
+            setSelectedCheck(model.getAllStudentAnswer().get(questionNumber).getAnsvCheck());
         }
     }
 
