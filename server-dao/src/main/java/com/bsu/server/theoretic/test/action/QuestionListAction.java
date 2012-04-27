@@ -1,4 +1,4 @@
-package com.bsu.server.theoretic.test;
+package com.bsu.server.theoretic.test.action;
 
 import com.bsu.server.theoretic.test.dto.QuestionDto;
 

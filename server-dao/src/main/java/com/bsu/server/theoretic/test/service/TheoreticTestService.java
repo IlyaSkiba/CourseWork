@@ -1,10 +1,13 @@
 package com.bsu.server.theoretic.test.service;
 
-import com.bsu.server.theoretic.test.QuestionListAction;
+import com.bsu.server.theoretic.test.action.QuestionListAction;
 import com.bsu.server.theoretic.test.controller.QuestionController;
 import com.bsu.server.theoretic.test.controller.TestController;
+import com.bsu.server.theoretic.test.dto.AnswerDto;
 import com.bsu.server.theoretic.test.dto.QuestionDto;
 import com.bsu.server.theoretic.test.dto.TestDto;
+import com.bsu.server.theoretic.test.student.controller.StudentAnswerController;
+import com.bsu.server.theoretic.test.student.dto.StudentAnswerDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,8 +27,16 @@ public class TheoreticTestService {
     @Autowired
     private TestController testController;
 
+    @Autowired
+    private StudentAnswerController studentAnswerController;
+
     public List<Integer> getQuestionIds(Integer themeId) {
-        Integer testId = testController.getTestFromTheme(themeId).getId();
+        Integer testId;
+        try {
+            testId = testController.getTestFromTheme(themeId).getId();
+        } catch (NullPointerException e) {
+            return Collections.emptyList();
+        }
         List<QuestionDto> questions = questionController.getQuestionsForTest(testId);
         if (questions == null || questions.isEmpty()) {
             return Collections.emptyList();
@@ -64,5 +75,36 @@ public class TheoreticTestService {
 
     public QuestionDto getQuestion(Integer questionId) {
         return questionController.getQuestionDto(questionId);
+    }
+
+    public int countResult(List<Integer> questionIds) {
+        double result = 0;
+        double maxResult = 0;
+        for (Integer questionId : questionIds) {
+            List<AnswerDto> rightAnswers = questionController.getRightAnswers(questionId);
+            double correctives = 0;
+            List<StudentAnswerDto> answerDtos = studentAnswerController.getAnswers(questionId);
+            for (StudentAnswerDto studentAnswerDto : answerDtos) {
+                for (AnswerDto rightAnswer : rightAnswers) {
+                    if (rightAnswer.getTextAnswer().trim().equalsIgnoreCase(studentAnswerDto.getAnswerText().trim())) {
+                        correctives += 1;
+                    }
+                }
+            }
+            correctives = correctives * 2 - answerDtos.size();
+            if (correctives <= 0) continue;
+            result += correctives * questionController.getQuestionDto(questionId).getWeight();
+            maxResult += questionController.getQuestionDto(questionId).getWeight();
+        }
+        return (int) (result / maxResult * 100);
+    }
+
+    public void saveResults(List<StudentAnswerDto> answerDtos) {
+        studentAnswerController.saveResults(answerDtos);
+
+    }
+
+    public List<AnswerDto> getAnswers(Integer questionId) {
+        return questionController.getAnswers(questionId);
     }
 }

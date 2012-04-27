@@ -9,6 +9,7 @@ package com.bsu.server.controller;
 
 import com.bsu.server.dto.CourseDto;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -20,6 +21,7 @@ public class CourseController {
     @PersistenceContext
     private EntityManager em;
 
+    @Transactional(readOnly = false)
     public List<CourseDto> loadCourseList() {
         return em.createQuery("from CourseDto order by courseName", CourseDto.class).getResultList();
     }

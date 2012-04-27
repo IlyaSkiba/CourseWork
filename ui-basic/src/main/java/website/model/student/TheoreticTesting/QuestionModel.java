@@ -1,11 +1,14 @@
 package website.model.student.TheoreticTesting;
 
+import com.bsu.server.theoretic.test.dto.AnswerDto;
+import com.bsu.server.theoretic.test.dto.QuestionDto;
+import com.bsu.server.theoretic.test.service.TheoreticTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
 import javax.inject.Named;
 import java.io.IOException;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,7 +21,9 @@ import java.util.List;
 public class QuestionModel {
     @Autowired
     private TheoreticTestingModel model;
-    private String question = "First Question";
+    @Autowired
+    private TheoreticTestService testService;
+    private String question;
     private boolean answerType = false;
     private String answer;
     private List<String> selectedCheck;
@@ -30,6 +35,20 @@ public class QuestionModel {
 
     private int questionNumber = 0;
 
+    public void initializeQuestion(Integer questionId) {
+        QuestionDto question = testService.getQuestion(model.getIdQuestionList().get(questionId));
+        setQuestion(question.getQuestion());
+        setAnswerType(question.getQuestionType() > 0);
+        List<AnswerDto> answerDtoList = testService.getAnswers(model.getIdQuestionList().get(questionId));
+        if (!isAnswerType()) {
+            List<String> checks = new ArrayList<String>();
+            for (AnswerDto answer : answerDtoList) {
+                checks.add(answer.getTextAnswer());
+            }
+            setAllCheck(checks);
+        }
+    }
+
     public List<String> getSelectedCheck() {
         return selectedCheck;
     }
@@ -38,12 +57,7 @@ public class QuestionModel {
         this.selectedCheck = selectedCheck;
     }
 
-    private void load() {
-        allCheck = Arrays.asList("Ans1", "Ans2", "Ans3", "Ans4");
-    }
-
     public List<String> getAllCheck() {
-        load();
         return allCheck;
     }
 
@@ -61,6 +75,9 @@ public class QuestionModel {
     }
 
     public String getQuestion() {
+        if (question == null || question.isEmpty()) {
+            initializeQuestion(questionNumber);
+        }
         return question;
     }
 
@@ -78,6 +95,7 @@ public class QuestionModel {
 
     private StudentAnswer saveAnswer() {
         StudentAnswer ans = new StudentAnswer();
+        ans.setQuestionId(model.getIdQuestionList().get(questionNumber));
         if (answerType) ans.setAnsvStr(answer);
         else ans.setAnsvCheck(selectedCheck);
         return ans;
@@ -86,26 +104,45 @@ public class QuestionModel {
     public void gotoPrev() throws IOException {
         questionNumber--;
         model.getAllStudentAnswer().set(questionNumber, saveAnswer());
-        //@TODO:загрузить новый вопрос и ответы
+        initializeQuestion(questionNumber);
+        if (isAnswerType()) {
+            setAnswer(model.getAllStudentAnswer().get(questionNumber - 1).getAnsvStr());
+        } else {
+            setSelectedCheck(model.getAllStudentAnswer().get(questionNumber - 1).getAnsvCheck());
+        }
     }
 
     public void gotoNext() throws IOException {
-        if (model.getAllStudentAnswer().size() != questionNumber) {
+        if (model.getAllStudentAnswer().size() > questionNumber) {
             model.getAllStudentAnswer().set(questionNumber, saveAnswer());
         } else {
             model.getAllStudentAnswer().add(saveAnswer());
         }
         questionNumber++;
-        //@TODO:загрузить новый вопрос и ответы
+        initializeQuestion(questionNumber);
+        if (model.getAllStudentAnswer().size() > questionNumber) {
+            if (isAnswerType()) {
+                setAnswer(model.getAllStudentAnswer().get(questionNumber).getAnsvStr());
+            } else {
+                setSelectedCheck(model.getAllStudentAnswer().get(questionNumber).getAnsvCheck());
+            }
+        } else {
+            setAnswer(null);
+            setSelectedCheck(new ArrayList<String>());
+        }
+
     }
 
     public boolean isNoLast() {
-        if (questionNumber == model.getIdQuestionList().size())
-            return false;
-        else return true;
+        return questionNumber != model.getIdQuestionList().size() - 1;
     }
 
     public String gotoEnd() {
+        if (model.getAllStudentAnswer().size() > questionNumber) {
+            model.getAllStudentAnswer().set(questionNumber, saveAnswer());
+        } else {
+            model.getAllStudentAnswer().add(saveAnswer());
+        }
         return "./end_test.xhtml";
     }
 }

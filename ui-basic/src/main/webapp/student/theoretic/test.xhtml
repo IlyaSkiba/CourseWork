@@ -32,9 +32,9 @@
             </div>
             <div class="QuestionNavigationButton">
                 <p:commandButton rendered="#{questionModel.questionNumber!=0}" value="Предыдущий"
-                                 action="#{questionModel.gotoPrev}" update="@form"/>
+                                 action="#{questionModel.gotoPrev}" update="@form" process="@form"/>
                 <p:commandButton rendered="#{questionModel.noLast}" value="Следующий" action="#{questionModel.gotoNext}"
-                                 update="@form"/>
+                                 update="@form" process="@form"/>
                 <p:commandButton rendered="#{!questionModel.noLast}" value="Закончить тест"
                                  action="#{questionModel.gotoEnd}" ajax="false"/>
 

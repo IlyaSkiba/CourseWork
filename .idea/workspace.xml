@@ -7,22 +7,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" name="Default" comment="student test UI done">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/controller/StudentAnswerController.java" />
+      <change type="DELETED" beforePath="D:\Temp\CourseWork\.idea\libraries\Maven__com_sun_faces_jsf_api_2_0_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Temp\CourseWork\.idea\libraries\Maven__com_sun_faces_jsf_impl_2_0_3.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
-    <list id="1743105f-7ad9-466d-8f4f-e1159695aca8" name="Failed commit: Default" comment="teacher UI done">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/controller/QuestionController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/dto/AnswerDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/dto/QuestionDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/dto/TestDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/service/TheoreticTestService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/dto/StudentAnswerDto.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/server-dao.iml" afterPath="$PROJECT_DIR$/server-dao/server-dao.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/CourseController.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/CourseController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/ThemeController.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/ThemeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/controller/QuestionController.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/controller/QuestionController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/controller/TestController.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/controller/TestController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/dto/QuestionDto.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/dto/QuestionDto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/service/TheoreticTestService.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/service/TheoreticTestService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/dto/StudentAnswerDto.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/dto/StudentAnswerDto.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/server-dao/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/QuestionModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/QuestionModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/TheoreticTestingResultModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/TheoreticTestingResultModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/service/JpaUserDetailsService.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/service/JpaUserDetailsService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/ui-basic/src/main/resources/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext-security.xml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext-security.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/resources/css/start.css" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/resources/css/start.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/main.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/main.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/theoretic/test.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/theoretic/test.xhtml" />
+      <change type="MOVED" beforePath="D:\Temp\CourseWork\server-dao\src\main\java\com\bsu\server\theoretic\test\QuestionListAction.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/action/QuestionListAction.java" />
+      <change type="MOVED" beforePath="D:\Temp\CourseWork\ui-basic\src\main\java\website\model\student\TheoreticTesting\StudentAnsver.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/StudentAnswer.java" />
     </list>
+    <list id="1743105f-7ad9-466d-8f4f-e1159695aca8" name="Failed commit: Default" comment="teacher UI done" />
     <ignored path="$USER_HOME$/.griffon/" />
     <ignored path="$USER_HOME$/.grails/" />
     <ignored mask="*.iml" />
@@ -133,55 +148,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/index.xhtml">
+      <file leaf-file-name="TheoreticTestingModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/TheoreticTestingModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="705" selection-end="705" vertical-scroll-proportion="-6.5384617">
-              <folding />
+            <state line="41" column="0" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#903#913#0" expanded="true" />
+                <element signature="method#load#0;class#TheoreticTestingModel#0" expanded="false" />
+                <element signature="method#getCourses#0;class#TheoreticTestingModel#0" expanded="false" />
+                <element signature="method#setCourses#0;class#TheoreticTestingModel#0" expanded="false" />
+                <element signature="method#getTopics#0;class#TheoreticTestingModel#0" expanded="false" />
+                <element signature="method#setSelectedCourse#0;class#TheoreticTestingModel#0" expanded="false" />
+                <element signature="method#getSelectedCourse#0;class#TheoreticTestingModel#0" expanded="false" />
+                <element signature="method#getSelectedTopic#0;class#TheoreticTestingModel#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/main.xhtml">
+      <file leaf-file-name="StudentAnswerController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/controller/StudentAnswerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="40" selection-start="542" selection-end="551" vertical-scroll-proportion="-9.153846">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="structure.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/structure.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="84" selection-start="2752" selection-end="2752" vertical-scroll-proportion="-9.807693">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_topic.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/add_topic.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="90" selection-start="1371" selection-end="1371" vertical-scroll-proportion="-8.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="change_topic.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/change_topic.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="67" selection-start="742" selection-end="742" vertical-scroll-proportion="11.769231">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TopicsModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TopicsModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="10" selection-start="2372" selection-end="2372" vertical-scroll-proportion="0.0">
+            <state line="30" column="17" selection-start="996" selection-end="996" vertical-scroll-proportion="2.8732395">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,10 +177,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delete_topic.xhtml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/delete_topic.xhtml">
+      <file leaf-file-name="StudentAnswerDto.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/dto/StudentAnswerDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="49" selection-start="808" selection-end="809" vertical-scroll-proportion="1.3744681">
+            <state line="24" column="14" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getAnswerText#0;class#StudentAnswerDto#0" expanded="false" />
+                <element signature="method#setAnswerText#0;class#StudentAnswerDto#0" expanded="false" />
+                <element signature="method#getStudent#0;class#StudentAnswerDto#0" expanded="false" />
+                <element signature="method#setStudent#0;class#StudentAnswerDto#0" expanded="false" />
+                <element signature="method#getQuestion#0;class#StudentAnswerDto#0" expanded="false" />
+                <element signature="method#setQuestion#0;class#StudentAnswerDto#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="71" selection-start="2110" selection-end="2110" vertical-scroll-proportion="-28.9">
+              <folding>
+                <element signature="tag#property#0;tag#bean#1;tag#beans#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext-security.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext-security.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="19" selection-start="2819" selection-end="2819" vertical-scroll-proportion="-2.05">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SharedEntityManagerCreator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/3.1.0.RELEASE/spring-orm-3.1.0.RELEASE-sources.jar!/org/springframework/orm/jpa/SharedEntityManagerCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="255" column="0" selection-start="9899" selection-end="9899" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -222,22 +253,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/QuestionModel.java" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/security/AccountController.java" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/service/JpaUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/security/RedirectingController.java" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/security/AuthController.java" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext-security.xml" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/security/RedirectController.java" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/main.xhtml" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TheoreticTesting/TheoreticTestingModel.java" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/teoretic.xhtml" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/add_topic.xhtml" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/change_topic.xhtml" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/StudentAnsver.java" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/StudentAnswer.java" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/controller/QuestionController.java" />
+        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/controller/TestController.java" />
         <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/ThemeController.java" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TopicsModel.java" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/structure.xhtml" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/delete_topic.xhtml" />
+        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/CourseController.java" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/student/main.xhtml" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/QuestionModel.java" />
+        <option value="$PROJECT_DIR$/server-dao/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/service/JpaUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext-security.xml" />
+        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/dto/StudentAnswerDto.java" />
+        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/controller/StudentAnswerController.java" />
       </list>
     </option>
   </component>
@@ -335,20 +366,23 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
         <expanded-state>
           <State>
-            <id>Inspections</id>
+            <id />
+          </State>
+          <State>
+            <id>Java EE issues</id>
           </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>Abstraction issues</id>
+            <id>JpaQlInspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -414,7 +448,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
+              <option name="myItemId" value="CourseWork" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -424,7 +458,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
+              <option name="myItemId" value="CourseWork" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -438,25 +472,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui-basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
+              <option name="myItemId" value="CourseWork" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -467,12 +483,18 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CourseWork" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="server-dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -482,11 +504,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
+              <option name="myItemId" value="CourseWork" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ui-basic" />
+              <option name="myItemId" value="server-dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -495,266 +517,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teacher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui-basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teacher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui-basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui-basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui-basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui-basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui-basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui-basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teacher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui-basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -824,14 +586,15 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.jgeek.website.model" />
     </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.bsu.server.theoretic.test.student" />
+      <recent name="com.bsu.server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\DmitriySpace\Development\Workspaces\idea\org.jgeek.website\src\main\resources\META-INF" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.bsu.server" />
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="" />
     </key>
   </component>
   <component name="Regex">
@@ -1170,35 +933,35 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2857906" sideWeight="0.62249446" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6815145" sideWeight="0.32869378" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21232876" sideWeight="0.49829352" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6808874" sideWeight="0.32869378" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19700214" sideWeight="0.32739422" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26393142" sideWeight="0.6289753" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37750557" sideWeight="0.32371795" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31740615" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26331812" sideWeight="0.6289753" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5017065" sideWeight="0.32371795" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4910913" sideWeight="0.20673077" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48976108" sideWeight="0.20673077" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2607362" sideWeight="0.0" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2607362" sideWeight="0.0" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.44444445" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29674795" sideWeight="0.77974087" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29674795" sideWeight="0.77974087" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2037862" sideWeight="0.49786323" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26549146" sideWeight="0.5089087" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26549146" sideWeight="0.5089087" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36302894" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22195122" sideWeight="0.6584217" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22195122" sideWeight="0.6584217" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25267094" sideWeight="0.7973274" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19017094" sideWeight="0.31848553" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29955456" sideWeight="0.7895299" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2518968" sideWeight="0.4334471" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25417298" sideWeight="0.31911263" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5665529" sideWeight="0.0" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36525613" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="JPA Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20824054" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1239,7 +1002,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="teacher UI done" />
+    <option name="LAST_COMMIT_MESSAGE" value="testDto added" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1259,6 +1022,7 @@
     <MESSAGE value="user redirection done" />
     <MESSAGE value="student test UI done" />
     <MESSAGE value="teacher UI done" />
+    <MESSAGE value="testDto added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1268,119 +1032,159 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/student/structure.xhtml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final-sources.jar!/javax/persistence/EntityManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="58" selection-start="401" selection-end="401" vertical-scroll-proportion="0.23529412">
+        <state line="494" column="16" selection-start="22450" selection-end="22450" vertical-scroll-proportion="0.42698705">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/StudentMainModel.java">
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/resources/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TeacherMainModel.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaEE/lib/javaee-impl.jar!/standardSchemas/persistence_2_0.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="29" selection-start="213" selection-end="213" vertical-scroll-proportion="0.25331125">
+        <state line="281" column="12" selection-start="10101" selection-end="10101" vertical-scroll-proportion="0.1887324">
+          <folding>
+            <element signature="tag#xsd:sequence#0;tag#xsd:complexType#0;tag#xsd:element#0;tag#xsd:sequence#0;tag#xsd:complexType#0;tag#xsd:element#0;tag#xsd:schema#0" expanded="false" />
+            <element signature="tag#xsd:element#10;tag#xsd:sequence#0;tag#xsd:complexType#0;tag#xsd:element#0;tag#xsd:sequence#0;tag#xsd:complexType#0;tag#xsd:element#0;tag#xsd:schema#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="34" selection-start="592" selection-end="592" vertical-scroll-proportion="0.72649574">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/CourseDto.java">
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/service/TheoreticTestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="18" selection-start="732" selection-end="732" vertical-scroll-proportion="0.8725166">
+        <state line="52" column="0" selection-start="1887" selection-end="1887" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2418#2427#0" expanded="true" />
+            <element signature="method#countResult#0;class#TheoreticTestService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/service/JpaUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="35" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.757085">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/global/UserModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="61" selection-start="941" selection-end="941" vertical-scroll-proportion="0.20320855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/3.1.0.RELEASE/spring-orm-3.1.0.RELEASE-sources.jar!/org/springframework/orm/jpa/SharedEntityManagerCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="255" column="0" selection-start="9899" selection-end="9899" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/security/UserAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="111" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.8092692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="71" selection-start="2110" selection-end="2110" vertical-scroll-proportion="-28.9">
+          <folding>
+            <element signature="tag#property#0;tag#bean#1;tag#beans#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/QuestionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="67" selection-start="4112" selection-end="4112" vertical-scroll-proportion="0.43438077">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getQuestionNumber#0;class#QuestionModel#0" expanded="false" />
+            <element signature="e#1398#1406#0" expanded="true" />
+            <element signature="method#setSelectedCheck#0;class#QuestionModel#0" expanded="false" />
+            <element signature="method#getAllCheck#0;class#QuestionModel#0" expanded="false" />
+            <element signature="method#setAllCheck#0;class#QuestionModel#0" expanded="false" />
+            <element signature="method#isAnswerType#0;class#QuestionModel#0" expanded="false" />
+            <element signature="method#setAnswerType#0;class#QuestionModel#0" expanded="false" />
+            <element signature="method#setQuestion#0;class#QuestionModel#0" expanded="false" />
+            <element signature="method#gotoPrev#0;class#QuestionModel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/student/theoretic/test.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="77" selection-start="1960" selection-end="1960" vertical-scroll-proportion="-18.76923">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/TheoreticTestingModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="89" selection-start="1484" selection-end="1484" vertical-scroll-proportion="1.013245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/student/teoretic_main.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="50" selection-start="735" selection-end="735" vertical-scroll-proportion="0.44117647">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="705" selection-end="705" vertical-scroll-proportion="-6.5384617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/main.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="40" selection-start="542" selection-end="551" vertical-scroll-proportion="-9.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/teoretic.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="130" selection-start="2598" selection-end="2676" vertical-scroll-proportion="-3.1764705">
+        <state line="41" column="0" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1335215566773" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <element signature="e#903#913#0" expanded="true" />
+            <element signature="method#load#0;class#TheoreticTestingModel#0" expanded="false" />
+            <element signature="method#getCourses#0;class#TheoreticTestingModel#0" expanded="false" />
+            <element signature="method#setCourses#0;class#TheoreticTestingModel#0" expanded="false" />
+            <element signature="method#getTopics#0;class#TheoreticTestingModel#0" expanded="false" />
+            <element signature="method#setSelectedCourse#0;class#TheoreticTestingModel#0" expanded="false" />
+            <element signature="method#getSelectedCourse#0;class#TheoreticTestingModel#0" expanded="false" />
+            <element signature="method#getSelectedTopic#0;class#TheoreticTestingModel#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TheoreticTesting/TheoreticTestingModel.java">
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext-security.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="28" selection-start="1909" selection-end="1909" vertical-scroll-proportion="0.0">
+        <state line="50" column="19" selection-start="2819" selection-end="2819" vertical-scroll-proportion="-2.05">
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/ThemeController.java">
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/dto/StudentAnswerDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="35" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.70364237">
-          <folding />
+        <state line="24" column="14" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getAnswerText#0;class#StudentAnswerDto#0" expanded="false" />
+            <element signature="method#setAnswerText#0;class#StudentAnswerDto#0" expanded="false" />
+            <element signature="method#getStudent#0;class#StudentAnswerDto#0" expanded="false" />
+            <element signature="method#setStudent#0;class#StudentAnswerDto#0" expanded="false" />
+            <element signature="method#getQuestion#0;class#StudentAnswerDto#0" expanded="false" />
+            <element signature="method#setQuestion#0;class#StudentAnswerDto#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/add_topic.xhtml">
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/controller/StudentAnswerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="90" selection-start="1371" selection-end="1371" vertical-scroll-proportion="-8.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TopicsModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="10" selection-start="2372" selection-end="2372" vertical-scroll-proportion="0.0">
+        <state line="30" column="17" selection-start="996" selection-end="996" vertical-scroll-proportion="2.8732395">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/change_topic.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="67" selection-start="742" selection-end="742" vertical-scroll-proportion="11.769231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/structure.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="84" selection-start="2752" selection-end="2752" vertical-scroll-proportion="-9.807693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/delete_topic.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="49" selection-start="808" selection-end="809" vertical-scroll-proportion="1.3744681">
-          <folding />
         </state>
       </provider>
     </entry>

@@ -56,4 +56,20 @@ public class QuestionDto {
     public Integer getId() {
         return id;
     }
+
+    public Integer getQuestionType() {
+        return questionType;
+    }
+
+    public void setQuestionType(Integer questionType) {
+        this.questionType = questionType;
+    }
+
+    public List<AnswerDto> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(List<AnswerDto> answers) {
+        this.answers = answers;
+    }
 }
