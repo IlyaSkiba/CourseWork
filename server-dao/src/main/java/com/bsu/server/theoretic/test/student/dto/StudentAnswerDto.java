@@ -1,6 +1,7 @@
 package com.bsu.server.theoretic.test.student.dto;
 
 import com.bsu.server.dto.security.UserAccount;
+import com.bsu.server.theoretic.test.dto.QuestionDto;
 
 import javax.persistence.*;
 
@@ -22,6 +23,9 @@ public class StudentAnswerDto {
     @ManyToOne
     private UserAccount student;
 
+    @ManyToOne
+    private QuestionDto question;
+
     public String getAnswerText() {
         return answerText;
     }
@@ -36,5 +40,13 @@ public class StudentAnswerDto {
 
     public void setStudent(UserAccount student) {
         this.student = student;
+    }
+
+    public QuestionDto getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(QuestionDto question) {
+        this.question = question;
     }
 }

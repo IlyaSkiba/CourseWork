@@ -7,3 +7,11 @@
     right: 5px;
     float: right;
 }
+
+.field {
+    width: 70%;
+}
+
+.answer {
+    min-height: 100px;
+}

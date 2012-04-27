@@ -48,4 +48,8 @@ public class TestDto {
     public void setQuestionCount(Integer questionCount) {
         this.questionCount = questionCount;
     }
+
+    public Integer getId() {
+        return id;
+    }
 }

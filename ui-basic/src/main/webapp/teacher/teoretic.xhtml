@@ -16,7 +16,7 @@
             <ui:define name="content">
                 <h:form>
                     <div class="elementBlock">
-                        <h:outputLabel for="courses">Выберите курс: </h:outputLabel>
+                        <h:outputLabel for="courses">Выберите курс:</h:outputLabel>
                         <p:selectOneMenu id="courses" value="#{theoreticTeacher.selectedCourse}">
                             <f:selectItem itemLabel="" itemValue=""/>
                             <f:selectItems value="#{theoreticTeacher.courses}" var="course"
@@ -30,7 +30,7 @@
                                    rendered="#{theoreticTeacher.selectedCourse!=null and theoreticTeacher.selectedCourse!=''}"
                                    autoUpdate="true">
                         <div class="elementBlock">
-                            <h:outputLabel for="topics">Выберите тему: </h:outputLabel>
+                            <h:outputLabel for="topics">Выберите тему:</h:outputLabel>
                             <p:selectOneMenu id="topics" widgetVar="topics" value="#{theoreticTeacher.selectedTopic}">
                                 <f:selectItem itemLabel="" itemValue=""/>
                                 <f:selectItems value="#{theoreticTeacher.topics}" var="topic"
@@ -41,14 +41,15 @@
                         </div>
                     </p:outputPanel>
 
-                    <div>
-                        <h:outputText value="Добавьте задание одним из способов:"/>
-                    </div>
-                    <div>
-                        <h:outputText value="1. Добавьте задание вручную:"/>
-                    </div>
+
                     <h:form id="testForm"
                             rendered="#{theoreticTeacher.selectedTopic!=null and theoreticTeacher.selectedTopic!=''}">
+                        <div>
+                            <h:outputText value="Добавьте задание одним из способов:"/>
+                        </div>
+                        <div>
+                            <h:outputText value="1. Добавьте задание вручную:"/>
+                        </div>
                         <p:editor id="editor" value="#{theoreticTeacher.value}" width="600"/>
                         <h:panelGrid columns="2" style="margin-top:10px">
                             <p:commandButton id="submitButton" value="Submit" update="display" oncomplete="dlg.show()"

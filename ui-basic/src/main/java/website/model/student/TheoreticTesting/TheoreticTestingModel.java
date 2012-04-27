@@ -4,6 +4,7 @@ import com.bsu.server.controller.CourseController;
 import com.bsu.server.controller.ThemeController;
 import com.bsu.server.dto.CourseDto;
 import com.bsu.server.dto.ThemeDto;
+import com.bsu.server.theoretic.test.service.TheoreticTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
@@ -11,7 +12,6 @@ import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -35,6 +35,8 @@ public class TheoreticTestingModel {
     private CourseController courseController;
     @Autowired
     private ThemeController themeController;
+    @Autowired
+    private TheoreticTestService testService;
 
     public List<StudentAnswer> getAllStudentAnswer() {
         return allStudentAnswer;
@@ -81,8 +83,7 @@ public class TheoreticTestingModel {
 
     public void gotoTest() throws IOException {
         FacesContext.getCurrentInstance().getExternalContext().redirect("theoretic/test.xhtml");
-        //@TODO: загрузить список всех id теста
-        idQuestionList = Arrays.asList(1, 2, 3);
+        idQuestionList = testService.getQuestionIds(selectedTopic);
         allStudentAnswer = new ArrayList<StudentAnswer>(idQuestionList.size());
     }
 
