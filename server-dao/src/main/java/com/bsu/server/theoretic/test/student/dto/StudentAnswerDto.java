@@ -4,13 +4,14 @@ import com.bsu.server.dto.security.UserAccount;
 import com.bsu.server.theoretic.test.dto.QuestionDto;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @author Ilya Skiba
  */
 @Entity
 @Table(name = "student_answer", schema = "public")
-public class StudentAnswerDto {
+public class StudentAnswerDto implements Serializable {
 
     @Column(name = "id")
     @Id

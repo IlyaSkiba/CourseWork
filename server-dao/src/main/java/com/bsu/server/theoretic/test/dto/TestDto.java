@@ -3,6 +3,7 @@ package com.bsu.server.theoretic.test.dto;
 import com.bsu.server.dto.ThemeDto;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @author Ilya Skiba
@@ -10,7 +11,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "global_test", schema = "public")
-public class TestDto {
+public class TestDto implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "id")

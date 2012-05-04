@@ -3,6 +3,7 @@ package com.bsu.server.dto;
 import com.bsu.server.dto.security.UserAccount;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * User: HomeUser
@@ -11,7 +12,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "theme", schema = "public")
-public class ThemeDto {
+public class ThemeDto implements Serializable {
     @Id
     @Column(name = "theme_id")
     private Integer id;

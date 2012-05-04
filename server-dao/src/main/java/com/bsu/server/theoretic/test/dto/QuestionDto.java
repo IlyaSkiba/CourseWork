@@ -1,6 +1,7 @@
 package com.bsu.server.theoretic.test.dto;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -8,7 +9,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "question", schema = "public")
-public class QuestionDto {
+public class QuestionDto implements Serializable {
 
     @Column(name = "id")
     @Id

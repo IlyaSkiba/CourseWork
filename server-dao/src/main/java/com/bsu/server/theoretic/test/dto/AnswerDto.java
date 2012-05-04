@@ -1,13 +1,14 @@
 package com.bsu.server.theoretic.test.dto;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @author Ilya Skiba
  */
 @Entity
 @Table(name = "question_answer", schema = "public")
-public class AnswerDto {
+public class AnswerDto implements Serializable {
 
     @Id
     @GeneratedValue

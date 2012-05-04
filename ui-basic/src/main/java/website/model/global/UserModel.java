@@ -9,6 +9,7 @@ import website.service.JpaUserDetailsService;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import java.io.Serializable;
 
 /**
  * User: HomeUser
@@ -17,12 +18,12 @@ import javax.inject.Named;
  */
 @Scope("session")
 @Named
-public class UserModel {
+public class UserModel implements Serializable {
 
     @Autowired
-    JpaUserDetailsService userService;
+    private JpaUserDetailsService userService;
     @Autowired
-    ShaPasswordEncoder passwordEncoder;
+    private ShaPasswordEncoder passwordEncoder;
 
     private String userName;
     private String firstName;

@@ -100,7 +100,8 @@ public class TheoreticTestService {
     }
 
     public void saveResults(List<StudentAnswerDto> answerDtos) {
-        studentAnswerController.saveResults(answerDtos);
+
+        studentAnswerController.saveResults(answerDtos, answerDtos.get(0).getStudent().getId());
 
     }
 

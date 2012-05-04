@@ -6,6 +6,7 @@ import org.springframework.security.authentication.encoding.PasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
@@ -17,7 +18,7 @@ import javax.persistence.PersistenceContext;
  * Date: 10.01.11
  * Time: 17:26
  */
-@Transactional
+@Service
 public class JpaUserDetailsService implements UserDetailsService, IChangePassword {
 
     @PersistenceContext
