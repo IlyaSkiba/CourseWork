@@ -30,7 +30,8 @@ public class TheoreticTestingResultModel {
 
     public int getMark() {
         testService.saveResults(assembleResult());
-        return testService.countResult(theoreticTestingModel.getIdQuestionList());
+        return testService.countResult(theoreticTestingModel.getIdQuestionList(),
+                currentUser.getUser().getId());
 
     }
 
@@ -53,6 +54,7 @@ public class TheoreticTestingResultModel {
                 StudentAnswerDto dto = new StudentAnswerDto();
                 dto.setStudent(currentUser.getUser());
                 dto.setAnswerText(answer.getAnsvStr());
+                dto.setQuestion(testService.getQuestion(answer.getQuestionId()));
                 assembledAnswers.add(dto);
             }
         }

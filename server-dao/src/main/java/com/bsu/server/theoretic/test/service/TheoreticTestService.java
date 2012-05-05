@@ -77,13 +77,13 @@ public class TheoreticTestService {
         return questionController.getQuestionDto(questionId);
     }
 
-    public int countResult(List<Integer> questionIds) {
+    public int countResult(List<Integer> questionIds, Integer studentId) {
         double result = 0;
         double maxResult = 0;
         for (Integer questionId : questionIds) {
             List<AnswerDto> rightAnswers = questionController.getRightAnswers(questionId);
             double correctives = 0;
-            List<StudentAnswerDto> answerDtos = studentAnswerController.getAnswers(questionId);
+            List<StudentAnswerDto> answerDtos = studentAnswerController.getAnswers(questionId, studentId);
             for (StudentAnswerDto studentAnswerDto : answerDtos) {
                 for (AnswerDto rightAnswer : rightAnswers) {
                     if (rightAnswer.getTextAnswer().trim().equalsIgnoreCase(studentAnswerDto.getAnswerText().trim())) {
@@ -93,19 +93,24 @@ public class TheoreticTestService {
             }
             correctives = correctives * 2 - answerDtos.size();
             if (correctives <= 0) continue;
-            result += correctives * questionController.getQuestionDto(questionId).getWeight();
+            result += correctives * questionController.getQuestionDto(questionId).getWeight() / rightAnswers.size();
             maxResult += questionController.getQuestionDto(questionId).getWeight();
         }
         return (int) (result / maxResult * 100);
     }
 
     public void saveResults(List<StudentAnswerDto> answerDtos) {
-
+        studentAnswerController.cleanupTestResults(answerDtos.get(0).getStudent().getId(),
+                answerDtos.get(0).getQuestion().getTest().getId());
         studentAnswerController.saveResults(answerDtos, answerDtos.get(0).getStudent().getId());
 
     }
 
     public List<AnswerDto> getAnswers(Integer questionId) {
         return questionController.getAnswers(questionId);
+    }
+
+    public Integer getTestId(Integer themeId) {
+        return testController.getTestFromTheme(themeId).getId();
     }
 }

@@ -55,7 +55,7 @@
     </tx:advice>
     <aop:config>
         <aop:pointcut id="daoOperations"
-                      expression="execution(* com.bsu.server..*.*(..))"/>
+                      expression="execution(* com.bsu.server..*Controller.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="daoOperations"/>
     </aop:config>
 
