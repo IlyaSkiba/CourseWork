@@ -42,13 +42,14 @@
                                 <p:menuitem value="Дополнительная информация" url="http://www.prime.com.tr"
                                             ajax="false"/>
                             </p:submenu>
-                            <p:submenu label="Практические задачи">
+                            <p:submenu label="Тестирование задачи">
                                 <p:menuitem value="Сдать задачу" update="content"
                                             ajax="false"/>
                             </p:submenu>
-                            <p:submenu label="Результаты">
-                                <p:menuitem value="Результаты по курсу" url="http://www.prime.com.tr"/>
-                                <p:menuitem value="Статистика" url="http://www.primefaces.org"/>
+                            <p:submenu label="Статистика">
+                                <p:menuitem value="Статистика по теоретическим тестам" ajax="true"
+                                            url="/student/statistic/teoretic_stat.xhtml"/>
+                                <p:menuitem value="Статистика по задачам" url="http://www.primefaces.org"/>
                             </p:submenu>
                         </p:menu>
 
