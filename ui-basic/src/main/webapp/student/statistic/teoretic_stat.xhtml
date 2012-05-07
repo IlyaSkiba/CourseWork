@@ -9,12 +9,33 @@
       xmlns:p="http://primefaces.org/ui">
 <f:view contentType="text/html">
     <h:head>
-        <title>Student statistic</title>
+        <title>Статистика</title>
+        <h:outputStylesheet library="css" name="global.css"/>
     </h:head>
     <h:body>
         <ui:decorate template="../structure.xhtml">
             <ui:define name="content">
-                <p:graphicImage value="#{teorStatModel.chart}"/>
+                <div class="statGraphic">
+                    <p:graphicImage value="#{teorStatModel.chart}"/>
+                </div>
+
+                <h:form prependId="false">
+                    <p:dataTable styleClass="statTable" id="basic" var="teoreticResult" value="#{teorStatModel.result}">
+                        <p:column id="modelHeader">
+                            <f:facet name="header">
+                                Тесты
+                            </f:facet>
+                            <h:outputText value="#{teoreticResult.test}"/>
+                        </p:column>
+
+                        <p:column>
+                            <f:facet name="header">
+                                Баллы
+                            </f:facet>
+                            <h:outputText value="#{teoreticResult.result}"/>
+                        </p:column>
+                    </p:dataTable>
+                </h:form>
             </ui:define>
         </ui:decorate>
     </h:body>

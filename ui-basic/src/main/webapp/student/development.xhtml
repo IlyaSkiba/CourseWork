@@ -6,16 +6,15 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-        >
+      xmlns:p="http://primefaces.org/ui">
 <f:view contentType="text/html">
     <h:head>
-        <title>Студент</title>
+        <title>Страница находится в разработке</title>
     </h:head>
     <h:body>
         <ui:decorate template="structure.xhtml">
             <ui:define name="content">
-                <h:outputText
-                        value="Добро пожаловать в систему автоматического тестирования. Для взаимодействия с системой выберите необходимый пункт из меню слева."/>
+                <ui:include src="../additional/inProgress.xhtml"/>
             </ui:define>
         </ui:decorate>
     </h:body>

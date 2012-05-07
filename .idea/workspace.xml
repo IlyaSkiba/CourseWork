@@ -7,23 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" name="Default" comment="student test UI done">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__bouncycastle_bcmail_jdk14_138.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__bouncycastle_bcprov_jdk14_138.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_lowagie_itext_2_1_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfree_jcommon_1_0_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfree_jfreechart_1_0_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_3_04.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/server-dao.iml" afterPath="$PROJECT_DIR$/server-dao/server-dao.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/service/TheoreticTestService.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/service/TheoreticTestService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/controller/StudentResultController.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/controller/StudentResultController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/TheoreticTestingModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/TheoreticTestingModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/teoretic_main.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/teoretic_main.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website.iml" afterPath="$PROJECT_DIR$/website.iml" />
-      <change type="MOVED" beforePath="D:\Temp\CourseWork\.idea\libraries\Maven__com_sun_faces_jsf_api_2_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_faces_jsf_api_2_1_7.xml" />
-      <change type="MOVED" beforePath="D:\Temp\CourseWork\.idea\libraries\Maven__com_sun_faces_jsf_impl_2_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_faces_jsf_impl_2_1_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/Statistic/StatisticTable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/additional/inProgress.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/development.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/Statistic/TeoreticStatisticModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/Statistic/TeoreticStatisticModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/resources/css/global.css" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/resources/css/global.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/main.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/main.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/statistic/teoretic_stat.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/statistic/teoretic_stat.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/structure.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/structure.xhtml" />
     </list>
     <ignored path="$USER_HOME$/.griffon/" />
     <ignored path="$USER_HOME$/.grails/" />
@@ -133,8 +126,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -146,7 +139,7 @@
       <file leaf-file-name="TheoreticTestService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/service/TheoreticTestService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="43" selection-start="5021" selection-end="5021" vertical-scroll-proportion="1.32">
+            <state line="122" column="43" selection-start="5022" selection-end="5022" vertical-scroll-proportion="1.2844445">
               <folding>
                 <element signature="method#getQuestionIdList#0;class#TheoreticTestService#0" expanded="false" />
                 <element signature="method#getQuestion#0;class#TheoreticTestService#0" expanded="false" />
@@ -162,9 +155,7 @@
         <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/controller/StudentResultController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="23" column="28" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,7 +163,7 @@
       <file leaf-file-name="teoretic_main.xhtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/student/teoretic_main.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="128" selection-start="2544" selection-end="2544" vertical-scroll-proportion="-12.076923">
+            <state line="44" column="128" selection-start="2504" selection-end="2504" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -182,9 +173,7 @@
         <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/dto/StudentResultDto.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="12" column="13" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -381,12 +370,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -641,12 +630,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -666,16 +655,16 @@
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="278" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="296" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="Persistence.ERD.GroupObjects" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="296" />
     <property name="options.splitter.main.proportions" value="0.30000007" />
+    <property name="Persistence.ERD.GroupObjects" value="false" />
     <property name="Persistence.ERD.MergeEmbedded" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="292" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="297" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="967" />
@@ -691,19 +680,19 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="Persistence.ERD.SimpleMode" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
-    <property name="DefaultHtmlFileTemplate" value="Xhtml" />
+    <property name="Persistence.ERD.SimpleMode" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="DefaultHtmlFileTemplate" value="Xhtml" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="Persistence.ERD.MergeInherited" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -814,6 +803,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" runner="idea" />
       <module name="" />
@@ -840,24 +847,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -922,10 +911,11 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -933,11 +923,10 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1052,8 +1041,8 @@
       </method>
     </configuration>
     <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Maven.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="Query Language Console.Default" />
+      <item index="0" class="java.lang.String" itemvalue="Query Language Console.Default" />
+      <item index="1" class="java.lang.String" itemvalue="Maven.Unnamed" />
       <item index="2" class="java.lang.String" itemvalue="Tomcat Server.JGeek Tomcat 7.0.2" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1117,7 +1106,6 @@
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.57337886" sideWeight="0.49468893" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25265554" sideWeight="0.56825936" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34300342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26393142" sideWeight="0.6289753" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5" sideWeight="0.32371795" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1126,20 +1114,21 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2607362" sideWeight="0.0" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.44444445" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29666162" sideWeight="0.77974087" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29351535" sideWeight="0.49786323" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26549146" sideWeight="0.5089087" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36302894" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22195122" sideWeight="0.6584217" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39984825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21168438" sideWeight="0.7372014" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.215478" sideWeight="0.42662117" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21471927" sideWeight="0.42662117" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45904437" sideWeight="0.7852807" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36525613" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.61433446" order="1" side_tool="false" content_ui="combo" />
       <window_info id="JPA Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34300342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29351535" sideWeight="0.49786323" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -1295,9 +1284,7 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.0.RELEASE/spring-aop-3.1.0.RELEASE-sources.jar!/org/springframework/aop/framework/Cglib2AopProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="593" column="0" selection-start="20416" selection-end="20416" vertical-scroll-proportion="0.3554817">
-          <folding />
-        </state>
+        <state line="593" column="0" selection-start="20416" selection-end="20416" vertical-scroll-proportion="0.3554817" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/TheoreticTestingModel.java">
@@ -1310,34 +1297,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/dto/StudentResultDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/student/teoretic_main.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="128" selection-start="2544" selection-end="2544" vertical-scroll-proportion="-12.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/controller/StudentResultController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="28" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/service/TheoreticTestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="43" selection-start="5021" selection-end="5021" vertical-scroll-proportion="1.32">
+        <state line="122" column="43" selection-start="5022" selection-end="5022" vertical-scroll-proportion="1.2844445">
           <folding>
             <element signature="method#getQuestionIdList#0;class#TheoreticTestService#0" expanded="false" />
             <element signature="method#getQuestion#0;class#TheoreticTestService#0" expanded="false" />
@@ -1345,6 +1307,27 @@
             <element signature="method#saveResults#0;class#TheoreticTestService#0" expanded="false" />
             <element signature="method#getAnswers#0;class#TheoreticTestService#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/controller/StudentResultController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="28" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/student/teoretic_main.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="128" selection-start="2504" selection-end="2504" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/dto/StudentResultDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
