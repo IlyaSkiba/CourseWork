@@ -119,7 +119,14 @@ public class TheoreticTestService {
         return questionController.getAnswers(questionId);
     }
 
-    public Integer getTestId(Integer themeId) {
+    public Integer getTestId(Integer themeId, Integer userId) {
+        try {
+            StudentResultDto resultDto = studentResultController.
+                    getStudentResult(userId, testController.getTestFromTheme(themeId).getId());
+            if (resultDto != null) return null;
+        } catch (Exception e) {
+        }
+
         return testController.getTestFromTheme(themeId).getId();
     }
 }

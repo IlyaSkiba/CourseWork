@@ -25,7 +25,15 @@ public class StudentResultController {
 
     @Transactional(readOnly = true)
     public List<StudentResultDto> getStudentResults(Integer userId) {
-        return em.createQuery("from StudentResultDto where student.id = :studentId", StudentResultDto.class)
+        return em.createQuery("from StudentResultDto where student.id=:studentId", StudentResultDto.class)
                 .setParameter("studentId", userId).getResultList();
+    }
+
+    @Transactional(readOnly = true)
+    public StudentResultDto getStudentResult(Integer userId, Integer testId) {
+        return em.createQuery("from StudentResultDto where student.id=:studentId and testDto.id=:testId",
+                StudentResultDto.class)
+                .setParameter("studentId", userId)
+                .setParameter("testId", testId).getResultList().get(0);
     }
 }

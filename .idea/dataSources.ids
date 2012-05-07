@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
-  <data-source source="LOCAL" name="jdbc" product="PostgreSQL" version="9.1beta3" jdbc-version="4.0" driver-version="PostgreSQL 9.0 JDBC4 (build 801)" uuid="10d3cd24-466e-46e7-a71b-9bf9fdb2c446">
+  <data-source source="LOCAL" name="jdbc" product="PostgreSQL" version="9.1.3" jdbc-version="4.0" driver-version="PostgreSQL 9.0 JDBC4 (build 801)" uuid="10d3cd24-466e-46e7-a71b-9bf9fdb2c446">
     <identifier-quote-string>"</identifier-quote-string>
     <jdbc-driver>org.postgresql.Driver</jdbc-driver>
     <jdbc-url>jdbc:postgresql://localhost:5432/course_work</jdbc-url>
@@ -2263,11 +2263,123 @@
       <column name="chunk_id" sqlType="oid" length="10" precision="0" nullable="true" jdbcType="-5" />
       <column name="chunk_seq" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
     </table>
-    <table name="course" schema="public" catalog="" type="TABLE" />
-    <table name="course_course_id_seq" schema="public" catalog="" type="SEQUENCE" />
-    <table name="course_pkey" schema="public" catalog="" type="INDEX" />
+    <table name="course" schema="public" catalog="" type="TABLE">
+      <column name="course_id" sqlType="serial" length="10" precision="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY291cnNlX2NvdXJzZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true" />
+      <column name="course_name" sqlType="varchar" length="100" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="course_pkey" columns="course_id" />
+    </table>
+    <table name="course_course_id_seq" schema="public" catalog="" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+    </table>
+    <table name="course_pkey" schema="public" catalog="" type="INDEX">
+      <column name="course_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="global_test" schema="public" catalog="" type="TABLE">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="theme_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="points_count" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="question_count" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="relatedtheme_theme_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="global_test_pkey" columns="id" />
+      <foreign-key name="global_test_theme_id_fkey" columns="theme_id" ref-table="theme" ref-schema="public" ref-catalog="" ref-columns="theme_id" />
+      <foreign-key name="fkcdd7c7aeff71054b" columns="relatedtheme_theme_id" ref-table="theme" ref-schema="public" ref-catalog="" ref-columns="theme_id" />
+    </table>
+    <table name="global_test_pkey" schema="public" catalog="" type="INDEX">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="group_theme_list" schema="public" catalog="" type="TABLE">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="group_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="theme_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="group_theme_list_pkey" columns="id" />
+      <foreign-key name="fk75c1d31498862aa" columns="theme_id" ref-table="theme" ref-schema="public" ref-catalog="" ref-columns="theme_id" />
+      <foreign-key name="fk75c1d314606f7529" columns="group_id" ref-table="user_group" ref-schema="public" ref-catalog="" ref-columns="id" />
+    </table>
+    <table name="group_theme_list_pkey" schema="public" catalog="" type="INDEX">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="hibernate_sequence" schema="public" catalog="" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+    </table>
+    <table name="question" schema="public" catalog="" type="TABLE">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="content" sqlType="text" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="question_type" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="weight" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="test_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="question_pkey" columns="id" />
+      <foreign-key name="fkba823be6a13698af" columns="test_id" ref-table="global_test" ref-schema="public" ref-catalog="" ref-columns="id" />
+    </table>
+    <table name="question_answer" schema="public" catalog="" type="TABLE">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="question_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="answer" sqlType="text" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="is_right" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+      <column name="questiondto_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="question_answer_pkey" columns="id" />
+      <foreign-key name="question_answer_question_id_fkey" columns="question_id" ref-table="question" ref-schema="public" ref-catalog="" ref-columns="id" />
+      <foreign-key name="fk561df23711eecad4" columns="questiondto_id" ref-table="question" ref-schema="public" ref-catalog="" ref-columns="id" />
+    </table>
+    <table name="question_answer_pkey" schema="public" catalog="" type="INDEX">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="question_pkey" schema="public" catalog="" type="INDEX">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
     <table name="role_ID" schema="public" catalog="" type="INDEX">
       <column name="role_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="student_answer" schema="public" catalog="" type="TABLE">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="answer_text" sqlType="text" length="2147483647" precision="0" nullable="true" jdbcType="12" />
+      <column name="student_user_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="question_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="student_answer_pkey" columns="id" />
+      <foreign-key name="fkad2ad242b2aa4c07" columns="question_id" ref-table="question" ref-schema="public" ref-catalog="" ref-columns="id" />
+      <foreign-key name="fkad2ad242eb933d82" columns="student_user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="user_id" />
+    </table>
+    <table name="student_answer_pkey" schema="public" catalog="" type="INDEX">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="student_test_results" schema="public" catalog="" type="TABLE">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="test_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="student_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="result" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" def="MA==" />
+      <primary-key name="student_test_results_pkey" columns="id" />
+    </table>
+    <table name="student_test_results_pkey" schema="public" catalog="" type="INDEX">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="theme" schema="public" catalog="" type="TABLE">
+      <column name="theme_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="theme_name" sqlType="text" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="coursedto_course_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="creator_user_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="theme_id_PK" columns="theme_id" />
+      <foreign-key name="fk69375c941165545" columns="coursedto_course_id" ref-table="course" ref-schema="public" ref-catalog="" ref-columns="course_id" />
+      <foreign-key name="fk69375c91002ba73" columns="creator_user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="user_id" />
+    </table>
+    <table name="theme_id_PK" schema="public" catalog="" type="INDEX">
+      <column name="theme_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
     </table>
     <table name="user" schema="public" catalog="" type="TABLE">
       <column name="f_name" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
@@ -2277,6 +2389,25 @@
       <column name="password" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
       <column name="user_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
       <primary-key name="user_pkey" columns="user_id" />
+    </table>
+    <table name="user_group" schema="public" catalog="" type="TABLE">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="group_name" sqlType="text" length="2147483647" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="user_group_pkey" columns="id" />
+    </table>
+    <table name="user_group_list" schema="public" catalog="" type="TABLE">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="user_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="group_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="user_group_list_pkey" columns="id" />
+      <foreign-key name="fk9c025752c0e17f86" columns="user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="user_id" />
+      <foreign-key name="fk9c025752606f7529" columns="group_id" ref-table="user_group" ref-schema="public" ref-catalog="" ref-columns="id" />
+    </table>
+    <table name="user_group_list_pkey" schema="public" catalog="" type="INDEX">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="user_group_pkey" schema="public" catalog="" type="INDEX">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
     </table>
     <table name="user_pkey" schema="public" catalog="" type="INDEX">
       <column name="user_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />

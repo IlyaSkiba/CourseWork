@@ -40,7 +40,11 @@
                         </div>
                     </p:outputPanel>
                     <p:commandButton id="passTest" value="Пройти тестирование" action="#{theoretic.gotoTest}"
-                                     rendered="#{(theoretic.selectedTopic!=null)}"/>
+                                     rendered="#{(theoretic.selectedTopic!=null and theoretic.testId !=null)}"/>
+
+                    <p:commandButton id="showResults" value="Результаты" process="@this"
+                                     action="#{theoretic.redirectToStatistic}"
+                                     rendered="#{(theoretic.selectedTopic!=null and theoretic.testId == null)}"/>
                 </h:form>
             </ui:define>
         </ui:decorate>

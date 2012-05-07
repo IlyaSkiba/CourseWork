@@ -32,6 +32,7 @@ public class TheoreticTestingModel {
     private Integer selectedTopic;
     private List<StudentAnswer> allStudentAnswer;
     private List<Integer> idQuestionList;
+    private Integer testId;
     @Autowired
     private CourseController courseController;
     @Autowired
@@ -85,6 +86,7 @@ public class TheoreticTestingModel {
 
     public void setSelectedTopic(Integer selectedTopic) {
         this.selectedTopic = selectedTopic;
+        testId = testService.getTestId(selectedTopic, userModel.getUser().getId());
     }
 
     public void gotoTest() throws IOException {
@@ -93,7 +95,15 @@ public class TheoreticTestingModel {
         allStudentAnswer = new ArrayList<StudentAnswer>(idQuestionList.size());
     }
 
+    public void redirectToStatistic() throws IOException {
+        FacesContext.getCurrentInstance().getExternalContext().redirect("./statistic/teoretic_stat.xhtml");
+    }
+
     public List<Integer> getIdQuestionList() {
         return idQuestionList;
+    }
+
+    public Integer getTestId() {
+        return testId;
     }
 }
