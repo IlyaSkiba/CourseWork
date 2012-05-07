@@ -9,7 +9,7 @@
       xmlns:p="http://primefaces.org/ui">
 <f:view contentType="text/html">
     <h:head>
-        <title>Student page: </title>
+        <title>Студент</title>
         <h:outputStylesheet library="css" name="global.css"/>
     </h:head>
     <h:body>
@@ -39,17 +39,16 @@
                             <p:submenu label="Теоретическое тестирование">
                                 <p:menuitem value="Пройти тестирование" ajax="true" url="/student/teoretic_main.xhtml"
                                             actionListener="#{theoretic.load}"/>
-                                <p:menuitem value="Дополнительная информация" url="http://www.prime.com.tr"
-                                            ajax="false"/>
+                                <p:menuitem value="Дополнительная информация" url="/student/development.xhtml"
+                                            ajax="true"/>
                             </p:submenu>
                             <p:submenu label="Тестирование задачи">
-                                <p:menuitem value="Сдать задачу" update="content"
-                                            ajax="false"/>
+                                <p:menuitem value="Сдать задачу" ajax="true" url="/student/development.xhtml"/>
                             </p:submenu>
                             <p:submenu label="Статистика">
                                 <p:menuitem value="Статистика по теоретическим тестам" ajax="true"
                                             url="/student/statistic/teoretic_stat.xhtml"/>
-                                <p:menuitem value="Статистика по задачам" url="http://www.primefaces.org"/>
+                                <p:menuitem value="Статистика по задачам" ajax="true" url="/student/development.xhtml"/>
                             </p:submenu>
                         </p:menu>
 

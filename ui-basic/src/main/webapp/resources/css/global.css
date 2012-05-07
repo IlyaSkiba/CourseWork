@@ -162,3 +162,17 @@ input {
     height: 100%;
     top: 30px;
 }
+
+.inProgress {
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.statTable {
+    width: 50%;
+}
+
+.statGraphic {
+    padding-bottom: 40px;
+}
