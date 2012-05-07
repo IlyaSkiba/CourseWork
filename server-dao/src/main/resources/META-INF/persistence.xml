@@ -15,6 +15,7 @@
         <class>com.bsu.server.theoretic.test.dto.QuestionDto</class>
         <class>com.bsu.server.theoretic.test.dto.TestDto</class>
         <class>com.bsu.server.theoretic.test.student.dto.StudentAnswerDto</class>
+        <class>com.bsu.server.theoretic.test.student.dto.StudentResultDto</class>
     </persistence-unit>
 
 </persistence>

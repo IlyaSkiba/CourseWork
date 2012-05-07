@@ -29,7 +29,7 @@ public class TheoreticTestingResultModel {
     private int mark = 100;
 
     public int getMark() {
-        testService.saveResults(assembleResult());
+        testService.saveResults(assembleResult(), theoreticTestingModel.getIdQuestionList());
         return testService.countResult(theoreticTestingModel.getIdQuestionList(),
                 currentUser.getUser().getId());
 

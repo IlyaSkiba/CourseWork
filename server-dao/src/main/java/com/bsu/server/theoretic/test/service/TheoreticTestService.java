@@ -7,7 +7,9 @@ import com.bsu.server.theoretic.test.dto.AnswerDto;
 import com.bsu.server.theoretic.test.dto.QuestionDto;
 import com.bsu.server.theoretic.test.dto.TestDto;
 import com.bsu.server.theoretic.test.student.controller.StudentAnswerController;
+import com.bsu.server.theoretic.test.student.controller.StudentResultController;
 import com.bsu.server.theoretic.test.student.dto.StudentAnswerDto;
+import com.bsu.server.theoretic.test.student.dto.StudentResultDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +31,8 @@ public class TheoreticTestService {
 
     @Autowired
     private StudentAnswerController studentAnswerController;
+    @Autowired
+    private StudentResultController studentResultController;
 
     public List<Integer> getQuestionIds(Integer themeId) {
         Integer testId;
@@ -99,11 +103,16 @@ public class TheoreticTestService {
         return (int) (result / maxResult * 100);
     }
 
-    public void saveResults(List<StudentAnswerDto> answerDtos) {
+    public void saveResults(List<StudentAnswerDto> answerDtos, List<Integer> questionIds) {
         studentAnswerController.cleanupTestResults(answerDtos.get(0).getStudent().getId(),
                 answerDtos.get(0).getQuestion().getTest().getId());
         studentAnswerController.saveResults(answerDtos, answerDtos.get(0).getStudent().getId());
-
+        /** Assemble test results*/
+        StudentResultDto testResult = new StudentResultDto();
+        testResult.setStudent(answerDtos.get(0).getStudent());
+        testResult.setTestDto(answerDtos.get(0).getQuestion().getTest());
+        testResult.setResult(countResult(questionIds, answerDtos.get(0).getStudent().getId()));
+        studentResultController.saveResult(testResult);
     }
 
     public List<AnswerDto> getAnswers(Integer questionId) {
