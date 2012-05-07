@@ -7,6 +7,7 @@ import com.bsu.server.dto.ThemeDto;
 import com.bsu.server.theoretic.test.service.TheoreticTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import website.model.global.UserModel;
 
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
@@ -38,15 +39,20 @@ public class TheoreticTestingModel {
     @Autowired
     private TheoreticTestService testService;
 
+    @Autowired
+    private UserModel userModel;
+
     public List<StudentAnswer> getAllStudentAnswer() {
         return allStudentAnswer;
     }
 
     public void load() {
-        courses = courseController.loadCourseList();
+        if (courses == null || courses.isEmpty()) {
+            courses = courseController.loadCourseList(userModel.getUser().getId());
+        }
         topics.clear();
         if (selectedCourse != null) {
-            topics = themeController.getThemesForCourse(selectedCourse);
+            topics = themeController.getThemesForCourse(selectedCourse, userModel.getUser().getId());
         }
     }
 

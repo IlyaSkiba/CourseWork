@@ -1,5 +1,6 @@
 package com.bsu.server.dto.security;
 
+import com.bsu.server.dto.UserGroupDto;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -8,6 +9,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -50,6 +52,15 @@ public class UserAccount implements UserDetails, Serializable {
             @JoinColumn(name = "role_id", referencedColumnName = "role_id")
     )
     private Set<UserRole> userRoles;
+
+    @ManyToMany
+    @JoinTable(name = "user_group_list",
+            joinColumns =
+            @JoinColumn(name = "user_id", referencedColumnName = "user_id"),
+            inverseJoinColumns =
+            @JoinColumn(name = "group_id", referencedColumnName = "id")
+    )
+    private List<UserGroupDto> userGroups;
 
     public Integer getId() {
         return id;
@@ -139,5 +150,13 @@ public class UserAccount implements UserDetails, Serializable {
 
     public void setUserRoles(Set<UserRole> userRoles) {
         this.userRoles = userRoles;
+    }
+
+    public List<UserGroupDto> getUserGroups() {
+        return userGroups;
+    }
+
+    public void setUserGroups(List<UserGroupDto> userGroups) {
+        this.userGroups = userGroups;
     }
 }

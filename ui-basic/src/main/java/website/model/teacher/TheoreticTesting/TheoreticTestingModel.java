@@ -7,6 +7,7 @@ import com.bsu.server.dto.ThemeDto;
 import org.primefaces.event.FileUploadEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import website.model.global.UserModel;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -33,12 +34,16 @@ public class TheoreticTestingModel {
     private CourseController courseController;
     @Autowired
     private ThemeController themeController;
+    @Autowired
+    private UserModel userModel;
 
     public void load() {
-        courses = courseController.loadCourseList();
+        if (courses == null || courses.isEmpty()) {
+            courses = courseController.loadCourseList(userModel.getUser().getId());
+        }
         topics.clear();
         if (selectedCourse != null) {
-            topics = themeController.getThemesForCourse(selectedCourse);
+            topics = themeController.getThemesForCourse(selectedCourse, userModel.getUser().getId());
         }
     }
 

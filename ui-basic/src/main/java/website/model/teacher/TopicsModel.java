@@ -6,17 +6,16 @@ import com.bsu.server.dto.CourseDto;
 import com.bsu.server.dto.ThemeDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import website.model.global.UserModel;
 
 import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by IntelliJ IDEA.
  * User: HomeUser
  * Date: 23.4.12
  * Time: 11.46
- * To change this template use File | Settings | File Templates.
  */
 @Scope("session")
 @Named("topicsChange")
@@ -30,12 +29,16 @@ public class TopicsModel {
     private CourseController courseController;
     @Autowired
     private ThemeController themeController;
+    @Autowired
+    private UserModel userModel;
 
     public void load() {
-        courses = courseController.loadCourseList();
+        if (courses == null || courses.isEmpty()) {
+            courses = courseController.loadCourseList(userModel.getUser().getId());
+        }
         topics.clear();
         if (selectedCourse != null) {
-            topics = themeController.getThemesForCourse(selectedCourse);
+            topics = themeController.getThemesForCourse(selectedCourse, userModel.getUser().getId());
         }
     }
 

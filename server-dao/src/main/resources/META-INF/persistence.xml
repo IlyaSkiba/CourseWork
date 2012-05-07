@@ -9,6 +9,7 @@
         <class>com.bsu.server.dto.CourseDto</class>
         <class>com.bsu.server.dto.ThemeDto</class>
         <class>com.bsu.server.dto.security.UserAccount</class>
+        <class>com.bsu.server.dto.UserGroupDto</class>
         <class>com.bsu.server.dto.security.UserRole</class>
         <class>com.bsu.server.theoretic.test.dto.AnswerDto</class>
         <class>com.bsu.server.theoretic.test.dto.QuestionDto</class>

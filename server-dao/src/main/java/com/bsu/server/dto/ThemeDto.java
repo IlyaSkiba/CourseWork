@@ -4,6 +4,7 @@ import com.bsu.server.dto.security.UserAccount;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * User: HomeUser
@@ -26,6 +27,14 @@ public class ThemeDto implements Serializable {
     @ManyToOne
     private CourseDto courseDto;
 
+    @ManyToMany
+    @JoinTable(name = "group_theme_list",
+            joinColumns =
+            @JoinColumn(name = "theme_id", referencedColumnName = "theme_id"),
+            inverseJoinColumns =
+            @JoinColumn(name = "group_id", referencedColumnName = "id")
+    )
+    private List<UserGroupDto> assignedGroups;
 
     public Integer getId() {
         return id;
@@ -49,5 +58,13 @@ public class ThemeDto implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<UserGroupDto> getAssignedGroups() {
+        return assignedGroups;
+    }
+
+    public void setAssignedGroups(List<UserGroupDto> assignedGroups) {
+        this.assignedGroups = assignedGroups;
     }
 }
