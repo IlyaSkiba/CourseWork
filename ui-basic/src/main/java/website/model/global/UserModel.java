@@ -4,10 +4,8 @@ import com.bsu.server.dto.security.UserAccount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
-import website.service.JpaUserDetailsService;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import java.io.Serializable;
 
@@ -21,7 +19,7 @@ import java.io.Serializable;
 public class UserModel implements Serializable {
 
     @Autowired
-    private JpaUserDetailsService userService;
+    private UserDetailsService userService;
     @Autowired
     private ShaPasswordEncoder passwordEncoder;
 
@@ -92,12 +90,5 @@ public class UserModel implements Serializable {
     }
 
     public void changePassword() {
-        if (passwordEncoder.isPasswordValid(userService.loadUserByUsername(userName).getPassword(), oldPassword, null)) {
-
-            userService.changePassword(userName, newPassword);
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Пароль успешно сменен", null));
-        } else {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Введенный пароль не верен", null));
-        }
     }
 }

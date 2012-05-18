@@ -1,5 +1,6 @@
 package com.bsu.server.theoretic.test.service;
 
+import com.bsu.server.dto.security.UserAccount;
 import com.bsu.server.theoretic.test.action.QuestionListAction;
 import com.bsu.server.theoretic.test.controller.QuestionController;
 import com.bsu.server.theoretic.test.controller.TestController;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -88,16 +90,28 @@ public class TheoreticTestService {
             List<AnswerDto> rightAnswers = questionController.getRightAnswers(questionId);
             double correctives = 0;
             List<StudentAnswerDto> answerDtos = studentAnswerController.getAnswers(questionId, studentId);
-            for (StudentAnswerDto studentAnswerDto : answerDtos) {
-                for (AnswerDto rightAnswer : rightAnswers) {
-                    if (rightAnswer.getTextAnswer().trim().equalsIgnoreCase(studentAnswerDto.getAnswerText().trim())) {
-                        correctives += 1;
+            if (answerDtos.size() == rightAnswers.size()) {
+                correctives = 1;
+                Collections.sort(rightAnswers, new Comparator<AnswerDto>() {
+                    @Override
+                    public int compare(AnswerDto o1, AnswerDto o2) {
+                        return o1.getTextAnswer().compareTo(o2.getTextAnswer());
+                    }
+                });
+                Collections.sort(answerDtos, new Comparator<StudentAnswerDto>() {
+                    @Override
+                    public int compare(StudentAnswerDto o1, StudentAnswerDto o2) {
+                        return o1.getAnswerText().compareTo(o2.getAnswerText());
+                    }
+                });
+                for (int i = 0; i < answerDtos.size(); i++) {
+                    if (!answerDtos.get(i).getAnswerText().equalsIgnoreCase(rightAnswers.get(i).getTextAnswer())) {
+                        correctives = 0;
+                        break;
                     }
                 }
             }
-            correctives = correctives * 2 - answerDtos.size();
-            if (correctives <= 0) continue;
-            result += correctives * questionController.getQuestionDto(questionId).getWeight() / rightAnswers.size();
+            result += correctives * questionController.getQuestionDto(questionId).getWeight();
             maxResult += questionController.getQuestionDto(questionId).getWeight();
         }
         return (int) (result / maxResult * 100);
@@ -128,5 +142,9 @@ public class TheoreticTestService {
         }
 
         return testController.getTestFromTheme(themeId).getId();
+    }
+
+    public List<StudentResultDto> getStudentResults(UserAccount user) {
+        return studentResultController.getStudentResults(user.getId());
     }
 }

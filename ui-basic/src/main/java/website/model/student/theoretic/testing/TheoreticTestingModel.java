@@ -1,4 +1,4 @@
-package website.model.student.TheoreticTesting;
+package website.model.student.theoretic.testing;
 
 import com.bsu.server.controller.CourseController;
 import com.bsu.server.controller.ThemeController;
@@ -25,6 +25,7 @@ import java.util.List;
 @Scope("session")
 @Named("theoretic")
 public class TheoreticTestingModel {
+    private static final String STUDENT_FOLDER = "/student/";
     private static final String TEMPLATE_URL = "teoretic_main.xhtml";
     private List<CourseDto> courses = new ArrayList<CourseDto>();
     private List<ThemeDto> topics = new ArrayList<ThemeDto>();
@@ -40,6 +41,7 @@ public class TheoreticTestingModel {
     @Autowired
     private TheoreticTestService testService;
 
+
     @Autowired
     private UserModel userModel;
 
@@ -47,7 +49,24 @@ public class TheoreticTestingModel {
         return allStudentAnswer;
     }
 
+    public void cleanup() {
+        selectedCourse = null;
+        selectedTopic = null;
+        courses.clear();
+        topics.clear();
+        testId = null;
+        allStudentAnswer = null;
+        idQuestionList = null;
+    }
+
+    public String initialize() {
+        cleanup();
+        load();
+        return STUDENT_FOLDER + TEMPLATE_URL;
+    }
+
     public void load() {
+
         if (courses == null || courses.isEmpty()) {
             courses = courseController.loadCourseList(userModel.getUser().getId());
         }

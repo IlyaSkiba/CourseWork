@@ -21,7 +21,7 @@
                             <f:selectItem itemLabel="" itemValue=""/>
                             <f:selectItems value="#{theoretic.courses}" var="course" itemLabel="#{course.courseName}"
                                            itemValue="#{course.id}"/>
-                            <p:ajax update="@form"/>
+                            <p:ajax event="change" update="@form"/>
                         </p:selectOneMenu>
                     </div>
 

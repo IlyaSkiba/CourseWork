@@ -1,4 +1,4 @@
-package website.model.student.TheoreticTesting;
+package website.model.student.theoretic.testing;
 
 import com.bsu.server.theoretic.test.dto.AnswerDto;
 import com.bsu.server.theoretic.test.dto.QuestionDto;
