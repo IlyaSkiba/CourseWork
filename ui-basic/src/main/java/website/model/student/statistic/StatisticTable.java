@@ -1,12 +1,13 @@
-package website.model.student.statistic;
+package website.model.student.Statistic;
 
 import org.springframework.context.annotation.Scope;
 
 /**
  * Created by IntelliJ IDEA.
- * User: Kira Stepina
+ * User: HomeUser
  * Date: 7.5.12
  * Time: 14.30
+ * To change this template use File | Settings | File Templates.
  */
 @Scope("session")
 public class StatisticTable {

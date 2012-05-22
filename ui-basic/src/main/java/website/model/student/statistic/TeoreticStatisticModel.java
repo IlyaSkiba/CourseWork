@@ -1,7 +1,5 @@
-package website.model.student.statistic;
+package website.model.student.Statistic;
 
-import com.bsu.server.theoretic.test.service.TheoreticTestService;
-import com.bsu.server.theoretic.test.student.dto.StudentResultDto;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
@@ -10,9 +8,7 @@ import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.primefaces.model.DefaultStreamedContent;
 import org.primefaces.model.StreamedContent;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
-import website.model.global.UserModel;
 
 import javax.inject.Named;
 import java.io.File;
@@ -33,10 +29,6 @@ import java.util.List;
 public class TeoreticStatisticModel {
     private StreamedContent chart;
     private List<StatisticTable> result;
-    @Autowired
-    private TheoreticTestService theoreticTestService;
-    @Autowired
-    private UserModel userModel;
 
     public void dynamicImageController() {
         JFreeChart jfreechart = ChartFactory.createLineChart("Статистика по теоретическим тестам", "Тесты", "Баллы", createDataset(), PlotOrientation.VERTICAL, false, true, false);
@@ -56,10 +48,10 @@ public class TeoreticStatisticModel {
 
     private CategoryDataset createDataset() {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-        List<StudentResultDto> results = theoreticTestService.getStudentResults(userModel.getUser());
-        for (StudentResultDto resultDto : results) {
-            dataset.setValue(resultDto.getResult(), Integer.valueOf(1), resultDto.getTestDto().getRelatedTheme().getName());
-        }
+        dataset.setValue(100, Integer.valueOf(1), "Тест1");
+        dataset.setValue(70, Integer.valueOf(1), "Тест2");
+        dataset.setValue(85, Integer.valueOf(1), "Тест3");
+        dataset.setValue(90, Integer.valueOf(1), "Тест4");
         return dataset;
         //@todo: извлечь из базы результаты теоретического тестирования студента
     }
