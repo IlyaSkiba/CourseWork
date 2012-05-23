@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html">
+    <h:head>
+        <title>Добавить тему</title>
+    </h:head>
+    <h:body>
+        <ui:decorate template="../structure.xhtml">
+            <ui:define name="content">
+                <h:form>
+                    <div class="elementBlock">
+                        <h:outputLabel for="courses">Выберите курс: </h:outputLabel>
+                        <p:selectOneMenu id="courses" value="#{topicsChange.selectedCourse}">
+                            <f:selectItem itemLabel="" itemValue=""/>
+                            <f:selectItems value="#{topicsChange.courses}" var="course"
+                                           itemLabel="#{course.courseName}"
+                                           itemValue="#{course.id}"/>
+                            <p:ajax update="@form"/>
+                        </p:selectOneMenu>
+                    </div>
+                    <h:form rendered="#{topicsChange.selectedCourse!=null and topicsChange.selectedCourse!=''}">
+                        <div>
+                            <h:outputText value="Введите название темы:"/>
+                        </div>
+                        <p:inputText id="input"/>
+
+                        <div>
+                            <p:commandButton value="Submit" icon="ui-icon-disk" action="#{topicsChange.saveTopic}"/>
+                        </div>
+                    </h:form>
+                </h:form>
+            </ui:define>
+        </ui:decorate>
+    </h:body>
+</f:view>
+</html>

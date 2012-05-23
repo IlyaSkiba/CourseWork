@@ -7,17 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/course/CourseService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/themes/service/ThemeService.java" />
-      <change type="DELETED" beforePath="D:\Temp\CourseWork\ui-basic\src\main\java\website\model\student\statistic\TeoreticStatisticModel.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/server-dao.iml" afterPath="$PROJECT_DIR$/server-dao/server-dao.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/service/TheoreticTestService.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/service/TheoreticTestService.java" />
-      <change type="MODIFICATION" beforePath="D:\Temp\CourseWork\ui-basic\src\main\java\website\model\student\statistic\StatisticTable.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/statistic/StatisticTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/resources/css/global.css" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/resources/css/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/statistic/teoretic_stat.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/statistic/teoretic_stat.xhtml" />
-      <change type="MOVED" beforePath="D:\Temp\CourseWork\ui-basic\src\main\java\website\model\student\statistic\TeoreticStatisticModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/statistic/TheoreticStatisticModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/LecturerMainModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/AddTestModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveQuestionsTable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveTestModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/main.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/structure.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic_approve.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/add_topic.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/change_topic.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/delete_topic.xhtml" />
+      <change type="DELETED" beforePath="D:\Temp\CourseWork\.idea\libraries\Maven__com_sun_faces_jsf_api_2_1_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Temp\CourseWork\.idea\libraries\Maven__com_sun_faces_jsf_impl_2_1_7.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/statistic/StatisticTable.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/statistic/StatisticTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/statistic/TheoreticStatisticModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/statistic/TheoreticStatisticModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/security/RedirectController.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/security/RedirectController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext-security.xml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext-security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/index.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/index.xhtml" />
     </list>
     <ignored path="$USER_HOME$/.griffon/" />
     <ignored path="$USER_HOME$/.grails/" />
@@ -127,8 +134,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -140,7 +147,7 @@
       <file leaf-file-name="new  2.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$USER_HOME$/new  2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="34" selection-start="6597" selection-end="6597" vertical-scroll-proportion="4.6792455">
+            <state line="184" column="34" selection-start="6597" selection-end="6597" vertical-scroll-proportion="2.192">
               <folding>
                 <element signature="tag#style#0;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
@@ -349,6 +356,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -593,7 +610,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Favorites">
         <subPane subId="org.jgeek.website">
           <PATH>
@@ -609,16 +625,16 @@
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="278" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="296" />
-    <property name="options.splitter.main.proportions" value="0.30000007" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="Persistence.ERD.GroupObjects" value="false" />
+    <property name="options.splitter.main.proportions" value="0.30000007" />
     <property name="Persistence.ERD.MergeEmbedded" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="292" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="292" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="297" />
@@ -635,19 +651,19 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="File.Encoding" />
     <property name="Persistence.ERD.SimpleMode" value="false" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="options.lastSelected" value="File.Encoding" />
     <property name="DefaultHtmlFileTemplate" value="Xhtml" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="Persistence.ERD.MergeInherited" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -773,24 +789,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" runner="idea" />
       <module name="" />
@@ -817,6 +815,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -881,11 +897,10 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -893,10 +908,11 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1077,7 +1093,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.245827" sideWeight="0.42662117" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.7996575" sideWeight="0.49468893" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.67636985" sideWeight="0.49468893" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25265554" sideWeight="0.56825936" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1094,7 +1110,7 @@
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22195122" sideWeight="0.6584217" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39984825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21168438" sideWeight="0.7372014" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3068182" sideWeight="0.20034246" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3068182" sideWeight="0.32363012" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46404108" sideWeight="0.0" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36525613" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.61433446" order="1" side_tool="false" content_ui="combo" />
@@ -1258,7 +1274,7 @@
     </entry>
     <entry file="file://$USER_HOME$/new  2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="34" selection-start="6597" selection-end="6597" vertical-scroll-proportion="4.6792455">
+        <state line="184" column="34" selection-start="6597" selection-end="6597" vertical-scroll-proportion="2.192">
           <folding>
             <element signature="tag#style#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />

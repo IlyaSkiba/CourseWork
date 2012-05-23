@@ -34,7 +34,7 @@ public class RedirectController extends SimpleUrlAuthenticationSuccessHandler {
                 if (role.getRoleName().equals("ROLE_TEACHER")) {
                     setDefaultTargetUrl("/teacher/main.xhtml");
                 }
-                if (role.getRoleName().equals("ROLE_LECTURER")) {
+                if (role.getRoleName().equals("ROLE_LECTOR")) {
                     setDefaultTargetUrl("/lecturer/main.xhtml");
                 }
 

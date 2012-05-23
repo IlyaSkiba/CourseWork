@@ -29,9 +29,10 @@
             <h:panelGrid columns="2">
                 <f:validateBean>
                     <h:outputLabel for="j_username" value="Имя пользователя (логин):"/>
-                    <p:inputText id="j_username" required="true" value="#{userModel.userName}"/>
+                    <p:inputText id="j_username" required="true" requiredMessage="Введите логин"
+                                 value="#{userModel.userName}"/>
                     <h:outputLabel for="j_password" value="Пароль:"/>
-                    <p:password id="j_password" required="true"/>
+                    <p:password id="j_password" requiredMessage="Введите пароль" required="true"/>
                     <h:outputLabel for="_spring_security_remember_me" value="Запомнить меня:"/>
                     <p:selectBooleanCheckbox id="_spring_security_remember_me"/>
                 </f:validateBean>

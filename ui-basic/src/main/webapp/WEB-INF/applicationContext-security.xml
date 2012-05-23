@@ -15,7 +15,7 @@
         <intercept-url pattern="/student/**" access="hasAuthority('ROLE_STUDENT')"/>
         <intercept-url pattern="/admin/**" access="hasAuthority('ROLE_ADMIN')"/>
         <intercept-url pattern="/teacher/**" access="hasAuthority('ROLE_TEACHER')"/>
-        <intercept-url pattern="/coursehead/**" access="hasAuthority('ROLE_LECTURER')"/>
+        <intercept-url pattern="/lecturer/**" access="hasAuthority('ROLE_LECTOR')"/>
         <intercept-url pattern="/*" access="permitAll"/>
 
         <form-login
