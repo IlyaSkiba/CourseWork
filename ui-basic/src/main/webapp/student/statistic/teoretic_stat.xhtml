@@ -16,11 +16,12 @@
         <ui:decorate template="../structure.xhtml">
             <ui:define name="content">
                 <div class="statGraphic">
-                    <p:graphicImage value="#{teorStatModel.chart}"/>
+                    <p:graphicImage value="#{theorStatModel.chart}"/>
                 </div>
 
                 <h:form prependId="false">
-                    <p:dataTable styleClass="statTable" id="basic" var="teoreticResult" value="#{teorStatModel.result}">
+                    <p:dataTable styleClass="statTable" id="basic" var="teoreticResult"
+                                 value="#{theorStatModel.result}">
                         <p:column id="modelHeader">
                             <f:facet name="header">
                                 Тесты

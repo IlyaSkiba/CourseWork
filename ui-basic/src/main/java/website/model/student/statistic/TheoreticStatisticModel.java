@@ -29,8 +29,8 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Scope("session")
-@Named("teorStatModel")
-public class TeoreticStatisticModel {
+@Named("theorStatModel")
+public class TheoreticStatisticModel {
     private StreamedContent chart;
     private List<StatisticTable> result;
     @Autowired
@@ -61,27 +61,17 @@ public class TeoreticStatisticModel {
             dataset.setValue(resultDto.getResult(), Integer.valueOf(1), resultDto.getTestDto().getRelatedTheme().getName());
         }
         return dataset;
-        //@todo: извлечь из базы результаты теоретического тестирования студента
     }
 
     public List<StatisticTable> getResult() {
         result = new ArrayList<StatisticTable>();
-        StatisticTable stRes = new StatisticTable();
-        stRes.setTest("Тест1");
-        stRes.setResult(100);
-        result.add(0, stRes);
-        stRes = new StatisticTable();
-        stRes.setTest("Тест2");
-        stRes.setResult(70);
-        result.add(1, stRes);
-        stRes = new StatisticTable();
-        stRes.setTest("Тест3");
-        stRes.setResult(85);
-        result.add(2, stRes);
-        stRes = new StatisticTable();
-        stRes.setTest("Тест4");
-        stRes.setResult(90);
-        result.add(3, stRes);
+        List<StudentResultDto> results = theoreticTestService.getStudentResults(userModel.getUser());
+        for (StudentResultDto resultDto : results) {
+            StatisticTable stRes = new StatisticTable();
+            stRes.setTest(resultDto.getTestDto().getRelatedTheme().getName());
+            stRes.setResult(resultDto.getResult());
+            result.add(stRes);
+        }
         return result;
     }
 }
