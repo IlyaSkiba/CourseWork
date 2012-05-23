@@ -41,6 +41,7 @@ public class TheoreticTestingModel {
     @Autowired
     private TheoreticTestService testService;
 
+    private int cheaterState;
 
     @Autowired
     private UserModel userModel;
@@ -124,5 +125,13 @@ public class TheoreticTestingModel {
 
     public Integer getTestId() {
         return testId;
+    }
+
+    public int getCheaterState() {
+        return cheaterState;
+    }
+
+    public void setCheaterState(int cheaterState) {
+        this.cheaterState = cheaterState;
     }
 }

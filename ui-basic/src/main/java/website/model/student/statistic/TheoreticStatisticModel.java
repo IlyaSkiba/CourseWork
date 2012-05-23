@@ -1,5 +1,7 @@
-package website.model.student.Statistic;
+package website.model.student.statistic;
 
+import com.bsu.server.theoretic.test.service.TheoreticTestService;
+import com.bsu.server.theoretic.test.student.dto.StudentResultDto;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
@@ -9,7 +11,9 @@ import org.jfree.data.category.DefaultCategoryDataset;
 import org.primefaces.model.DefaultStreamedContent;
 import org.primefaces.model.StreamedContent;
 import org.springframework.context.annotation.Scope;
+import website.model.global.UserModel;
 
+import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,17 +22,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by IntelliJ IDEA.
  * User: HomeUser
  * Date: 5.5.12
  * Time: 14.51
- * To change this template use File | Settings | File Templates.
  */
 @Scope("session")
 @Named("theorStatModel")
 public class TheoreticStatisticModel {
     private StreamedContent chart;
     private List<StatisticTable> result;
+    @Inject
+    private TheoreticTestService theoreticTestService;
+    @Inject
+    private UserModel userModel;
 
     public void dynamicImageController() {
         JFreeChart jfreechart = ChartFactory.createLineChart("Статистика по теоретическим тестам", "Тесты", "Баллы", createDataset(), PlotOrientation.VERTICAL, false, true, false);

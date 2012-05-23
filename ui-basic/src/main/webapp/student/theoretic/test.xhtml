@@ -7,11 +7,12 @@
     <h:head>
         <h:outputStylesheet library="css" name="global.css"/>
         <h:outputStylesheet library="css" name="test.css"/>
+        <h:outputScript name="js/test.js"/>
     </h:head>
     <h:body>
         <h:form id="test">
 
-            <p:panel header="Вопрос">
+            <p:panel header="Вопрос" id="question">
                 <div class="Question">
                     <h:outputText value="#{questionModel.question}" escape="false"/>
                 </div>
@@ -39,6 +40,33 @@
 
             </div>
         </h:form>
+
+        <h:form id="cheaterChecking">
+            <p:dialog widgetVar="cheaterReminder" id="cheaterReminder" modal="true" resizable="false">
+                <h:outputLabel value="Система заподозрила вас в попытке обмана системы.
+                        При повторной попытке вы будете заблокированы."/>
+            </p:dialog>
+
+            <h:commandButton style="visibility: hidden;" id="listener">
+                <f:actionListener binding="#{cheatListener}"
+                                  type="website.model.student.theoretic.testing.action.CheaterActionListener"/>
+            </h:commandButton>
+        </h:form>
     </h:body>
+    <script type="text/javascript">
+        $(function () {
+            var checker = new StudentTheoretic();
+            checker.bindFocusing();
+        })
+
+        function getHiddenObjects() {
+            return{
+                "cheaterForm":"#{p:component('cheaterChecking')}",
+                "cheaterAttr":"#{p:component('listener')}",
+                "updateVal":"#{p:component('cheaterReminder')}, #{p:component('question')}"
+
+            };
+        }
+    </script>
 </f:view>
 </html>
