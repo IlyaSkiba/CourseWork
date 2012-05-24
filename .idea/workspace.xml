@@ -6,26 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" name="Default" comment="student test UI done">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/LecturerMainModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/AddTestModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveQuestionsTable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveTestModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/main.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/structure.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic_approve.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/add_topic.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/change_topic.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/delete_topic.xhtml" />
-      <change type="DELETED" beforePath="D:\Trash\JSF\trunk\.idea\libraries\Maven__com_sun_faces_jsf_api_2_1_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Trash\JSF\trunk\.idea\libraries\Maven__com_sun_faces_jsf_impl_2_1_7.xml" afterPath="" />
+    <list default="true" id="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="D:\Trash\JSF\trunk\ui-basic\src\main\java\website\model\student\Statistic\StatisticTable.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/Statistic/StatisticTable.java" />
-      <change type="MODIFICATION" beforePath="D:\Trash\JSF\trunk\ui-basic\src\main\java\website\model\student\Statistic\TeoreticStatisticModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/Statistic/TeoreticStatisticModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/security/RedirectController.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/security/RedirectController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext-security.xml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext-security.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/index.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/index.xhtml" />
     </list>
     <ignored path="$USER_HOME$/.griffon/" />
     <ignored path="$USER_HOME$/.grails/" />
@@ -163,7 +145,7 @@
       <file leaf-file-name="main.xhtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/main.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="46" selection-start="511" selection-end="526" vertical-scroll-proportion="-9.153846">
+            <state line="14" column="46" selection-start="511" selection-end="526" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -172,7 +154,7 @@
       <file leaf-file-name="structure.xhtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/structure.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="10" selection-start="1968" selection-end="1968" vertical-scroll-proportion="-10.115385">
+            <state line="46" column="10" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,7 +163,7 @@
       <file leaf-file-name="index.xhtml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="37" selection-start="1906" selection-end="1906" vertical-scroll-proportion="2.144144">
+            <state line="9" column="37" selection-start="436" selection-end="436" vertical-scroll-proportion="0.21520804">
               <folding />
             </state>
           </provider>
@@ -190,7 +172,7 @@
       <file leaf-file-name="teoretic_approve.xhtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic_approve.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="90" selection-start="728" selection-end="728" vertical-scroll-proportion="-9.5">
+            <state line="17" column="90" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -199,10 +181,8 @@
       <file leaf-file-name="ApproveTestModel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveTestModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="64" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="23" column="64" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -210,7 +190,7 @@
       <file leaf-file-name="ApproveQuestionsTable.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveQuestionsTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="48" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+            <state line="14" column="50" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -219,7 +199,7 @@
       <file leaf-file-name="AddTestModel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/AddTestModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="37" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.0">
+            <state line="50" column="37" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -228,7 +208,7 @@
       <file leaf-file-name="teoretic.xhtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="68" selection-start="1000" selection-end="1000" vertical-scroll-proportion="-11.653846">
+            <state line="21" column="68" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1337711576101" expanded="true" signature="2842:2857" placeholder="{...}" />
               </folding>
@@ -428,6 +408,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -844,16 +834,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="website" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1321,7 +1301,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2457265" sideWeight="0.46547884" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.57238305" sideWeight="0.49468893" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16703786" sideWeight="0.49468893" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25265554" sideWeight="0.56825936" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26393142" sideWeight="0.6289753" order="7" side_tool="true" content_ui="tabs" />
@@ -1338,7 +1318,7 @@
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22195122" sideWeight="0.6584217" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39984825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21168438" sideWeight="0.7372014" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28311965" sideWeight="0.42761692" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2820513" sideWeight="0.83296216" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29064587" sideWeight="0.78205127" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36525613" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.61433446" order="1" side_tool="false" content_ui="combo" />
@@ -1386,7 +1366,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="testResults added on service layer" />
+    <option name="LAST_COMMIT_MESSAGE" value="реализован интерфейс для теоретического тестирования" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1410,6 +1390,7 @@
     <MESSAGE value="test results calculation done" />
     <MESSAGE value="group authorization added" />
     <MESSAGE value="testResults added on service layer" />
+    <MESSAGE value="реализован интерфейс для теоретического тестирования" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1436,30 +1417,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/Statistic/StatisticTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="13" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/Statistic/TeoreticStatisticModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="28" column="13" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/student/theoretic/test.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext-security.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="79" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.36342043">
-          <folding />
-        </state>
+        <state line="17" column="79" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.36342043" />
       </provider>
       <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
         <state />
@@ -1467,67 +1440,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/security/RedirectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="58" selection-start="1504" selection-end="1515" vertical-scroll-proportion="0.659436">
-          <folding />
-        </state>
+        <state line="36" column="58" selection-start="1504" selection-end="1515" vertical-scroll-proportion="0.659436" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/main.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="46" selection-start="511" selection-end="526" vertical-scroll-proportion="-9.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveTestModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="64" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveQuestionsTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="48" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic_approve.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="90" selection-start="728" selection-end="728" vertical-scroll-proportion="-9.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="68" selection-start="1000" selection-end="1000" vertical-scroll-proportion="-11.653846">
-          <folding>
-            <marker date="1337711576101" expanded="true" signature="2842:2857" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/AddTestModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="37" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="46" selection-start="511" selection-end="526" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/structure.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="10" selection-start="1968" selection-end="1968" vertical-scroll-proportion="-10.115385">
-          <folding />
-        </state>
+        <state line="46" column="10" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic_approve.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="90" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveTestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="64" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveQuestionsTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="50" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/AddTestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="37" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="68" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="37" selection-start="1906" selection-end="1906" vertical-scroll-proportion="2.144144">
+        <state line="9" column="37" selection-start="436" selection-end="436" vertical-scroll-proportion="0.21520804">
           <folding />
         </state>
       </provider>
