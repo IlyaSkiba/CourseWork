@@ -137,7 +137,9 @@ public class TheoreticTestService {
         try {
             StudentResultDto resultDto = studentResultController.
                     getStudentResult(userId, testController.getTestFromTheme(themeId).getId());
-            if (resultDto != null) return null;
+            if (resultDto != null) {
+                return null;
+            }
         } catch (Exception e) {
         }
 
@@ -151,4 +153,6 @@ public class TheoreticTestService {
     public void addQuestion(QuestionDto questionDto) {
         //@TODO: implement
     }
+
+
 }

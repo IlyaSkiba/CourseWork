@@ -2,7 +2,8 @@ StudentTheoretic = function () {
     var call = 0;
     return {
         bindFocusing:function () {
-            window.document.onblur = function () {
+
+            var blurFunc = function () {
                 $(".Question").css("display", "none");
                 PrimeFaces.ab(
                     {
@@ -16,6 +17,12 @@ StudentTheoretic = function () {
                     }
                 );
             };
+            // Is this a version of IE?
+            if ($.browser.msie) {
+                $(window).bind('blur', blurFunc);
+            } else {
+                $(document).bind('blur', blurFunc);
+            }
         }
     }
 }

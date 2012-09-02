@@ -7,8 +7,8 @@ package com.bsu.server.controller;
  * This class represents DAO of the course entity. Will be modified to add course owner
  */
 
-import com.bsu.server.dto.CourseDto;
-import com.bsu.server.dto.ThemeDto;
+import com.bsu.server.dto.CourseEntity;
+import com.bsu.server.dto.ThemeEntity;
 import com.bsu.server.dto.UserGroupDto;
 import com.bsu.server.dto.security.UserAccount;
 import org.springframework.stereotype.Service;
@@ -28,17 +28,19 @@ public class CourseController {
     private EntityManager em;
 
     @Transactional(readOnly = true)
-    public List<CourseDto> loadCourseList(Integer userId) {
+    public List<CourseEntity> loadCourseList(Integer userId) {
         UserAccount currentUser = em.createQuery("from UserAccount where id=:userId", UserAccount.class)
                 .setParameter("userId", userId).getSingleResult();
         List<UserGroupDto> userGroups = currentUser.getUserGroups();
-        HashSet<CourseDto> courses = new HashSet<CourseDto>();
-        if (userGroups == null) return Collections.emptyList();
+        HashSet<CourseEntity> courses = new HashSet<CourseEntity>();
+        if (userGroups == null) {
+            return Collections.emptyList();
+        }
         for (UserGroupDto userGroup : userGroups) {
-            for (ThemeDto theme : userGroup.getAvailableThemes()) {
-                courses.add(theme.getCourseDto());
+            for (ThemeEntity theme : userGroup.getAvailableThemes()) {
+                courses.add(theme.getCourseEntity());
             }
         }
-        return new ArrayList<CourseDto>(courses);
+        return new ArrayList<CourseEntity>(courses);
     }
 }

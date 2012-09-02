@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "theme", schema = "public")
-public class ThemeDto implements Serializable {
+public class ThemeEntity implements Serializable {
     @Id
     @Column(name = "theme_id")
     private Integer id;
@@ -25,7 +25,7 @@ public class ThemeDto implements Serializable {
     private String name;
 
     @ManyToOne
-    private CourseDto courseDto;
+    private CourseEntity courseEntity;
 
     @ManyToMany
     @JoinTable(name = "group_theme_list",
@@ -44,8 +44,8 @@ public class ThemeDto implements Serializable {
         this.id = id;
     }
 
-    public CourseDto getCourseDto() {
-        return courseDto;
+    public CourseEntity getCourseEntity() {
+        return courseEntity;
     }
 
     public UserAccount getCreator() {
@@ -66,5 +66,13 @@ public class ThemeDto implements Serializable {
 
     public void setAssignedGroups(List<UserGroupDto> assignedGroups) {
         this.assignedGroups = assignedGroups;
+    }
+
+    public void setCreator(UserAccount creator) {
+        this.creator = creator;
+    }
+
+    public void setCourseEntity(CourseEntity courseEntity) {
+        this.courseEntity = courseEntity;
     }
 }

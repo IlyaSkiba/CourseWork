@@ -1,6 +1,6 @@
 package com.bsu.server.controller;
 
-import com.bsu.server.dto.ThemeDto;
+import com.bsu.server.dto.ThemeEntity;
 import com.bsu.server.dto.UserGroupDto;
 import com.bsu.server.dto.security.UserAccount;
 import org.springframework.stereotype.Service;
@@ -25,20 +25,24 @@ public class ThemeController {
     @PersistenceContext
     private EntityManager em;
 
-    @Transactional(readOnly = false)
-    public List<ThemeDto> getThemesForCourse(Integer courseId, Integer userId) {
-        if (courseId == null || userId == null) return Collections.emptyList();
-        TypedQuery<ThemeDto> q = em.createQuery("from ThemeDto where courseDto.id in (:courseId)", ThemeDto.class);
+    @Transactional(readOnly = true)
+    public List<ThemeEntity> getThemesForCourse(Integer courseId, Integer userId) {
+        if (courseId == null || userId == null) {
+            return Collections.emptyList();
+        }
+        TypedQuery<ThemeEntity> q = em.createQuery("from ThemeEntity where courseDto.id in (:courseId)", ThemeEntity.class);
         q.setParameter("courseId", Arrays.asList(courseId));
-        List<ThemeDto> queryResult = q.getResultList();
+        List<ThemeEntity> queryResult = q.getResultList();
         UserAccount currentUser = em.createQuery("from UserAccount where id=:userId", UserAccount.class)
                 .setParameter("userId", userId).getSingleResult();
         List<UserGroupDto> userGroups = currentUser.getUserGroups();
-        if (userGroups == null) return Collections.emptyList();
+        if (userGroups == null) {
+            return Collections.emptyList();
+        }
 
-        ArrayList<ThemeDto> result = new ArrayList<ThemeDto>();
+        ArrayList<ThemeEntity> result = new ArrayList<ThemeEntity>();
         for (UserGroupDto userGroup : userGroups) {
-            for (ThemeDto theme : userGroup.getAvailableThemes()) {
+            for (ThemeEntity theme : userGroup.getAvailableThemes()) {
                 if (queryResult.contains(theme)) {
                     result.add(theme);
                 }
@@ -47,10 +51,39 @@ public class ThemeController {
         return result;
     }
 
-    @Transactional(readOnly = false)
-    public ThemeDto getTheme(Integer selectedTopic) {
-        TypedQuery<ThemeDto> q = em.createQuery("from ThemeDto where id = :themeId", ThemeDto.class);
+    @Transactional(readOnly = true)
+    public ThemeEntity getTheme(Integer selectedTopic) {
+        TypedQuery<ThemeEntity> q = em.createQuery("from ThemeEntity where id = :themeId", ThemeEntity.class);
         q.setParameter("themeId", selectedTopic);
         return q.getSingleResult();
+    }
+
+    @Transactional(readOnly = false)
+    public ThemeEntity createTheme(ThemeEntity entity) {
+        em.persist(entity);
+        em.flush();
+        TypedQuery<ThemeEntity> q = em.createQuery("from ThemeEntity where id = :themeId", ThemeEntity.class);
+        q.setParameter("themeId", entity.getId());
+        return entity;
+    }
+
+    @Transactional(readOnly = false)
+    public void updateEntity(ThemeEntity entity) {
+        if (entity.getId() == null) {
+            return;
+        }
+        em.merge(entity);
+        em.flush();
+    }
+
+    @Transactional(readOnly = false)
+    public boolean deleteTheme(Integer id) {
+        ThemeEntity entity = getTheme(id);
+        if (entity != null) {
+            em.detach(entity);
+            em.flush();
+            return true;
+        }
+        return false;
     }
 }

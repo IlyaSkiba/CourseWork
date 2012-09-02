@@ -1,6 +1,6 @@
 package com.bsu.server.theoretic.test.dto;
 
-import com.bsu.server.dto.ThemeDto;
+import com.bsu.server.dto.ThemeEntity;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -18,7 +18,7 @@ public class TestDto implements Serializable {
     private Integer id;
 
     @OneToOne
-    private ThemeDto relatedTheme;
+    private ThemeEntity relatedTheme;
 
     @Column(name = "points_count")
     private Integer pointsCount;
@@ -26,11 +26,11 @@ public class TestDto implements Serializable {
     @Column(name = "question_count")
     private Integer questionCount;
 
-    public ThemeDto getRelatedTheme() {
+    public ThemeEntity getRelatedTheme() {
         return relatedTheme;
     }
 
-    public void setRelatedTheme(ThemeDto relatedTheme) {
+    public void setRelatedTheme(ThemeEntity relatedTheme) {
         this.relatedTheme = relatedTheme;
     }
 

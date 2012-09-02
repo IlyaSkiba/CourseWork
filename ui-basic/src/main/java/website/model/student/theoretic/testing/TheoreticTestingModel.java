@@ -2,8 +2,8 @@ package website.model.student.theoretic.testing;
 
 import com.bsu.server.controller.CourseController;
 import com.bsu.server.controller.ThemeController;
-import com.bsu.server.dto.CourseDto;
-import com.bsu.server.dto.ThemeDto;
+import com.bsu.server.dto.CourseEntity;
+import com.bsu.server.dto.ThemeEntity;
 import com.bsu.server.theoretic.test.service.TheoreticTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -27,8 +27,8 @@ import java.util.List;
 public class TheoreticTestingModel {
     private static final String STUDENT_FOLDER = "/student/";
     private static final String TEMPLATE_URL = "teoretic_main.xhtml";
-    private List<CourseDto> courses = new ArrayList<CourseDto>();
-    private List<ThemeDto> topics = new ArrayList<ThemeDto>();
+    private List<CourseEntity> courses = new ArrayList<CourseEntity>();
+    private List<ThemeEntity> topics = new ArrayList<ThemeEntity>();
     private Integer selectedCourse;
     private Integer selectedTopic;
     private List<StudentAnswer> allStudentAnswer;
@@ -77,16 +77,18 @@ public class TheoreticTestingModel {
         }
     }
 
-    public List<CourseDto> getCourses() {
-        if (courses.isEmpty()) load();
+    public List<CourseEntity> getCourses() {
+        if (courses.isEmpty()) {
+            load();
+        }
         return courses;
     }
 
-    public void setCourses(List<CourseDto> courses) {
+    public void setCourses(List<CourseEntity> courses) {
         this.courses = courses;
     }
 
-    public List<ThemeDto> getTopics() {
+    public List<ThemeEntity> getTopics() {
         load();
         return topics;
     }

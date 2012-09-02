@@ -20,7 +20,7 @@ public class UserGroupDto implements Serializable {
     public String groupName;
 
     @ManyToMany(mappedBy = "assignedGroups")
-    public List<ThemeDto> availableThemes;
+    public List<ThemeEntity> availableThemes;
 
     public Integer getId() {
         return id;
@@ -34,11 +34,11 @@ public class UserGroupDto implements Serializable {
         this.groupName = groupName;
     }
 
-    public List<ThemeDto> getAvailableThemes() {
+    public List<ThemeEntity> getAvailableThemes() {
         return availableThemes;
     }
 
-    public void setAvailableThemes(List<ThemeDto> availableThemes) {
+    public void setAvailableThemes(List<ThemeEntity> availableThemes) {
         this.availableThemes = availableThemes;
     }
 }
