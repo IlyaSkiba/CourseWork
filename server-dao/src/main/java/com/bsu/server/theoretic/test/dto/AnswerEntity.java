@@ -8,7 +8,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "question_answer", schema = "public")
-public class AnswerDto implements Serializable {
+public class AnswerEntity implements Serializable {
 
     @Id
     @GeneratedValue
@@ -22,7 +22,7 @@ public class AnswerDto implements Serializable {
     private Boolean isRight;
 
     @ManyToOne
-    private QuestionDto questionDto;
+    private QuestionEntity questionEntity;
 
     public Integer getId() {
         return id;

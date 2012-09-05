@@ -1,16 +1,23 @@
 package com.bsu.server.theoretic.test.service;
 
+import com.bsu.server.assembler.QuestionAssembler;
+import com.bsu.server.controller.UserController;
 import com.bsu.server.dto.security.UserAccount;
 import com.bsu.server.theoretic.test.action.QuestionListAction;
 import com.bsu.server.theoretic.test.controller.QuestionController;
 import com.bsu.server.theoretic.test.controller.TestController;
-import com.bsu.server.theoretic.test.dto.AnswerDto;
-import com.bsu.server.theoretic.test.dto.QuestionDto;
+import com.bsu.server.theoretic.test.dto.AnswerEntity;
+import com.bsu.server.theoretic.test.dto.QuestionEntity;
 import com.bsu.server.theoretic.test.dto.TestDto;
 import com.bsu.server.theoretic.test.student.controller.StudentAnswerController;
 import com.bsu.server.theoretic.test.student.controller.StudentResultController;
-import com.bsu.server.theoretic.test.student.dto.StudentAnswerDto;
-import com.bsu.server.theoretic.test.student.dto.StudentResultDto;
+import com.bsu.server.theoretic.test.student.dto.StudentAnswerEntity;
+import com.bsu.server.theoretic.test.student.dto.StudentResultEntity;
+import com.bsu.service.api.dto.AnswerDto;
+import com.bsu.service.api.dto.QuestionDto;
+import com.bsu.service.api.dto.StudentAnswerDto;
+import com.bsu.service.api.dto.StudentResultDto;
+import com.bsu.service.api.theoretic.TheoreticTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +30,7 @@ import java.util.List;
  * @author Ilya Skiba
  */
 @Service
-public class TheoreticTestService {
+public class TheoreticTestServiceImpl implements TheoreticTestService {
 
     @Autowired
     private QuestionController questionController;
@@ -35,7 +42,10 @@ public class TheoreticTestService {
     private StudentAnswerController studentAnswerController;
     @Autowired
     private StudentResultController studentResultController;
+    @Autowired
+    private UserController userController;
 
+    @Override
     public List<Integer> getQuestionIds(Integer themeId) {
         Integer testId;
         try {
@@ -43,7 +53,7 @@ public class TheoreticTestService {
         } catch (NullPointerException e) {
             return Collections.emptyList();
         }
-        List<QuestionDto> questions = questionController.getQuestionsForTest(testId);
+        List<QuestionEntity> questions = questionController.getQuestionsForTest(testId);
         if (questions == null || questions.isEmpty()) {
             return Collections.emptyList();
         }
@@ -53,54 +63,57 @@ public class TheoreticTestService {
         return getQuestionIdList(questions, testDto.getPointsCount(), testDto.getQuestionCount());
     }
 
-    private List<Integer> getQuestionIdList(List<QuestionDto> questionDtos,
+
+    private List<Integer> getQuestionIdList(List<QuestionEntity> questionEntities,
                                             Integer pointsCount, Integer questionsCount) {
-        List<QuestionDto> shuffledList;
+        List<QuestionEntity> shuffledList;
         if (questionsCount == null) {
             if (pointsCount == null) {
                 return Collections.emptyList();
             }
 
-            shuffledList = new QuestionListAction().getIdsByPoints(questionDtos, pointsCount);
+            shuffledList = new QuestionListAction().getIdsByPoints(questionEntities, pointsCount);
 
         } else {
-            shuffledList = new QuestionListAction().shuffle(questionDtos);
-            if (questionsCount < questionDtos.size()) {
+            shuffledList = new QuestionListAction().shuffle(questionEntities);
+            if (questionsCount < questionEntities.size()) {
 
                 shuffledList = shuffledList.subList(0, questionsCount);
             }
         }
 
         List<Integer> questionIds = new ArrayList<Integer>(shuffledList.size());
-        for (QuestionDto question : shuffledList) {
+        for (QuestionEntity question : shuffledList) {
             questionIds.add(question.getId());
         }
         return questionIds;
 
     }
 
+    @Override
     public QuestionDto getQuestion(Integer questionId) {
-        return questionController.getQuestionDto(questionId);
+        return QuestionAssembler.assemble(questionController.getQuestionDto(questionId));
     }
 
+    @Override
     public int countResult(List<Integer> questionIds, Integer studentId) {
         double result = 0;
         double maxResult = 0;
         for (Integer questionId : questionIds) {
-            List<AnswerDto> rightAnswers = questionController.getRightAnswers(questionId);
+            List<AnswerEntity> rightAnswers = questionController.getRightAnswers(questionId);
             double correctives = 0;
-            List<StudentAnswerDto> answerDtos = studentAnswerController.getAnswers(questionId, studentId);
+            List<StudentAnswerEntity> answerDtos = studentAnswerController.getAnswers(questionId, studentId);
             if (answerDtos.size() == rightAnswers.size()) {
                 correctives = 1;
-                Collections.sort(rightAnswers, new Comparator<AnswerDto>() {
+                Collections.sort(rightAnswers, new Comparator<AnswerEntity>() {
                     @Override
-                    public int compare(AnswerDto o1, AnswerDto o2) {
+                    public int compare(AnswerEntity o1, AnswerEntity o2) {
                         return o1.getTextAnswer().compareTo(o2.getTextAnswer());
                     }
                 });
-                Collections.sort(answerDtos, new Comparator<StudentAnswerDto>() {
+                Collections.sort(answerDtos, new Comparator<StudentAnswerEntity>() {
                     @Override
-                    public int compare(StudentAnswerDto o1, StudentAnswerDto o2) {
+                    public int compare(StudentAnswerEntity o1, StudentAnswerEntity o2) {
                         return o1.getAnswerText().compareTo(o2.getAnswerText());
                     }
                 });
@@ -117,25 +130,35 @@ public class TheoreticTestService {
         return (int) (result / maxResult * 100);
     }
 
+    @Override
     public void saveResults(List<StudentAnswerDto> answerDtos, List<Integer> questionIds) {
-        studentAnswerController.cleanupTestResults(answerDtos.get(0).getStudent().getId(),
+        //TODO: refactor id
+       /* studentAnswerController.cleanupTestResults(answerDtos.get(0).getStudent().getId(),
                 answerDtos.get(0).getQuestion().getTest().getId());
         studentAnswerController.saveResults(answerDtos, answerDtos.get(0).getStudent().getId());
-        /** Assemble test results*/
-        StudentResultDto testResult = new StudentResultDto();
+        /** Assemble test results
+        StudentResultEntity testResult = new StudentResultEntity();
         testResult.setStudent(answerDtos.get(0).getStudent());
         testResult.setTestDto(answerDtos.get(0).getQuestion().getTest());
         testResult.setResult(countResult(questionIds, answerDtos.get(0).getStudent().getId()));
-        studentResultController.saveResult(testResult);
+        studentResultController.saveResult(testResult);                                        */
     }
 
+    @Override
     public List<AnswerDto> getAnswers(Integer questionId) {
-        return questionController.getAnswers(questionId);
+        ArrayList<AnswerDto> result = new ArrayList<AnswerDto>();
+        List<AnswerEntity> dbResult = questionController.getAnswers(questionId);
+        for (AnswerEntity entity : dbResult) {
+            AnswerDto answerDto = new AnswerDto();
+            result.add(answerDto);
+        }
+        return result;
     }
 
+    @Override
     public Integer getTestId(Integer themeId, Integer userId) {
         try {
-            StudentResultDto resultDto = studentResultController.
+            StudentResultEntity resultDto = studentResultController.
                     getStudentResult(userId, testController.getTestFromTheme(themeId).getId());
             if (resultDto != null) {
                 return null;
@@ -146,11 +169,20 @@ public class TheoreticTestService {
         return testController.getTestFromTheme(themeId).getId();
     }
 
-    public List<StudentResultDto> getStudentResults(UserAccount user) {
-        return studentResultController.getStudentResults(user.getId());
+    @Override
+    public List<StudentResultDto> getStudentResults(Integer userId) {
+        UserAccount user = userController.getUser(userId);
+        ArrayList<StudentResultDto> result = new ArrayList<StudentResultDto>();
+        List<StudentResultEntity> dbResult = studentResultController.getStudentResults(user.getId());
+        for (StudentResultEntity entity : dbResult) {
+            StudentResultDto answerDto = new StudentResultDto();
+            result.add(answerDto);
+        }
+        return result;
     }
 
-    public void addQuestion(QuestionDto questionDto) {
+    @Override
+    public void addQuestion(QuestionDto questionEntity) {
         //@TODO: implement
     }
 

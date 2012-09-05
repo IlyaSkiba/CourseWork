@@ -1,7 +1,7 @@
 package website.model.student.theoretic.testing;
 
-import com.bsu.server.theoretic.test.service.TheoreticTestService;
-import com.bsu.server.theoretic.test.student.dto.StudentAnswerDto;
+import com.bsu.server.theoretic.test.service.TheoreticTestServiceImpl;
+import com.bsu.server.theoretic.test.student.dto.StudentAnswerEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import website.model.global.UserModel;
@@ -24,7 +24,7 @@ public class TheoreticTestingResultModel {
     @Autowired
     private UserModel currentUser;
     @Autowired
-    private TheoreticTestService testService;
+    private TheoreticTestServiceImpl testService;
 
     private int mark = 100;
 
@@ -35,13 +35,13 @@ public class TheoreticTestingResultModel {
 
     }
 
-    private List<StudentAnswerDto> assembleResult() {
+    private List<StudentAnswerEntity> assembleResult() {
         List<StudentAnswer> studentAnswers = theoreticTestingModel.getAllStudentAnswer();
-        List<StudentAnswerDto> assembledAnswers = new ArrayList<StudentAnswerDto>(studentAnswers.size());
+        List<StudentAnswerEntity> assembledAnswers = new ArrayList<StudentAnswerEntity>(studentAnswers.size());
         for (StudentAnswer answer : studentAnswers) {
             if (answer.getAnsvCheck() != null && !answer.getAnsvCheck().isEmpty()) {
                 for (String ansCheck : answer.getAnsvCheck()) {
-                    StudentAnswerDto dto = new StudentAnswerDto();
+                    StudentAnswerEntity dto = new StudentAnswerEntity();
                     dto.setStudent(currentUser.getUser());
                     dto.setAnswerText(ansCheck);
                     dto.setQuestion(testService.getQuestion(answer.getQuestionId()));
@@ -51,7 +51,7 @@ public class TheoreticTestingResultModel {
                 if (answer.getAnsvStr() == null || answer.getAnsvStr().isEmpty()) {
                     continue;
                 }
-                StudentAnswerDto dto = new StudentAnswerDto();
+                StudentAnswerEntity dto = new StudentAnswerEntity();
                 dto.setStudent(currentUser.getUser());
                 dto.setAnswerText(answer.getAnsvStr());
                 dto.setQuestion(testService.getQuestion(answer.getQuestionId()));

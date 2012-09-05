@@ -8,17 +8,21 @@ import com.bsu.service.api.dto.ThemeDto;
  * User: meloman
  * Date: 30.08.12
  * Time: 22:27
- * To change this template use File | Settings | File Templates.
  */
 public class ThemeDtoAssembler {
 
-    public static final ThemeDto assemble(ThemeEntity entity) {
+    public static ThemeDto assemble(ThemeEntity entity) {
         ThemeDto dto = new ThemeDto();
+        dto.setId(entity.getId());
+        dto.setName(entity.getName());
+        dto.setCreatorName(entity.getCreator().getUsername());
         return dto;
     }
 
-    public static final ThemeEntity disassemble(ThemeDto dto) {
+    public static ThemeEntity disassemble(ThemeDto dto) {
         ThemeEntity newEntity = new ThemeEntity();
+        newEntity.setId(dto.getId());
+        newEntity.setName(dto.getName());
         return newEntity;
     }
 }

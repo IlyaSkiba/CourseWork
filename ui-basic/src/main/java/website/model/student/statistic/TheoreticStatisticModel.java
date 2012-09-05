@@ -1,7 +1,7 @@
 package website.model.student.statistic;
 
-import com.bsu.server.theoretic.test.service.TheoreticTestService;
-import com.bsu.server.theoretic.test.student.dto.StudentResultDto;
+import com.bsu.server.theoretic.test.service.TheoreticTestServiceImpl;
+import com.bsu.server.theoretic.test.student.dto.StudentResultEntity;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
@@ -32,7 +32,7 @@ public class TheoreticStatisticModel {
     private StreamedContent chart;
     private List<StatisticTable> result;
     @Inject
-    private TheoreticTestService theoreticTestService;
+    private TheoreticTestServiceImpl theoreticTestService;
     @Inject
     private UserModel userModel;
 
@@ -63,8 +63,8 @@ public class TheoreticStatisticModel {
 
     public List<StatisticTable> getResult() {
         result = new ArrayList<StatisticTable>();
-        List<StudentResultDto> results = theoreticTestService.getStudentResults(userModel.getUser());
-        for (StudentResultDto resultDto : results) {
+        List<StudentResultEntity> results = theoreticTestService.getStudentResults(userModel.getUser());
+        for (StudentResultEntity resultDto : results) {
             StatisticTable stRes = new StatisticTable();
             stRes.setTest(resultDto.getTestDto().getRelatedTheme().getName());
             stRes.setResult(resultDto.getResult());

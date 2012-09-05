@@ -1,8 +1,8 @@
 package website.model.student.theoretic.testing;
 
-import com.bsu.server.theoretic.test.dto.AnswerDto;
-import com.bsu.server.theoretic.test.dto.QuestionDto;
-import com.bsu.server.theoretic.test.service.TheoreticTestService;
+import com.bsu.server.theoretic.test.dto.AnswerEntity;
+import com.bsu.server.theoretic.test.dto.QuestionEntity;
+import com.bsu.server.theoretic.test.service.TheoreticTestServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
@@ -22,7 +22,7 @@ public class QuestionModel {
     @Autowired
     private TheoreticTestingModel model;
     @Autowired
-    private TheoreticTestService testService;
+    private TheoreticTestServiceImpl testService;
     private String question;
     private boolean answerType = false;
     private String answer;
@@ -36,13 +36,13 @@ public class QuestionModel {
     private int questionNumber = 0;
 
     public void initializeQuestion(Integer questionId) {
-        QuestionDto question = testService.getQuestion(model.getIdQuestionList().get(questionId));
+        QuestionEntity question = testService.getQuestion(model.getIdQuestionList().get(questionId));
         setQuestion(question.getQuestion());
         setAnswerType(question.getQuestionType() > 0);
-        List<AnswerDto> answerDtoList = testService.getAnswers(model.getIdQuestionList().get(questionId));
+        List<AnswerEntity> answerEntityList = testService.getAnswers(model.getIdQuestionList().get(questionId));
         if (!isAnswerType()) {
             List<String> checks = new ArrayList<String>();
-            for (AnswerDto answer : answerDtoList) {
+            for (AnswerEntity answer : answerEntityList) {
                 checks.add(answer.getTextAnswer());
             }
             setAllCheck(checks);
@@ -96,8 +96,11 @@ public class QuestionModel {
     private StudentAnswer saveAnswer() {
         StudentAnswer ans = new StudentAnswer();
         ans.setQuestionId(model.getIdQuestionList().get(questionNumber));
-        if (answerType) ans.setAnsvStr(answer);
-        else ans.setAnsvCheck(selectedCheck);
+        if (answerType) {
+            ans.setAnsvStr(answer);
+        } else {
+            ans.setAnsvCheck(selectedCheck);
+        }
         return ans;
     }
 

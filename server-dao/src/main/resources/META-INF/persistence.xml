@@ -11,11 +11,11 @@
         <class>com.bsu.server.dto.security.UserAccount</class>
         <class>com.bsu.server.dto.UserGroupDto</class>
         <class>com.bsu.server.dto.security.UserRole</class>
-        <class>com.bsu.server.theoretic.test.dto.AnswerDto</class>
-        <class>com.bsu.server.theoretic.test.dto.QuestionDto</class>
+        <class>com.bsu.server.theoretic.test.dto.AnswerEntity</class>
+        <class>com.bsu.server.theoretic.test.dto.QuestionEntity</class>
         <class>com.bsu.server.theoretic.test.dto.TestDto</class>
-        <class>com.bsu.server.theoretic.test.student.dto.StudentAnswerDto</class>
-        <class>com.bsu.server.theoretic.test.student.dto.StudentResultDto</class>
+        <class>com.bsu.server.theoretic.test.student.dto.StudentAnswerEntity</class>
+        <class>com.bsu.server.theoretic.test.student.dto.StudentResultEntity</class>
     </persistence-unit>
 
 </persistence>

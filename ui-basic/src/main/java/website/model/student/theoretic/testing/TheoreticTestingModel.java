@@ -4,7 +4,7 @@ import com.bsu.server.controller.CourseController;
 import com.bsu.server.controller.ThemeController;
 import com.bsu.server.dto.CourseEntity;
 import com.bsu.server.dto.ThemeEntity;
-import com.bsu.server.theoretic.test.service.TheoreticTestService;
+import com.bsu.server.theoretic.test.service.TheoreticTestServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import website.model.global.UserModel;
@@ -39,7 +39,7 @@ public class TheoreticTestingModel {
     @Autowired
     private ThemeController themeController;
     @Autowired
-    private TheoreticTestService testService;
+    private TheoreticTestServiceImpl testService;
 
     private int cheaterState;
 

@@ -10,7 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "student_test_results", schema = "public")
-public class StudentResultDto {
+public class StudentResultEntity {
     @Id
     @GeneratedValue
     @Column(name = "id")

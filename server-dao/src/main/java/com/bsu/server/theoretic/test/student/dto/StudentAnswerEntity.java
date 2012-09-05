@@ -1,7 +1,7 @@
 package com.bsu.server.theoretic.test.student.dto;
 
 import com.bsu.server.dto.security.UserAccount;
-import com.bsu.server.theoretic.test.dto.QuestionDto;
+import com.bsu.server.theoretic.test.dto.QuestionEntity;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,7 +11,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "student_answer", schema = "public")
-public class StudentAnswerDto implements Serializable {
+public class StudentAnswerEntity implements Serializable {
 
     @Column(name = "id")
     @Id
@@ -25,7 +25,7 @@ public class StudentAnswerDto implements Serializable {
     private UserAccount student;
 
     @ManyToOne
-    private QuestionDto question;
+    private QuestionEntity question;
 
     public String getAnswerText() {
         return answerText;
@@ -43,11 +43,11 @@ public class StudentAnswerDto implements Serializable {
         this.student = student;
     }
 
-    public QuestionDto getQuestion() {
+    public QuestionEntity getQuestion() {
         return question;
     }
 
-    public void setQuestion(QuestionDto question) {
+    public void setQuestion(QuestionEntity question) {
         this.question = question;
     }
 }
