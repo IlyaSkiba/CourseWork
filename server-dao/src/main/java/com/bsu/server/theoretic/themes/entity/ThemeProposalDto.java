@@ -1,4 +1,4 @@
-package com.bsu.server.theoretic.themes.dto;
+package com.bsu.server.theoretic.themes.entity;
 
 import com.bsu.server.dto.ThemeEntity;
 import com.bsu.server.theoretic.test.dto.AnswerEntity;

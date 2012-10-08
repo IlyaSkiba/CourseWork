@@ -1,8 +1,8 @@
 package website.model.student.theoretic.testing;
 
-import com.bsu.server.theoretic.test.dto.AnswerEntity;
-import com.bsu.server.theoretic.test.dto.QuestionEntity;
 import com.bsu.server.theoretic.test.service.TheoreticTestServiceImpl;
+import com.bsu.service.api.dto.AnswerDto;
+import com.bsu.service.api.dto.QuestionDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
@@ -28,22 +28,21 @@ public class QuestionModel {
     private String answer;
     private List<String> selectedCheck;
     private List<String> allCheck;
+    private int questionNumber = 0;
 
     public int getQuestionNumber() {
         return questionNumber;
     }
 
-    private int questionNumber = 0;
-
     public void initializeQuestion(Integer questionId) {
-        QuestionEntity question = testService.getQuestion(model.getIdQuestionList().get(questionId));
+        QuestionDto question = testService.getQuestion(model.getIdQuestionList().get(questionId));
         setQuestion(question.getQuestion());
         setAnswerType(question.getQuestionType() > 0);
-        List<AnswerEntity> answerEntityList = testService.getAnswers(model.getIdQuestionList().get(questionId));
+        List<AnswerDto> answerEntityList = testService.getAnswers(model.getIdQuestionList().get(questionId));
         if (!isAnswerType()) {
             List<String> checks = new ArrayList<String>();
-            for (AnswerEntity answer : answerEntityList) {
-                checks.add(answer.getTextAnswer());
+            for (AnswerDto answer : answerEntityList) {
+                checks.add(answer.getAnswer());
             }
             setAllCheck(checks);
         }
@@ -65,7 +64,6 @@ public class QuestionModel {
         this.allCheck = allCheck;
     }
 
-
     public String getAnswer() {
         return answer;
     }
@@ -81,16 +79,16 @@ public class QuestionModel {
         return question;
     }
 
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
     public boolean isAnswerType() {
         return answerType;
     }
 
     public void setAnswerType(boolean answerType) {
         this.answerType = answerType;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
     }
 
     private StudentAnswer saveAnswer() {

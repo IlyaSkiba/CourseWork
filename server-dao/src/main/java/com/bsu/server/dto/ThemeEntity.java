@@ -17,16 +17,12 @@ public class ThemeEntity implements Serializable {
     @Id
     @Column(name = "theme_id")
     private Integer id;
-
     @OneToOne
     private UserAccount creator;
-
     @Column(name = "theme_name")
     private String name;
-
     @ManyToOne
     private CourseEntity courseEntity;
-
     @ManyToMany
     @JoinTable(name = "group_theme_list",
             joinColumns =
@@ -48,8 +44,16 @@ public class ThemeEntity implements Serializable {
         return courseEntity;
     }
 
+    public void setCourseEntity(CourseEntity courseEntity) {
+        this.courseEntity = courseEntity;
+    }
+
     public UserAccount getCreator() {
         return creator;
+    }
+
+    public void setCreator(UserAccount creator) {
+        this.creator = creator;
     }
 
     public String getName() {
@@ -66,13 +70,5 @@ public class ThemeEntity implements Serializable {
 
     public void setAssignedGroups(List<UserGroupDto> assignedGroups) {
         this.assignedGroups = assignedGroups;
-    }
-
-    public void setCreator(UserAccount creator) {
-        this.creator = creator;
-    }
-
-    public void setCourseEntity(CourseEntity courseEntity) {
-        this.courseEntity = courseEntity;
     }
 }

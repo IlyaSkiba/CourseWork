@@ -3,7 +3,7 @@ package com.bsu.server.theoretic.test.student.controller;
 import com.bsu.server.controller.UserController;
 import com.bsu.server.dto.security.UserAccount;
 import com.bsu.server.theoretic.test.dto.QuestionEntity;
-import com.bsu.server.theoretic.test.student.dto.StudentAnswerEntity;
+import com.bsu.server.theoretic.test.student.entity.StudentAnswerEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

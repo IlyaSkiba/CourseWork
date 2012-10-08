@@ -1,7 +1,7 @@
 package website.model.student.theoretic.testing;
 
 import com.bsu.server.theoretic.test.service.TheoreticTestServiceImpl;
-import com.bsu.server.theoretic.test.student.dto.StudentAnswerEntity;
+import com.bsu.service.api.dto.StudentAnswerDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import website.model.global.UserModel;
@@ -25,7 +25,6 @@ public class TheoreticTestingResultModel {
     private UserModel currentUser;
     @Autowired
     private TheoreticTestServiceImpl testService;
-
     private int mark = 100;
 
     public int getMark() {
@@ -35,26 +34,26 @@ public class TheoreticTestingResultModel {
 
     }
 
-    private List<StudentAnswerEntity> assembleResult() {
+    private List<StudentAnswerDto> assembleResult() {
         List<StudentAnswer> studentAnswers = theoreticTestingModel.getAllStudentAnswer();
-        List<StudentAnswerEntity> assembledAnswers = new ArrayList<StudentAnswerEntity>(studentAnswers.size());
+        List<StudentAnswerDto> assembledAnswers = new ArrayList<StudentAnswerDto>(studentAnswers.size());
         for (StudentAnswer answer : studentAnswers) {
             if (answer.getAnsvCheck() != null && !answer.getAnsvCheck().isEmpty()) {
                 for (String ansCheck : answer.getAnsvCheck()) {
-                    StudentAnswerEntity dto = new StudentAnswerEntity();
-                    dto.setStudent(currentUser.getUser());
-                    dto.setAnswerText(ansCheck);
-                    dto.setQuestion(testService.getQuestion(answer.getQuestionId()));
+                    StudentAnswerDto dto = new StudentAnswerDto();
+                    dto.setUserId(currentUser.getUser().getId());
+                    dto.setAnswer(ansCheck);
+                    dto.setQuestionId(answer.getQuestionId());
                     assembledAnswers.add(dto);
                 }
             } else {
                 if (answer.getAnsvStr() == null || answer.getAnsvStr().isEmpty()) {
                     continue;
                 }
-                StudentAnswerEntity dto = new StudentAnswerEntity();
-                dto.setStudent(currentUser.getUser());
-                dto.setAnswerText(answer.getAnsvStr());
-                dto.setQuestion(testService.getQuestion(answer.getQuestionId()));
+                StudentAnswerDto dto = new StudentAnswerDto();
+                dto.setUserId(currentUser.getUser().getId());
+                dto.setAnswer(answer.getAnsvStr());
+                dto.setQuestionId(answer.getQuestionId());
                 assembledAnswers.add(dto);
             }
         }

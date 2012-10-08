@@ -1,6 +1,6 @@
 package com.bsu.server.theoretic.test.student.controller;
 
-import com.bsu.server.theoretic.test.student.dto.StudentResultEntity;
+import com.bsu.server.theoretic.test.student.entity.StudentResultEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

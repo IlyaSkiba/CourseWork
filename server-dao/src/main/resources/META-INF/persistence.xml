@@ -14,8 +14,8 @@
         <class>com.bsu.server.theoretic.test.dto.AnswerEntity</class>
         <class>com.bsu.server.theoretic.test.dto.QuestionEntity</class>
         <class>com.bsu.server.theoretic.test.dto.TestDto</class>
-        <class>com.bsu.server.theoretic.test.student.dto.StudentAnswerEntity</class>
-        <class>com.bsu.server.theoretic.test.student.dto.StudentResultEntity</class>
+        <class>com.bsu.server.theoretic.test.student.entity.StudentAnswerEntity</class>
+        <class>com.bsu.server.theoretic.test.student.entity.StudentResultEntity</class>
     </persistence-unit>
 
 </persistence>
