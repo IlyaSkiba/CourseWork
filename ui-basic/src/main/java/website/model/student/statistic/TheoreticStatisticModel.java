@@ -66,8 +66,8 @@ public class TheoreticStatisticModel {
         List<StudentResultDto> results = theoreticTestService.getStudentResults(userModel.getUser().getId());
         for (StudentResultDto resultDto : results) {
             StatisticTable stRes = new StatisticTable();
-            stRes.setTest(resultDto.getTestDto().getRelatedTheme().getName());
-            stRes.setResult(resultDto.getResult());
+            //stRes.setTest(resultDto.getTestDto().getRelatedTheme().getName());
+            //stRes.setResult(resultDto.getResult());
             result.add(stRes);
         }
         return result;

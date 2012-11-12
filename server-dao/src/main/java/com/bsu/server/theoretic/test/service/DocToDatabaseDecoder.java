@@ -69,7 +69,7 @@ public class DocToDatabaseDecoder {
         paragraphRuns = paragraph.getRuns();
         validateRuns(paragraphRuns);
         Boolean hasAnswers = Boolean.parseBoolean(paragraphRuns.get(1).getText(0).trim());
-        questionDto.setOpenType(!hasAnswers);
+        questionDto.setOpenType(hasAnswers ? 1 : 0);
 
         if (!hasAnswers) {
             return tempPosition;

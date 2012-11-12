@@ -37,7 +37,7 @@ public class QuestionModel {
     public void initializeQuestion(Integer questionId) {
         QuestionDto question = testService.getQuestion(model.getIdQuestionList().get(questionId));
         setQuestion(question.getQuestion());
-        setAnswerType(question.getQuestionType() > 0);
+        setAnswerType(question.getOpenType() > 0);
         List<AnswerDto> answerEntityList = testService.getAnswers(model.getIdQuestionList().get(questionId));
         if (!isAnswerType()) {
             List<String> checks = new ArrayList<String>();

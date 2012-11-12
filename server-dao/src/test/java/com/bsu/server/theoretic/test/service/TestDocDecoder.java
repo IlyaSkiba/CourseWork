@@ -36,7 +36,7 @@ public class TestDocDecoder {
     public void testDecoding() throws Exception {
         final QuestionDto resultDto = new QuestionDto();
         resultDto.setQuestion("Test Doc creation");
-        resultDto.setOpenType(false);
+        resultDto.setOpenType(0);
         resultDto.setAnswerDtos(Arrays.asList(createAnswer(1, "Answ1", false), createAnswer(2, "Answ2", true),
                 createAnswer(3, "Answ3", false), createAnswer(4, "Answ4", true)));
 
