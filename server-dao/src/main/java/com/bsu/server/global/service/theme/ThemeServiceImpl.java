@@ -17,7 +17,7 @@ public class ThemeServiceImpl implements ThemeService {
     private ThemeController themeController;
 
     @Override
-    public boolean updateTheme(ThemeDto themeDto) {
+    public boolean update(ThemeDto themeDto) {
         try {
             ThemeEntity entity = ThemeDtoAssembler.disassemble(themeDto);
             themeController.updateEntity(entity);
@@ -29,14 +29,13 @@ public class ThemeServiceImpl implements ThemeService {
     }
 
     @Override
-    public void createTheme(ThemeDto themeDto) {
+    public void create(ThemeDto themeDto) {
         ThemeEntity entity = ThemeDtoAssembler.disassemble(themeDto);
         themeController.createTheme(entity);
     }
 
     @Override
-    public boolean deleteTheme(Integer themeId) {
-
+    public boolean delete(Integer themeId) {
         return themeController.deleteTheme(themeId);
     }
 

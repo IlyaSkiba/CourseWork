@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<f:view id="courseCard">
+    <h:head>
+        <title>Статистика</title>
+        <h:outputStylesheet library="css" name="global.css"/>
+    </h:head>
+    <h:body>
+        <ui:decorate template="../structure.xhtml">
+            <ui:define name="content">
+                <h:form name="courseForm">
+                    <div class="courseContainer">
+                        <h:inputHidden value="#{courseAdmin.currentModel.id}"/>
+
+                        <div class="field">
+                            <p:outputLabel for="courseName" value="Название курса:"/>
+                            <p:inputText id="courseName" value="#{courseAdmin.currentModel.name}"/>
+                        </div>
+
+                        <div class="field">
+                            <h:outputLabel for="courseOwner" value="Руководитель курса:"/>
+                            <p:selectOneMenu id="courseOwner" filter="true" filterMatchMode="startsWith">
+                                <f:selectItem itemLabel="" noSelectionOption="true"/>
+                                <f:selectItems value="#{courseAdmin.possibleUsers}" var="user"
+                                               itemLabel="#{user.displayName}"
+                                               itemValue="#{user.id}"/>
+                            </p:selectOneMenu>
+                        </div>
+                    </div>
+                </h:form>
+            </ui:define>
+        </ui:decorate>
+    </h:body>
+</f:view>
+</html>
