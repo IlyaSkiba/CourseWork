@@ -40,8 +40,8 @@ public class CourseAssembler {
         CourseEntity entity = new CourseEntity();
         entity.setId(dto.getId());
         entity.setCourseName(dto.getCourseName());
-        entity.setOwner(userController.getUser(dto.getId()));
-        List<ThemeEntity> themes = new ArrayList<ThemeEntity>();
+        entity.setOwner(userController.getUser(dto.getOwnerId()));
+        List<ThemeEntity> themes = new ArrayList<>();
         if (dto.getThemeIds() != null) {
             for (Integer id : dto.getThemeIds()) {
                 themes.add(themeController.getTheme(id));
