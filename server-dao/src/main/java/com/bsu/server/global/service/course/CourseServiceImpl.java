@@ -2,10 +2,14 @@ package com.bsu.server.global.service.course;
 
 import com.bsu.server.assembler.CourseAssembler;
 import com.bsu.server.controller.CourseController;
+import com.bsu.server.dto.CourseEntity;
 import com.bsu.service.api.dto.CourseDto;
 import com.bsu.service.api.global.admin.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Ilya SKiba
@@ -38,5 +42,15 @@ public class CourseServiceImpl implements CourseService {
         return courseAssembler.assemble(
                 courseController.create(
                         courseAssembler.dissassemble(newCourse)));
+    }
+
+    @Override
+    public List<CourseDto> getCourses() {
+        List<CourseEntity> courses = courseController.getList();
+        List<CourseDto> resultList = new ArrayList<>(courses.size());
+        for (CourseEntity entity : courses) {
+            resultList.add(courseAssembler.assemble(entity));
+        }
+        return resultList;
     }
 }

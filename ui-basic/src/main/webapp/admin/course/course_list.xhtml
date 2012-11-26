@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<f:view id="courseCard">
+    <h:head>
+        <title>Статистика</title>
+        <h:outputStylesheet library="css" name="global.css"/>
+    </h:head>
+    <h:body>
+        <ui:decorate template="../structure.xhtml">
+            <ui:define name="content">
+                <h:form name="courseListForm">
+                    <p:dataTable id="courseList" value="#{courseAdmin.courses}" editable="true" var="course">
+
+                        <p:ajax event="rowEdit" listener="#{courseAdmin.onEdit}" update="courseList"/>
+
+                        <p:column headerText="Название курса">
+                            <p:cellEditor>
+                                <f:facet name="output">
+                                    <h:outputText value="#{course.courseName}"/>
+                                </f:facet>
+                                <f:facet name="input">
+                                    <p:inputText value="#{course.courseName}" style="width:100%"/>
+                                </f:facet>
+                            </p:cellEditor>
+                        </p:column>
+                        <p:column headerText="Руководитель курса">
+                            <p:cellEditor>
+                                <f:facet name="output">
+                                    <h:outputText value="#{courseAdmin.encodeName(course.ownerId)}"/>
+                                </f:facet>
+                                <f:facet name="input">
+                                    <p:selectOneMenu value="#{course.ownerId}">
+                                        <f:selectItems value="#{courseAdmin.possibleUsers}" var="user"
+                                                       itemLabel="#{user.displayName}" itemValue="#{user.id}"/>
+                                    </p:selectOneMenu>
+                                </f:facet>
+                            </p:cellEditor>
+                        </p:column>
+                        <p:column headerText="Options" style="width:50px">
+                            <p:rowEditor/>
+                        </p:column>
+
+                    </p:dataTable>
+                </h:form>
+            </ui:define>
+        </ui:decorate>
+    </h:body>
+</f:view>
+</html>

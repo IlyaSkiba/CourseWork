@@ -6,12 +6,15 @@ import com.bsu.service.api.global.admin.UserService;
 import com.bsu.service.api.global.admin.dto.UserDto;
 import com.google.common.collect.Lists;
 import org.apache.commons.lang.StringUtils;
+import org.primefaces.event.RowEditEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 import website.model.admin.common.AdminUserModel;
+import website.model.common.ServletUtils;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import java.io.IOException;
@@ -38,14 +41,6 @@ public class CourseAdmin {
         currentModel.clear();
     }
 
-    public void open(String id) {
-        Set<AdminUserModel> users = getPossibleUsers();
-        final CourseDto dto = courseService.getCourse(Integer.valueOf(id));
-        currentModel.setId(id);
-        currentModel.setName(dto.getCourseName());
-        currentModel.setOwner(dto.getOwnerId().toString());
-    }
-
     public void save() throws IOException {
         CourseDto courseDto = new CourseDto();
         courseDto.setId(StringUtils.isEmpty(currentModel.getId()) ? null : Integer.parseInt(currentModel.getId()));
@@ -58,7 +53,8 @@ public class CourseAdmin {
         } else {
             courseService.updateCourse(courseDto);
         }
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/admin/courses.xhtml");
+        FacesContext.getCurrentInstance().getExternalContext().redirect(
+                ServletUtils.buildPath("/admin/course/course_list.xhtml"));
     }
 
     public Set<AdminUserModel> getPossibleUsers() {
@@ -66,7 +62,7 @@ public class CourseAdmin {
         Set<AdminUserModel> resultSet = new HashSet<>();
         for (UserDto userDto : users) {
             AdminUserModel model = new AdminUserModel();
-            model.setId(userDto.getUserId().toString());
+            model.setId(userDto.getUserId());
             model.setFirstName(userDto.getFirstName());
             model.setMiddleName(userDto.getMiddleName());
             model.setLastName(userDto.getLastName());
@@ -74,4 +70,30 @@ public class CourseAdmin {
         }
         return resultSet;
     }
+
+    public String encodeName(Integer userId) {
+        if (userId == null) {
+            return StringUtils.EMPTY;
+        }
+        Set<AdminUserModel> users = getPossibleUsers();
+        for (AdminUserModel user : users) {
+            if (user.getId().equals(userId)) {
+                return user.getDisplayName();
+            }
+        }
+        return userId.toString();
+    }
+
+    public List<CourseDto> getCourses() {
+        return courseService.getCourses();
+    }
+
+    public void onEdit(RowEditEvent event) {
+        CourseDto editedRow = (CourseDto) event.getObject();
+        courseService.updateCourse(editedRow);
+        editedRow = courseService.getCourse(editedRow.getId());
+        FacesMessage msg = new FacesMessage("Курс обновлен", editedRow.getCourseName());
+        FacesContext.getCurrentInstance().addMessage(null, msg);
+    }
+
 }

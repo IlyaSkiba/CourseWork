@@ -9,11 +9,12 @@
       xmlns:p="http://primefaces.org/ui">
 <f:view contentType="text/html">
     <h:head>
-        <title>Студент</title>
+        <title>Администратор</title>
         <h:outputStylesheet library="css" name="global.css"/>
     </h:head>
     <h:body>
-        <p:growl autoUpdate="true"/>
+        <p:growl autoUpdate="true" showDetail="true"/>
+        <p:ajaxStatus id="status"/>
 
         <div id="wrapper">
             <div id="header" class="ui-widget-header">

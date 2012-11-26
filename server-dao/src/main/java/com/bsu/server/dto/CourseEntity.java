@@ -25,7 +25,7 @@ public class CourseEntity implements Serializable {
     @Length(max = 500)
     @Column(name = "course_name")
     private String courseName;
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private List<ThemeEntity> themes;
     @ManyToOne
     private UserAccount owner;
