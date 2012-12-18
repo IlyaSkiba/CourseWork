@@ -35,12 +35,14 @@
                 <div class="sidebar" id="sideLeft">
 
                     <h:form>
-                        <p:slideMenu type="sliding" style="width:95%; height:300px;">
+                        <p:slideMenu type="sliding" style="width:98%; min-height:300px;">
                             <p:menuitem value="Главная" url="/admin/main.xhtml"/>
-                            <p:submenu label="Управление курсами">
+                            <p:submenu label="Управление курсами" style="width:98%; min-height:300px;">
                                 <p:menuitem value="Добавить курс" ajax="true"
                                             url="/admin/course/course_card.xhtml"
                                             actionListener="#{courseAdmin.create}"/>
+                                <p:menuitem value="Список курсов" ajax="true"
+                                            url="/admin/course/course_list.xhtml"/>
                             </p:submenu>
                         </p:slideMenu>
 
