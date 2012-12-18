@@ -147,4 +147,8 @@ public class TheoreticTestService {
     public List<StudentResultDto> getStudentResults(UserAccount user) {
         return studentResultController.getStudentResults(user.getId());
     }
+
+    public void addQuestion(QuestionDto questionDto) {
+        //@TODO: implement
+    }
 }

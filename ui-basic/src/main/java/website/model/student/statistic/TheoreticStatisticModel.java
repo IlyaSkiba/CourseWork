@@ -1,5 +1,7 @@
-package website.model.student.Statistic;
+package website.model.student.statistic;
 
+import com.bsu.server.theoretic.test.service.TheoreticTestService;
+import com.bsu.server.theoretic.test.student.dto.StudentResultDto;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
@@ -9,7 +11,9 @@ import org.jfree.data.category.DefaultCategoryDataset;
 import org.primefaces.model.DefaultStreamedContent;
 import org.primefaces.model.StreamedContent;
 import org.springframework.context.annotation.Scope;
+import website.model.global.UserModel;
 
+import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,17 +22,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by IntelliJ IDEA.
  * User: HomeUser
  * Date: 5.5.12
  * Time: 14.51
- * To change this template use File | Settings | File Templates.
  */
 @Scope("session")
-@Named("teorStatModel")
-public class TeoreticStatisticModel {
+@Named("theorStatModel")
+public class TheoreticStatisticModel {
     private StreamedContent chart;
     private List<StatisticTable> result;
+    @Inject
+    private TheoreticTestService theoreticTestService;
+    @Inject
+    private UserModel userModel;
 
     public void dynamicImageController() {
         JFreeChart jfreechart = ChartFactory.createLineChart("Статистика по теоретическим тестам", "Тесты", "Баллы", createDataset(), PlotOrientation.VERTICAL, false, true, false);
@@ -53,27 +59,17 @@ public class TeoreticStatisticModel {
         dataset.setValue(85, Integer.valueOf(1), "Тест3");
         dataset.setValue(90, Integer.valueOf(1), "Тест4");
         return dataset;
-        //@todo: извлечь из базы результаты теоретического тестирования студента
     }
 
     public List<StatisticTable> getResult() {
         result = new ArrayList<StatisticTable>();
-        StatisticTable stRes = new StatisticTable();
-        stRes.setTest("Тест1");
-        stRes.setResult(100);
-        result.add(0, stRes);
-        stRes = new StatisticTable();
-        stRes.setTest("Тест2");
-        stRes.setResult(70);
-        result.add(1, stRes);
-        stRes = new StatisticTable();
-        stRes.setTest("Тест3");
-        stRes.setResult(85);
-        result.add(2, stRes);
-        stRes = new StatisticTable();
-        stRes.setTest("Тест4");
-        stRes.setResult(90);
-        result.add(3, stRes);
+        List<StudentResultDto> results = theoreticTestService.getStudentResults(userModel.getUser());
+        for (StudentResultDto resultDto : results) {
+            StatisticTable stRes = new StatisticTable();
+            stRes.setTest(resultDto.getTestDto().getRelatedTheme().getName());
+            stRes.setResult(resultDto.getResult());
+            result.add(stRes);
+        }
         return result;
     }
 }

@@ -1,4 +1,4 @@
-package website.model.student.Statistic;
+package website.model.student.statistic;
 
 import org.springframework.context.annotation.Scope;
 
