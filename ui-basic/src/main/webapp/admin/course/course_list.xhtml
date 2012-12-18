@@ -16,7 +16,11 @@
         <ui:decorate template="../structure.xhtml">
             <ui:define name="content">
                 <h:form name="courseListForm">
-                    <p:dataTable id="courseList" value="#{courseAdmin.courses}" editable="true" var="course">
+                    <p:dataTable id="courseList"
+                                 var="course"
+                                 value="#{courseAdmin.courses}"
+                                 editable="true"
+                                 rowKey="#{course.id}">
 
                         <p:ajax event="rowEdit" listener="#{courseAdmin.onEdit}" update="courseList"/>
 
@@ -33,7 +37,7 @@
                         <p:column headerText="Руководитель курса">
                             <p:cellEditor>
                                 <f:facet name="output">
-                                    <h:outputText value="#{courseAdmin.encodeName(course.ownerId)}"/>
+                                    <h:outputText style="width:100%" value="#{courseAdmin.encodeName(course.ownerId)}"/>
                                 </f:facet>
                                 <f:facet name="input">
                                     <p:selectOneMenu value="#{course.ownerId}">
