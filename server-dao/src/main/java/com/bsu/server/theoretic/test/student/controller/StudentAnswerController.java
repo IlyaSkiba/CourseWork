@@ -2,8 +2,8 @@ package com.bsu.server.theoretic.test.student.controller;
 
 import com.bsu.server.controller.UserController;
 import com.bsu.server.dto.security.UserAccount;
-import com.bsu.server.theoretic.test.dto.QuestionDto;
-import com.bsu.server.theoretic.test.student.dto.StudentAnswerDto;
+import com.bsu.server.theoretic.test.dto.QuestionEntity;
+import com.bsu.server.theoretic.test.student.entity.StudentAnswerEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,19 +27,19 @@ public class StudentAnswerController {
     private UserController userController;
 
     @Transactional(readOnly = true)
-    public List<StudentAnswerDto> getAnswers(Integer questionId, Integer studentId) {
-        TypedQuery<StudentAnswerDto> query = em.createQuery("from StudentAnswerDto where question.id = :questionId and student.id = :studentId",
-                StudentAnswerDto.class);
+    public List<StudentAnswerEntity> getAnswers(Integer questionId, Integer studentId) {
+        TypedQuery<StudentAnswerEntity> query = em.createQuery("from StudentAnswerEntity where question.id = :questionId and student.id = :studentId",
+                StudentAnswerEntity.class);
         query.setParameter("questionId", questionId);
         query.setParameter("studentId", studentId);
         return query.getResultList();
     }
 
     @Transactional(readOnly = false)
-    public void saveResults(List<StudentAnswerDto> answers, Integer studentId) {
+    public void saveResults(List<StudentAnswerEntity> answers, Integer studentId) {
         UserAccount user = userController.getUser(studentId);
-        List<StudentAnswerDto> results = new ArrayList<StudentAnswerDto>(answers);
-        for (StudentAnswerDto currAnswer : results) {
+        List<StudentAnswerEntity> results = new ArrayList<StudentAnswerEntity>(answers);
+        for (StudentAnswerEntity currAnswer : results) {
             currAnswer.setStudent(user);
             em.persist(currAnswer);
         }
@@ -48,14 +48,18 @@ public class StudentAnswerController {
 
     @Transactional(readOnly = false)
     public void cleanupTestResults(Integer studentId, Integer testId) {
-        TypedQuery<QuestionDto> query = em.createQuery("from QuestionDto where test.id=:testId", QuestionDto.class);
+        TypedQuery<QuestionEntity> query = em.createQuery("from QuestionEntity where test.id=:testId", QuestionEntity.class);
         query.setParameter("testId", testId);
-        List<QuestionDto> questions = query.getResultList();
-        if (questions == null) return;
-        for (QuestionDto question : questions) {
-            List<StudentAnswerDto> answers = getAnswers(question.getId(), studentId);
-            if (answers == null) continue;
-            for (StudentAnswerDto answerDto : answers) {
+        List<QuestionEntity> questions = query.getResultList();
+        if (questions == null) {
+            return;
+        }
+        for (QuestionEntity question : questions) {
+            List<StudentAnswerEntity> answers = getAnswers(question.getId(), studentId);
+            if (answers == null) {
+                continue;
+            }
+            for (StudentAnswerEntity answerDto : answers) {
                 em.remove(answerDto);
             }
         }

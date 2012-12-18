@@ -9,7 +9,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "question", schema = "public")
-public class QuestionDto implements Serializable {
+public class QuestionEntity implements Serializable {
 
     @Column(name = "id")
     @Id
@@ -22,7 +22,7 @@ public class QuestionDto implements Serializable {
     private Integer questionType;
 
     @OneToMany(mappedBy = "questionDto")
-    private List<AnswerDto> answers;
+    private List<AnswerEntity> answers;
 
     @Column(name = "weight")
     private Integer weight;
@@ -66,11 +66,11 @@ public class QuestionDto implements Serializable {
         this.questionType = questionType;
     }
 
-    public List<AnswerDto> getAnswers() {
+    public List<AnswerEntity> getAnswers() {
         return answers;
     }
 
-    public void setAnswers(List<AnswerDto> answers) {
+    public void setAnswers(List<AnswerEntity> answers) {
         this.answers = answers;
     }
 }

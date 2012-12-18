@@ -8,6 +8,7 @@
     <modules>
         <module>server-dao</module>
         <module>ui-basic</module>
+        <module>server-api</module>
     </modules>
 
     <name>JSF 2 + JPA 2 + Spring 3 + Spring Security 3 application</name>

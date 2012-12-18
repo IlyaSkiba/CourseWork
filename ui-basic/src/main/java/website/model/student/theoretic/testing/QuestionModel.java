@@ -1,8 +1,8 @@
 package website.model.student.theoretic.testing;
 
-import com.bsu.server.theoretic.test.dto.AnswerDto;
-import com.bsu.server.theoretic.test.dto.QuestionDto;
-import com.bsu.server.theoretic.test.service.TheoreticTestService;
+import com.bsu.server.theoretic.test.service.TheoreticTestServiceImpl;
+import com.bsu.service.api.dto.AnswerDto;
+import com.bsu.service.api.dto.QuestionDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
@@ -22,28 +22,27 @@ public class QuestionModel {
     @Autowired
     private TheoreticTestingModel model;
     @Autowired
-    private TheoreticTestService testService;
+    private TheoreticTestServiceImpl testService;
     private String question;
     private boolean answerType = false;
     private String answer;
     private List<String> selectedCheck;
     private List<String> allCheck;
+    private int questionNumber = 0;
 
     public int getQuestionNumber() {
         return questionNumber;
     }
 
-    private int questionNumber = 0;
-
     public void initializeQuestion(Integer questionId) {
         QuestionDto question = testService.getQuestion(model.getIdQuestionList().get(questionId));
         setQuestion(question.getQuestion());
         setAnswerType(question.getQuestionType() > 0);
-        List<AnswerDto> answerDtoList = testService.getAnswers(model.getIdQuestionList().get(questionId));
+        List<AnswerDto> answerEntityList = testService.getAnswers(model.getIdQuestionList().get(questionId));
         if (!isAnswerType()) {
             List<String> checks = new ArrayList<String>();
-            for (AnswerDto answer : answerDtoList) {
-                checks.add(answer.getTextAnswer());
+            for (AnswerDto answer : answerEntityList) {
+                checks.add(answer.getAnswer());
             }
             setAllCheck(checks);
         }
@@ -65,7 +64,6 @@ public class QuestionModel {
         this.allCheck = allCheck;
     }
 
-
     public String getAnswer() {
         return answer;
     }
@@ -81,6 +79,10 @@ public class QuestionModel {
         return question;
     }
 
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
     public boolean isAnswerType() {
         return answerType;
     }
@@ -89,15 +91,14 @@ public class QuestionModel {
         this.answerType = answerType;
     }
 
-    public void setQuestion(String question) {
-        this.question = question;
-    }
-
     private StudentAnswer saveAnswer() {
         StudentAnswer ans = new StudentAnswer();
         ans.setQuestionId(model.getIdQuestionList().get(questionNumber));
-        if (answerType) ans.setAnsvStr(answer);
-        else ans.setAnsvCheck(selectedCheck);
+        if (answerType) {
+            ans.setAnsvStr(answer);
+        } else {
+            ans.setAnsvCheck(selectedCheck);
+        }
         return ans;
     }
 

@@ -6,16 +6,16 @@
     <persistence-unit name="JGeekPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
-        <class>com.bsu.server.dto.CourseDto</class>
-        <class>com.bsu.server.dto.ThemeDto</class>
+        <class>com.bsu.server.dto.CourseEntity</class>
+        <class>com.bsu.server.dto.ThemeEntity</class>
         <class>com.bsu.server.dto.security.UserAccount</class>
         <class>com.bsu.server.dto.UserGroupDto</class>
         <class>com.bsu.server.dto.security.UserRole</class>
-        <class>com.bsu.server.theoretic.test.dto.AnswerDto</class>
-        <class>com.bsu.server.theoretic.test.dto.QuestionDto</class>
+        <class>com.bsu.server.theoretic.test.dto.AnswerEntity</class>
+        <class>com.bsu.server.theoretic.test.dto.QuestionEntity</class>
         <class>com.bsu.server.theoretic.test.dto.TestDto</class>
-        <class>com.bsu.server.theoretic.test.student.dto.StudentAnswerDto</class>
-        <class>com.bsu.server.theoretic.test.student.dto.StudentResultDto</class>
+        <class>com.bsu.server.theoretic.test.student.entity.StudentAnswerEntity</class>
+        <class>com.bsu.server.theoretic.test.student.entity.StudentResultEntity</class>
     </persistence-unit>
 
 </persistence>

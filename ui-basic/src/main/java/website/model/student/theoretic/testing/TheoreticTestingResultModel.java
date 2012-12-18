@@ -1,7 +1,7 @@
 package website.model.student.theoretic.testing;
 
-import com.bsu.server.theoretic.test.service.TheoreticTestService;
-import com.bsu.server.theoretic.test.student.dto.StudentAnswerDto;
+import com.bsu.server.theoretic.test.service.TheoreticTestServiceImpl;
+import com.bsu.service.api.dto.StudentAnswerDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import website.model.global.UserModel;
@@ -24,8 +24,7 @@ public class TheoreticTestingResultModel {
     @Autowired
     private UserModel currentUser;
     @Autowired
-    private TheoreticTestService testService;
-
+    private TheoreticTestServiceImpl testService;
     private int mark = 100;
 
     public int getMark() {
@@ -42,9 +41,9 @@ public class TheoreticTestingResultModel {
             if (answer.getAnsvCheck() != null && !answer.getAnsvCheck().isEmpty()) {
                 for (String ansCheck : answer.getAnsvCheck()) {
                     StudentAnswerDto dto = new StudentAnswerDto();
-                    dto.setStudent(currentUser.getUser());
-                    dto.setAnswerText(ansCheck);
-                    dto.setQuestion(testService.getQuestion(answer.getQuestionId()));
+                    dto.setUserId(currentUser.getUser().getId());
+                    dto.setAnswer(ansCheck);
+                    dto.setQuestionId(answer.getQuestionId());
                     assembledAnswers.add(dto);
                 }
             } else {
@@ -52,9 +51,9 @@ public class TheoreticTestingResultModel {
                     continue;
                 }
                 StudentAnswerDto dto = new StudentAnswerDto();
-                dto.setStudent(currentUser.getUser());
-                dto.setAnswerText(answer.getAnsvStr());
-                dto.setQuestion(testService.getQuestion(answer.getQuestionId()));
+                dto.setUserId(currentUser.getUser().getId());
+                dto.setAnswer(answer.getAnsvStr());
+                dto.setQuestionId(answer.getQuestionId());
                 assembledAnswers.add(dto);
             }
         }

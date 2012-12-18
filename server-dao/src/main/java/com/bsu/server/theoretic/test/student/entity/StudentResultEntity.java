@@ -1,4 +1,4 @@
-package com.bsu.server.theoretic.test.student.dto;
+package com.bsu.server.theoretic.test.student.entity;
 
 import com.bsu.server.dto.security.UserAccount;
 import com.bsu.server.theoretic.test.dto.TestDto;
@@ -10,7 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "student_test_results", schema = "public")
-public class StudentResultDto {
+public class StudentResultEntity {
     @Id
     @GeneratedValue
     @Column(name = "id")

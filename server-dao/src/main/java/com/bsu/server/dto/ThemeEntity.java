@@ -13,20 +13,16 @@ import java.util.List;
  */
 @Entity
 @Table(name = "theme", schema = "public")
-public class ThemeDto implements Serializable {
+public class ThemeEntity implements Serializable {
     @Id
     @Column(name = "theme_id")
     private Integer id;
-
     @OneToOne
     private UserAccount creator;
-
     @Column(name = "theme_name")
     private String name;
-
     @ManyToOne
-    private CourseDto courseDto;
-
+    private CourseEntity courseEntity;
     @ManyToMany
     @JoinTable(name = "group_theme_list",
             joinColumns =
@@ -44,12 +40,20 @@ public class ThemeDto implements Serializable {
         this.id = id;
     }
 
-    public CourseDto getCourseDto() {
-        return courseDto;
+    public CourseEntity getCourseEntity() {
+        return courseEntity;
+    }
+
+    public void setCourseEntity(CourseEntity courseEntity) {
+        this.courseEntity = courseEntity;
     }
 
     public UserAccount getCreator() {
         return creator;
+    }
+
+    public void setCreator(UserAccount creator) {
+        this.creator = creator;
     }
 
     public String getName() {

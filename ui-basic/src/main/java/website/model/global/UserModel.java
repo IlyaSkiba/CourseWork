@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import javax.inject.Named;
 import java.io.Serializable;
@@ -30,7 +31,7 @@ public class UserModel implements Serializable {
     private String oldPassword;
     private String newPassword;
 
-    public void initializeByUsername() {
+    public void initializeByUsername() throws UsernameNotFoundException {
         UserAccount userDto = (UserAccount) userService.loadUserByUsername(userName);
         firstName = userDto.getFirstName();
         middleName = userDto.getMiddleName();
