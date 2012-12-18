@@ -18,6 +18,7 @@
     <annotationProcessing enabled="false" useClasspath="true" />
   </component>
   <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-target 1.7" />
     <option name="MAXIMUM_HEAP_SIZE" value="1024" />
   </component>
 </project>

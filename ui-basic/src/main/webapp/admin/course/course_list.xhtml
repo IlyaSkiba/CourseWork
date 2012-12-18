@@ -15,43 +15,97 @@
     <h:body>
         <ui:decorate template="../structure.xhtml">
             <ui:define name="content">
-                <h:form name="courseListForm">
+                <h:form id="courseListForm">
+                    <p:ajaxStatus style="width:64px;height:64px;position:fixed;right:5px;bottom:5px">
+                        <f:facet name="start">
+                            <p:graphicImage value="/resources/images/loading.gif"/>
+                        </f:facet>
+
+                        <f:facet name="complete">
+                            <h:outputText value=""/>
+                        </f:facet>
+                    </p:ajaxStatus>
                     <p:dataTable id="courseList"
                                  var="course"
                                  value="#{courseAdmin.courses}"
-                                 editable="true"
                                  rowKey="#{course.id}">
 
-                        <p:ajax event="rowEdit" listener="#{courseAdmin.onEdit}" update="courseList"/>
-
-                        <p:column headerText="Название курса">
-                            <p:cellEditor>
-                                <f:facet name="output">
-                                    <h:outputText value="#{course.courseName}"/>
-                                </f:facet>
-                                <f:facet name="input">
-                                    <p:inputText value="#{course.courseName}" style="width:100%"/>
-                                </f:facet>
-                            </p:cellEditor>
+                        <p:column headerText="Название курса"
+                                  sortBy="#{course.getCourseName().toLowerCase()}"
+                                  styleClass="course-list course-name-column"
+                                  filterBy="#{course.courseName}">
+                            <h:outputText value="#{course.courseName}"/>
                         </p:column>
-                        <p:column headerText="Руководитель курса">
-                            <p:cellEditor>
-                                <f:facet name="output">
-                                    <h:outputText style="width:100%" value="#{courseAdmin.encodeName(course.ownerId)}"/>
-                                </f:facet>
-                                <f:facet name="input">
-                                    <p:selectOneMenu value="#{course.ownerId}">
-                                        <f:selectItems value="#{courseAdmin.possibleUsers}" var="user"
-                                                       itemLabel="#{user.displayName}" itemValue="#{user.id}"/>
-                                    </p:selectOneMenu>
-                                </f:facet>
-                            </p:cellEditor>
+                        <p:column headerText="Руководитель курса"
+                                  sortBy="#{courseAdmin.encodeName(course.ownerId)}"
+                                  styleClass="course-list course-owner-column">
+                            <h:outputText style="width:100%" value="#{courseAdmin.encodeName(course.ownerId)}"/>
                         </p:column>
-                        <p:column headerText="Options" style="width:50px">
-                            <p:rowEditor/>
+                        <p:column styleClass="course-list course-action-column">
+                            <p:commandButton id="editButton" icon="ui-icon ui-icon-pencil" update=":editCourseForm"
+                                             oncomplete="editCourse.show()">
+                                <f:setPropertyActionListener value="#{course}" target="#{courseAdmin.courseEdit}"/>
+                            </p:commandButton>
+                            <p:commandButton id="deleteButton" icon="ui-icon ui-icon-trash" update="@none"
+                                             oncomplete="deleteCourseDialog.show()">
+                                <f:setPropertyActionListener value="#{course}" target="#{courseAdmin.courseEdit}"/>
+                            </p:commandButton>
                         </p:column>
-
                     </p:dataTable>
+                </h:form>
+                <h:form id="editCourseForm">
+                    <p:dialog widgetVar="editCourse" id="editCourseDialog" modal="true" resizable="false" width="500"
+                              height="300" dynamic="true">
+
+                        <div class="courseContainer">
+                            <h:inputHidden value="#{courseAdmin.courseEdit.id}"/>
+
+                            <div class="field">
+                                <p:outputLabel for="courseName" value="Название курса:"/>
+                                <p:inputText id="courseName" required="true"
+                                             value="#{courseAdmin.courseEdit.courseName}"/>
+                            </div>
+
+                            <div class="field">
+                                <p:outputLabel for="courseOwner" value="Руководитель курса:"/>
+                                <p:selectOneMenu id="courseOwner" filter="true" required="true"
+                                                 filterMatchMode="startsWith" value="#{courseAdmin.courseEdit.ownerId}">
+                                    <f:selectItems value="#{courseAdmin.possibleUsers}" var="user"
+                                                   itemLabel="#{user.displayName}"
+                                                   itemValue="#{user.id}"/>
+                                </p:selectOneMenu>
+                            </div>
+                            <f:facet name="footer">
+                                <div class="form-submit">
+                                    <p:commandButton id="saveButton"
+                                                     ajax="true"
+                                                     icon="ui-icon ui-icon-disk"
+                                                     process="@form"
+                                                     value="Сохранить"
+                                                     action="#{courseAdmin.editCourse}"
+                                                     update=":courseListForm:courseList"
+                                                     oncomplete="editCourse.hide()"/>
+                                    <p:commandButton id="cancelButton" type="button" icon="ui-icon ui-icon-cancel"
+                                                     value="Отмена"
+                                                     onclick="editCourse.hide()"/>
+                                </div>
+                            </f:facet>
+                        </div>
+
+                    </p:dialog>
+                </h:form>
+                <h:form id="deleteCourseForm">
+                    <p:confirmDialog widgetVar="deleteCourseDialog"
+                                     severity="alert"
+                                     closable="false"
+                                     header="Удаление курса"
+                                     message="Курс будет удален. Вы уверены что хотите продолжить?">
+                        <p:commandButton id="confirm" value="Да" update=":courseListForm:courseList"
+                                         oncomplete="deleteCourseDialog.hide()"
+                                         action="#{courseAdmin.deleteCourse()}"/>
+                        <p:commandButton id="decline" value="Отмена " onclick="deleteCourseDialog.hide()"
+                                         type="button"/>
+                    </p:confirmDialog>
                 </h:form>
             </ui:define>
         </ui:decorate>

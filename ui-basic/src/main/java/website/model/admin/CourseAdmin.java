@@ -6,14 +6,15 @@ import com.bsu.service.api.global.admin.UserService;
 import com.bsu.service.api.global.admin.dto.UserDto;
 import com.google.common.collect.Lists;
 import org.apache.commons.lang.StringUtils;
-import org.primefaces.event.RowEditEvent;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 import website.model.admin.common.AdminUserModel;
 import website.model.common.ServletUtils;
 
+import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
@@ -30,12 +31,21 @@ import java.util.Set;
 @Component
 @Scope(WebApplicationContext.SCOPE_SESSION)
 public class CourseAdmin {
+    @Qualifier("courseAdminModel")
     @Autowired
     private CourseAdminModel currentModel;
     @Autowired
     private CourseService courseService;
     @Autowired
     private UserService userService;
+    private CourseDto courseEdit;
+    private List<CourseDto> courses;
+
+    @PostConstruct
+    public void init() {
+        courses = courseService.getCourses();
+    }
+
 
     public void create() {
         currentModel.clear();
@@ -85,15 +95,31 @@ public class CourseAdmin {
     }
 
     public List<CourseDto> getCourses() {
-        return courseService.getCourses();
+        return courses;
     }
 
-    public void onEdit(RowEditEvent event) {
-        CourseDto editedRow = (CourseDto) event.getObject();
-        courseService.updateCourse(editedRow);
-        editedRow = courseService.getCourse(editedRow.getId());
-        FacesMessage msg = new FacesMessage("Курс обновлен", editedRow.getCourseName());
-        FacesContext.getCurrentInstance().addMessage(null, msg);
+    public CourseDto getCourseEdit() {
+        return courseEdit == null ? new CourseDto() : courseEdit;
     }
 
+    public void setCourseEdit(CourseDto courseEdit) {
+        this.courseEdit = courseEdit;
+    }
+
+    public void editCourse() {
+        CourseDto saveDto = getCourseEdit();
+        saveDto.setThemeIds(courseService.getCourse(saveDto.getId()).getThemeIds());
+        courseService.updateCourse(saveDto);
+        courses = courseService.getCourses();
+        FacesContext.getCurrentInstance().addMessage(null,
+                new FacesMessage("", String.format("Курс '%s' обновлен", saveDto.getCourseName())));
+    }
+
+    public void deleteCourse() {
+        CourseDto saveDto = getCourseEdit();
+        courseService.deleteCourse(saveDto.getId());
+        courses = courseService.getCourses();
+        FacesContext.getCurrentInstance().addMessage(null,
+                new FacesMessage("", String.format("Курс '%s' удален", saveDto.getCourseName())));
+    }
 }

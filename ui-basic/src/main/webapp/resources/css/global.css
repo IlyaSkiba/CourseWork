@@ -177,3 +177,16 @@ input {
 .statGraphic {
     padding-bottom: 40px;
 }
+
+.course-list.course-owner-column {
+    width: 30%
+}
+
+.course-list.course-name-column {
+    width: 60%
+}
+
+.course-list.course-action-column {
+    width: 10%;
+    min-width: 80px
+}

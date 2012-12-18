@@ -7,34 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/course/CourseService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/themes/service/ThemeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/theoretic/testing/action/CheaterActionListener.java" />
-      <change type="DELETED" beforePath="D:\Trash\JSF\trunk\ui-basic\src\main\java\website\model\student\statistic\TeoreticStatisticModel.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/server-dao.iml" afterPath="$PROJECT_DIR$/server-dao/server-dao.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/service/TheoreticTestService.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/service/TheoreticTestService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/LecturerMainModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/LecturerMainModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/AddTestModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/AddTestModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveQuestionsTable.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveQuestionsTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveTestModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveTestModel.java" />
-      <change type="MODIFICATION" beforePath="D:\Trash\JSF\trunk\ui-basic\src\main\java\website\model\student\statistic\StatisticTable.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/statistic/StatisticTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/theoretic/testing/TheoreticTestingModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/theoretic/testing/TheoreticTestingModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/security/RedirectController.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/security/RedirectController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/index.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/index.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/main.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/main.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/structure.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/structure.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic_approve.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic_approve.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/add_topic.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/add_topic.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/change_topic.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/change_topic.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/delete_topic.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/delete_topic.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/CourseAdmin.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/CourseAdmin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/admin/course/course_list.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/admin/course/course_list.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/resources/css/global.css" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/resources/css/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/resources/js/test.js" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/resources/js/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/statistic/teoretic_stat.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/statistic/teoretic_stat.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/theoretic/test.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/student/theoretic/test.xhtml" />
-      <change type="MOVED" beforePath="D:\Trash\JSF\trunk\ui-basic\src\main\java\website\model\student\statistic\TeoreticStatisticModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/statistic/TheoreticStatisticModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website.iml" afterPath="$PROJECT_DIR$/website.iml" />
     </list>
     <ignored path="$USER_HOME$/.griffon/" />
     <ignored path="$USER_HOME$/.grails/" />
@@ -144,8 +125,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -153,7 +134,112 @@
     <favorites_list name="org.jgeek.website" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="course_list.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/admin/course/course_list.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="71" selection-start="2210" selection-end="2210" vertical-scroll-proportion="-10.076923">
+              <folding>
+                <element signature="tag#p:ajaxStatus#0;tag#h:form#0;tag#ui:define#0;tag#ui:decorate#0;tag#h:body#0;tag#f:view#0;tag#html#0" expanded="false" />
+                <marker date="1355865103712" expanded="true" signature="2039:2049" placeholder="{...}" />
+                <element signature="tag#h:form#1;tag#ui:define#0;tag#ui:decorate#0;tag#h:body#0;tag#f:view#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#0;tag#p:dialog#0;tag#h:form#1;tag#ui:define#0;tag#ui:decorate#0;tag#h:body#0;tag#f:view#0;tag#html#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/resources/css/start.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#98#247#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/resources/css/global.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="184" column="15" selection-start="2829" selection-end="2829" vertical-scroll-proportion="1.5221239">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/global/UserModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="0" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="32" selection-start="1868" selection-end="1868" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="course_card.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/admin/course/course_card.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="62" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-16.961538">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseAdmin.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/CourseAdmin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="114" column="70" selection-start="3908" selection-end="3908" vertical-scroll-proportion="-27.88">
+              <folding>
+                <element signature="method#create#0;class#CourseAdmin#0" expanded="false" />
+                <element signature="method#save#0;class#CourseAdmin#0" expanded="false" />
+                <element signature="e#1963#1972#0" expanded="true" />
+                <element signature="method#getPossibleUsers#0;class#CourseAdmin#0" expanded="false" />
+                <element signature="method#getCourseEdit#0;class#CourseAdmin#0" expanded="false" />
+                <element signature="method#setCourseEdit#0;class#CourseAdmin#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/user/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="24" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseAdminModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/CourseAdminModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="29" selection-start="394" selection-end="410" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -177,9 +263,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/student/controller/StudentResultController.java" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/student/teoretic_main.xhtml" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/TheoreticTesting/TheoreticTestingModel.java" />
         <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/main.xhtml" />
         <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic.xhtml" />
         <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/AddTestModel.java" />
@@ -193,6 +276,9 @@
         <option value="$PROJECT_DIR$/server-dao/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/controller/TestController.java" />
         <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/controller/QuestionController.java" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/CourseAdmin.java" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/admin/course/course_list.xhtml" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/resources/css/global.css" />
       </list>
     </option>
   </component>
@@ -269,6 +355,12 @@
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="JSF 2 + JPA 2 + Spring 3 + Spring Security 3 application" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
@@ -290,9 +382,6 @@
       </PATH>
     </treeState>
   </component>
-  <component name="MavenRunner">
-    <option name="jreName" value="#JAVA_INTERNAL" />
-  </component>
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
@@ -308,7 +397,7 @@
       <profile-state>
         <expanded-state>
           <State>
-            <id>Inspections</id>
+            <id />
           </State>
         </expanded-state>
         <selected-state>
@@ -331,6 +420,89 @@
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectStructureProblems">
+    <ignored-problems>
+      <problem id="invalid-module-dependency(module:server-dao,Maven: com.sun.faces:jsf-api:2.1.14)" />
+      <problem id="invalid-module-dependency(module:server-dao,Maven: com.sun.faces:jsf-impl:2.1.14)" />
+      <problem id="invalid-module-dependency(module:server-dao,Maven: javax.servlet:javax.servlet-api:3.0.1)" />
+      <problem id="invalid-module-dependency(module:website,Maven: com.sun.faces:jsf-api:2.1.14)" />
+      <problem id="invalid-module-dependency(module:website,Maven: com.sun.faces:jsf-impl:2.1.14)" />
+      <problem id="invalid-module-dependency(module:website,Maven: javax.servlet:javax.servlet-api:3.0.1)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: antlr:antlr:2.7.6)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: aopalliance:aopalliance:1.0)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: asm:asm:3.3)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: asm:asm:3.3)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: bouncycastle:bcmail-jdk14:138)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: bouncycastle:bcmail-jdk14:138)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: bouncycastle:bcprov-jdk14:138)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: bouncycastle:bcprov-jdk14:138)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: dom4j:dom4j:1.6.1)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: javassist:javassist:3.12.0.GA)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: javax.activation:activation:1.1.1)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: javax.mail:mail:1.4)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: javax.servlet:jstl:1.2)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: javax.servlet:servlet-api:2.5)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: javax.transaction:jta:1.1)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: junit:junit:4.8.1)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: log4j:log4j:1.2.15)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.apache.poi:poi-ooxml-schemas:3.8)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.apache.poi:poi-ooxml-schemas:3.8)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.apache.poi:poi-ooxml:3.8)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.apache.poi:poi-scratchpad:3.8)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.apache.poi:poi:3.8)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.apache.xmlbeans:xmlbeans:2.3.0)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.apache.xmlbeans:xmlbeans:2.3.0)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.aspectj:aspectjrt:1.6.7)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.aspectj:aspectjtools:1.6.7)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.aspectj:aspectjweaver:1.6.7)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.glassfish:javax.annotation:3.0)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.hibernate:hibernate-core:3.6.9.Final)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.hibernate:hibernate-entitymanager:3.6.9.Final)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.hibernate:hibernate-search:3.3.0.CR1)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.primefaces.themes:bluesky:1.0.4)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.primefaces.themes:bluesky:1.0.4)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.primefaces:primefaces:3.2)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework.security:spring-security-config:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework.security:spring-security-core:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework.security:spring-security-crypto:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework.security:spring-security-web:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework.webflow:spring-binding:2.2.1.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework.webflow:spring-faces:2.2.1.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework.webflow:spring-js-resources:2.2.1.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework.webflow:spring-js:2.2.1.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework.webflow:spring-webflow:2.2.1.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-aop:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-asm:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-aspects:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-beans:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-context-support:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-context:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-core:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-expression:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-jdbc:3.0.6.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-orm:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-test:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-tx:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-web:3.1.0.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: org.springframework:spring-webmvc:3.0.4.RELEASE)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: stax:stax-api:1.0.1)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: stax:stax-api:1.0.1)" />
+      <problem id="library-invalid-source-javadoc-path(library:project:Maven: xml-apis:xml-apis:1.3.04)" />
+      <problem id="library-missing-from-artifact(artifact:website:war exploded,/WEB-INF/classes/module-output)" />
+      <problem id="library-missing-from-artifact(artifact:website:war exploded,/WEB-INF/classes/module-output)" />
+      <problem id="library-missing-from-artifact(artifact:website:war exploded,/WEB-INF/classes/module-output)" />
+      <problem id="library-missing-from-artifact(artifact:website:war exploded,/WEB-INF/classes/module-output)" />
+      <problem id="library-missing-from-artifact(artifact:website:war exploded,/WEB-INF/classes/module-output)" />
+      <problem id="library-missing-from-artifact(artifact:website:war exploded,/WEB-INF/classes/module-output)" />
+      <problem id="library-missing-from-artifact(artifact:website:war,website-org-1.0.0-SNAPSHOT.war/WEB-INF/classes/module-output)" />
+      <problem id="library-missing-from-artifact(artifact:website:war,website-org-1.0.0-SNAPSHOT.war/WEB-INF/classes/module-output)" />
+      <problem id="library-missing-from-artifact(artifact:website:war,website-org-1.0.0-SNAPSHOT.war/WEB-INF/classes/module-output)" />
+      <problem id="library-missing-from-artifact(artifact:website:war,website-org-1.0.0-SNAPSHOT.war/WEB-INF/classes/module-output)" />
+      <problem id="library-missing-from-artifact(artifact:website:war,website-org-1.0.0-SNAPSHOT.war/WEB-INF/classes/module-output)" />
+      <problem id="library-missing-from-artifact(artifact:website:war,website-org-1.0.0-SNAPSHOT.war/WEB-INF/classes/module-output)" />
+    </ignored-problems>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -359,17 +531,161 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
+              <option name="myItemId" value="website-org" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
+              <option name="myItemId" value="website-org" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -398,18 +714,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="278" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="296" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="296" />
+    <property name="options.splitter.main.proportions" value="0.3000001" />
     <property name="Persistence.ERD.GroupObjects" value="false" />
-    <property name="options.splitter.main.proportions" value="0.30000007" />
     <property name="Persistence.ERD.MergeEmbedded" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="292" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="297" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="967" />
@@ -425,19 +741,19 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
     <property name="Persistence.ERD.SimpleMode" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
-    <property name="DefaultHtmlFileTemplate" value="Xhtml" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="DefaultHtmlFileTemplate" value="Xhtml" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="Persistence.ERD.MergeInherited" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -548,6 +864,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" runner="idea" />
       <module name="" />
@@ -574,24 +908,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -656,10 +972,11 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -667,11 +984,10 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -725,7 +1041,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="JGeek Tomcat 7.0.2" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 6">
+    <configuration default="false" name="JGeek Tomcat 7.0.2" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -751,13 +1067,13 @@
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
           <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="%IDEA_RUN:TOMCAT_HOME%/bin/catalina.bat" />
+          <option name="SCRIPT" value="C:/apache-tomcat-6.0.35/bin/catalina.bat" />
           <option name="VM_PARAMETERS" value="" />
           <option name="PROGRAM_PARAMETERS" value=" run" />
         </STARTUP>
         <SHUTDOWN>
           <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="%IDEA_RUN:TOMCAT_HOME%/bin/catalina.bat" />
+          <option name="SCRIPT" value="C:/apache-tomcat-6.0.35/bin/catalina.bat" />
           <option name="VM_PARAMETERS" value="" />
           <option name="PROGRAM_PARAMETERS" value=" stop" />
         </SHUTDOWN>
@@ -766,13 +1082,13 @@
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
           <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="%IDEA_RUN:TOMCAT_HOME%/bin/catalina.bat" />
+          <option name="SCRIPT" value="C:/apache-tomcat-6.0.35/bin/catalina.bat" />
           <option name="VM_PARAMETERS" value="" />
           <option name="PROGRAM_PARAMETERS" value=" run" />
         </STARTUP>
         <SHUTDOWN>
           <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="%IDEA_RUN:TOMCAT_HOME%/bin/catalina.bat" />
+          <option name="SCRIPT" value="C:/apache-tomcat-6.0.35/bin/catalina.bat" />
           <option name="VM_PARAMETERS" value="" />
           <option name="PROGRAM_PARAMETERS" value=" stop" />
         </SHUTDOWN>
@@ -786,8 +1102,8 @@
       </method>
     </configuration>
     <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Query Language Console.Default" />
-      <item index="1" class="java.lang.String" itemvalue="Maven.Unnamed" />
+      <item index="0" class="java.lang.String" itemvalue="Maven.Unnamed" />
+      <item index="1" class="java.lang.String" itemvalue="Query Language Console.Default" />
       <item index="2" class="java.lang.String" itemvalue="Tomcat Server.JGeek Tomcat 7.0.2" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -848,32 +1164,32 @@
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2457265" sideWeight="0.46547884" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47111112" sideWeight="0.49468893" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47" sideWeight="0.49468893" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25265554" sideWeight="0.56825936" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3422222" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26393142" sideWeight="0.6289753" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5" sideWeight="0.32371795" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49333334" sideWeight="0.32371795" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29" sideWeight="0.21420941" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2607362" sideWeight="0.0" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.44444445" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29647437" sideWeight="0.46547884" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2927928" sideWeight="0.99903566" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26549146" sideWeight="0.46547884" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36302894" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22195122" sideWeight="0.6584217" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39984825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21153846" sideWeight="0.7093541" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2820513" sideWeight="0.5288889" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29064587" sideWeight="0.78205127" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21111111" sideWeight="0.7094595" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1340812" sideWeight="0.53" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29054055" sideWeight="0.78205127" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36525613" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.61433446" order="1" side_tool="false" content_ui="combo" />
       <window_info id="JPA Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34300342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29351535" sideWeight="0.49786323" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -947,87 +1263,128 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveTestModel.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/3.2/primefaces-3.2.jar!/META-INF/primefaces-p.taglib.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="64" selection-start="639" selection-end="639" vertical-scroll-proportion="0.027777778" />
+        <state line="5" column="36" selection-start="324" selection-end="324" vertical-scroll-proportion="0.1" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/ApproveQuestionsTable.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="50" selection-start="365" selection-end="365" vertical-scroll-proportion="0.16666667" />
+        <state line="279" column="0" selection-start="9395" selection-end="9395" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="tag#repositories#0;tag#project#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/lecturer/theoretic/testing/AddTestModel.java">
+    <entry file="file://$PROJECT_DIR$/ui-basic/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="37" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.027777778" />
+        <state line="43" column="32" selection-start="1868" selection-end="1868" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic.xhtml">
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/CourseAdminModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="68" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.029010238" />
+        <state line="17" column="29" selection-start="394" selection-end="410" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/index.xhtml">
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/global/UserModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="59" selection-start="987" selection-end="987" vertical-scroll-proportion="-14.923077" />
+        <state line="34" column="0" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/statistic/TheoreticStatisticModel.java">
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/service/JpaUserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="29" selection-start="942" selection-end="942" vertical-scroll-proportion="0.318569" />
+        <state line="35" column="18" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/statistic/StatisticTable.java">
+    <entry file="file://$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="34" selection-start="374" selection-end="374" vertical-scroll-proportion="0.3888889" />
+        <state line="14" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TheoreticTesting/TheoreticTestingModel.java">
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/user/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="63" selection-start="1296" selection-end="1296" vertical-scroll-proportion="0.0" />
+        <state line="31" column="24" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/theoretic/testing/TheoreticTestingModel.java">
+    <entry file="file://$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/dto/CourseDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.5277778" />
+        <state line="10" column="13" selection-start="160" selection-end="160" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/theoretic/testing/action/CheaterActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="42" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.44788086" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/security/RedirectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="75" selection-start="1148" selection-end="1166" vertical-scroll-proportion="0.513173" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="81" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.33028573" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/controller/QuestionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="640" selection-end="640" vertical-scroll-proportion="0.29142857" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="34" selection-start="1137" selection-end="1157" vertical-scroll-proportion="0.32" />
-      </provider>
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/resources/images/logo.png">
+      <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/CourseDto.java">
+    <entry file="file://$PROJECT_DIR$/ui-basic/target/ui-basic-1.0.0-SNAPSHOT/resources/css/global.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="321" selection-end="321" vertical-scroll-proportion="0.21371429" />
+        <state line="149" column="29" selection-start="2282" selection-end="2292" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/theoretic/test/controller/TestController.java">
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/admin/course/course_card.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="376" selection-end="376" vertical-scroll-proportion="0.15542857" />
+        <state line="28" column="62" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-16.961538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/CourseAdmin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="70" selection-start="3908" selection-end="3908" vertical-scroll-proportion="-27.88">
+          <folding>
+            <element signature="method#create#0;class#CourseAdmin#0" expanded="false" />
+            <element signature="method#save#0;class#CourseAdmin#0" expanded="false" />
+            <element signature="e#1963#1972#0" expanded="true" />
+            <element signature="method#getPossibleUsers#0;class#CourseAdmin#0" expanded="false" />
+            <element signature="method#getCourseEdit#0;class#CourseAdmin#0" expanded="false" />
+            <element signature="method#setCourseEdit#0;class#CourseAdmin#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/admin/course/course_list.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="71" selection-start="2210" selection-end="2210" vertical-scroll-proportion="-10.076923">
+          <folding>
+            <element signature="tag#p:ajaxStatus#0;tag#h:form#0;tag#ui:define#0;tag#ui:decorate#0;tag#h:body#0;tag#f:view#0;tag#html#0" expanded="false" />
+            <marker date="1355865103712" expanded="true" signature="2039:2049" placeholder="{...}" />
+            <element signature="tag#h:form#1;tag#ui:define#0;tag#ui:decorate#0;tag#h:body#0;tag#f:view#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#p:dialog#0;tag#h:form#1;tag#ui:define#0;tag#ui:decorate#0;tag#h:body#0;tag#f:view#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/resources/css/start.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#98#247#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/resources/css/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="15" selection-start="2829" selection-end="2829" vertical-scroll-proportion="1.5221239">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
@@ -1089,7 +1446,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1109,7 +1465,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: org.springframework:spring-webmvc:3.0.4.RELEASE</last-edited>
+          <last-edited>Maven: asm:asm:3.3</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
