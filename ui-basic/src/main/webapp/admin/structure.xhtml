@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html">
+    <h:head>
+        <title>Администратор</title>
+        <h:outputStylesheet library="css" name="global.css"/>
+    </h:head>
+    <h:body>
+        <p:growl autoUpdate="true" showDetail="true"/>
+        <p:ajaxStatus id="status"/>
+
+        <div id="wrapper">
+            <div id="header" class="ui-widget-header">
+
+                <ui:include src="../additional/header.xhtml"/>
+            </div>
+            <div id="middle">
+
+                <div id="container">
+                    <div id="content">
+                        <p:growl id="messages"/>
+                        <ui:insert name="content">Default Center</ui:insert>
+                    </div>
+                    <!-- #content-->
+                </div>
+                <!-- #container-->
+
+                <div class="sidebar" id="sideLeft">
+
+                    <h:form>
+                        <p:slideMenu type="sliding" style="width:95%; height:300px;">
+                            <p:menuitem value="Главная" url="/admin/main.xhtml"/>
+                            <p:submenu label="Управление курсами">
+                                <p:menuitem value="Добавить курс" ajax="true"
+                                            url="/admin/course/course_card.xhtml"
+                                            actionListener="#{courseAdmin.create}"/>
+                            </p:submenu>
+                        </p:slideMenu>
+
+                    </h:form>
+                </div>
+
+            </div>
+            <!-- #middle-->
+
+        </div>
+        <!-- #wrapper -->
+
+        <div id="footer">
+
+            <h:outputText value="South unit content."/>
+        </div>
+    </h:body>
+</f:view>
+</html>

@@ -16,6 +16,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -32,7 +35,7 @@ public class CourseController {
         UserAccount currentUser = em.createQuery("from UserAccount where id=:userId", UserAccount.class)
                 .setParameter("userId", userId).getSingleResult();
         List<UserGroupDto> userGroups = currentUser.getUserGroups();
-        HashSet<CourseEntity> courses = new HashSet<CourseEntity>();
+        HashSet<CourseEntity> courses = new HashSet<>();
         if (userGroups == null) {
             return Collections.emptyList();
         }
@@ -41,7 +44,7 @@ public class CourseController {
                 courses.add(theme.getCourseEntity());
             }
         }
-        return new ArrayList<CourseEntity>(courses);
+        return new ArrayList<>(courses);
     }
 
     public CourseEntity getEntity(Integer id) {
@@ -50,7 +53,7 @@ public class CourseController {
     }
 
     public void update(CourseEntity courseEntity) {
-        em.persist(courseEntity);
+        em.merge(courseEntity);
     }
 
     public void delete(Integer id) {
@@ -60,5 +63,12 @@ public class CourseController {
     public CourseEntity create(CourseEntity entity) {
         em.persist(entity);
         return getEntity(entity.getId());
+    }
+
+    public List<CourseEntity> getList() {
+        CriteriaBuilder builder = em.getCriteriaBuilder();
+        CriteriaQuery<CourseEntity> query = builder.createQuery(CourseEntity.class);
+        Root<CourseEntity> root = query.from(CourseEntity.class);
+        return em.createQuery(query).getResultList();
     }
 }

@@ -20,8 +20,6 @@ public class UserRole implements GrantedAuthority {
     @Id
     @Column(name = "role_id")
     private Integer id;
-
-
     @Column(name = "role_name")
     private String roleName;
 

@@ -79,13 +79,13 @@ public class DatabaseBaseToDocConverter {
         addTextHeader("Есть варианты ответов:", hasAnswersParagraph);
 
         XWPFRun hasAnswers = hasAnswersParagraph.createRun();
-        hasAnswers.setText((!question.isOpenType()) + "");
+        hasAnswers.setText((question.getOpenType() > 0) + "");
         hasAnswers.setBold(true);
         hasAnswers.addCarriageReturn();
         hasAnswers.addCarriageReturn();
         hasAnswersParagraph.addRun(hasAnswers);
 
-        if (question.isOpenType()) {
+        if (question.getOpenType() > 0) {
             hasAnswersParagraph.setPageBreak(true);
             return;
         }

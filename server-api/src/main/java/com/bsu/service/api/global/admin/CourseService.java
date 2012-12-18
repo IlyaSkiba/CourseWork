@@ -2,6 +2,8 @@ package com.bsu.service.api.global.admin;
 
 import com.bsu.service.api.dto.CourseDto;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: meloman
@@ -20,4 +22,6 @@ public interface CourseService {
     void deleteCourse(Integer id);
 
     CourseDto createCourse(CourseDto newCourse);
+
+    List<CourseDto> getCourses();
 }

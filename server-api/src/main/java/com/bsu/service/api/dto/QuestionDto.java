@@ -12,7 +12,7 @@ import java.util.List;
 public class QuestionDto {
     private Integer id;
     private String question;
-    private boolean openType;
+    private Integer openType;
     private List<AnswerDto> answerDtos;
 
     public String getQuestion() {
@@ -23,11 +23,11 @@ public class QuestionDto {
         this.question = question;
     }
 
-    public boolean isOpenType() {
+    public Integer getOpenType() {
         return openType;
     }
 
-    public void setOpenType(boolean openType) {
+    public void setOpenType(Integer openType) {
         this.openType = openType;
     }
 

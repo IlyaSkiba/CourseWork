@@ -12,6 +12,7 @@ public class CourseDto {
     private Integer id;
     private String courseName;
     private List<Integer> themeIds;
+    private Integer ownerId;
 
     public Integer getId() {
         return id;
@@ -35,5 +36,13 @@ public class CourseDto {
 
     public void setThemeIds(List<Integer> themeIds) {
         this.themeIds = themeIds;
+    }
+
+    public Integer getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(Integer ownerId) {
+        this.ownerId = ownerId;
     }
 }

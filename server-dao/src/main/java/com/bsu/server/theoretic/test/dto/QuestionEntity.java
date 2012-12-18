@@ -14,19 +14,14 @@ public class QuestionEntity implements Serializable {
     @Column(name = "id")
     @Id
     private Integer id;
-
     @Column(name = "content")
     private String question;
-
     @Column(name = "question_type")
     private Integer questionType;
-
-    @OneToMany(mappedBy = "questionDto")
+    @OneToMany(mappedBy = "questionEntity")
     private List<AnswerEntity> answers;
-
     @Column(name = "weight")
     private Integer weight;
-
     @ManyToOne
     private TestDto test;
 

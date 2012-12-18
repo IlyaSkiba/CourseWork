@@ -8,9 +8,9 @@ import java.io.Serializable;
  * @author Ilya Skiba
  */
 public interface ThemeService extends Serializable {
-    public boolean updateTheme(ThemeDto themeDto);
+    public boolean update(ThemeDto themeDto);
 
-    public void createTheme(ThemeDto themeDto);
+    public void create(ThemeDto themeDto);
 
-    boolean deleteTheme(Integer themeId);
+    boolean delete(Integer themeId);
 }

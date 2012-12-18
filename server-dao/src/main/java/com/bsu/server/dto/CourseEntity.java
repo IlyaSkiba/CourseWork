@@ -1,5 +1,6 @@
 package com.bsu.server.dto;
 
+import com.bsu.server.dto.security.UserAccount;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
@@ -21,11 +22,13 @@ public class CourseEntity implements Serializable {
     @Column(name = "course_id")
     private Integer id;
     @NotNull
-    @Length(max = 100)
+    @Length(max = 500)
     @Column(name = "course_name")
     private String courseName;
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private List<ThemeEntity> themes;
+    @ManyToOne
+    private UserAccount owner;
 
     public Integer getId() {
         return id;
@@ -49,5 +52,13 @@ public class CourseEntity implements Serializable {
 
     public void setThemes(List<ThemeEntity> themes) {
         this.themes = themes;
+    }
+
+    public UserAccount getOwner() {
+        return owner;
+    }
+
+    public void setOwner(UserAccount owner) {
+        this.owner = owner;
     }
 }
