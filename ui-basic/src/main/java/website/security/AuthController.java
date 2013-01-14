@@ -42,9 +42,8 @@ public class AuthController {
         RequestDispatcher dispatcher = ((ServletRequest) context.getRequest())
                 .getRequestDispatcher("/login_check");
         dispatcher.forward((ServletRequest) context.getRequest(), (ServletResponse) context.getResponse());
-        FacesContext.getCurrentInstance().responseComplete();
         userModel.initializeByUsername();
-        return "/student/main.xhtml";
+                return "/student/main.xhtml";
     }
 
     /**

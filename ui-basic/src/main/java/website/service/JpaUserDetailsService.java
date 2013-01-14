@@ -1,6 +1,7 @@
 package website.service;
 
 import com.bsu.server.dto.security.UserAccount;
+import com.bsu.service.api.global.admin.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -21,21 +22,18 @@ import javax.persistence.PersistenceContext;
 @Service
 public class JpaUserDetailsService implements UserDetailsService, IChangePassword {
 
-    @PersistenceContext
-    private EntityManager em;
+    @Autowired
+    private UserService userService;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Transactional(readOnly = true)
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserDetails userDetails = null;
 
         try {
-            userDetails = em.createQuery("from UserAccount where username = :username", UserAccount.class)
-                    .setParameter("username", username)
-                    .getSingleResult();
+            userDetails = userService.getUserByUserName(username);
         } catch (NoResultException nre) {
             throw new UsernameNotFoundException(null);
         }
@@ -43,17 +41,9 @@ public class JpaUserDetailsService implements UserDetailsService, IChangePasswor
         return userDetails;
     }
 
-    @Transactional(readOnly = false)
     @Override
     public void changePassword(String username, String newPassword) {
-        UserAccount userDetails = em.createQuery("from UserAccount where username = :username", UserAccount.class)
-                .setParameter("username", username)
-                .getSingleResult();
-
-        userDetails.setPassword(passwordEncoder.encodePassword(newPassword, null));
-
-        em.merge(userDetails);
-
+        //todo: implement this
     }
 
 

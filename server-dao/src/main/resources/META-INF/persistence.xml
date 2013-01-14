@@ -16,6 +16,10 @@
         <class>com.bsu.server.theoretic.test.dto.TestDto</class>
         <class>com.bsu.server.theoretic.test.student.entity.StudentAnswerEntity</class>
         <class>com.bsu.server.theoretic.test.student.entity.StudentResultEntity</class>
+        <properties>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+        </properties>
+
     </persistence-unit>
 
 </persistence>

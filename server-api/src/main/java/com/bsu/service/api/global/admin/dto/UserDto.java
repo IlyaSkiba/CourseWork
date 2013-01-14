@@ -1,7 +1,5 @@
 package com.bsu.service.api.global.admin.dto;
 
-import java.util.Set;
-
 /**
  * @author Ilya SKiba
  * @created 23/11/12
@@ -11,13 +9,14 @@ public class UserDto {
     private String firstName;
     private String middleName;
     private String lastName;
-    private Set<RoleDto> roles;
+    private String username;
+    private RoleDto roles;
 
     public Integer getUserId() {
         return userId;
     }
 
-    public UserDto setUserId(Integer userId) {
+    public UserDto buildUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
@@ -26,7 +25,7 @@ public class UserDto {
         return firstName;
     }
 
-    public UserDto setFirstName(String firstName) {
+    public UserDto buildFirstName(String firstName) {
         this.firstName = firstName;
         return this;
     }
@@ -35,7 +34,7 @@ public class UserDto {
         return middleName;
     }
 
-    public UserDto setMiddleName(String middleName) {
+    public UserDto buildMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
     }
@@ -44,18 +43,50 @@ public class UserDto {
         return lastName;
     }
 
-    public UserDto setLastName(String lastName) {
+    public UserDto buildLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    public Set<RoleDto> getRoles() {
+    public RoleDto getRoles() {
         return roles;
     }
 
-    public UserDto setRoles(Set<RoleDto> roles) {
+    public UserDto buildRoles(RoleDto roles) {
         this.roles = roles;
         return this;
     }
 
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setRoles(RoleDto roles) {
+        this.roles = roles;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public UserDto buildUsername(String username) {
+        this.username = username;
+        return this;
+    }
 }

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<f:view id="userCard">
+    <h:head>
+        <title>Добавить курс</title>
+        <h:outputStylesheet library="css" name="global.css"/>
+    </h:head>
+    <h:body>
+        <ui:decorate template="../structure.xhtml">
+            <ui:define name="content">
+                <h:form name="userForm">
+                    <div class="userContainer">
+                        <div class="field">
+                            <p:outputLabel for="username" value="Логин:"/>
+                            <p:inputText id="username" required="true" value="#{userCardModel.user.username}"/>
+                        </div>
+
+                        <div class="field">
+                            <p:outputLabel for="userLName" value="Фамилия:"/>
+                            <p:inputText id="userLName" required="true" value="#{userCardModel.user.lastName}"/>
+                        </div>
+
+                        <div class="field">
+                            <p:outputLabel for="userFName" value="Имя:"/>
+                            <p:inputText id="userFName" required="true" value="#{userCardModel.user.firstName}"/>
+                        </div>
+
+                        <div class="field">
+                            <p:outputLabel for="userMName" value="Отчество:"/>
+                            <p:inputText id="userMName" value="#{userCardModel.user.middleName}"/>
+                        </div>
+
+                        <div class="field">
+                            <p:outputLabel for="userRole" value="Роль в системе:"/>
+                            <p:selectOneMenu id="userRole" value="#{userCardModel.roleId}">
+                                <f:selectItems value="#{userAdminModel.availableRoles}" var="role"
+                                               itemLabel="#{role.name}"
+                                               itemValue="#{role.id}"/>
+                            </p:selectOneMenu>
+                        </div>
+
+                        <div class="form-submit">
+                            <p:commandButton id="save" ajax="false" process="@form" value="Сохранить"
+                                             action="#{userAdminModel.create}"/>
+                        </div>
+                    </div>
+                </h:form>
+            </ui:define>
+        </ui:decorate>
+    </h:body>
+</f:view>
+</html>

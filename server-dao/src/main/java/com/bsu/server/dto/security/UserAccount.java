@@ -40,7 +40,6 @@ public class UserAccount implements UserDetails, Serializable {
     @Column(nullable = false, name = "l_name")
     private String lastName;
 
-    @NotBlank
     @Column(name = "m_name")
     private String middleName;
 

@@ -1,18 +1,18 @@
 StudentTheoretic = function () {
     var call = 0;
     return {
-        bindFocusing:function () {
+        bindFocusing: function () {
 
             var blurFunc = function () {
                 $(".Question").css("display", "none");
                 PrimeFaces.ab(
                     {
-                        formId:getHiddenObjects().cheaterForm,
-                        source:getHiddenObjects().cheaterAttr,
-                        process:getHiddenObjects().cheaterAttr,
-                        update:getHiddenObjects().updateVal,
-                        event:"action",
-                        oncomplete:cheaterReminder.show()
+                        formId: getHiddenObjects().cheaterForm,
+                        source: getHiddenObjects().cheaterAttr,
+                        process: getHiddenObjects().cheaterAttr,
+                        update: getHiddenObjects().updateVal,
+                        event: "action",
+                        oncomplete: cheaterReminder.show()
 
                     }
                 );

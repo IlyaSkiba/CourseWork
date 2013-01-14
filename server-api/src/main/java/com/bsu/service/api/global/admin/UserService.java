@@ -2,6 +2,7 @@ package com.bsu.service.api.global.admin;
 
 import com.bsu.service.api.global.admin.dto.RoleDto;
 import com.bsu.service.api.global.admin.dto.UserDto;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.List;
 import java.util.Set;
@@ -12,8 +13,6 @@ import java.util.Set;
  */
 public interface UserService {
 
-    List<UserDto> getTeachers();
-
     List<UserDto> getUsersByRoles(Set<RoleDto> roles);
 
     UserDto get(Integer userId);
@@ -23,4 +22,10 @@ public interface UserService {
     UserDto update(UserDto user);
 
     void delete(Integer userId);
+
+    List<UserDto> getUsers();
+
+    List<RoleDto> getRoles();
+
+    UserDetails getUserByUserName(String username);
 }

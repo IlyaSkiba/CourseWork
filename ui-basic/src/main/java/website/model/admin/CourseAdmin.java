@@ -3,8 +3,10 @@ package website.model.admin;
 import com.bsu.service.api.dto.CourseDto;
 import com.bsu.service.api.global.admin.CourseService;
 import com.bsu.service.api.global.admin.UserService;
+import com.bsu.service.api.global.admin.dto.RoleDto;
 import com.bsu.service.api.global.admin.dto.UserDto;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -68,7 +70,9 @@ public class CourseAdmin {
     }
 
     public Set<AdminUserModel> getPossibleUsers() {
-        List<UserDto> users = userService.getTeachers();
+        List<UserDto> users = userService.getUsersByRoles(Sets.<RoleDto>newHashSet(new RoleDto() {{
+            setName("ROLE_TEACHER");
+        }}));
         Set<AdminUserModel> resultSet = new HashSet<>();
         for (UserDto userDto : users) {
             AdminUserModel model = new AdminUserModel();
