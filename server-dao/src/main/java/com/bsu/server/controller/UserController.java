@@ -71,4 +71,10 @@ public class UserController {
     public UserAccount update(UserAccount newUser) {
         return em.merge(newUser);
     }
+
+    @Transactional(readOnly = false)
+    public void delete(Integer userId) {
+        em.remove(getUser(userId));
+        //em.createQuery("delete from UserAccount where id=:userId").setParameter("userId", userId).executeUpdate();
+    }
 }

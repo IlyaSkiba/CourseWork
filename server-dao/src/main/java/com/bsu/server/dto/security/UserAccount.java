@@ -43,7 +43,7 @@ public class UserAccount implements UserDetails, Serializable {
     @Column(name = "m_name")
     private String middleName;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "user_role_list",
             joinColumns =
             @JoinColumn(name = "user_id", referencedColumnName = "user_id"),
@@ -52,7 +52,7 @@ public class UserAccount implements UserDetails, Serializable {
     )
     private Set<UserRole> userRoles;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "user_group_list",
             joinColumns =
             @JoinColumn(name = "user_id", referencedColumnName = "user_id"),

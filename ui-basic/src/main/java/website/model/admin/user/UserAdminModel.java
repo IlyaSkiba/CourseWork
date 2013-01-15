@@ -32,6 +32,7 @@ public class UserAdminModel {
     @Autowired
     private UserCardModel userModel;
     private List<UserDto> userList;
+    private Integer userId;
 
     public List<UserDto> getUsers() {
         if (userList == null) {
@@ -72,6 +73,19 @@ public class UserAdminModel {
         }
         userService.update(userModel.getUser());
         userList =  new ArrayList<>(userService.getUsers());
+    }
+
+    public void delete() {
+        userService.delete(userId);
+        userList =  new ArrayList<>(userService.getUsers());
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String viewRoles(UserDto user) {

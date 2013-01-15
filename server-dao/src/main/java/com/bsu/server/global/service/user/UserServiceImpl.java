@@ -68,6 +68,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void delete(Integer userId) {
+        userController.delete(userId);
     }
 
     @Override
