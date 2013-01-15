@@ -15,6 +15,7 @@ import javax.annotation.Nullable;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class UserAdminModel {
 
     public List<UserDto> getUsers() {
         if (userList == null) {
-            userList = userService.getUsers();
+            userList = new ArrayList<>(userService.getUsers());
         }
         return userList;
     }
@@ -52,14 +53,25 @@ public class UserAdminModel {
             }
         }
         userService.create(userModel.getUser());
-        userList = userService.getUsers();
+        userList =  new ArrayList<>(userService.getUsers());
         FacesContext.getCurrentInstance().getExternalContext().redirect(
                 ServletUtils.buildPath("/admin/user/user_list.xhtml"));
     }
 
     public void update() {
+        if (StringUtils.isNotEmpty(userModel.getRoleId())) {
+            Collection<RoleDto> roleCollection = Collections2.filter(getAvailableRoles(), new Predicate<RoleDto>() {
+                @Override
+                public boolean apply(@Nullable RoleDto input) {
+                    return input != null && StringUtils.equals(input.getId(), userModel.getRoleId());
+                }
+            });
+            if (!roleCollection.isEmpty()) {
+                userModel.getUser().setRoles(roleCollection.iterator().next());
+            }
+        }
         userService.update(userModel.getUser());
-        userList = userService.getUsers();
+        userList =  new ArrayList<>(userService.getUsers());
     }
 
     public String viewRoles(UserDto user) {

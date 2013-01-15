@@ -26,46 +26,46 @@
                         </f:facet>
                     </p:ajaxStatus>
                     <p:dataTable id="userList"
-                                 var="user"
+                                 var="tableUser"
                                  value="#{userAdminModel.users}"
                                  paginator="true" rows="10"
                                  paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                                  rowsPerPageTemplate="5,10,15"
-                                 rowKey="#{user.userId}">
+                                 rowKey="#{tableUser.userId}">
 
                         <p:column headerText="Фамилия"
-                                  sortBy="#{user.lastName.toLowerCase()}"
-                                  filterBy="#{user.lastName}"
+                                  sortBy="#{tableUser.lastName.toLowerCase()}"
+                                  filterBy="#{tableUser.lastName}"
                                   styleClass="user-list user-owner-column">
-                            <h:outputText style="width:100%" value="#{user.lastName}"/>
+                            <h:outputText style="width:100%" value="#{tableUser.lastName}"/>
                         </p:column>
 
                         <p:column headerText="Имя"
-                                  sortBy="#{user.firstName.toLowerCase()}"
+                                  sortBy="#{tableUser.firstName.toLowerCase()}"
                                   styleClass="user-list user-name-column"
-                                  filterBy="#{user.firstName}">
-                            <h:outputText value="#{user.firstName}"/>
+                                  filterBy="#{tableUser.firstName}">
+                            <h:outputText value="#{tableUser.firstName}"/>
                         </p:column>
 
                         <p:column headerText="Фамилия"
-                                  sortBy="#{user.middleName.toLowerCase()}"
-                                  filterBy="#{user.middleName}"
+                                  sortBy="#{tableUser.middleName.toLowerCase()}"
+                                  filterBy="#{tableUser.middleName}"
                                   styleClass="user-list user-owner-column">
-                            <h:outputText style="width:100%" value="#{user.middleName}"/>
+                            <h:outputText style="width:100%" value="#{tableUser.middleName}"/>
                         </p:column>
 
                         <p:column headerText="Назначенные роли"
                                   styleClass="user-list user-owner-column">
-                            <h:outputText style="width:100%" value="#{userAdminModel.viewRoles(user)}"/>
+                            <h:outputText style="width:100%" value="#{userAdminModel.viewRoles(tableUser)}"/>
                         </p:column>
                         <p:column styleClass="user-list user-action-column">
                             <p:commandButton id="editButton" icon="ui-icon ui-icon-pencil" update=":edituserForm"
                                              oncomplete="edituser.show()">
-                                <!--<f:setPropertyActionListener value="#{user}" target="#{userAdmin.userEdit}"/>-->
+                               <f:setPropertyActionListener value="#{tableUser}" target="#{userCardModel.user}"/>
                             </p:commandButton>
                             <p:commandButton id="deleteButton" icon="ui-icon ui-icon-trash" update="@none"
                                              oncomplete="deleteuserDialog.show()">
-                                <!--<f:setPropertyActionListener value="#{user}" target="#{userAdmin.userEdit}"/>-->
+                                <!--<f:setPropertyActionListener value="#{tableUser}" target="#{userAdmin.userEdit}"/>-->
                             </p:commandButton>
                         </p:column>
                     </p:dataTable>
@@ -73,6 +73,42 @@
                 <h:form id="edituserForm">
                     <p:dialog widgetVar="edituser" id="edituserDialog" modal="true" resizable="false" width="500"
                               height="300" dynamic="true">
+                        <div class="userContainer">
+                            <h:inputHidden value="#{userCardModel.user.userId}"/>
+                            <div class="field">
+                                <p:outputLabel for="username" value="Логин:"/>
+                                <p:inputText id="username" required="true" value="#{userCardModel.user.username}"/>
+                            </div>
+
+                            <div class="field">
+                                <p:outputLabel for="userLName" value="Фамилия:"/>
+                                <p:inputText id="userLName" required="true" value="#{userCardModel.user.lastName}"/>
+                            </div>
+
+                            <div class="field">
+                                <p:outputLabel for="userFName" value="Имя:"/>
+                                <p:inputText id="userFName" required="true" value="#{userCardModel.user.firstName}"/>
+                            </div>
+
+                            <div class="field">
+                                <p:outputLabel for="userMName" value="Отчество:"/>
+                                <p:inputText id="userMName" value="#{userCardModel.user.middleName}"/>
+                            </div>
+
+                            <div class="field">
+                                <p:outputLabel for="userRole" value="Роль в системе:"/>
+                                <p:selectOneMenu id="userRole" value="#{userCardModel.roleId}">
+                                    <f:selectItems value="#{userAdminModel.availableRoles}" var="role"
+                                                   itemLabel="#{role.name}"
+                                                   itemValue="#{role.id}"/>
+                                </p:selectOneMenu>
+                            </div>
+
+                            <div class="form-submit">
+                                <p:commandButton id="save" ajax="false" process="@form" value="Сохранить"
+                                                 action="#{userAdminModel.update}"/>
+                            </div>
+                        </div>
                     </p:dialog>
                 </h:form>
                 <h:form id="deleteuserForm">

@@ -31,36 +31,39 @@ public class UserServiceImpl implements UserService {
     private UserController userController;
     @Autowired
     private RoleController roleController;
+    @Autowired
+    private UserAssembler userAssembler;
 
     @Override
     public List<UserDto> getUsersByRoles(Set<RoleDto> roles) {
-        Set<String> roleNames = new HashSet<String>();
+        Set<String> roleNames = new HashSet<>();
         for (RoleDto roleDto : roles) {
             roleNames.add(roleDto.getName());
         }
         List<UserAccount> users = userController.getUsersByRoles(roleNames);
         List<UserDto> result = new ArrayList<>();
         for (UserAccount user : users) {
-            result.add(UserAssembler.assemble(user));
+            result.add(userAssembler.assemble(user));
         }
         return result;
     }
 
     @Override
     public UserDto get(Integer userId) {
-        return UserAssembler.assemble(userController.getUser(userId));
+        return userAssembler.assemble(userController.getUser(userId));
     }
 
     @Override
     public UserDto create(UserDto user) {
-        UserAccount newUser = UserAssembler.assemble(user);
+        UserAccount newUser = userAssembler.assemble(user);
         newUser.setPassword("123");
-        return UserAssembler.assemble(userController.createUser(newUser));
+        return userAssembler.assemble(userController.createUser(newUser));
     }
 
     @Override
     public UserDto update(UserDto user) {
-        return null;
+        UserAccount newUser = userAssembler.assemble(user);
+        return userAssembler.assemble(userController.update(newUser));
     }
 
     @Override
@@ -70,23 +73,25 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserDto> getUsers() {
         List<UserAccount> users = userController.getUsers();
-        List<UserDto> result = Lists.transform(users, new Function<UserAccount, UserDto>() {
-            @Override
-            public UserDto apply(UserAccount input) {
-                return UserAssembler.assemble(input);
-            }
-        });
+        List<UserDto> result = Lists.transform(users, new TranformFunction());
         return result;
     }
 
     @Override
     public List<RoleDto> getRoles() {
         List<UserRole> dbRoles = roleController.getRoles();
-       return RoleAssembler.assemble(dbRoles);
+        return RoleAssembler.assemble(dbRoles);
     }
 
     @Override
     public UserDetails getUserByUserName(String username) {
         return userController.getUserByUsername(username);
+    }
+
+    private class TranformFunction implements Function<UserAccount, UserDto> {
+        @Override
+        public UserDto apply(UserAccount input) {
+            return userAssembler.assemble(input);
+        }
     }
 }

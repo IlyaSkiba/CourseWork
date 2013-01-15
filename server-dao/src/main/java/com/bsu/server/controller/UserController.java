@@ -58,11 +58,17 @@ public class UserController {
         return getUser(assemble.getId());
     }
 
+    @Transactional(readOnly = true)
     public UserAccount getUserByUsername(String username) {
         CriteriaBuilder builder = em.getCriteriaBuilder();
         CriteriaQuery<UserAccount> query = builder.createQuery(UserAccount.class);
         Root<UserAccount> root = query.from(UserAccount.class);
         query = query.where((root.get("username").in(username)));
         return em.createQuery(query).getSingleResult();
+    }
+
+    @Transactional(readOnly = false)
+    public UserAccount update(UserAccount newUser) {
+        return em.merge(newUser);
     }
 }

@@ -38,6 +38,9 @@ public class UserCardModel {
 
     public void setUser(UserDto user) {
         this.user = user;
+        if (user.getRoles() !=null){
+            setRoleId(user.getRoles().getId());
+        }
     }
 
     public String getRoleId() {

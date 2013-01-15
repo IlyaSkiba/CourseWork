@@ -1,10 +1,13 @@
 package com.bsu.server.assembler;
 
+import com.bsu.server.controller.UserController;
 import com.bsu.server.dto.security.UserAccount;
 import com.bsu.server.dto.security.UserRole;
 import com.bsu.service.api.global.admin.dto.RoleDto;
 import com.bsu.service.api.global.admin.dto.UserDto;
 import com.google.common.collect.Sets;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,9 +16,16 @@ import java.util.Set;
  * @author Ilya SKiba
  * @created 23/11/12
  */
+@Service
 public class UserAssembler {
-    public static UserAccount assemble(UserDto userDto) {
+    @Autowired
+    private UserController userController;
+
+    public UserAccount assemble(UserDto userDto) {
         UserAccount entity = new UserAccount();
+        if (userDto.getUserId() != null) {
+            entity = userController.getUser(userDto.getUserId());
+        }
         entity.setId(userDto.getUserId());
         entity.setFirstName(userDto.getFirstName());
         entity.setLastName(userDto.getLastName());
@@ -29,7 +39,7 @@ public class UserAssembler {
         return entity;
     }
 
-    public static UserDto assemble(UserAccount userAccount) {
+    public UserDto assemble(UserAccount userAccount) {
         UserDto dto = new UserDto();
         dto.buildUserId(userAccount.getId()).buildFirstName(userAccount.getFirstName())
                 .buildLastName(userAccount.getLastName()).buildMiddleName(userAccount.getMiddleName())
