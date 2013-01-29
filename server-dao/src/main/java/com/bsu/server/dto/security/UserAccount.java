@@ -1,6 +1,6 @@
 package com.bsu.server.dto.security;
 
-import com.bsu.server.dto.UserGroupDto;
+import com.bsu.server.dto.UserGroupEntity;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -59,7 +59,7 @@ public class UserAccount implements UserDetails, Serializable {
             inverseJoinColumns =
             @JoinColumn(name = "group_id", referencedColumnName = "id")
     )
-    private List<UserGroupDto> userGroups;
+    private List<UserGroupEntity> userGroups;
 
     public Integer getId() {
         return id;
@@ -151,11 +151,11 @@ public class UserAccount implements UserDetails, Serializable {
         this.userRoles = userRoles;
     }
 
-    public List<UserGroupDto> getUserGroups() {
+    public List<UserGroupEntity> getUserGroups() {
         return userGroups;
     }
 
-    public void setUserGroups(List<UserGroupDto> userGroups) {
+    public void setUserGroups(List<UserGroupEntity> userGroups) {
         this.userGroups = userGroups;
     }
 }

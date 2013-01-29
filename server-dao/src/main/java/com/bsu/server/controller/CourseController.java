@@ -9,7 +9,7 @@ package com.bsu.server.controller;
 
 import com.bsu.server.dto.CourseEntity;
 import com.bsu.server.dto.ThemeEntity;
-import com.bsu.server.dto.UserGroupDto;
+import com.bsu.server.dto.UserGroupEntity;
 import com.bsu.server.dto.security.UserAccount;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,13 +34,14 @@ public class CourseController {
     public List<CourseEntity> loadCourseList(Integer userId) {
         UserAccount currentUser = em.createQuery("from UserAccount where id=:userId", UserAccount.class)
                 .setParameter("userId", userId).getSingleResult();
-        List<UserGroupDto> userGroups = currentUser.getUserGroups();
+        List<UserGroupEntity> userGroups = currentUser.getUserGroups();
         HashSet<CourseEntity> courses = new HashSet<>();
         if (userGroups == null) {
             return Collections.emptyList();
         }
-        for (UserGroupDto userGroup : userGroups) {
-            for (ThemeEntity theme : userGroup.getAvailableThemes()) {
+        //TODO: fix this!
+        for (UserGroupEntity userGroup : userGroups) {
+            for (ThemeEntity theme : userGroup.getCourses().get(0).getAvailableThemes()) {
                 courses.add(theme.getCourseEntity());
             }
         }

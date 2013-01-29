@@ -30,7 +30,7 @@ public class ThemeEntity implements Serializable {
             inverseJoinColumns =
             @JoinColumn(name = "group_id", referencedColumnName = "id")
     )
-    private List<UserGroupDto> assignedGroups;
+    private List<CourseGroupEntity> assignedGroups;
 
     public Integer getId() {
         return id;
@@ -64,11 +64,11 @@ public class ThemeEntity implements Serializable {
         this.name = name;
     }
 
-    public List<UserGroupDto> getAssignedGroups() {
+    public List<CourseGroupEntity> getAssignedGroups() {
         return assignedGroups;
     }
 
-    public void setAssignedGroups(List<UserGroupDto> assignedGroups) {
+    public void setAssignedGroups(List<CourseGroupEntity> assignedGroups) {
         this.assignedGroups = assignedGroups;
     }
 }

@@ -1,7 +1,7 @@
 package com.bsu.server.controller;
 
 import com.bsu.server.dto.ThemeEntity;
-import com.bsu.server.dto.UserGroupDto;
+import com.bsu.server.dto.UserGroupEntity;
 import com.bsu.server.dto.security.UserAccount;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,14 +35,14 @@ public class ThemeController {
         List<ThemeEntity> queryResult = q.getResultList();
         UserAccount currentUser = em.createQuery("from UserAccount where id=:userId", UserAccount.class)
                 .setParameter("userId", userId).getSingleResult();
-        List<UserGroupDto> userGroups = currentUser.getUserGroups();
+        List<UserGroupEntity> userGroups = currentUser.getUserGroups();
         if (userGroups == null) {
             return Collections.emptyList();
         }
 
         ArrayList<ThemeEntity> result = new ArrayList<ThemeEntity>();
-        for (UserGroupDto userGroup : userGroups) {
-            for (ThemeEntity theme : userGroup.getAvailableThemes()) {
+        for (UserGroupEntity userGroup : userGroups) {
+            for (ThemeEntity theme : userGroup.getCourses().get(0).getAvailableThemes()) {
                 if (queryResult.contains(theme)) {
                     result.add(theme);
                 }

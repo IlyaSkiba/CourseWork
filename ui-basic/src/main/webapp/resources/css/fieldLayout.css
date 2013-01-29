@@ -1,0 +1,24 @@
+.field {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.field .label, .field .value {
+    display: inline-block;
+}
+
+.field .label {
+    width: 200px;
+}
+
+.field .value {
+    width: 200px;
+}
+
+.field .value input, .field .value textarea {
+    width: 200px;
+}
+
+.cleanup {
+    clear: both;
+}

@@ -6,7 +6,8 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:tags="http://auto.test.bsu.by/composite">
 <f:view id="courseCard">
     <h:head>
         <title>Добавить курс</title>
@@ -18,21 +19,18 @@
                 <h:form name="courseForm">
                     <div class="courseContainer">
                         <h:inputHidden value="#{courseAdminModel.id}"/>
-
-                        <div class="field">
-                            <p:outputLabel for="courseName" value="Название курса:"/>
+                        <tags:textfield label="Название курса:" labelFor="courseName">
                             <p:inputText id="courseName" required="true" value="#{courseAdminModel.name}"/>
-                        </div>
+                        </tags:textfield>
 
-                        <div class="field">
-                            <p:outputLabel for="courseOwner" value="Руководитель курса:"/>
+                        <tags:textfield label="Руководитель курса:" labelFor="courseOwner">
                             <p:selectOneMenu id="courseOwner" filter="true" required="true"
                                              filterMatchMode="startsWith" value="#{courseAdminModel.owner}">
                                 <f:selectItems value="#{courseAdmin.possibleUsers}" var="user"
                                                itemLabel="#{user.displayName}"
                                                itemValue="#{user.id}"/>
                             </p:selectOneMenu>
-                        </div>
+                        </tags:textfield>
 
                         <div class="form-submit">
                             <p:commandButton id="save" ajax="true" process="@form" value="Сохранить"

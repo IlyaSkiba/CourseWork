@@ -56,6 +56,10 @@
         <param-value>bluesky</param-value>
     </context-param>
 
+    <context-param>
+        <param-name>facelets.LIBRARIES</param-name>
+        <param-value>/WEB-INF/course.taglib.xml</param-value>
+    </context-param>
 
     <welcome-file-list>
         <welcome-file>index.xhtml</welcome-file>

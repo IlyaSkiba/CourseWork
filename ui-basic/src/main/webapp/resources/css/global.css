@@ -186,3 +186,7 @@ input {
     width: 10%;
     min-width: 80px
 }
+
+.courseContainer {
+    width: 500px;
+}
