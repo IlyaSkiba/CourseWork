@@ -50,6 +50,12 @@
                                             action="#{userCardModel.createUser}"/>
                                 <p:menuitem value="Список пользователей" url="/admin/user/user_list.xhtml"/>
                             </p:submenu>
+                            <p:submenu label="Управление группами" style="width:98%">
+                                <p:menuitem value="Добавить группу"
+                                            url="/admin/group/group_card.xhtml"/>
+                                <p:menuitem value="Список групп"
+                                            url="/admin/group/group_list.xhtml"/>
+                            </p:submenu>
                         </p:slideMenu>
 
                     </h:form>

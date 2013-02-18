@@ -11,6 +11,7 @@ import com.bsu.service.api.global.admin.dto.RoleDto;
 import com.bsu.service.api.global.admin.dto.UserDto;
 import com.google.common.base.Function;
 import com.google.common.collect.Lists;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -74,8 +76,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserDto> getUsers() {
         List<UserAccount> users = userController.getUsers();
-        List<UserDto> result = Lists.transform(users, new TranformFunction());
-        return result;
+        return Lists.transform(users, new TranformFunction());
     }
 
     @Override
@@ -87,6 +88,19 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDetails getUserByUserName(String username) {
         return userController.getUserByUsername(username);
+    }
+
+    @Override
+    public List<UserDto> search(Map<String, String> filters, String orderField, String orderDirection, int from,
+                                int pageSize) {
+        List<UserAccount> users = userController.searchForUsers(filters, orderField,
+                StringUtils.equals(orderDirection, "ASCENDING"), from, pageSize);
+        return Lists.newArrayList(Lists.transform(users, new TranformFunction()));
+    }
+
+    @Override
+    public int count(Map<String, String> filters) {
+        return Integer.parseInt(userController.count(filters).toString());
     }
 
     private class TranformFunction implements Function<UserAccount, UserDto> {

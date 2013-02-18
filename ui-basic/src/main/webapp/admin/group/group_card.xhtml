@@ -1,9 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:tags="http://auto.test.bsu.by/composite">
+<f:view id="courseCard">
+    <h:head>
+        <title>Добавить группу</title>
+    </h:head>
+    <h:body>
+        <ui:decorate template="../structure.xhtml">
+            <ui:define name="content">
+                <h:form name="courseForm">
+                    <p:tabView>
+                        <p:tab title="Общая информация">
+                            <tags:textfield label="Имя группы:" labelFor="groupName">
+                                <p:inputText id="groupName" required="true" value="#{groupAdminModel.name}"/>
+                            </tags:textfield>
+                        </p:tab>
+                        <p:tab title="Пользователи">
+                            <p:dataTable value="#{groupAdminModel.users}"
+                                         var="user"
+                                         lazy="true"
+                                         rowKey="#{user.userId}"
+                                         paginator="true"
+                                         rows="20"
+                                         rowsPerPageTemplate="10,20,30,50"
+                                         selectionMode="checkbox"
+                                         selection="#{groupAdminModel.selectedUsers}">
+                                <p:column selectionMode="multiple" style="width:18px"/>
 
-</body>
+                                <p:column sortBy="#{user.lastName}">
+                                    <h:outputText value="#{user.lastName}"/>
+                                </p:column>
+                                <p:column sortBy="#{user.firstName}">
+                                    <h:outputText value="#{user.firstName}"/>
+                                </p:column>
+                                <p:column sortBy="#{user.middleName}">
+                                    <h:outputText value="#{user.middleName}"/>
+                                </p:column>
+                            </p:dataTable>
+                        </p:tab>
+                        <p:tab title="Назначенные курсы">
+
+                        </p:tab>
+                    </p:tabView>
+
+                    <div class="form-submit">
+
+                    </div>
+                </h:form>
+            </ui:define>
+        </ui:decorate>
+    </h:body>
+</f:view>
 </html>

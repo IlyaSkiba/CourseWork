@@ -5,6 +5,7 @@ import com.bsu.service.api.global.admin.dto.UserDto;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -28,4 +29,9 @@ public interface UserService {
     List<RoleDto> getRoles();
 
     UserDetails getUserByUserName(String username);
+
+    List<UserDto> search(Map<String, String> filters, String orderField, String orderDirection, int from,
+                         int pageSize);
+
+    int count(Map<String, String> filters);
 }
