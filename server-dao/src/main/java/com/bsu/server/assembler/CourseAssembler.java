@@ -40,14 +40,14 @@ public class CourseAssembler {
     }
 
     public CourseEntity dissassemble(CourseDto dto) {
-        CourseEntity entity = dto.getId() == null ? new CourseEntity() : courseController.getEntity(dto.getId());
+        CourseEntity entity = dto.getId() == null ? new CourseEntity() : courseController.getById(dto.getId());
         entity.setId(dto.getId());
         entity.setCourseName(dto.getCourseName());
-        entity.setOwner(userController.getUser(dto.getOwnerId()));
+        entity.setOwner(userController.getById(dto.getOwnerId()));
         List<ThemeEntity> themes = new ArrayList<>();
         if (dto.getThemeIds() != null) {
             for (Integer id : dto.getThemeIds()) {
-                themes.add(themeController.getTheme(id));
+                themes.add(themeController.getById(id));
             }
         }
         entity.setThemes(themes);

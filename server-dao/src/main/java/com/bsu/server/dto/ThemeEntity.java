@@ -2,7 +2,13 @@ package com.bsu.server.dto;
 
 import com.bsu.server.dto.security.UserAccount;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.List;
 
@@ -13,10 +19,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "theme", schema = "public")
-public class ThemeEntity implements Serializable {
-    @Id
-    @Column(name = "theme_id")
-    private Integer id;
+public class ThemeEntity extends BaseEntity implements Serializable {
     @OneToOne
     private UserAccount creator;
     @Column(name = "theme_name")
@@ -24,21 +27,8 @@ public class ThemeEntity implements Serializable {
     @ManyToOne
     private CourseEntity courseEntity;
     @ManyToMany
-    @JoinTable(name = "group_theme_list",
-            joinColumns =
-            @JoinColumn(name = "theme_id", referencedColumnName = "theme_id"),
-            inverseJoinColumns =
-            @JoinColumn(name = "group_id", referencedColumnName = "id")
-    )
+    @JoinTable
     private List<CourseGroupEntity> assignedGroups;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public CourseEntity getCourseEntity() {
         return courseEntity;

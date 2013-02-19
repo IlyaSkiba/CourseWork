@@ -52,14 +52,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDto get(Integer userId) {
-        return userAssembler.assemble(userController.getUser(userId));
+        return userAssembler.assemble(userController.getById(userId));
     }
 
     @Override
     public UserDto create(UserDto user) {
         UserAccount newUser = userAssembler.assemble(user);
         newUser.setPassword("123");
-        return userAssembler.assemble(userController.createUser(newUser));
+        return userAssembler.assemble(userController.create(newUser));
     }
 
     @Override
@@ -81,7 +81,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<RoleDto> getRoles() {
-        List<UserRole> dbRoles = roleController.getRoles();
+        List<UserRole> dbRoles = roleController.getList();
         return RoleAssembler.assemble(dbRoles);
     }
 
@@ -93,7 +93,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserDto> search(Map<String, String> filters, String orderField, String orderDirection, int from,
                                 int pageSize) {
-        List<UserAccount> users = userController.searchForUsers(filters, orderField,
+        List<UserAccount> users = userController.search(filters, orderField,
                 StringUtils.equals(orderDirection, "ASCENDING"), from, pageSize);
         return Lists.newArrayList(Lists.transform(users, new TranformFunction()));
     }

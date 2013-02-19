@@ -1,10 +1,12 @@
 package com.bsu.server.dto.security;
 
+import com.bsu.server.dto.BaseEntity;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 /**
@@ -15,21 +17,10 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "user_roles", schema = "public")
-public class UserRole implements GrantedAuthority {
+public class UserRole extends BaseEntity implements GrantedAuthority {
 
-    @Id
-    @Column(name = "role_id")
-    private Integer id;
     @Column(name = "role_name")
     private String roleName;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getRoleName() {
         return roleName;

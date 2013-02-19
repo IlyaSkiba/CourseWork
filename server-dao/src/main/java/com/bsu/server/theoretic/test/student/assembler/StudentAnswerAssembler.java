@@ -35,7 +35,7 @@ public class StudentAnswerAssembler {
         StudentAnswerEntity answerEntity = new StudentAnswerEntity();
         answerEntity.setAnswerText(dto.getAnswer());
         answerEntity.setQuestion(questionController.getQuestionDto(dto.getQuestionId()));
-        answerEntity.setStudent(userController.getUser(dto.getUserId()));
+        answerEntity.setStudent(userController.getById(dto.getUserId()));
 
         return answerEntity;
     }

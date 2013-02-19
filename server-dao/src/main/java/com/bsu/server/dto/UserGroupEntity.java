@@ -2,7 +2,12 @@ package com.bsu.server.dto;
 
 import com.bsu.server.dto.security.UserAccount;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.List;
 
@@ -11,12 +16,8 @@ import java.util.List;
  */
 @Entity
 @Table(name = "user_group", schema = "public")
-public class UserGroupEntity implements Serializable {
-
-    @Id
-    @GeneratedValue
-    @Column(name = "id")
-    private Integer id;
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public class UserGroupEntity extends BaseEntity implements Serializable {
 
     @Column(name = "group_name")
     private String groupName;
@@ -26,10 +27,6 @@ public class UserGroupEntity implements Serializable {
 
     @ManyToMany
     private List<CourseGroupEntity> courses;
-
-    public Integer getId() {
-        return id;
-    }
 
     public String getGroupName() {
         return groupName;

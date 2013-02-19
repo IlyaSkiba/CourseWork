@@ -5,7 +5,7 @@
 
     <persistence-unit name="JGeekPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
-
+        <class>com.bsu.server.dto.BaseEntity</class>
         <class>com.bsu.server.dto.CourseEntity</class>
         <class>com.bsu.server.dto.ThemeEntity</class>
         <class>com.bsu.server.dto.security.UserAccount</class>

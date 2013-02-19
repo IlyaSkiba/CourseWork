@@ -171,7 +171,7 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
 
     @Override
     public List<StudentResultDto> getStudentResults(Integer userId) {
-        UserAccount user = userController.getUser(userId);
+        UserAccount user = userController.getById(userId);
         ArrayList<StudentResultDto> result = new ArrayList<StudentResultDto>();
         List<StudentResultEntity> dbResult = studentResultController.getStudentResults(user.getId());
         for (StudentResultEntity entity : dbResult) {

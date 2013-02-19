@@ -2,7 +2,10 @@ package com.bsu.server.dto;
 
 import com.bsu.server.dto.security.UserAccount;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.List;
 
@@ -13,12 +16,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "course_group", schema = "public")
-public class CourseGroupEntity implements Serializable {
-    @Id
-    @GeneratedValue
-    @Column(name = "id")
-    private Integer id;
-
+public class CourseGroupEntity extends BaseEntity implements Serializable {
     @ManyToMany(mappedBy = "assignedGroups")
     public List<ThemeEntity> availableThemes;
 
@@ -34,10 +32,6 @@ public class CourseGroupEntity implements Serializable {
 
     public void setAvailableThemes(List<ThemeEntity> availableThemes) {
         this.availableThemes = availableThemes;
-    }
-
-    public Integer getId() {
-        return id;
     }
 
     public CourseEntity getAssignedCourse() {

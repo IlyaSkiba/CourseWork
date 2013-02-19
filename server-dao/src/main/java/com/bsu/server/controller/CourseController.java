@@ -7,6 +7,7 @@ package com.bsu.server.controller;
  * This class represents DAO of the course entity. Will be modified to add course owner
  */
 
+import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.dto.CourseEntity;
 import com.bsu.server.dto.ThemeEntity;
 import com.bsu.server.dto.UserGroupEntity;
@@ -16,9 +17,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -26,7 +24,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class CourseController {
+public class CourseController extends BaseController<CourseEntity> {
 
     @PersistenceContext
     private EntityManager em;
@@ -48,28 +46,9 @@ public class CourseController {
         return new ArrayList<>(courses);
     }
 
-    public CourseEntity getEntity(Integer id) {
-        return em.createQuery("from CourseEntity where id=:courseId", CourseEntity.class)
-                .setParameter("courseId", id).getSingleResult();
+    @Override
+    protected Class<CourseEntity> getEntityClass() {
+        return CourseEntity.class;
     }
 
-    public void update(CourseEntity courseEntity) {
-        em.merge(courseEntity);
-    }
-
-    public void delete(Integer id) {
-        em.createQuery("delete from CourseEntity  where id=:courseId").setParameter("courseId", id).executeUpdate();
-    }
-
-    public CourseEntity create(CourseEntity entity) {
-        em.persist(entity);
-        return getEntity(entity.getId());
-    }
-
-    public List<CourseEntity> getList() {
-        CriteriaBuilder builder = em.getCriteriaBuilder();
-        CriteriaQuery<CourseEntity> query = builder.createQuery(CourseEntity.class);
-        Root<CourseEntity> root = query.from(CourseEntity.class);
-        return em.createQuery(query).getResultList();
-    }
 }

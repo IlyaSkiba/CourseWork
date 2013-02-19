@@ -1,11 +1,18 @@
 package com.bsu.server.dto.security;
 
+import com.bsu.server.dto.BaseEntity;
 import com.bsu.server.dto.UserGroupEntity;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
@@ -17,12 +24,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "user", schema = "public")
-public class UserAccount implements UserDetails, Serializable {
-
-    @Id
-    @Column(name = "user_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+public class UserAccount extends BaseEntity implements UserDetails, Serializable {
 
     @NotBlank
     @Column(length = 50, nullable = false, unique = true, name = "login")
@@ -44,30 +46,13 @@ public class UserAccount implements UserDetails, Serializable {
     private String middleName;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(name = "user_role_list",
-            joinColumns =
-            @JoinColumn(name = "user_id", referencedColumnName = "user_id"),
-            inverseJoinColumns =
-            @JoinColumn(name = "role_id", referencedColumnName = "role_id")
-    )
+    @JoinTable
     private Set<UserRole> userRoles;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "user_group_list",
-            joinColumns =
-            @JoinColumn(name = "user_id", referencedColumnName = "user_id"),
-            inverseJoinColumns =
-            @JoinColumn(name = "group_id", referencedColumnName = "id")
-    )
+    @JoinTable
     private List<UserGroupEntity> userGroups;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public void setUsername(String username) {
         this.username = username;

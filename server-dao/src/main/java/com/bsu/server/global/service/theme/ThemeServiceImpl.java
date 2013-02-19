@@ -20,7 +20,7 @@ public class ThemeServiceImpl implements ThemeService {
     public boolean update(ThemeDto themeDto) {
         try {
             ThemeEntity entity = ThemeDtoAssembler.disassemble(themeDto);
-            themeController.updateEntity(entity);
+            themeController.update(entity);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -31,12 +31,13 @@ public class ThemeServiceImpl implements ThemeService {
     @Override
     public void create(ThemeDto themeDto) {
         ThemeEntity entity = ThemeDtoAssembler.disassemble(themeDto);
-        themeController.createTheme(entity);
+        themeController.create(entity);
     }
 
     @Override
     public boolean delete(Integer themeId) {
-        return themeController.deleteTheme(themeId);
+        themeController.delete(themeId);
+        return themeController.getById(themeId) == null;
     }
 
 }

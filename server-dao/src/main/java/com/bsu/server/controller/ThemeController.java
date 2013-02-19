@@ -1,5 +1,6 @@
 package com.bsu.server.controller;
 
+import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.dto.ThemeEntity;
 import com.bsu.server.dto.UserGroupEntity;
 import com.bsu.server.dto.security.UserAccount;
@@ -21,7 +22,7 @@ import java.util.List;
  */
 
 @Service
-public class ThemeController {
+public class ThemeController extends BaseController<ThemeEntity> {
     @PersistenceContext
     private EntityManager em;
 
@@ -51,39 +52,8 @@ public class ThemeController {
         return result;
     }
 
-    @Transactional(readOnly = true)
-    public ThemeEntity getTheme(Integer selectedTopic) {
-        TypedQuery<ThemeEntity> q = em.createQuery("from ThemeEntity where id = :themeId", ThemeEntity.class);
-        q.setParameter("themeId", selectedTopic);
-        return q.getSingleResult();
-    }
-
-    @Transactional(readOnly = false)
-    public ThemeEntity createTheme(ThemeEntity entity) {
-        em.persist(entity);
-        em.flush();
-        TypedQuery<ThemeEntity> q = em.createQuery("from ThemeEntity where id = :themeId", ThemeEntity.class);
-        q.setParameter("themeId", entity.getId());
-        return entity;
-    }
-
-    @Transactional(readOnly = false)
-    public void updateEntity(ThemeEntity entity) {
-        if (entity.getId() == null) {
-            return;
-        }
-        em.merge(entity);
-        em.flush();
-    }
-
-    @Transactional(readOnly = false)
-    public boolean deleteTheme(Integer id) {
-        ThemeEntity entity = getTheme(id);
-        if (entity != null) {
-            em.detach(entity);
-            em.flush();
-            return true;
-        }
-        return false;
+    @Override
+    protected Class<ThemeEntity> getEntityClass() {
+        return ThemeEntity.class;
     }
 }

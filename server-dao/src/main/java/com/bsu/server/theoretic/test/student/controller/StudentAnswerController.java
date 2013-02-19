@@ -37,7 +37,7 @@ public class StudentAnswerController {
 
     @Transactional(readOnly = false)
     public void saveResults(List<StudentAnswerEntity> answers, Integer studentId) {
-        UserAccount user = userController.getUser(studentId);
+        UserAccount user = userController.getById(studentId);
         List<StudentAnswerEntity> results = new ArrayList<StudentAnswerEntity>(answers);
         for (StudentAnswerEntity currAnswer : results) {
             currAnswer.setStudent(user);

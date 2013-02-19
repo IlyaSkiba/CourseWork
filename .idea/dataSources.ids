@@ -2191,53 +2191,41 @@
       <column name="definition" sqlType="text" length="2147483647" precision="0" nullable="true" jdbcType="12" />
     </table>
     <table name="course" schema="public" catalog="course_work" type="TABLE">
-      <column name="course_id" sqlType="serial" length="10" precision="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY291cnNlX2NvdXJzZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true" />
-      <column name="course_name" sqlType="varchar" length="100" precision="0" nullable="false" jdbcType="12" />
-      <column name="owner_user_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
-      <primary-key name="course_pkey" columns="course_id" />
-      <foreign-key name="fkaf42e01bad8cb5fa" columns="owner_user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2" />
-      <exported-key name="fk6692f8a55fa812fc" table="course_theme" schema="public" catalog="course_work" columns="course_course_id" />
-      <exported-key name="fk69375c941165545" table="theme" schema="public" catalog="course_work" columns="coursedto_course_id" />
-      <exported-key name="fk69375c93d7446df" table="theme" schema="public" catalog="course_work" columns="courseentity_course_id" />
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="course_name" sqlType="varchar" length="500" precision="0" nullable="false" jdbcType="12" />
+      <column name="owner_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="course_pkey" columns="id" />
+      <foreign-key name="fkaf42e01b2cc82f9e" columns="owner_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <exported-key name="fk65e0795b3980f812" table="course_group" schema="public" catalog="course_work" columns="assignedcourse_id" />
+      <exported-key name="fk6692f8a5e31d5e20" table="course_theme" schema="public" catalog="course_work" columns="course_id" />
+      <exported-key name="fk69375c9c152739d" table="theme" schema="public" catalog="course_work" columns="courseentity_id" />
     </table>
-    <table name="course_course_id_seq" schema="public" catalog="course_work" type="SEQUENCE">
-      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
-      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
-      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+    <table name="course_group" schema="public" catalog="course_work" type="TABLE">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="assignedcourse_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="groupowner_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="course_group_pkey" columns="id" />
+      <foreign-key name="fk65e0795b3980f812" columns="assignedcourse_id" ref-table="course" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="fk65e0795ba346371d" columns="groupowner_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <exported-key name="fk1d15dc11360ed8dc" table="theme_course_group" schema="public" catalog="course_work" columns="assignedgroups_id" />
+      <exported-key name="fk62c82c0fcc86fa86" table="user_group_course_group" schema="public" catalog="course_work" columns="courses_id" />
     </table>
     <table name="course_theme" schema="public" catalog="course_work" type="TABLE">
-      <column name="course_course_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="themes_theme_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <foreign-key name="fk6692f8a55fa812fc" columns="course_course_id" ref-table="course" ref-schema="public" ref-catalog="" ref-columns="course_id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="fk6692f8a5fe09e44f" columns="themes_theme_id" ref-table="theme" ref-schema="public" ref-catalog="" ref-columns="theme_id" update-rule="3" delete-rule="3" deferrability="2" />
-      <index name="course_theme_themes_theme_id_key" unique="true" columns="themes_theme_id" />
+      <column name="course_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="themes_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <foreign-key name="fk6692f8a5e31d5e20" columns="course_id" ref-table="course" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="fk6692f8a5628f39d9" columns="themes_id" ref-table="theme" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <index name="course_theme_themes_id_key" unique="true" columns="themes_id" />
     </table>
     <table name="global_test" schema="public" catalog="course_work" type="TABLE">
       <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="theme_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="points_count" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="question_count" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
-      <column name="relatedtheme_theme_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="relatedtheme_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="global_test_pkey" columns="id" />
-      <foreign-key name="fkcdd7c7aeff71054b" columns="relatedtheme_theme_id" ref-table="theme" ref-schema="public" ref-catalog="" ref-columns="theme_id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="global_test_theme_id_fkey" columns="theme_id" ref-table="theme" ref-schema="public" ref-catalog="" ref-columns="theme_id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="fkcdd7c7ae10b394a5" columns="relatedtheme_id" ref-table="theme" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <exported-key name="fkba823be6a13698af" table="question" schema="public" catalog="course_work" columns="test_id" />
       <exported-key name="fk29614cd79fbc754" table="student_test_results" schema="public" catalog="course_work" columns="testdto_id" />
-    </table>
-    <table name="group_theme_list" schema="public" catalog="course_work" type="TABLE">
-      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="group_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
-      <column name="theme_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
-      <primary-key name="group_theme_list_pkey" columns="id" />
-      <foreign-key name="fk75c1d31498862aa" columns="theme_id" ref-table="theme" ref-schema="public" ref-catalog="" ref-columns="theme_id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="fk75c1d314606f7529" columns="group_id" ref-table="user_group" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
     <table name="hibernate_sequence" schema="public" catalog="course_work" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
@@ -2251,89 +2239,86 @@
       <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
       <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
     </table>
+    <table name="hibernate_sequences" schema="public" catalog="course_work" type="TABLE">
+      <column name="sequence_name" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="sequence_next_hi_value" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="identity" schema="public" catalog="course_work" type="TABLE">
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="identity_pkey" columns="id" />
+    </table>
     <table name="question" schema="public" catalog="course_work" type="TABLE">
       <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="content" sqlType="text" length="2147483647" precision="0" nullable="false" jdbcType="12" />
-      <column name="question_type" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="content" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="question_type" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="weight" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="test_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="question_pkey" columns="id" />
       <foreign-key name="fkba823be6a13698af" columns="test_id" ref-table="global_test" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
-      <exported-key name="fk561df23711eecad4" table="question_answer" schema="public" catalog="course_work" columns="questiondto_id" />
-      <exported-key name="question_answer_question_id_fkey" table="question_answer" schema="public" catalog="course_work" columns="question_id" />
       <exported-key name="fk561df2371c1c7f20" table="question_answer" schema="public" catalog="course_work" columns="questionentity_id" />
-      <exported-key name="fkad2ad242b2aa4c07" table="student_answer" schema="public" catalog="course_work" columns="question_id" />
+      <exported-key name="fkad2ad24222eebd63" table="student_answer" schema="public" catalog="course_work" columns="question_id" />
       <exported-key name="fk9103119db19ffa8e" table="theme_proposal_question" schema="public" catalog="course_work" columns="proposalquestions_id" />
-      <exported-key name="fk9103119d415b8932" table="theme_proposal_question" schema="public" catalog="course_work" columns="proposalquestions_id" />
     </table>
     <table name="question_answer" schema="public" catalog="course_work" type="TABLE">
       <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="question_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
-      <column name="answer" sqlType="text" length="2147483647" precision="0" nullable="false" jdbcType="12" />
-      <column name="is_right" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
-      <column name="questiondto_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="is_right" sqlType="bool" length="1" precision="0" nullable="true" jdbcType="-7" />
+      <column name="answer" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
       <column name="questionentity_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="question_answer_pkey" columns="id" />
-      <foreign-key name="fk561df23711eecad4" columns="questiondto_id" ref-table="question" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="question_answer_question_id_fkey" columns="question_id" ref-table="question" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <foreign-key name="fk561df2371c1c7f20" columns="questionentity_id" ref-table="question" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <exported-key name="fkcbea90a05cacaa3e" table="theme_proposal_question_answer" schema="public" catalog="course_work" columns="proposalanswers_id" />
-      <exported-key name="fkcbea90a032d8b132" table="theme_proposal_question_answer" schema="public" catalog="course_work" columns="proposalanswers_id" />
     </table>
     <table name="student_answer" schema="public" catalog="course_work" type="TABLE">
       <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="answer_text" sqlType="text" length="2147483647" precision="0" nullable="true" jdbcType="12" />
-      <column name="student_user_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="answer_text" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
       <column name="question_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="student_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="student_answer_pkey" columns="id" />
-      <foreign-key name="fkad2ad242b2aa4c07" columns="question_id" ref-table="question" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="fkad2ad242eb933d82" columns="student_user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="fkad2ad24222eebd63" columns="question_id" ref-table="question" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="fkad2ad2428c1d1316" columns="student_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
     <table name="student_test_results" schema="public" catalog="course_work" type="TABLE">
       <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="result" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" def="MA==" remarks="cmVwcmVzZW50cyBtYXJrIG9mIHRoZSBzdHVkZW50" />
-      <column name="student_user_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="result" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="student_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="testdto_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="student_test_results_pkey" columns="id" />
       <foreign-key name="fk29614cd79fbc754" columns="testdto_id" ref-table="global_test" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="fk29614cdeb933d82" columns="student_user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="fk29614cd8c1d1316" columns="student_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
     <table name="theme" schema="public" catalog="course_work" type="TABLE">
-      <column name="theme_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="theme_name" sqlType="text" length="2147483647" precision="0" nullable="false" jdbcType="12" />
-      <column name="coursedto_course_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
-      <column name="creator_user_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
-      <column name="courseentity_course_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
-      <primary-key name="theme_id_PK" columns="theme_id" />
-      <foreign-key name="fk69375c941165545" columns="coursedto_course_id" ref-table="course" ref-schema="public" ref-catalog="" ref-columns="course_id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="fk69375c93d7446df" columns="courseentity_course_id" ref-table="course" ref-schema="public" ref-catalog="" ref-columns="course_id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="fk69375c91002ba73" columns="creator_user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2" />
-      <exported-key name="fk6692f8a5fe09e44f" table="course_theme" schema="public" catalog="course_work" columns="themes_theme_id" />
-      <exported-key name="fkcdd7c7aeff71054b" table="global_test" schema="public" catalog="course_work" columns="relatedtheme_theme_id" />
-      <exported-key name="global_test_theme_id_fkey" table="global_test" schema="public" catalog="course_work" columns="theme_id" />
-      <exported-key name="fk75c1d31498862aa" table="group_theme_list" schema="public" catalog="course_work" columns="theme_id" />
-      <exported-key name="fkd76198a898094e7e" table="theme_proposal" schema="public" catalog="course_work" columns="assignedtheme_theme_id" />
-      <exported-key name="fkd76198a8fe005dae" table="theme_proposal" schema="public" catalog="course_work" columns="assignedtheme_theme_id" />
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="theme_name" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="courseentity_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="creator_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="theme_pkey" columns="id" />
+      <foreign-key name="fk69375c9c152739d" columns="courseentity_id" ref-table="course" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="fk69375c91bdd8385" columns="creator_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <exported-key name="fk6692f8a5628f39d9" table="course_theme" schema="public" catalog="course_work" columns="themes_id" />
+      <exported-key name="fkcdd7c7ae10b394a5" table="global_test" schema="public" catalog="course_work" columns="relatedtheme_id" />
+      <exported-key name="fk1d15dc112c12c130" table="theme_course_group" schema="public" catalog="course_work" columns="availablethemes_id" />
+      <exported-key name="fkd76198a82239b348" table="theme_proposal" schema="public" catalog="course_work" columns="assignedtheme_id" />
+    </table>
+    <table name="theme_course_group" schema="public" catalog="course_work" type="TABLE">
+      <column name="availablethemes_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="assignedgroups_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <foreign-key name="fk1d15dc11360ed8dc" columns="assignedgroups_id" ref-table="course_group" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="fk1d15dc112c12c130" columns="availablethemes_id" ref-table="theme" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
     <table name="theme_proposal" schema="public" catalog="course_work" type="TABLE">
       <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="assignedtheme_theme_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="assignedtheme_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="theme_proposal_pkey" columns="id" />
-      <foreign-key name="fkd76198a898094e7e" columns="assignedtheme_theme_id" ref-table="theme" ref-schema="public" ref-catalog="" ref-columns="theme_id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="fkd76198a8fe005dae" columns="assignedtheme_theme_id" ref-table="theme" ref-schema="public" ref-catalog="" ref-columns="theme_id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="fkd76198a82239b348" columns="assignedtheme_id" ref-table="theme" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <exported-key name="fk9103119d7a5be162" table="theme_proposal_question" schema="public" catalog="course_work" columns="theme_proposal_id" />
-      <exported-key name="fk9103119d6db08984" table="theme_proposal_question" schema="public" catalog="course_work" columns="theme_proposal_id" />
       <exported-key name="fkcbea90a07a5be162" table="theme_proposal_question_answer" schema="public" catalog="course_work" columns="theme_proposal_id" />
-      <exported-key name="fkcbea90a06db08984" table="theme_proposal_question_answer" schema="public" catalog="course_work" columns="theme_proposal_id" />
     </table>
     <table name="theme_proposal_question" schema="public" catalog="course_work" type="TABLE">
       <column name="theme_proposal_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="proposalquestions_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
       <primary-key name="theme_proposal_question_pkey" columns="theme_proposal_id,proposalquestions_id" />
       <foreign-key name="fk9103119db19ffa8e" columns="proposalquestions_id" ref-table="question" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="fk9103119d415b8932" columns="proposalquestions_id" ref-table="question" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <foreign-key name="fk9103119d7a5be162" columns="theme_proposal_id" ref-table="theme_proposal" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="fk9103119d6db08984" columns="theme_proposal_id" ref-table="theme_proposal" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <index name="theme_proposal_question_proposalquestions_id_key" unique="true" columns="proposalquestions_id" />
     </table>
     <table name="theme_proposal_question_answer" schema="public" catalog="course_work" type="TABLE">
@@ -2341,62 +2326,65 @@
       <column name="proposalanswers_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
       <primary-key name="theme_proposal_question_answer_pkey" columns="theme_proposal_id,proposalanswers_id" />
       <foreign-key name="fkcbea90a05cacaa3e" columns="proposalanswers_id" ref-table="question_answer" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="fkcbea90a032d8b132" columns="proposalanswers_id" ref-table="question_answer" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <foreign-key name="fkcbea90a07a5be162" columns="theme_proposal_id" ref-table="theme_proposal" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="fkcbea90a06db08984" columns="theme_proposal_id" ref-table="theme_proposal" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <index name="theme_proposal_question_answer_proposalanswers_id_key" unique="true" columns="proposalanswers_id" />
     </table>
     <table name="user" schema="public" catalog="course_work" type="TABLE">
-      <column name="f_name" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
-      <column name="l_name" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
-      <column name="login" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="f_name" sqlType="varchar" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="l_name" sqlType="varchar" length="255" precision="0" nullable="false" jdbcType="12" />
       <column name="m_name" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
-      <column name="password" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
-      <column name="user_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <primary-key name="user_pkey" columns="user_id" />
-      <exported-key name="fkaf42e01bad8cb5fa" table="course" schema="public" catalog="course_work" columns="owner_user_id" />
-      <exported-key name="fkad2ad242eb933d82" table="student_answer" schema="public" catalog="course_work" columns="student_user_id" />
-      <exported-key name="fk29614cdeb933d82" table="student_test_results" schema="public" catalog="course_work" columns="student_user_id" />
-      <exported-key name="fk69375c91002ba73" table="theme" schema="public" catalog="course_work" columns="creator_user_id" />
+      <column name="password" sqlType="varchar" length="50" precision="0" nullable="false" jdbcType="12" />
+      <column name="login" sqlType="varchar" length="50" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="user_pkey" columns="id" />
+      <exported-key name="fkaf42e01b2cc82f9e" table="course" schema="public" catalog="course_work" columns="owner_id" />
+      <exported-key name="fk65e0795ba346371d" table="course_group" schema="public" catalog="course_work" columns="groupowner_id" />
+      <exported-key name="fkad2ad2428c1d1316" table="student_answer" schema="public" catalog="course_work" columns="student_id" />
+      <exported-key name="fk29614cd8c1d1316" table="student_test_results" schema="public" catalog="course_work" columns="student_id" />
+      <exported-key name="fk69375c91bdd8385" table="theme" schema="public" catalog="course_work" columns="creator_id" />
       <exported-key name="fk9c025752c0e17f86" table="user_group_list" schema="public" catalog="course_work" columns="user_id" />
-      <exported-key name="user_role_list_user_id_fkey" table="user_role_list" schema="public" catalog="course_work" columns="user_id" />
-      <exported-key name="fkc2d7463df352fad1" table="user_user_roles" schema="public" catalog="course_work" columns="user_user_id" />
+      <exported-key name="fk9c06927f387ab7f7" table="user_group_user" schema="public" catalog="course_work" columns="assignedusers_id" />
+      <exported-key name="fk716ba753c0e17f86" table="user_role_list" schema="public" catalog="course_work" columns="user_id" />
+      <index name="user_login_key" unique="true" columns="login" />
     </table>
     <table name="user_group" schema="public" catalog="course_work" type="TABLE">
       <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="group_name" sqlType="text" length="2147483647" precision="0" nullable="true" jdbcType="12" />
+      <column name="group_name" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
       <primary-key name="user_group_pkey" columns="id" />
-      <exported-key name="fk75c1d314606f7529" table="group_theme_list" schema="public" catalog="course_work" columns="group_id" />
-      <exported-key name="fk9c025752606f7529" table="user_group_list" schema="public" catalog="course_work" columns="group_id" />
+      <exported-key name="fk62c82c0f2befb1e3" table="user_group_course_group" schema="public" catalog="course_work" columns="user_group_id" />
+      <exported-key name="fk9c02575228ec57ef" table="user_group_list" schema="public" catalog="course_work" columns="group_id" />
+      <exported-key name="fk9c06927f2befb1e3" table="user_group_user" schema="public" catalog="course_work" columns="user_group_id" />
+    </table>
+    <table name="user_group_course_group" schema="public" catalog="course_work" type="TABLE">
+      <column name="user_group_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="courses_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <foreign-key name="fk62c82c0fcc86fa86" columns="courses_id" ref-table="course_group" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="fk62c82c0f2befb1e3" columns="user_group_id" ref-table="user_group" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
     <table name="user_group_list" schema="public" catalog="course_work" type="TABLE">
-      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="user_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
-      <column name="group_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
-      <primary-key name="user_group_list_pkey" columns="id" />
-      <foreign-key name="fk9c025752c0e17f86" columns="user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="fk9c025752606f7529" columns="group_id" ref-table="user_group" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <column name="user_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="group_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <foreign-key name="fk9c025752c0e17f86" columns="user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="fk9c02575228ec57ef" columns="group_id" ref-table="user_group" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+    </table>
+    <table name="user_group_user" schema="public" catalog="course_work" type="TABLE">
+      <column name="user_group_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="assignedusers_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <foreign-key name="fk9c06927f387ab7f7" columns="assignedusers_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="fk9c06927f2befb1e3" columns="user_group_id" ref-table="user_group" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
     <table name="user_role_list" schema="public" catalog="course_work" type="TABLE">
-      <column name="user_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
-      <column name="role_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4" />
-      <foreign-key name="user_role_list_user_id_fkey" columns="user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="user_role_list_role_id_fkey" columns="role_id" ref-table="user_roles" ref-schema="public" ref-catalog="" ref-columns="role_id" update-rule="3" delete-rule="3" deferrability="2" />
+      <column name="user_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="role_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="user_role_list_pkey" columns="user_id,role_id" />
+      <foreign-key name="fk716ba753c0e17f86" columns="user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="fk716ba7536cd062f0" columns="role_id" ref-table="user_roles" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
     <table name="user_roles" schema="public" catalog="course_work" type="TABLE">
-      <column name="role_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="role_name" sqlType="text" length="2147483647" precision="0" nullable="false" jdbcType="12" />
-      <primary-key name="role_ID" columns="role_id" />
-      <exported-key name="user_role_list_role_id_fkey" table="user_role_list" schema="public" catalog="course_work" columns="role_id" />
-      <exported-key name="fkc2d7463d6b142e24" table="user_user_roles" schema="public" catalog="course_work" columns="userroles_role_id" />
-      <index name="user_roles_role_name_key" unique="true" columns="role_name" />
-    </table>
-    <table name="user_user_roles" schema="public" catalog="course_work" type="TABLE">
-      <column name="user_user_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="userroles_role_id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
-      <primary-key name="user_user_roles_pkey" columns="user_user_id,userroles_role_id" />
-      <foreign-key name="fkc2d7463df352fad1" columns="user_user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="fkc2d7463d6b142e24" columns="userroles_role_id" ref-table="user_roles" ref-schema="public" ref-catalog="" ref-columns="role_id" update-rule="3" delete-rule="3" deferrability="2" />
+      <column name="id" sqlType="int4" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="role_name" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="user_roles_pkey" columns="id" />
+      <exported-key name="fk716ba7536cd062f0" table="user_role_list" schema="public" catalog="course_work" columns="role_id" />
     </table>
     <procedure name="_pg_char_max_length" schema="information_schema" catalog="course_work" type="2">
       <prototype return="true">

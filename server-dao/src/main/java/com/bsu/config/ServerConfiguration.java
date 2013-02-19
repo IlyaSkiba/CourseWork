@@ -47,9 +47,10 @@ public class ServerConfiguration {
                 setShowSql(true);
             }
         });
-        bean.setJpaProperties(new Properties(){{
-            setProperty("hibernate.hbm2ddl.auto", "update");
-        }
+        bean.setJpaProperties(new Properties() {
+            {
+                setProperty("hibernate.hbm2ddl.auto", "create");
+            }
         });
         bean.setPackagesToScan("com.bsu.server.controller", "com.bsu.server.theoretic.test.controller");
         return bean;

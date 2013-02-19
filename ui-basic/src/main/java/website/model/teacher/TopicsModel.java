@@ -74,7 +74,7 @@ public class TopicsModel {
     public void setSelectedTopic(Integer selectedTopic) {
         this.selectedTopic = selectedTopic;
         if (selectedTopic != null) {
-            setChangedTopic(themeController.getTheme(selectedTopic));
+            setChangedTopic(themeController.getById(selectedTopic));
         }
     }
 

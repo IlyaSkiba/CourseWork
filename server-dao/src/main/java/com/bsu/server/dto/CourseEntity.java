@@ -3,7 +3,14 @@ package com.bsu.server.dto;
 import com.bsu.server.dto.security.UserAccount;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.List;
@@ -16,11 +23,8 @@ import java.util.List;
  */
 @Entity
 @Table(name = "course", schema = "public")
-public class CourseEntity implements Serializable {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    @Column(name = "course_id")
-    private Integer id;
+public class CourseEntity extends BaseEntity implements Serializable {
+
     @NotNull
     @Length(max = 500)
     @Column(name = "course_name")
@@ -29,14 +33,6 @@ public class CourseEntity implements Serializable {
     private List<ThemeEntity> themes;
     @ManyToOne
     private UserAccount owner;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getCourseName() {
         return courseName;

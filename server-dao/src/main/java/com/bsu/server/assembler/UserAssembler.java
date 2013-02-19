@@ -24,7 +24,7 @@ public class UserAssembler {
     public UserAccount assemble(UserDto userDto) {
         UserAccount entity = new UserAccount();
         if (userDto.getUserId() != null) {
-            entity = userController.getUser(userDto.getUserId());
+            entity = userController.getById(userDto.getUserId());
         }
         entity.setId(userDto.getUserId());
         entity.setFirstName(userDto.getFirstName());

@@ -24,7 +24,7 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public CourseDto getCourse(Integer id) {
-        return courseAssembler.assemble(courseController.getEntity(id));
+        return courseAssembler.assemble(courseController.getById(id));
     }
 
     @Override
