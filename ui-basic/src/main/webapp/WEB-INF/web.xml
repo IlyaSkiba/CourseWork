@@ -31,8 +31,8 @@
     </context-param>
 
     <context-param>
-        <param-name>javax.faces.FACELETS_LIBRARIES</param-name>
-        <param-value>/WEB-INF/springsecurity.taglib.xml</param-value>
+        <param-name>javax.faces.LIBRARIES</param-name>
+        <param-value>/WEB-INF/springsecurity.taglib.xml;/WEB-INF/course.taglib.xml</param-value>
     </context-param>
 
     <listener>
@@ -54,11 +54,6 @@
     <context-param>
         <param-name>primefaces.THEME</param-name>
         <param-value>bluesky</param-value>
-    </context-param>
-
-    <context-param>
-        <param-name>facelets.LIBRARIES</param-name>
-        <param-value>/WEB-INF/course.taglib.xml</param-value>
     </context-param>
 
     <welcome-file-list>
