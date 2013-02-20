@@ -17,6 +17,7 @@ import java.util.Map;
  *         Date: 19.2.13
  *         Time: 21.05
  */
+@Transactional(readOnly = true)
 public abstract class BaseController<T extends BaseEntity> {
 
     @PersistenceContext
@@ -61,7 +62,11 @@ public abstract class BaseController<T extends BaseEntity> {
         CriteriaQuery<T> query = builder.createQuery(getEntityClass());
         Root<T> root = query.from(getEntityClass());
         query = query.where(root.get("id").in(id));
-        return em.createQuery(query).getSingleResult();
+        T result = em.createQuery(query).getSingleResult();
+        if (result != null) {
+            em.persist(result);
+        }
+        return result;
     }
 
     @Transactional(readOnly = false)

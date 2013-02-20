@@ -33,12 +33,13 @@
                                  value="#{userModel.userName}"/>
                     <h:outputLabel for="j_password" value="Пароль:"/>
                     <p:password id="j_password" requiredMessage="Введите пароль" required="true"/>
-                    <h:outputLabel for="_spring_security_remember_me" value="Запомнить меня:"/>
-                    <p:selectBooleanCheckbox id="_spring_security_remember_me"/>
                 </f:validateBean>
             </h:panelGrid>
 
             <p:commandButton action="#{authController.doLogin}" value="Войти" id="login" ajax="false"/>
+
+            <p:commandButton action="#{testDataService.generateTestData}" process="@this" update="@none"
+                             value="Сгенерировать набор данных"/>
         </div>
     </h:form>
 </h:body>

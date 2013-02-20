@@ -13,6 +13,7 @@ import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.encoding.PasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -35,6 +36,10 @@ public class UserServiceImpl implements UserService {
     private RoleController roleController;
     @Autowired
     private UserAssembler userAssembler;
+    @Autowired
+    private RoleAssembler roleAssembler;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public List<UserDto> getUsersByRoles(Set<RoleDto> roles) {
@@ -58,7 +63,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto create(UserDto user) {
         UserAccount newUser = userAssembler.assemble(user);
-        newUser.setPassword("123");
+        newUser.setPassword(passwordEncoder.encodePassword("123", null));
         return userAssembler.assemble(userController.create(newUser));
     }
 
@@ -82,7 +87,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<RoleDto> getRoles() {
         List<UserRole> dbRoles = roleController.getList();
-        return RoleAssembler.assemble(dbRoles);
+        return roleAssembler.assemble(dbRoles);
     }
 
     @Override

@@ -20,6 +20,8 @@ import java.util.Set;
 public class UserAssembler {
     @Autowired
     private UserController userController;
+    @Autowired
+    private RoleAssembler roleAssembler;
 
     public UserAccount assemble(UserDto userDto) {
         UserAccount entity = new UserAccount();
@@ -32,7 +34,7 @@ public class UserAssembler {
         entity.setMiddleName(userDto.getLastName());
         entity.setUsername(userDto.getUsername());
         if (userDto.getRoles() != null) {
-            Set<UserRole> roles = Sets.newHashSet(RoleAssembler.assemble(userDto.getRoles()));
+            Set<UserRole> roles = Sets.newHashSet(roleAssembler.assemble(userDto.getRoles()));
             entity.setUserRoles(roles);
         }
         //TODO: increase this!
