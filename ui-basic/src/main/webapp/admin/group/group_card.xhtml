@@ -19,7 +19,8 @@
                     <p:tabView id="courseTab">
                         <p:tab title="Общая информация">
                             <tags:textfield label="Имя группы:" labelFor="groupName">
-                                <p:inputText id="groupName" required="true" value="#{groupAdminModel.name}"/>
+                                <p:inputText id="groupName" required="true"
+                                             value="#{groupAdminModel.groupDto.groupName}"/>
                             </tags:textfield>
                         </p:tab>
                         <p:tab title="Пользователи">
@@ -54,14 +55,26 @@
                                          rows="20"
                                          rowsPerPageTemplate="10,20,30,50">
 
-                                <p:column sortBy="#{groupAdminModel.resolveCourseName(courseGroup.courseId)}">
+                                <p:column headerText="Названия курса"
+                                          sortBy="#{groupAdminModel.resolveCourseName(courseGroup.courseId)}">
                                     <h:outputText value="#{groupAdminModel.resolveCourseName(courseGroup.courseId)}"/>
                                 </p:column>
-                                <p:column sortBy="#{groupAdminModel.resolveUserName(courseGroup.ownerId)}">
+                                <p:column headerText="Назначенный руководитель группы"
+                                          sortBy="#{groupAdminModel.resolveUserName(courseGroup.ownerId)}">
                                     <h:outputText value="#{groupAdminModel.resolveUserName(courseGroup.ownerId)}"/>
+                                </p:column>
+                                <p:column headerText="Действия" width="50">
+                                    <p:commandButton action="#{groupAdminModel.removeCourse(courseGroup)}"
+                                                     icon="ui-icon ui-icon-trash"
+                                                     title="Удалить"
+                                                     update="courseGroup"
+                                                     process="@this"/>
                                 </p:column>
                                 <f:facet name="footer">
                                     <p:commandButton icon="ui-icon ui-icon-plusthick"
+                                                     title="Добавить курс"
+                                                     value="Добавить курс"
+                                                     type="button"
                                                      onclick="addCourseDialogVar.show();"/>
                                 </f:facet>
                             </p:dataTable>
@@ -69,7 +82,11 @@
                     </p:tabView>
 
                     <div class="form-submit">
-
+                        <p:commandButton action="#{groupAdminModel.save}"
+                                         ajax="false"
+                                         icon="ui-icon ui-icon-disk"
+                                         value="Сохранить"
+                                         title="Сохранить"/>
                     </div>
                 </h:form>
                 <p:dialog modal="true" header="Добавить курс" widgetVar="addCourseDialogVar" width="600" height="300">

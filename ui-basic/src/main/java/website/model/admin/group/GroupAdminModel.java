@@ -3,9 +3,11 @@ package website.model.admin.group;
 import com.bsu.service.api.dto.CourseDto;
 import com.bsu.service.api.dto.CourseGroupDto;
 import com.bsu.service.api.global.admin.CourseService;
+import com.bsu.service.api.global.admin.GroupService;
 import com.bsu.service.api.global.admin.UserService;
 import com.bsu.service.api.global.admin.dto.RoleDto;
 import com.bsu.service.api.global.admin.dto.UserDto;
+import com.bsu.service.api.global.admin.dto.UserGroupDto;
 import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
@@ -18,7 +20,6 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.context.WebApplicationContext;
 
 import javax.annotation.Nullable;
-import javax.annotation.PostConstruct;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -37,22 +38,26 @@ import java.util.Set;
 @Component
 @Scope(WebApplicationContext.SCOPE_SESSION)
 public class GroupAdminModel implements Serializable {
-    private String name;
+    private UserGroupDto groupDto;
+
     private GroupUsersModel users;
+    private List<UserDto> teachers;
+    private List<UserDto> selectedUsers;
+
+    private List<CourseDto> systemCourses;
+    private CourseGroupDto tempCourse;
     private List<CourseGroupDto> courses;
     private Map<Integer, String> courseNames;
     private Map<Integer, String> loadedUsers;
-    private List<UserDto> teachers;
-    private List<UserDto> selectedUsers;
-    private List<CourseDto> systemCourses;
-    private CourseGroupDto tempCourse;
     @Autowired
     private UserService userService;
     @Autowired
     private CourseService courseService;
+    @Autowired
+    private GroupService groupService;
 
-    @PostConstruct
-    public void init() {
+    public String init() {
+        groupDto = new UserGroupDto();
         users = new GroupUsersModel(userService);
         courses = new ArrayList<>();
         courseNames = new HashMap<>();
@@ -69,14 +74,11 @@ public class GroupAdminModel implements Serializable {
         }
         selectedUsers = new ArrayList<>();
         tempCourse = new CourseGroupDto();
+        return "/admin/group/group_card.xhtml";
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public UserGroupDto getGroupDto() {
+        return groupDto;
     }
 
     public GroupUsersModel getUsers() {
@@ -116,7 +118,7 @@ public class GroupAdminModel implements Serializable {
                 Integer>() {
             @Override
             public Integer apply(@Nullable CourseGroupDto input) {
-                return input.getCourseId();
+                return input == null ? null : input.getCourseId();
             }
         }));
 
@@ -124,7 +126,7 @@ public class GroupAdminModel implements Serializable {
             @Override
             public boolean apply(@Nullable CourseDto input) {
                 if (input == null || StringUtils.isEmpty(courseQuery)) {
-                    return false;
+                    return StringUtils.isEmpty(courseQuery);
                 }
                 return !addedIds.contains(input.getId())
                         && input.getCourseName().toLowerCase().startsWith(courseQuery.toLowerCase());
@@ -147,5 +149,14 @@ public class GroupAdminModel implements Serializable {
     public void addCourse() {
         courses.add(tempCourse);
         tempCourse = new CourseGroupDto();
+    }
+
+    public void removeCourse(CourseGroupDto courseData) {
+        courses.remove(courseData);
+    }
+
+    public String save() {
+        groupService.createGroup(groupDto, courses);
+        return "/admin/group/group_list.xhtml";
     }
 }

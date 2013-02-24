@@ -43,7 +43,7 @@ public class CourseGroupAssembler {
         entity.setAssignedCourse(courseController.getById(dto.getCourseId()));
         //todo: fix this
         entity.setGroup(null);
-        entity.setGroupOwner(userController.getById(dto.getId()));
+        entity.setGroupOwner(userController.getById(dto.getOwnerId()));
         return entity;
     }
 }

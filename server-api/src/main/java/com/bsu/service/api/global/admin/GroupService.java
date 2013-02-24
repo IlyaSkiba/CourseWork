@@ -1,6 +1,9 @@
 package com.bsu.service.api.global.admin;
 
+import com.bsu.service.api.dto.CourseGroupDto;
 import com.bsu.service.api.global.admin.dto.UserGroupDto;
+
+import java.util.List;
 
 /**
  * @author HomeUser
@@ -9,11 +12,13 @@ import com.bsu.service.api.global.admin.dto.UserGroupDto;
  */
 public interface GroupService {
 
-    public UserGroupDto create(UserGroupDto userGroup);
+    UserGroupDto create(UserGroupDto userGroup);
 
-    public UserGroupDto update(UserGroupDto userGroupDto);
+    UserGroupDto update(UserGroupDto userGroupDto);
 
-    public void delete(Long id);
+    void delete(Integer id);
 
-    public UserGroupDto get(Long id);
+    UserGroupDto get(Integer id);
+
+    UserGroupDto createGroup(UserGroupDto dto, List<CourseGroupDto> courses);
 }

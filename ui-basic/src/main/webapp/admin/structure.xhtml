@@ -52,7 +52,8 @@
                             </p:submenu>
                             <p:submenu label="Управление группами" style="width:98%">
                                 <p:menuitem value="Добавить группу"
-                                            url="/admin/group/group_card.xhtml"/>
+                                            ajax="false"
+                                            action="#{groupAdminModel.init}"/>
                                 <p:menuitem value="Список групп"
                                             url="/admin/group/group_list.xhtml"/>
                             </p:submenu>
