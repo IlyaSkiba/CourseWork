@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.List;
@@ -25,7 +27,7 @@ public class UserGroupEntity extends BaseEntity implements Serializable {
     @ManyToMany
     private List<UserAccount> assignedUsers;
 
-    @ManyToMany
+    @OneToMany
     private List<CourseGroupEntity> courses;
 
     public String getGroupName() {

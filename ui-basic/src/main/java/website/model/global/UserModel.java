@@ -3,7 +3,6 @@ package website.model.global;
 import com.bsu.server.dto.security.UserAccount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
-import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
@@ -20,9 +19,7 @@ import java.io.Serializable;
 public class UserModel implements Serializable {
 
     @Autowired
-    private UserDetailsService userService;
-    @Autowired
-    private ShaPasswordEncoder passwordEncoder;
+    private transient UserDetailsService userService;
 
     private String userName;
     private String firstName;

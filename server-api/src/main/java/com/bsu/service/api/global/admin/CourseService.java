@@ -1,5 +1,6 @@
 package com.bsu.service.api.global.admin;
 
+import com.bsu.service.api.base.SearchableService;
 import com.bsu.service.api.dto.CourseDto;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
  * Date: 08.10.12
  * Time: 12:05
  */
-public interface CourseService {
+public interface CourseService extends SearchableService<CourseDto> {
     /**
      * @param id - valid course id
      * @return course with a such id

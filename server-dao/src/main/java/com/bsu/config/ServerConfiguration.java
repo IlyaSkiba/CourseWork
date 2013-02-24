@@ -53,7 +53,7 @@ public class ServerConfiguration {
                 setProperty("hibernate.hbm2ddl.auto", "create");
             }
         });
-        bean.setPackagesToScan("com.bsu.server.controller", "com.bsu.server.theoretic.test.controller");
+        bean.setPackagesToScan("com.bsu.server");
         return bean;
     }
 

@@ -18,7 +18,7 @@
 
     <context-param>
         <param-name>javax.faces.PROJECT_STAGE</param-name>
-        <param-value>Production</param-value>
+        <param-value>Development</param-value>
     </context-param>
 
     <!-- Spring Based Context Application -->
@@ -32,7 +32,12 @@
 
     <context-param>
         <param-name>javax.faces.LIBRARIES</param-name>
-        <param-value>/WEB-INF/springsecurity.taglib.xml;/WEB-INF/course.taglib.xml</param-value>
+        <param-value>/WEB-INF/springsecurity.taglib.xml</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>javax.faces.FACELETS_LIBRARIES</param-name>
+        <param-value>/WEB-INF/course.taglib.xml</param-value>
     </context-param>
 
     <listener>

@@ -4,14 +4,15 @@ import com.bsu.server.assembler.RoleAssembler;
 import com.bsu.server.assembler.UserAssembler;
 import com.bsu.server.controller.RoleController;
 import com.bsu.server.controller.UserController;
+import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.dto.security.UserAccount;
 import com.bsu.server.dto.security.UserRole;
+import com.bsu.server.global.service.base.BaseSearchableServiceImpl;
 import com.bsu.service.api.global.admin.UserService;
 import com.bsu.service.api.global.admin.dto.RoleDto;
 import com.bsu.service.api.global.admin.dto.UserDto;
 import com.google.common.base.Function;
 import com.google.common.collect.Lists;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,7 +21,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -28,7 +28,7 @@ import java.util.Set;
  * @created 23/11/12
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends BaseSearchableServiceImpl<UserDto, UserAccount> implements UserService {
 
     @Autowired
     private UserController userController;
@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private RoleAssembler roleAssembler;
     @Autowired
-    private PasswordEncoder passwordEncoder;
+    private transient PasswordEncoder passwordEncoder;
 
     @Override
     public List<UserDto> getUsersByRoles(Set<RoleDto> roles) {
@@ -96,16 +96,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserDto> search(Map<String, String> filters, String orderField, String orderDirection, int from,
-                                int pageSize) {
-        List<UserAccount> users = userController.search(filters, orderField,
-                StringUtils.equals(orderDirection, "ASCENDING"), from, pageSize);
-        return Lists.newArrayList(Lists.transform(users, new TranformFunction()));
+    protected UserDto convert(UserAccount entity) {
+        return userAssembler.assemble(entity);
     }
 
     @Override
-    public int count(Map<String, String> filters) {
-        return Integer.parseInt(userController.count(filters).toString());
+    protected BaseController<UserAccount> getController() {
+        return userController;
     }
 
     private class TranformFunction implements Function<UserAccount, UserDto> {

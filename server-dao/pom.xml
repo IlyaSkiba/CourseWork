@@ -7,6 +7,9 @@
         <groupId>org.jgeek</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
+    <properties>
+        <querydsl.version>2.9.0</querydsl.version>
+    </properties>
     <modelVersion>4.0.0</modelVersion>
     <name>server-dao</name>
     <artifactId>server-dao</artifactId>
@@ -47,6 +50,20 @@
             <artifactId>guava</artifactId>
             <version>13.0.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.mysema.querydsl</groupId>
+            <artifactId>querydsl-apt</artifactId>
+            <version>${querydsl.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mysema.querydsl</groupId>
+            <artifactId>querydsl-jpa</artifactId>
+            <version>${querydsl.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -75,6 +92,23 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+                <groupId>com.mysema.maven</groupId>
+                <artifactId>maven-apt-plugin</artifactId>
+                <version>1.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>process</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <outputDirectory>target/generated-sources/java</outputDirectory>
+                            <processor>com.mysema.query.apt.jpa.JPAAnnotationProcessor</processor>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>

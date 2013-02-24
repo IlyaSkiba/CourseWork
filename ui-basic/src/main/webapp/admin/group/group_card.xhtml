@@ -15,8 +15,8 @@
     <h:body>
         <ui:decorate template="../structure.xhtml">
             <ui:define name="content">
-                <h:form name="courseForm">
-                    <p:tabView>
+                <h:form name="courseForm" id="courseForm">
+                    <p:tabView id="courseTab">
                         <p:tab title="Общая информация">
                             <tags:textfield label="Имя группы:" labelFor="groupName">
                                 <p:inputText id="groupName" required="true" value="#{groupAdminModel.name}"/>
@@ -24,9 +24,9 @@
                         </p:tab>
                         <p:tab title="Пользователи">
                             <p:dataTable value="#{groupAdminModel.users}"
-                                         var="user"
+                                         var="userGroup"
                                          lazy="true"
-                                         rowKey="#{user.userId}"
+                                         rowKey="#{userGroup.userId}"
                                          paginator="true"
                                          rows="20"
                                          rowsPerPageTemplate="10,20,30,50"
@@ -34,19 +34,37 @@
                                          selection="#{groupAdminModel.selectedUsers}">
                                 <p:column selectionMode="multiple" style="width:18px"/>
 
-                                <p:column sortBy="#{user.lastName}">
-                                    <h:outputText value="#{user.lastName}"/>
+                                <p:column sortBy="#{userGroup.lastName}">
+                                    <h:outputText value="#{userGroup.lastName}"/>
                                 </p:column>
-                                <p:column sortBy="#{user.firstName}">
-                                    <h:outputText value="#{user.firstName}"/>
+                                <p:column sortBy="#{userGroup.firstName}">
+                                    <h:outputText value="#{userGroup.firstName}"/>
                                 </p:column>
-                                <p:column sortBy="#{user.middleName}">
-                                    <h:outputText value="#{user.middleName}"/>
+                                <p:column sortBy="#{userGroup.middleName}">
+                                    <h:outputText value="#{userGroup.middleName}"/>
                                 </p:column>
                             </p:dataTable>
                         </p:tab>
                         <p:tab title="Назначенные курсы">
+                            <p:dataTable value="#{groupAdminModel.courses}"
+                                         var="courseGroup"
+                                         lazy="false"
+                                         id="courseGroup"
+                                         paginator="true"
+                                         rows="20"
+                                         rowsPerPageTemplate="10,20,30,50">
 
+                                <p:column sortBy="#{groupAdminModel.resolveCourseName(courseGroup.courseId)}">
+                                    <h:outputText value="#{groupAdminModel.resolveCourseName(courseGroup.courseId)}"/>
+                                </p:column>
+                                <p:column sortBy="#{groupAdminModel.resolveUserName(courseGroup.ownerId)}">
+                                    <h:outputText value="#{groupAdminModel.resolveUserName(courseGroup.ownerId)}"/>
+                                </p:column>
+                                <f:facet name="footer">
+                                    <p:commandButton icon="ui-icon ui-icon-plusthick"
+                                                     onclick="addCourseDialogVar.show();"/>
+                                </f:facet>
+                            </p:dataTable>
                         </p:tab>
                     </p:tabView>
 
@@ -54,6 +72,41 @@
 
                     </div>
                 </h:form>
+                <p:dialog modal="true" header="Добавить курс" widgetVar="addCourseDialogVar" width="600" height="300">
+                    <h:form id="addCourseGroupForm">
+                        <tags:textfield label="Название курса:" labelFor="courseName">
+                            <p:autoComplete id="courseName"
+                                            required="true"
+                                            dropdown="true"
+                                            var="course" itemLabel="#{course.courseName}" itemValue="#{course.id}"
+                                            completeMethod="#{groupAdminModel.filterCourses}"
+                                            value="#{groupAdminModel.tempCourse.courseId}"/>
+                        </tags:textfield>
+                        <tags:textfield label="Назначенный руководитель группы:" labelFor="groupUser">
+                            <p:autoComplete id="groupUser"
+                                            required="true"
+                                            var="addUser"
+                                            itemLabel="#{addUser.username}"
+                                            itemValue="#{addUser.userId}"
+                                            dropdown="true"
+                                            completeMethod="#{groupAdminModel.filterUsers}"
+                                            value="#{groupAdminModel.tempCourse.ownerId}"/>
+                        </tags:textfield>
+
+                        <div class="footer">
+                            <p:commandButton icon="ui-icon ui-icon-disk"
+                                             action="#{groupAdminModel.addCourse}"
+                                             oncomplete="addCourseDialogVar.hide();"
+                                             process="@form"
+                                             update="@form, :courseForm:courseTab:courseGroup"
+                                             value="Добавить"/>
+                            <p:commandButton icon="ui-icon ui-icon-cancel"
+                                             type="button"
+                                             onclick="addCourseDialogVar.hide();"
+                                             value="Отмена"/>
+                        </div>
+                    </h:form>
+                </p:dialog>
             </ui:define>
         </ui:decorate>
     </h:body>
