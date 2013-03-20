@@ -2,11 +2,65 @@
 <!DOCTYPE html
         PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <title></title>
-</head>
-<body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<f:view id="groupCard">
+    <h:head>
+        <title>Статистика</title>
+        <h:outputStylesheet library="css" name="global.css"/>
+    </h:head>
+    <h:body>
+        <ui:decorate template="../structure.xhtml">
+            <ui:define name="content">
+                <h:form id="groupListForm">
+                    <p:dataTable id="groupList"
+                                 var="tablegroup"
+                                 value="#{groupsModel}"
+                                 lazy="true"
+                                 paginator="true" rows="10"
+                                 paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                 rowsPerPageTemplate="5,10,15"
+                                 rowKey="#{tablegroup.id}">
 
-</body>
+                        <p:column sortBy="#{tablegroup.name}">
+                            <h:outputText value="#{tablegroup.name}"/>
+                        </p:column>
+
+                        <p:column sortBy="#{tablegroup.displayCourses}">
+                            <h:outputText value="#{tablegroup.displayCourses}"/>
+                        </p:column>
+
+                        <p:column styleClass="group-list group-action-column">
+                            <p:commandButton id="editButton" icon="ui-icon ui-icon-pencil"
+                                             oncomplete="editgroup.show()">
+
+                            </p:commandButton>
+                            <p:commandButton id="deleteButton" icon="ui-icon ui-icon-trash" update="@none"
+                                             oncomplete="deletegroupDialog.show()">
+
+                            </p:commandButton>
+                        </p:column>
+                    </p:dataTable>
+                </h:form>
+
+                <h:form id="deletegroupForm">
+                    <p:confirmDialog widgetVar="deletegroupDialog"
+                                     severity="alert"
+                                     closable="false"
+                                     header="Удаление пользователя"
+                                     message="Пользователь будет удален. Вы уверены что хотите продолжить?">
+                        <p:commandButton id="confirm" value="Да" update=":groupListForm:groupList"
+                                         oncomplete="deletegroupDialog.hide()"
+                                />
+                        <p:commandButton id="decline" value="Отмена " onclick="deletegroupDialog.hide()"
+                                         type="button"/>
+                    </p:confirmDialog>
+                </h:form>
+            </ui:define>
+        </ui:decorate>
+    </h:body>
+</f:view>
 </html>

@@ -7,6 +7,7 @@ import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import org.apache.avro.reflect.Nullable;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Map;
@@ -16,6 +17,7 @@ import java.util.Map;
  *         Date: 21.2.13
  *         Time: 2.17
  */
+@Transactional
 public abstract class BaseSearchableServiceImpl<T, D extends BaseEntity> implements SearchableService<T> {
     @Override
     public int count(Map<String, String> filters) {

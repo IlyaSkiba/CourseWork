@@ -12,6 +12,7 @@ import com.bsu.service.api.global.admin.GroupService;
 import com.bsu.service.api.global.admin.dto.UserGroupDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 import java.util.List;
@@ -22,6 +23,7 @@ import java.util.List;
  *         Time: 14.06
  */
 @Service
+@Transactional
 public class GroupServiceImpl extends BaseSearchableServiceImpl<UserGroupDto, UserGroupEntity> implements GroupService {
     @Autowired
     private CourseGroupController courseGroupController;

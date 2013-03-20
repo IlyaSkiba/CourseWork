@@ -3,6 +3,7 @@ package website.model.global;
 import org.springframework.context.annotation.Scope;
 
 import javax.inject.Named;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
  */
 @Scope("session")
 @Named
-public class StartPage {
+public class StartPage implements Serializable {
     private List<String> images;
 
     public List<String> getImages() {
