@@ -2,6 +2,7 @@ package website.model.admin.group;
 
 import com.bsu.service.api.dto.CourseDto;
 import com.bsu.service.api.dto.CourseGroupDto;
+import com.bsu.service.api.global.admin.CourseGroupService;
 import com.bsu.service.api.global.admin.CourseService;
 import com.bsu.service.api.global.admin.GroupService;
 import com.bsu.service.api.global.admin.UserService;
@@ -20,6 +21,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.context.WebApplicationContext;
 
 import javax.annotation.Nullable;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -46,7 +48,7 @@ public class GroupAdminModel implements Serializable {
 
     private List<CourseDto> systemCourses;
     private CourseGroupDto tempCourse;
-    private List<CourseGroupDto> courses;
+    private List<CourseGroupDto> selectedCourses;
     private Map<Integer, String> courseNames;
     private Map<Integer, String> loadedUsers;
     @Autowired
@@ -55,11 +57,23 @@ public class GroupAdminModel implements Serializable {
     private CourseService courseService;
     @Autowired
     private GroupService groupService;
+    @Autowired
+    private CourseGroupService courseGroupService;
 
-    public String init() {
-        groupDto = new UserGroupDto();
+    public void init() {
+        FacesContext context = FacesContext.getCurrentInstance();
+        if (context.getPartialViewContext().isPartialRequest() &&
+                !context.getPartialViewContext().isExecuteAll()) {
+            return;
+        }
+        Map<String, String> requestParams = context.getExternalContext().getRequestParameterMap();
+        String groupId = requestParams.get("groupId");
+        if (StringUtils.isEmpty(groupId)) {
+            createNew();
+        } else {
+            loadFromRepository(groupId);
+        }
         users = new GroupUsersModel(userService);
-        courses = new ArrayList<>();
         courseNames = new HashMap<>();
         loadedUsers = new HashMap<>();
         systemCourses = courseService.getCourses();
@@ -72,9 +86,19 @@ public class GroupAdminModel implements Serializable {
         for (UserDto user : teachers) {
             loadedUsers.put(user.getUserId(), user.getUsername());
         }
-        selectedUsers = new ArrayList<>();
         tempCourse = new CourseGroupDto();
-        return "/admin/group/group_card.xhtml";
+    }
+
+    private void createNew() {
+        groupDto = new UserGroupDto();
+        selectedCourses = new ArrayList<>();
+        selectedUsers = new ArrayList<>();
+    }
+
+    private void loadFromRepository(String groupId) {
+        groupDto = groupService.get(Integer.parseInt(groupId));
+        selectedCourses = Lists.newArrayList(courseGroupService.getCourses(groupDto));
+        selectedUsers = Lists.newArrayList(groupService.getSelectedUsers(groupDto));
     }
 
     public UserGroupDto getGroupDto() {
@@ -86,7 +110,7 @@ public class GroupAdminModel implements Serializable {
     }
 
     public List<CourseGroupDto> getCourses() {
-        return courses;
+        return selectedCourses;
     }
 
     public List<UserDto> getSelectedUsers() {
@@ -114,7 +138,7 @@ public class GroupAdminModel implements Serializable {
     }
 
     public List<CourseDto> filterCourses(final String courseQuery) {
-        final Set<Integer> addedIds = Sets.newHashSet(Collections2.transform(courses, new Function<CourseGroupDto,
+        final Set<Integer> addedIds = Sets.newHashSet(Collections2.transform(selectedCourses, new Function<CourseGroupDto,
                 Integer>() {
             @Override
             public Integer apply(@Nullable CourseGroupDto input) {
@@ -147,16 +171,22 @@ public class GroupAdminModel implements Serializable {
     }
 
     public void addCourse() {
-        courses.add(tempCourse);
+        selectedCourses.add(tempCourse);
         tempCourse = new CourseGroupDto();
     }
 
     public void removeCourse(CourseGroupDto courseData) {
-        courses.remove(courseData);
+        selectedCourses.remove(courseData);
     }
 
     public String save() {
-        groupService.createGroup(groupDto, courses);
+        groupDto.setAssignedUserIds(Lists.transform(selectedUsers, new Function<UserDto, Integer>() {
+            @Override
+            public Integer apply(@Nullable UserDto input) {
+                return input.getUserId();
+            }
+        }));
+        groupService.createGroup(groupDto, selectedCourses);
         return "/admin/group/group_list.xhtml";
     }
 }

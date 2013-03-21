@@ -34,10 +34,11 @@
                         </p:column>
 
                         <p:column styleClass="group-list group-action-column">
-                            <p:commandButton id="editButton" icon="ui-icon ui-icon-pencil"
-                                             oncomplete="editgroup.show()">
-
-                            </p:commandButton>
+                            <p:button id="editButton"
+                                      outcome="/admin/group/group_card.xhtml"
+                                      icon="ui-icon ui-icon-pencil">
+                                <f:param name="groupId" value="#{tablegroup.id}"/>
+                            </p:button>
                             <p:commandButton id="deleteButton" icon="ui-icon ui-icon-trash" update="@none"
                                              oncomplete="deletegroupDialog.show()">
 

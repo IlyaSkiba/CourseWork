@@ -13,6 +13,7 @@
         <title>Добавить группу</title>
     </h:head>
     <h:body>
+        <f:event type="preRenderView" listener="#{groupAdminModel.init}"/>
         <ui:decorate template="../structure.xhtml">
             <ui:define name="content">
                 <h:form name="courseForm" id="courseForm">

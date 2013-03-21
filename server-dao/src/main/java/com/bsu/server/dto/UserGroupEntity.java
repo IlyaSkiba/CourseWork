@@ -23,10 +23,10 @@ public class UserGroupEntity extends BaseEntity implements Serializable {
     @Column(name = "group_name")
     private String groupName;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "userGroups")
     private List<UserAccount> assignedUsers;
 
-    @OneToMany
+    @OneToMany(mappedBy = "group")
     private List<CourseGroupEntity> courses;
 
     public String getGroupName() {

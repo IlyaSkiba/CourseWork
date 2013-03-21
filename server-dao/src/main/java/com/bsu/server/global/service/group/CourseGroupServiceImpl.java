@@ -7,9 +7,10 @@ import com.bsu.server.dto.CourseGroupEntity;
 import com.bsu.server.global.service.base.BaseSearchableServiceImpl;
 import com.bsu.service.api.dto.CourseGroupDto;
 import com.bsu.service.api.global.admin.CourseGroupService;
-import com.google.common.collect.Lists;
+import com.bsu.service.api.global.admin.dto.UserGroupDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -19,6 +20,7 @@ import java.util.List;
  *         Time: 2.45
  */
 @Service
+@Transactional
 public class CourseGroupServiceImpl extends BaseSearchableServiceImpl<CourseGroupDto,
         CourseGroupEntity> implements CourseGroupService {
     @Autowired
@@ -38,8 +40,12 @@ public class CourseGroupServiceImpl extends BaseSearchableServiceImpl<CourseGrou
 
     @Override
     public List<CourseGroupDto> getAssignedCourse(Integer courseId) {
-        return Lists.transform(courseGroupController.getAssignedCourses(courseId),
-                new TransformFunction());
+        return convertList(courseGroupController.getAssignedCourses(courseId));
+    }
+
+    @Override
+    public List<CourseGroupDto> getCourses(UserGroupDto groupDto) {
+        return convertList(courseGroupController.getCoursesForGroup(groupDto.getId()));
     }
 
     @Override

@@ -1,6 +1,8 @@
 package website.model.admin.group.list;
 
 import com.bsu.service.api.base.TransactionService;
+import com.bsu.service.api.dto.CourseGroupDto;
+import com.bsu.service.api.global.admin.CourseGroupService;
 import com.bsu.service.api.global.admin.CourseService;
 import com.bsu.service.api.global.admin.GroupService;
 import com.bsu.service.api.global.admin.dto.UserGroupDto;
@@ -35,6 +37,8 @@ public class GroupsModel extends LazyDataModel<GroupListEntity> {
     private CourseService courseService;
     @Autowired
     private TransactionService transactionService;
+    @Autowired
+    private CourseGroupService courseGroupService;
 
     @Override
     public List<GroupListEntity> load(int first, int pageSize, String sortField, SortOrder sortOrder,
@@ -65,24 +69,24 @@ public class GroupsModel extends LazyDataModel<GroupListEntity> {
             output.setId(input.getId());
             output.setName(input.getGroupName());
             output.setCourses(transactionService.callInTransaction(
-                    new GetCourseListExecutor(input.getAssignedCourseIds())));
+                    new GetCourseListExecutor(courseGroupService.getCourses(input))));
             return output;
         }
     }
 
     private class GetCourseListExecutor implements Callable<List<String>> {
-        private List<Integer> courseIds;
+        private List<CourseGroupDto> courseIds;
 
-        private GetCourseListExecutor(List<Integer> courseIds) {
+        private GetCourseListExecutor(List<CourseGroupDto> courseIds) {
             this.courseIds = courseIds;
         }
 
         @Override
         public List<String> call() throws Exception {
-            return Lists.transform(courseIds, new Function<Integer, String>() {
+            return Lists.transform(courseIds, new Function<CourseGroupDto, String>() {
                 @Override
-                public String apply(@Nullable Integer input) {
-                    return courseService.getCourse(input).getCourseName();
+                public String apply(@Nullable CourseGroupDto input) {
+                    return courseService.getCourse(input.getCourseId()).getCourseName();
                 }
             });
         }

@@ -25,9 +25,20 @@ public abstract class BaseSearchableServiceImpl<T, D extends BaseEntity> impleme
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<T> search(Map<String, String> filters, String sortField, String sortOrder, int first, int pageSize) {
         return Lists.transform(getController().search(filters, sortField, StringUtils.equals(sortOrder, "ASCENDING"),
                 first, pageSize), new TransformFunction());
+    }
+
+    protected List<T> convertList(List<D> entities) {
+        return convertList(entities, new TransformFunction());
+    }
+
+    public <From, To> List<To> convertList(List<From> entities, Function<From, To> convertFunction) {
+        List<To> result = Lists.transform(entities, convertFunction);
+        result.size();
+        return result;
     }
 
     protected abstract T convert(D entity);
