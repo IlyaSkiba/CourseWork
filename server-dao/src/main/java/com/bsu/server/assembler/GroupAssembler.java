@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Nullable;
-import java.util.Collections;
+import java.util.List;
 
 /**
  * @author HomeUser
@@ -61,23 +61,17 @@ public class GroupAssembler {
             entity = new UserGroupEntity();
         }
         entity.setGroupName(dto.getGroupName());
-        entity.setCourses(Lists.transform(dto.getAssignedCourseIds() != null ? dto.getAssignedUserIds()
-                : Collections.<Integer>emptyList(), new Function<Integer, CourseGroupEntity>() {
-            @Nullable
-            @Override
-            public CourseGroupEntity apply(@Nullable Integer input) {
-                return courseController.getById(input);
-            }
-        }));
+        List<CourseGroupEntity> courses = Lists.newArrayList();
+        for (Integer courseId : dto.getAssignedCourseIds()) {
+            courses.add(courseController.getById(courseId));
+        }
+        entity.setCourses(courses);
 
-        entity.setAssignedUsers(Lists.transform(dto.getAssignedUserIds() != null ? dto.getAssignedUserIds() :
-                Collections.<Integer>emptyList(), new Function<Integer, UserAccount>() {
-            @Nullable
-            @Override
-            public UserAccount apply(@Nullable Integer input) {
-                return userController.getById(input);
-            }
-        }));
+        List<UserAccount> users = Lists.newArrayList();
+        for (Integer userId : dto.getAssignedUserIds()) {
+            users.add(userController.getById(userId));
+        }
+        entity.setAssignedUsers(users);
         return entity;
     }
 

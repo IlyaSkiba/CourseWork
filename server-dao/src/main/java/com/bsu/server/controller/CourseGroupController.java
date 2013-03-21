@@ -41,4 +41,19 @@ public class CourseGroupController extends BaseController<CourseGroupEntity> {
                         .eq(groupId)).list(QCourseGroupEntity.courseGroupEntity);
 
     }
+
+    public List<CourseGroupEntity> getCoursesForUser(Integer userId) {
+        JPQLQuery query = new JPAQuery(em);
+        return query.from(QCourseGroupEntity.courseGroupEntity)
+                .where(QCourseGroupEntity.courseGroupEntity.group.assignedUsers.any().id
+                        .eq(userId)).list(QCourseGroupEntity.courseGroupEntity);
+    }
+
+    public CourseGroupEntity getAvailableThemesForUser(Integer userId, Integer courseId) {
+        JPQLQuery query = new JPAQuery(em);
+        return query.from(QCourseGroupEntity.courseGroupEntity)
+                .where(QCourseGroupEntity.courseGroupEntity.group.assignedUsers.any().id
+                        .eq(userId).and(QCourseGroupEntity.courseGroupEntity.assignedCourse.id.eq(courseId)))
+                .singleResult(QCourseGroupEntity.courseGroupEntity);
+    }
 }

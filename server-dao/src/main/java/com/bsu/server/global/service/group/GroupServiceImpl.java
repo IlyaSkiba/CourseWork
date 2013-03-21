@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Nullable;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -63,6 +64,7 @@ public class GroupServiceImpl extends BaseSearchableServiceImpl<UserGroupDto, Us
     @Transactional(readOnly = false)
     @Override
     public UserGroupDto createGroup(UserGroupDto dto, List<CourseGroupDto> courses) {
+        dto.setAssignedCourseIds(Collections.<Integer>emptyList());
         UserGroupEntity entity = groupAssembler.assemble(dto);
         if (entity.getId() == null) {
             entity = groupController.create(entity);

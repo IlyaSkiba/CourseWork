@@ -1,7 +1,6 @@
 package com.bsu.server.dto.security;
 
 import com.bsu.server.dto.BaseEntity;
-import com.bsu.server.dto.UserGroupEntity;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,7 +14,6 @@ import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -47,11 +45,6 @@ public class UserAccount extends BaseEntity implements UserDetails, Serializable
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable
     private Set<UserRole> userRoles;
-
-    @ManyToMany()
-    @JoinTable
-    private List<UserGroupEntity> userGroups;
-
 
     public void setUsername(String username) {
         this.username = username;
@@ -133,13 +126,5 @@ public class UserAccount extends BaseEntity implements UserDetails, Serializable
 
     public void setUserRoles(Set<UserRole> userRoles) {
         this.userRoles = userRoles;
-    }
-
-    public List<UserGroupEntity> getUserGroups() {
-        return userGroups;
-    }
-
-    public void setUserGroups(List<UserGroupEntity> userGroups) {
-        this.userGroups = userGroups;
     }
 }

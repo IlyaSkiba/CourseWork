@@ -29,7 +29,7 @@
         <dependency>
             <groupId>org.jgeek</groupId>
             <artifactId>server-dao</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jgeek</groupId>

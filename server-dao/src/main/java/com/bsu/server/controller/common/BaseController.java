@@ -63,9 +63,7 @@ public abstract class BaseController<T extends BaseEntity> {
         Root<T> root = query.from(getEntityClass());
         query = query.where(root.get("id").in(id));
         T result = em.createQuery(query).getSingleResult();
-        if (result != null) {
-            em.persist(result);
-        }
+
         return result;
     }
 
