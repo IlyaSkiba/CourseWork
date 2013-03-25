@@ -96,7 +96,7 @@ public class GroupAdminModel implements Serializable {
     }
 
     private void loadFromRepository(String groupId) {
-        groupDto = groupService.get(Integer.parseInt(groupId));
+        groupDto = groupService.getById(Integer.parseInt(groupId));
         selectedCourses = Lists.newArrayList(courseGroupService.getCourses(groupDto));
         selectedUsers = Lists.newArrayList(groupService.getSelectedUsers(groupDto));
     }

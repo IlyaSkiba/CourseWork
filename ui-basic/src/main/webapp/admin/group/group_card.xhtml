@@ -28,12 +28,12 @@
                             <p:dataTable value="#{groupAdminModel.users}"
                                          var="userGroup"
                                          lazy="true"
-                                         rowKey="#{userGroup.userId}"
                                          paginator="true"
                                          rows="20"
                                          rowsPerPageTemplate="10,20,30,50"
                                          selectionMode="checkbox"
                                          selection="#{groupAdminModel.selectedUsers}">
+
                                 <p:column selectionMode="multiple" style="width:18px"/>
 
                                 <p:column sortBy="#{userGroup.lastName}">

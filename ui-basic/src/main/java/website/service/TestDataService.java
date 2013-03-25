@@ -59,14 +59,14 @@ public class TestDataService {
         userDto.setFirstName("admin");
         userDto.setLastName("admin");
         userDto.setRoles(roleAssembler.assemble(roles.get("ROLE_ADMIN")));
-        users.put("admin", userService.create(userDto));
+        users.put("admin", userService.createOrUpdate(userDto));
 
         for (int i = 0; i < 20; i++) {
             userDto.setUsername("student" + i);
             userDto.setFirstName("student" + i);
             userDto.setLastName("student" + i);
             userDto.setRoles(roleAssembler.assemble(roles.get("ROLE_STUDENT")));
-            users.put("student" + i, userService.create(userDto));
+            users.put("student" + i, userService.createOrUpdate(userDto));
         }
 
         for (int i = 0; i < 20; i++) {
@@ -74,7 +74,7 @@ public class TestDataService {
             userDto.setFirstName("teacher" + i);
             userDto.setLastName("teacher" + i);
             userDto.setRoles(roleAssembler.assemble(roles.get("ROLE_TEACHER")));
-            users.put("teacher" + i, userService.create(userDto));
+            users.put("teacher" + i, userService.createOrUpdate(userDto));
         }
     }
 
@@ -84,7 +84,7 @@ public class TestDataService {
             CourseDto courseDto = new CourseDto();
             courseDto.setCourseName("CourseName" + i);
             courseDto.setOwnerId(users.get("teacher" + i).getUserId());
-            courseService.createCourse(courseDto);
+            courseService.createOrUpdate(courseDto);
         }
     }
 }

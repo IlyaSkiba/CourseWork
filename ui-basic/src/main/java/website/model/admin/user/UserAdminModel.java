@@ -32,7 +32,7 @@ public class UserAdminModel {
     @Autowired
     private UserCardModel userModel;
     private List<UserDto> userList;
-    private Integer userId;
+    private UserDto selectedUser;
 
     public List<UserDto> getUsers() {
         if (userList == null) {
@@ -53,8 +53,8 @@ public class UserAdminModel {
                 userModel.getUser().setRoles(roleCollection.iterator().next());
             }
         }
-        userService.create(userModel.getUser());
-        userList =  new ArrayList<>(userService.getUsers());
+        userService.createOrUpdate(userModel.getUser());
+        userList = new ArrayList<>(userService.getUsers());
         FacesContext.getCurrentInstance().getExternalContext().redirect(
                 ServletUtils.buildPath("/admin/user/user_list.xhtml"));
     }
@@ -71,21 +71,21 @@ public class UserAdminModel {
                 userModel.getUser().setRoles(roleCollection.iterator().next());
             }
         }
-        userService.update(userModel.getUser());
-        userList =  new ArrayList<>(userService.getUsers());
+        userService.createOrUpdate(userModel.getUser());
+        userList = new ArrayList<>(userService.getUsers());
     }
 
     public void delete() {
-        userService.delete(userId);
-        userList =  new ArrayList<>(userService.getUsers());
+        userService.delete(selectedUser);
+        userList = new ArrayList<>(userService.getUsers());
     }
 
-    public Integer getUserId() {
-        return userId;
+    public UserDto getSelectedUser() {
+        return selectedUser;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setSelectedUser(UserDto selectedUser) {
+        this.selectedUser = selectedUser;
     }
 
     public String viewRoles(UserDto user) {

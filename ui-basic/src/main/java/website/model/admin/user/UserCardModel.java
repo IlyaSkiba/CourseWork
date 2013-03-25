@@ -26,7 +26,7 @@ public class UserCardModel {
     }
 
     public void initUser(Integer userId) {
-        user = userService.get(userId);
+        user = userService.getById(userId);
     }
 
     public UserDto getUser() {

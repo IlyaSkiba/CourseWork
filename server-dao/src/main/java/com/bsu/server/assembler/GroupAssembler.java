@@ -1,5 +1,6 @@
 package com.bsu.server.assembler;
 
+import com.bsu.server.assembler.base.BaseConverter;
 import com.bsu.server.controller.CourseGroupController;
 import com.bsu.server.controller.UserController;
 import com.bsu.server.controller.common.GroupController;
@@ -21,7 +22,7 @@ import java.util.List;
  *         Time: 17.32
  */
 @Component
-public class GroupAssembler {
+public class GroupAssembler extends BaseConverter<UserGroupDto, UserGroupEntity> {
     @Autowired
     private GroupController groupController;
     @Autowired
@@ -29,7 +30,8 @@ public class GroupAssembler {
     @Autowired
     private CourseGroupController courseController;
 
-    public UserGroupDto assemble(UserGroupEntity groupEntity) {
+    @Override
+    public UserGroupDto convert(UserGroupEntity groupEntity) {
         UserGroupDto dto = new UserGroupDto();
         dto.setId(groupEntity.getId());
         dto.setGroupName(groupEntity.getGroupName());
@@ -50,7 +52,8 @@ public class GroupAssembler {
         return dto;
     }
 
-    public UserGroupEntity assemble(UserGroupDto dto) {
+    @Override
+    public UserGroupEntity convert(UserGroupDto dto) {
         UserGroupEntity entity;
         if (dto.getId() != null) {
             entity = groupController.getById(dto.getId());

@@ -1,8 +1,8 @@
 package com.bsu.server.global.service.base;
 
-import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.dto.BaseEntity;
 import com.bsu.service.api.base.SearchableService;
+import com.bsu.service.api.dto.base.BaseDto;
 import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import org.apache.avro.reflect.Nullable;
@@ -18,7 +18,8 @@ import java.util.Map;
  *         Time: 2.17
  */
 @Transactional
-public abstract class BaseSearchableServiceImpl<T, D extends BaseEntity> implements SearchableService<T> {
+public abstract class BaseSearchableServiceImpl<T extends BaseDto, D extends BaseEntity>
+        extends CRUDService<T, D> implements SearchableService<T> {
     @Override
     public int count(Map<String, String> filters) {
         return Integer.parseInt(getController().count(filters).toString());
@@ -41,15 +42,12 @@ public abstract class BaseSearchableServiceImpl<T, D extends BaseEntity> impleme
         return result;
     }
 
-    protected abstract T convert(D entity);
-
-    protected abstract BaseController<D> getController();
 
     public class TransformFunction implements Function<D, T> {
 
         @Override
         public T apply(@Nullable D input) {
-            return input == null ? null : convert(input);
+            return input == null ? null : getConverter().convert(input);
         }
     }
 }

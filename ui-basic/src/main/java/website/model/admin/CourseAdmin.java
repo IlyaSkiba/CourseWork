@@ -61,9 +61,9 @@ public class CourseAdmin {
                 : Integer.valueOf(currentModel.getOwner()));
         if (courseDto.getId() == null) {
             courseDto.setThemeIds(Lists.<Integer>newArrayList());
-            courseService.createCourse(courseDto);
+            courseService.createOrUpdate(courseDto);
         } else {
-            courseService.updateCourse(courseDto);
+            courseService.createOrUpdate(courseDto);
         }
         FacesContext.getCurrentInstance().getExternalContext().redirect(
                 ServletUtils.buildPath("/admin/course/course_list.xhtml"));
@@ -112,8 +112,8 @@ public class CourseAdmin {
 
     public void editCourse() {
         CourseDto saveDto = getCourseEdit();
-        saveDto.setThemeIds(courseService.getCourse(saveDto.getId()).getThemeIds());
-        courseService.updateCourse(saveDto);
+        saveDto.setThemeIds(courseService.getById(saveDto.getId()).getThemeIds());
+        courseService.createOrUpdate(saveDto);
         courses = courseService.getCourses();
         FacesContext.getCurrentInstance().addMessage(null,
                 new FacesMessage("", String.format("Курс '%s' обновлен", saveDto.getCourseName())));
@@ -121,7 +121,7 @@ public class CourseAdmin {
 
     public void deleteCourse() {
         CourseDto saveDto = getCourseEdit();
-        courseService.deleteCourse(saveDto.getId());
+        courseService.delete(saveDto);
         courses = courseService.getCourses();
         FacesContext.getCurrentInstance().addMessage(null,
                 new FacesMessage("", String.format("Курс '%s' удален", saveDto.getCourseName())));

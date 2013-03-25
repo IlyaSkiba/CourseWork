@@ -1,5 +1,6 @@
 package com.bsu.server.assembler;
 
+import com.bsu.server.assembler.base.BaseConverter;
 import com.bsu.server.controller.UserController;
 import com.bsu.server.dto.security.UserAccount;
 import com.bsu.server.dto.security.UserRole;
@@ -17,13 +18,14 @@ import java.util.Set;
  * @created 23/11/12
  */
 @Service
-public class UserAssembler {
+public class UserAssembler extends BaseConverter<UserDto, UserAccount> {
     @Autowired
     private UserController userController;
     @Autowired
     private RoleAssembler roleAssembler;
 
-    public UserAccount assemble(UserDto userDto) {
+    @Override
+    public UserAccount convert(UserDto userDto) {
         UserAccount entity = new UserAccount();
         if (userDto.getUserId() != null) {
             entity = userController.getById(userDto.getUserId());
@@ -41,7 +43,8 @@ public class UserAssembler {
         return entity;
     }
 
-    public UserDto assemble(UserAccount userAccount) {
+    @Override
+    public UserDto convert(UserAccount userAccount) {
         UserDto dto = new UserDto();
         dto.buildUserId(userAccount.getId()).buildFirstName(userAccount.getFirstName())
                 .buildLastName(userAccount.getLastName()).buildMiddleName(userAccount.getMiddleName())

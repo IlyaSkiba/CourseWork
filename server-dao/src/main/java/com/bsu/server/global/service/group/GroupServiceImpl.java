@@ -3,6 +3,7 @@ package com.bsu.server.global.service.group;
 import com.bsu.server.assembler.CourseGroupAssembler;
 import com.bsu.server.assembler.GroupAssembler;
 import com.bsu.server.assembler.UserAssembler;
+import com.bsu.server.assembler.base.BaseConverter;
 import com.bsu.server.controller.CourseGroupController;
 import com.bsu.server.controller.common.GroupController;
 import com.bsu.server.dto.CourseGroupEntity;
@@ -56,27 +57,18 @@ public class GroupServiceImpl extends BaseSearchableServiceImpl<UserGroupDto, Us
 
     }
 
-    @Override
-    public UserGroupDto get(Integer id) {
-        return convert(groupController.getById(id));
-    }
-
     @Transactional(readOnly = false)
     @Override
     public UserGroupDto createGroup(UserGroupDto dto, List<CourseGroupDto> courses) {
         dto.setAssignedCourseIds(Collections.<Integer>emptyList());
-        UserGroupEntity entity = groupAssembler.assemble(dto);
-        if (entity.getId() == null) {
-            entity = groupController.create(entity);
-        } else {
-            entity = groupController.update(entity);
-        }
+        dto = super.createOrUpdate(dto);
+        UserGroupEntity entity = groupController.getById(dto.getId());
         for (CourseGroupDto courseDto : courses) {
-            CourseGroupEntity courseEntity = courseGroupAssembler.assemble(courseDto);
+            CourseGroupEntity courseEntity = courseGroupAssembler.convert(courseDto);
             courseEntity.setGroup(entity);
             courseGroupController.create(courseEntity);
         }
-        return groupAssembler.assemble(groupController.getById(entity.getId()));
+        return groupAssembler.convert(groupController.getById(entity.getId()));
     }
 
     @Override
@@ -86,18 +78,18 @@ public class GroupServiceImpl extends BaseSearchableServiceImpl<UserGroupDto, Us
             @Nullable
             @Override
             public UserDto apply(@Nullable UserAccount input) {
-                return userAssembler.assemble(input);
+                return userAssembler.convert(input);
             }
         });
     }
 
     @Override
-    protected UserGroupDto convert(UserGroupEntity entity) {
-        return groupAssembler.assemble(entity);
+    protected GroupController getController() {
+        return groupController;
     }
 
     @Override
-    protected GroupController getController() {
-        return groupController;
+    protected BaseConverter<UserGroupDto, UserGroupEntity> getConverter() {
+        return groupAssembler;
     }
 }

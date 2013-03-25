@@ -1,6 +1,7 @@
 package com.bsu.server.global.service.group;
 
 import com.bsu.server.assembler.CourseGroupAssembler;
+import com.bsu.server.assembler.base.BaseConverter;
 import com.bsu.server.controller.CourseGroupController;
 import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.dto.CourseGroupEntity;
@@ -29,13 +30,13 @@ public class CourseGroupServiceImpl extends BaseSearchableServiceImpl<CourseGrou
     private CourseGroupController courseGroupController;
 
     @Override
-    protected CourseGroupDto convert(CourseGroupEntity entity) {
-        return courseGroupAssembler.assemble(entity);
+    protected BaseController<CourseGroupEntity> getController() {
+        return courseGroupController;
     }
 
     @Override
-    protected BaseController<CourseGroupEntity> getController() {
-        return courseGroupController;
+    protected BaseConverter<CourseGroupDto, CourseGroupEntity> getConverter() {
+        return courseGroupAssembler;
     }
 
     @Override
@@ -51,7 +52,7 @@ public class CourseGroupServiceImpl extends BaseSearchableServiceImpl<CourseGrou
     @Override
     public void updateAssignation(List<CourseGroupDto> courses) {
         for (CourseGroupDto course : courses) {
-            CourseGroupEntity entity = courseGroupAssembler.assemble(course);
+            CourseGroupEntity entity = courseGroupAssembler.convert(course);
             if (course.getId() == null) {
                 courseGroupController.create(entity);
             } else {

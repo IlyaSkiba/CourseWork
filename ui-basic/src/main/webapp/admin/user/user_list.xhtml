@@ -65,7 +65,8 @@
                             </p:commandButton>
                             <p:commandButton id="deleteButton" icon="ui-icon ui-icon-trash" update="@none"
                                              oncomplete="deleteuserDialog.show()">
-                                <f:setPropertyActionListener value="#{tableUser.userId}" target="#{userAdminModel.userId}"/>
+                                <f:setPropertyActionListener value="#{tableUser}"
+                                                             target="#{userAdminModel.selectedUser}"/>
                             </p:commandButton>
                         </p:column>
                     </p:dataTable>

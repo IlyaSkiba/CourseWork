@@ -1,24 +1,17 @@
 package com.bsu.service.api.dto;
 
+import com.bsu.service.api.dto.base.BaseDto;
+
 /**
  * @author HomeUser
  *         Date: 29.1.13
  *         Time: 22.21
  */
-public class CourseGroupDto {
-    private Integer id;
+public class CourseGroupDto extends BaseDto {
     private Integer courseId;
     private Integer ownerId;
     private Integer groupId;
     private String groupName;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public Integer getCourseId() {
         return courseId;

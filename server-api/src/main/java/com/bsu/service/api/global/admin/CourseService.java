@@ -16,13 +16,11 @@ public interface CourseService extends SearchableService<CourseDto> {
      * @param id - valid course id
      * @return course with a such id
      */
-    CourseDto getCourse(Integer id);
+    CourseDto getById(Integer id);
 
-    void updateCourse(CourseDto modifiedCourse);
+    CourseDto createOrUpdate(CourseDto modifiedCourse);
 
-    void deleteCourse(Integer id);
-
-    CourseDto createCourse(CourseDto newCourse);
+    void delete(CourseDto dto);
 
     List<CourseDto> getCourses();
 }

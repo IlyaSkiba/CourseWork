@@ -39,6 +39,7 @@ public class GroupsModel extends LazyDataModel<GroupListEntity> {
     private TransactionService transactionService;
     @Autowired
     private CourseGroupService courseGroupService;
+    private GroupListEntity deleteGroup;
 
     @Override
     public List<GroupListEntity> load(int first, int pageSize, String sortField, SortOrder sortOrder,
@@ -49,7 +50,7 @@ public class GroupsModel extends LazyDataModel<GroupListEntity> {
 
     @Override
     public GroupListEntity getRowData(String rowKey) {
-        return convert(Arrays.asList(groupService.get(Integer.parseInt(rowKey)))).get(0);
+        return convert(Arrays.asList(groupService.getById(Integer.parseInt(rowKey)))).get(0);
     }
 
     @Override
@@ -86,9 +87,17 @@ public class GroupsModel extends LazyDataModel<GroupListEntity> {
             return Lists.transform(courseIds, new Function<CourseGroupDto, String>() {
                 @Override
                 public String apply(@Nullable CourseGroupDto input) {
-                    return courseService.getCourse(input.getCourseId()).getCourseName();
+                    return courseService.getById(input.getCourseId()).getCourseName();
                 }
             });
         }
+    }
+
+    public void setDeleteGroup(GroupListEntity deleteGroup) {
+        this.deleteGroup = deleteGroup;
+    }
+
+    public void delete() {
+        groupService.delete(deleteGroup.getId());
     }
 }

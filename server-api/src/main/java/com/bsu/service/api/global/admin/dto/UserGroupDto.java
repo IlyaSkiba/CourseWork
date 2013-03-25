@@ -1,5 +1,7 @@
 package com.bsu.service.api.global.admin.dto;
 
+import com.bsu.service.api.dto.base.BaseDto;
+
 import java.util.List;
 
 /**
@@ -7,7 +9,7 @@ import java.util.List;
  *         Date: 27.1.13
  *         Time: 14.02
  */
-public class UserGroupDto {
+public class UserGroupDto extends BaseDto {
 
     private Integer id;
     private String groupName;

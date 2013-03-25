@@ -1,5 +1,7 @@
 package website.model.admin.group.list;
 
+import org.apache.commons.lang.StringUtils;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -36,6 +38,7 @@ public class GroupListEntity implements Serializable {
 
     public void setCourses(List<String> courses) {
         this.courses = courses;
+        setDisplayCourses(StringUtils.join(courses, ", "));
     }
 
     public String getDisplayCourses() {

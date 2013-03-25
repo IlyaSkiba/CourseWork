@@ -1,5 +1,6 @@
 package com.bsu.server.assembler;
 
+import com.bsu.server.assembler.base.BaseConverter;
 import com.bsu.server.controller.CourseController;
 import com.bsu.server.controller.ThemeController;
 import com.bsu.server.controller.UserController;
@@ -17,7 +18,7 @@ import java.util.List;
  *         Date: 08.10.12
  */
 @Service
-public class CourseAssembler {
+public class CourseAssembler extends BaseConverter<CourseDto, CourseEntity> {
     @Autowired
     private ThemeController themeController;
     @Autowired
@@ -25,7 +26,8 @@ public class CourseAssembler {
     @Autowired
     private CourseController courseController;
 
-    public CourseDto assemble(CourseEntity entity) {
+    @Override
+    public CourseDto convert(CourseEntity entity) {
         CourseDto resultDto = new CourseDto();
         resultDto.setCourseName(entity.getCourseName());
         resultDto.setId(entity.getId());
@@ -39,7 +41,8 @@ public class CourseAssembler {
         return resultDto;
     }
 
-    public CourseEntity dissassemble(CourseDto dto) {
+    @Override
+    public CourseEntity convert(CourseDto dto) {
         CourseEntity entity = dto.getId() == null ? new CourseEntity() : courseController.getById(dto.getId());
         entity.setId(dto.getId());
         entity.setCourseName(dto.getCourseName());

@@ -1,5 +1,6 @@
 package com.bsu.server.assembler;
 
+import com.bsu.server.assembler.base.BaseConverter;
 import com.bsu.server.controller.CourseController;
 import com.bsu.server.controller.CourseGroupController;
 import com.bsu.server.controller.UserController;
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Service;
  *         Time: 2.46
  */
 @Service
-public class CourseGroupAssembler {
+public class CourseGroupAssembler extends BaseConverter<CourseGroupDto, CourseGroupEntity> {
     @Autowired
     private CourseGroupController courseGroupController;
     @Autowired
@@ -22,7 +23,8 @@ public class CourseGroupAssembler {
     @Autowired
     private UserController userController;
 
-    public CourseGroupDto assemble(CourseGroupEntity entity) {
+    @Override
+    public CourseGroupDto convert(CourseGroupEntity entity) {
         CourseGroupDto dto = new CourseGroupDto();
         dto.setCourseId(entity.getAssignedCourse().getId());
         dto.setGroupId(entity.getGroup().getId());
@@ -32,7 +34,8 @@ public class CourseGroupAssembler {
         return dto;
     }
 
-    public CourseGroupEntity assemble(CourseGroupDto dto) {
+    @Override
+    public CourseGroupEntity convert(CourseGroupDto dto) {
         CourseGroupEntity entity;
         if (dto.getId() != null) {
             entity = courseGroupController.getById(dto.getId());

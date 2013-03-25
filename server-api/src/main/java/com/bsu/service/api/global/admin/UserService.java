@@ -16,13 +16,11 @@ public interface UserService {
 
     List<UserDto> getUsersByRoles(Set<RoleDto> roles);
 
-    UserDto get(Integer userId);
+    UserDto getById(Integer userId);
 
-    UserDto create(UserDto user);
+    UserDto createOrUpdate(UserDto user);
 
-    UserDto update(UserDto user);
-
-    void delete(Integer userId);
+    void delete(UserDto user);
 
     List<UserDto> getUsers();
 

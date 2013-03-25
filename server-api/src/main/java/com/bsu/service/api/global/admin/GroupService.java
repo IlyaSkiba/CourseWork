@@ -20,7 +20,7 @@ public interface GroupService extends SearchableService<UserGroupDto> {
 
     void delete(Integer id);
 
-    UserGroupDto get(Integer id);
+    UserGroupDto getById(Integer id);
 
     UserGroupDto createGroup(UserGroupDto dto, List<CourseGroupDto> courses);
 

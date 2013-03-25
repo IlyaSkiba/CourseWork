@@ -2,6 +2,7 @@ package com.bsu.server.global.service.user;
 
 import com.bsu.server.assembler.RoleAssembler;
 import com.bsu.server.assembler.UserAssembler;
+import com.bsu.server.assembler.base.BaseConverter;
 import com.bsu.server.controller.RoleController;
 import com.bsu.server.controller.UserController;
 import com.bsu.server.controller.common.BaseController;
@@ -11,14 +12,11 @@ import com.bsu.server.global.service.base.BaseSearchableServiceImpl;
 import com.bsu.service.api.global.admin.UserService;
 import com.bsu.service.api.global.admin.dto.RoleDto;
 import com.bsu.service.api.global.admin.dto.UserDto;
-import com.google.common.base.Function;
-import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -48,40 +46,13 @@ public class UserServiceImpl extends BaseSearchableServiceImpl<UserDto, UserAcco
             roleNames.add(roleDto.getName());
         }
         List<UserAccount> users = userController.getUsersByRoles(roleNames);
-        List<UserDto> result = new ArrayList<>();
-        for (UserAccount user : users) {
-            result.add(userAssembler.assemble(user));
-        }
-        return result;
-    }
-
-    @Override
-    public UserDto get(Integer userId) {
-        return userAssembler.assemble(userController.getById(userId));
-    }
-
-    @Override
-    public UserDto create(UserDto user) {
-        UserAccount newUser = userAssembler.assemble(user);
-        newUser.setPassword(passwordEncoder.encodePassword("123", null));
-        return userAssembler.assemble(userController.create(newUser));
-    }
-
-    @Override
-    public UserDto update(UserDto user) {
-        UserAccount newUser = userAssembler.assemble(user);
-        return userAssembler.assemble(userController.update(newUser));
-    }
-
-    @Override
-    public void delete(Integer userId) {
-        userController.delete(userId);
+        return convertList(users);
     }
 
     @Override
     public List<UserDto> getUsers() {
         List<UserAccount> users = userController.getUsers();
-        return Lists.transform(users, new TranformFunction());
+        return convertList(users);
     }
 
     @Override
@@ -96,19 +67,12 @@ public class UserServiceImpl extends BaseSearchableServiceImpl<UserDto, UserAcco
     }
 
     @Override
-    protected UserDto convert(UserAccount entity) {
-        return userAssembler.assemble(entity);
-    }
-
-    @Override
     protected BaseController<UserAccount> getController() {
         return userController;
     }
 
-    private class TranformFunction implements Function<UserAccount, UserDto> {
-        @Override
-        public UserDto apply(UserAccount input) {
-            return userAssembler.assemble(input);
-        }
+    @Override
+    protected BaseConverter<UserDto, UserAccount> getConverter() {
+        return userAssembler;
     }
 }

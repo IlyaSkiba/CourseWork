@@ -39,7 +39,11 @@
                                       icon="ui-icon ui-icon-pencil">
                                 <f:param name="groupId" value="#{tablegroup.id}"/>
                             </p:button>
-                            <p:commandButton id="deleteButton" icon="ui-icon ui-icon-trash" update="@none"
+                            <p:commandButton id="deleteButton"
+                                             icon="ui-icon ui-icon-trash"
+                                             update="@none"
+                                             process="@this"
+                                             action="#{groupsModel.setDeleteGroup(tablegroup)}"
                                              oncomplete="deletegroupDialog.show()">
 
                             </p:commandButton>
@@ -51,11 +55,12 @@
                     <p:confirmDialog widgetVar="deletegroupDialog"
                                      severity="alert"
                                      closable="false"
-                                     header="Удаление пользователя"
-                                     message="Пользователь будет удален. Вы уверены что хотите продолжить?">
-                        <p:commandButton id="confirm" value="Да" update=":groupListForm:groupList"
-                                         oncomplete="deletegroupDialog.hide()"
-                                />
+                                     header="Удаление групы"
+                                     message="Группа будет удалена. Вы уверены, что хотите продолжить?">
+                        <p:commandButton id="confirm" value="Да"
+                                         action="#{groupsModel.delete}"
+                                         update=":groupListForm:groupList"
+                                         oncomplete="deletegroupDialog.hide()"/>
                         <p:commandButton id="decline" value="Отмена " onclick="deletegroupDialog.hide()"
                                          type="button"/>
                     </p:confirmDialog>

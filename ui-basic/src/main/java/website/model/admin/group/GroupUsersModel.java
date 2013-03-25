@@ -30,7 +30,7 @@ public class GroupUsersModel extends LazyDataModel<UserDto> implements Serializa
 
 
     public UserDto getRowData(String rowKey) {
-        return userService.get(Integer.valueOf(rowKey));
+        return userService.getById(Integer.valueOf(rowKey));
     }
 
     public Object getRowKey(UserDto object) {

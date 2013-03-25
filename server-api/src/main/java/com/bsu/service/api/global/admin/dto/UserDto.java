@@ -1,10 +1,12 @@
 package com.bsu.service.api.global.admin.dto;
 
+import com.bsu.service.api.dto.base.BaseDto;
+
 /**
  * @author Ilya SKiba
  * @created 23/11/12
  */
-public class UserDto {
+public class UserDto extends BaseDto {
     private Integer userId;
     private String firstName;
     private String middleName;
