@@ -76,7 +76,7 @@ public class CourseAdmin {
         Set<AdminUserModel> resultSet = new HashSet<>();
         for (UserDto userDto : users) {
             AdminUserModel model = new AdminUserModel();
-            model.setId(userDto.getUserId());
+            model.setId(userDto.getId());
             model.setFirstName(userDto.getFirstName());
             model.setMiddleName(userDto.getMiddleName());
             model.setLastName(userDto.getLastName());

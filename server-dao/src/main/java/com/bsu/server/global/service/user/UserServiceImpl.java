@@ -75,4 +75,14 @@ public class UserServiceImpl extends BaseSearchableServiceImpl<UserDto, UserAcco
     protected BaseConverter<UserDto, UserAccount> getConverter() {
         return userAssembler;
     }
+
+    @Override
+    public UserDto createOrUpdate(UserDto userDto) {
+        if (userDto.getId() == null) {
+            UserAccount entity = getConverter().convert(userDto);
+            entity.setPassword(passwordEncoder.encodePassword("123", null));
+            return getConverter().convert(getController().create(entity));
+        }
+        return getConverter().convert(getController().update(getConverter().convert(userDto)));
+    }
 }

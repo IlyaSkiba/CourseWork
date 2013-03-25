@@ -7,21 +7,12 @@ import com.bsu.service.api.dto.base.BaseDto;
  * @created 23/11/12
  */
 public class UserDto extends BaseDto {
-    private Integer userId;
     private String firstName;
     private String middleName;
     private String lastName;
     private String username;
     private RoleDto roles;
 
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public UserDto buildUserId(Integer userId) {
-        this.userId = userId;
-        return this;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -57,10 +48,6 @@ public class UserDto extends BaseDto {
     public UserDto buildRoles(RoleDto roles) {
         this.roles = roles;
         return this;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
     }
 
     public void setFirstName(String firstName) {

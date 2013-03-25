@@ -50,7 +50,7 @@ public class ServerConfiguration {
         });
         bean.setJpaProperties(new Properties() {
             {
-                setProperty("hibernate.hbm2ddl.auto", "update");
+                setProperty("hibernate.hbm2ddl.auto", "create");
             }
         });
         bean.setPackagesToScan("com.bsu.server");

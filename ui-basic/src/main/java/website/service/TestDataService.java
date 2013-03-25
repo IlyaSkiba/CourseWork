@@ -83,7 +83,7 @@ public class TestDataService {
         for (int i = 0; i < 20; i++) {
             CourseDto courseDto = new CourseDto();
             courseDto.setCourseName("CourseName" + i);
-            courseDto.setOwnerId(users.get("teacher" + i).getUserId());
+            courseDto.setOwnerId(users.get("teacher" + i).getId());
             courseService.createOrUpdate(courseDto);
         }
     }

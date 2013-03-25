@@ -84,7 +84,7 @@ public class GroupAdminModel implements Serializable {
         role.setName("ROLE_TEACHER");
         teachers = userService.getUsersByRoles(Sets.newHashSet(role));
         for (UserDto user : teachers) {
-            loadedUsers.put(user.getUserId(), user.getUsername());
+            loadedUsers.put(user.getId(), user.getUsername());
         }
         tempCourse = new CourseGroupDto();
     }
@@ -183,7 +183,7 @@ public class GroupAdminModel implements Serializable {
         groupDto.setAssignedUserIds(Lists.transform(selectedUsers, new Function<UserDto, Integer>() {
             @Override
             public Integer apply(@Nullable UserDto input) {
-                return input.getUserId();
+                return input.getId();
             }
         }));
         groupService.createGroup(groupDto, selectedCourses);

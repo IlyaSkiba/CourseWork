@@ -27,10 +27,10 @@ public class UserAssembler extends BaseConverter<UserDto, UserAccount> {
     @Override
     public UserAccount convert(UserDto userDto) {
         UserAccount entity = new UserAccount();
-        if (userDto.getUserId() != null) {
-            entity = userController.getById(userDto.getUserId());
+        if (userDto.getId() != null) {
+            entity = userController.getById(userDto.getId());
         }
-        entity.setId(userDto.getUserId());
+        entity.setId(userDto.getId());
         entity.setFirstName(userDto.getFirstName());
         entity.setLastName(userDto.getLastName());
         entity.setMiddleName(userDto.getLastName());
@@ -46,9 +46,9 @@ public class UserAssembler extends BaseConverter<UserDto, UserAccount> {
     @Override
     public UserDto convert(UserAccount userAccount) {
         UserDto dto = new UserDto();
-        dto.buildUserId(userAccount.getId()).buildFirstName(userAccount.getFirstName())
+        dto.buildFirstName(userAccount.getFirstName())
                 .buildLastName(userAccount.getLastName()).buildMiddleName(userAccount.getMiddleName())
-                .buildUsername(userAccount.getUsername());
+                .buildUsername(userAccount.getUsername()).buildId(userAccount.getId());
         Set<RoleDto> assignedRoles = new HashSet<>();
         for (UserRole role : userAccount.getUserRoles()) {
             RoleDto roleDto = new RoleDto();

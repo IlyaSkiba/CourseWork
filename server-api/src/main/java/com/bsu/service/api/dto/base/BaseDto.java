@@ -26,4 +26,9 @@ public class BaseDto implements Serializable {
     public void setVersion(Integer version) {
         this.version = version;
     }
+
+    public BaseDto buildId(Integer id) {
+        setId(id);
+        return this;
+    }
 }
