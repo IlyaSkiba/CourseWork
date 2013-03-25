@@ -8,7 +8,7 @@ import com.bsu.server.controller.UserController;
 import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.dto.security.UserAccount;
 import com.bsu.server.dto.security.UserRole;
-import com.bsu.server.global.service.base.BaseSearchableServiceImpl;
+import com.bsu.server.global.service.base.BaseSearchableServiceImplImpl;
 import com.bsu.service.api.global.admin.UserService;
 import com.bsu.service.api.global.admin.dto.RoleDto;
 import com.bsu.service.api.global.admin.dto.UserDto;
@@ -26,7 +26,7 @@ import java.util.Set;
  * @created 23/11/12
  */
 @Service
-public class UserServiceImpl extends BaseSearchableServiceImpl<UserDto, UserAccount> implements UserService {
+public class UserServiceImpl extends BaseSearchableServiceImplImpl<UserDto, UserAccount> implements UserService {
 
     @Autowired
     private UserController userController;

@@ -5,7 +5,7 @@ import com.bsu.server.assembler.base.BaseConverter;
 import com.bsu.server.controller.CourseGroupController;
 import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.dto.CourseGroupEntity;
-import com.bsu.server.global.service.base.BaseSearchableServiceImpl;
+import com.bsu.server.global.service.base.BaseSearchableServiceImplImpl;
 import com.bsu.service.api.dto.CourseGroupDto;
 import com.bsu.service.api.global.admin.CourseGroupService;
 import com.bsu.service.api.global.admin.dto.UserGroupDto;
@@ -22,7 +22,7 @@ import java.util.List;
  */
 @Service
 @Transactional
-public class CourseGroupServiceImpl extends BaseSearchableServiceImpl<CourseGroupDto,
+public class CourseGroupServiceImpl extends BaseSearchableServiceImplImpl<CourseGroupDto,
         CourseGroupEntity> implements CourseGroupService {
     @Autowired
     private CourseGroupAssembler courseGroupAssembler;

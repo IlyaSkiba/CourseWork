@@ -65,14 +65,17 @@ public class GroupAssembler extends BaseConverter<UserGroupDto, UserGroupEntity>
         }
         entity.setGroupName(dto.getGroupName());
         List<CourseGroupEntity> courses = Lists.newArrayList();
-        for (Integer courseId : dto.getAssignedCourseIds()) {
-            courses.add(courseController.getById(courseId));
+        if (dto.getAssignedCourseIds() != null) {
+            for (Integer courseId : dto.getAssignedCourseIds()) {
+                courses.add(courseController.getById(courseId));
+            }
         }
         entity.setCourses(courses);
-
         List<UserAccount> users = Lists.newArrayList();
-        for (Integer userId : dto.getAssignedUserIds()) {
-            users.add(userController.getById(userId));
+        if (dto.getAssignedCourseIds() != null) {
+            for (Integer userId : dto.getAssignedUserIds()) {
+                users.add(userController.getById(userId));
+            }
         }
         entity.setAssignedUsers(users);
         return entity;

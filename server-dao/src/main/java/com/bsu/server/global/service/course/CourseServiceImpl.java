@@ -5,7 +5,7 @@ import com.bsu.server.assembler.base.BaseConverter;
 import com.bsu.server.controller.CourseController;
 import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.dto.CourseEntity;
-import com.bsu.server.global.service.base.BaseSearchableServiceImpl;
+import com.bsu.server.global.service.base.BaseSearchableServiceImplImpl;
 import com.bsu.service.api.dto.CourseDto;
 import com.bsu.service.api.global.admin.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ import java.util.List;
  *         Date: 08.10.12
  */
 @Service
-public class CourseServiceImpl extends BaseSearchableServiceImpl<CourseDto, CourseEntity> implements CourseService {
+public class CourseServiceImpl extends BaseSearchableServiceImplImpl<CourseDto, CourseEntity> implements CourseService {
     @Autowired
     private CourseController courseController;
     @Autowired

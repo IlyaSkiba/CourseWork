@@ -18,8 +18,8 @@ import java.util.Map;
  *         Time: 2.17
  */
 @Transactional
-public abstract class BaseSearchableServiceImpl<T extends BaseDto, D extends BaseEntity>
-        extends CRUDService<T, D> implements SearchableService<T> {
+public abstract class BaseSearchableServiceImplImpl<T extends BaseDto, D extends BaseEntity>
+        extends CRUDServiceImpl<T, D> implements SearchableService<T> {
     @Override
     public int count(Map<String, String> filters) {
         return Integer.parseInt(getController().count(filters).toString());

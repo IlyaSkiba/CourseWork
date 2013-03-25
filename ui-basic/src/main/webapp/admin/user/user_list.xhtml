@@ -31,7 +31,7 @@
                                  paginator="true" rows="10"
                                  paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                                  rowsPerPageTemplate="5,10,15"
-                                 rowKey="#{tableUser.userId}">
+                                 rowKey="#{tableUser.id}">
 
                         <p:column headerText="Фамилия"
                                   sortBy="#{tableUser.lastName.toLowerCase()}"
@@ -61,7 +61,7 @@
                         <p:column styleClass="user-list user-action-column">
                             <p:commandButton id="editButton" icon="ui-icon ui-icon-pencil" update=":edituserForm"
                                              oncomplete="edituser.show()">
-                               <f:setPropertyActionListener value="#{tableUser}" target="#{userCardModel.user}"/>
+                                <f:setPropertyActionListener value="#{tableUser}" target="#{userCardModel.user}"/>
                             </p:commandButton>
                             <p:commandButton id="deleteButton" icon="ui-icon ui-icon-trash" update="@none"
                                              oncomplete="deleteuserDialog.show()">
@@ -75,7 +75,8 @@
                     <p:dialog widgetVar="edituser" id="edituserDialog" modal="true" resizable="false" width="500"
                               height="300" dynamic="true">
                         <div class="userContainer">
-                            <h:inputHidden value="#{userCardModel.user.userId}"/>
+                            <h:inputHidden value="#{userCardModel.user.id}"/>
+
                             <div class="field">
                                 <p:outputLabel for="username" value="Логин:"/>
                                 <p:inputText id="username" required="true" value="#{userCardModel.user.username}"/>
@@ -118,11 +119,11 @@
                                      closable="false"
                                      header="Удаление пользователя"
                                      message="Пользователь будет удален. Вы уверены что хотите продолжить?">
-                         <p:commandButton id="confirm" value="Да" update=":userListForm:userList"
-                                          oncomplete="deleteuserDialog.hide()"
-                                          action="#{userAdminModel.delete}"/>
-                         <p:commandButton id="decline" value="Отмена " onclick="deleteuserDialog.hide()"
-                                          type="button"/>
+                        <p:commandButton id="confirm" value="Да" update=":userListForm:userList"
+                                         oncomplete="deleteuserDialog.hide()"
+                                         action="#{userAdminModel.delete}"/>
+                        <p:commandButton id="decline" value="Отмена " onclick="deleteuserDialog.hide()"
+                                         type="button"/>
                     </p:confirmDialog>
                 </h:form>
             </ui:define>

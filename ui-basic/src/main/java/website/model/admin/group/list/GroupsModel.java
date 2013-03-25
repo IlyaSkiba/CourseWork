@@ -98,6 +98,10 @@ public class GroupsModel extends LazyDataModel<GroupListEntity> {
     }
 
     public void delete() {
-        groupService.delete(deleteGroup.getId());
+        groupService.delete(new UserGroupDto() {
+            {
+                setId(deleteGroup.getId());
+            }
+        });
     }
 }

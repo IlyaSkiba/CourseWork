@@ -9,7 +9,7 @@ import com.bsu.server.controller.common.GroupController;
 import com.bsu.server.dto.CourseGroupEntity;
 import com.bsu.server.dto.UserGroupEntity;
 import com.bsu.server.dto.security.UserAccount;
-import com.bsu.server.global.service.base.BaseSearchableServiceImpl;
+import com.bsu.server.global.service.base.BaseSearchableServiceImplImpl;
 import com.bsu.service.api.dto.CourseGroupDto;
 import com.bsu.service.api.global.admin.GroupService;
 import com.bsu.service.api.global.admin.dto.UserDto;
@@ -30,7 +30,7 @@ import java.util.List;
  */
 @Service
 @Transactional
-public class GroupServiceImpl extends BaseSearchableServiceImpl<UserGroupDto, UserGroupEntity> implements GroupService {
+public class GroupServiceImpl extends BaseSearchableServiceImplImpl<UserGroupDto, UserGroupEntity> implements GroupService {
     @Autowired
     private CourseGroupController courseGroupController;
     @Autowired
@@ -41,21 +41,6 @@ public class GroupServiceImpl extends BaseSearchableServiceImpl<UserGroupDto, Us
     private CourseGroupAssembler courseGroupAssembler;
     @Autowired
     private UserAssembler userAssembler;
-
-    @Override
-    public UserGroupDto create(UserGroupDto userGroup) {
-        return null;
-    }
-
-    @Override
-    public UserGroupDto update(UserGroupDto userGroupDto) {
-        return null;
-    }
-
-    @Override
-    public void delete(Integer id) {
-
-    }
 
     @Transactional(readOnly = false)
     @Override

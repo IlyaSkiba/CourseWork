@@ -10,22 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Trash\JSF\trunk\server-dao\server-dao.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/common/BaseController.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/common/BaseController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/CourseController.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/CourseController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/CourseGroupController.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/CourseGroupController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/base/CRUDService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/CourseGroupEntity.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/CourseGroupEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/group/CourseGroupServiceImpl.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/group/CourseGroupServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/CourseService.java" afterPath="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/CourseService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/course/CourseServiceImpl.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/course/CourseServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/assembler/GroupAssembler.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/assembler/GroupAssembler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/common/GroupController.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/common/GroupController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/GroupService.java" afterPath="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/GroupService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/group/GroupServiceImpl.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/group/GroupServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/ThemeController.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/ThemeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/security/UserAccount.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/security/UserAccount.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/group/list/GroupsModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/group/list/GroupsModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/base/SearchableService.java" afterPath="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/base/SearchableService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/UserGroupEntity.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/UserGroupEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/user/UserServiceImpl.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/user/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/admin/group/group_card.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/admin/group/group_card.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/pom.xml" afterPath="$PROJECT_DIR$/ui-basic/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/admin/user/user_list.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/admin/user/user_list.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Trash\JSF\trunk\server-dao\src\main\java\com\bsu\server\global\service\base\BaseSearchableServiceImpl.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/base/BaseSearchableServiceImplImpl.java" />
+      <change type="MOVED" beforePath="D:\Trash\JSF\trunk\server-dao\src\main\java\com\bsu\server\global\service\base\CRUDService.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/base/CRUDServiceImpl.java" />
     </list>
     <ignored path="$USER_HOME$/.griffon/" />
     <ignored path="$USER_HOME$/.grails/" />
@@ -33,9 +35,9 @@
     <ignored path=".idea/" />
     <ignored path=".settings/" />
     <ignored path="target/" />
-    <file path="/GroupUsersModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361218652716" ignored="false" />
-    <file path="/GroupAdminModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363892732412" ignored="false" />
-    <file path="/group_card.xhtml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363887817578" ignored="false" />
+    <file path="/GroupUsersModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364241258992" ignored="false" />
+    <file path="/GroupAdminModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364241291634" ignored="false" />
+    <file path="/group_card.xhtml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364244370842" ignored="false" />
     <file path="/global.css" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1359490031463" ignored="false" />
     <file path="/fieldLayout.css" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361705704959" ignored="false" />
     <file path="/course_card.xhtml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1359489906575" ignored="false" />
@@ -43,18 +45,18 @@
     <file path="/web.xml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361401517176" ignored="false" />
     <file path="/textfield.xhtml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1359490188469" ignored="false" />
     <file path="/course.taglib.xml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1359487839938" ignored="false" />
-    <file path="/GroupServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363900792975" ignored="false" />
+    <file path="/GroupServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364239998709" ignored="false" />
     <file path="/CourseGroupDto.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1359487417918" ignored="false" />
     <file path="/GroupService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363812932890" ignored="false" />
-    <file path="/CourseAssembler.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1359282302678" ignored="false" />
+    <file path="/CourseAssembler.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364239254525" ignored="false" />
     <file path="/AnswerEntity.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1359282259728" ignored="false" />
     <file path="/a.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1359284724920" ignored="false" />
     <file path="/StartupConfig.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1359282678990" ignored="false" />
     <file path="/ThemeController.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363899301988" ignored="false" />
     <file path="/CourseController.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363898964701" ignored="false" />
-    <file path="/UserGroupEntity.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363897319131" ignored="false" />
+    <file path="/UserGroupEntity.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364245790440" ignored="false" />
     <file path="/ThemeEntity.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361298874475" ignored="false" />
-    <file path="/CourseGroupEntity.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361404497155" ignored="false" />
+    <file path="/CourseGroupEntity.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364245580590" ignored="false" />
     <file path="/UserGroupDto.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361717062456" ignored="false" />
     <file path="/GroupDto.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1359284574604" ignored="false" />
     <file path="/Startup.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1358195452931" ignored="false" />
@@ -65,37 +67,37 @@
     <file path="/persistence.xml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361401087403" ignored="false" />
     <file path="/applicationContext.xml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361396164852" ignored="false" />
     <file path="/UserDto.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1358079900891" ignored="false" />
-    <file path="/a.dummy" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363814683793" ignored="false" />
+    <file path="/a.dummy" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364244877961" ignored="false" />
     <file path="/UserCardModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1358260896252" ignored="false" />
-    <file path="/Dummy.txt" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363900015790" ignored="false" />
-    <file path="/UserAdminModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1358262181751" ignored="false" />
-    <file path="/UserServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361402834145" ignored="false" />
-    <file path="/UserService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363892329112" ignored="false" />
-    <file path="/CourseAdmin.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1356026982656" ignored="false" />
+    <file path="/Dummy.txt" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364243392753" ignored="false" />
+    <file path="/UserAdminModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364240055484" ignored="false" />
+    <file path="/UserServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364241924035" ignored="false" />
+    <file path="/UserService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364239491129" ignored="false" />
+    <file path="/CourseAdmin.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364241266691" ignored="false" />
     <file path="/UserModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361401864947" ignored="false" />
     <file path="/user_card.xhtml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1358080084611" ignored="false" />
     <file path="/structure.xhtml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363887848466" ignored="false" />
-    <file path="/user_list.xhtml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1358262902487" ignored="false" />
+    <file path="/user_list.xhtml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364244418561" ignored="false" />
     <file path="/UserController.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361297555092" ignored="false" />
-    <file path="/UserAssembler.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361394065035" ignored="false" />
+    <file path="/UserAssembler.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364241240385" ignored="false" />
     <file path="/RoleController.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361301038424" ignored="false" />
     <file path="/RoleAssembler.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361393908711" ignored="false" />
-    <file path="/BaseController.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361397916110" ignored="false" />
-    <file path="/UserAccount.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363894258026" ignored="false" />
+    <file path="/BaseController.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364243202684" ignored="false" />
+    <file path="/UserAccount.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364243882259" ignored="false" />
     <file path="/CourseEntity.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361298472692" ignored="false" />
     <file path="/BaseEntity.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361299424097" ignored="false" />
     <file path="/ThemeServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361301200942" ignored="false" />
-    <file path="/TestDataService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361400582425" ignored="false" />
+    <file path="/TestDataService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364241277296" ignored="false" />
     <file path="/index.xhtml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361393205312" ignored="false" />
     <file path="/pom.xml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361465263381" ignored="false" />
     <file path="/TestDocDecoder.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361397726177" ignored="false" />
     <file path="/GroupCoursesModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361696184185" ignored="false" />
-    <file path="/SearchableService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363891182661" ignored="false" />
-    <file path="/BaseSearchableServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363892538344" ignored="false" />
+    <file path="/SearchableService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364242306249" ignored="false" />
+    <file path="/BaseSearchableServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364238598954" ignored="false" />
     <file path="/CourseGroupController.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363899223236" ignored="false" />
     <file path="/CourseGroupService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361464194687" ignored="false" />
-    <file path="/CourseGroupServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363889317404" ignored="false" />
-    <file path="/CourseGroupAssembler.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361722144776" ignored="false" />
+    <file path="/CourseGroupServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364239722043" ignored="false" />
+    <file path="/CourseGroupAssembler.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364239650703" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/SpringIntegration/lib/spring-integration-support.jar!/resources/schemas/scripting/spring-integration-scripting-2.1.xsd" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361463819516" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/SpringBatch/lib/SpringBatch.jar!/schemas/spring-batch-2.0.xsd" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361463819516" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/SpringBatch/lib/SpringBatch.jar!/schemas/spring-batch-2.1.xsd" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361463819516" ignored="false" />
@@ -292,17 +294,21 @@
     <file path="$APPLICATION_HOME_DIR$/plugins/SpringIntegration/lib/spring-integration-support.jar!/resources/schemas/scripting/spring-integration-scripting-core-2.2.xsd" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361463819535" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/SpringIntegration/lib/spring-integration-support.jar!/resources/schemas/scripting/spring-integration-scripting-core-2.1.xsd" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361463819535" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/SpringIntegration/lib/spring-integration-support.jar!/resources/schemas/scripting/spring-integration-scripting-2.2.xsd" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361463819536" ignored="false" />
-    <file path="/CourseService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361556240703" ignored="false" />
-    <file path="/CourseServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1361556298480" ignored="false" />
-    <file path="/GroupAssembler.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363900567615" ignored="false" />
+    <file path="/CourseService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364239138296" ignored="false" />
+    <file path="/CourseServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364239573708" ignored="false" />
+    <file path="/GroupAssembler.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364244603487" ignored="false" />
     <file path="/GroupController.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363898697837" ignored="false" />
-    <file path="/group_list.xhtml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363887133221" ignored="false" />
+    <file path="/group_list.xhtml" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364236000738" ignored="false" />
     <file path="/GroupListAdminBean.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363812501773" ignored="false" />
-    <file path="/GroupsModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363893890019" ignored="false" />
-    <file path="/GroupListEntity.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363813194146" ignored="false" />
+    <file path="/GroupsModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364242573003" ignored="false" />
+    <file path="/GroupListEntity.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364235834117" ignored="false" />
     <file path="/TransactionService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363814285645" ignored="false" />
     <file path="/TransactionServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363814887835" ignored="false" />
     <file path="/StartPage.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1363815944846" ignored="false" />
+    <file path="/CRUDService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364242283167" ignored="false" />
+    <file path="/BaseConverter.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364238188936" ignored="false" />
+    <file path="/BaseDto.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364241207510" ignored="false" />
+    <file path="/CRUDServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364242364888" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,7 +333,23 @@
     <sortChildren value="true" />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/user/UserCardModel.java" line="24" class="website.model.admin.user.UserCardModel" package="website.model.admin.user">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -364,23 +386,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/user/UserCardModel.java" line="24" class="website.model.admin.user.UserCardModel" package="website.model.admin.user">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -391,65 +397,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="GroupsModel.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/group/list/GroupsModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="103" column="26" selection-start="3610" selection-end="3610" vertical-scroll-proportion="1.6222222">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="group_card.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/admin/group/group_card.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="103" column="18" selection-start="6205" selection-end="6205" vertical-scroll-proportion="-4.2941175">
+              <folding>
+                <marker date="1364244371689" expanded="true" signature="1871:1881" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_list.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/admin/user/user_list.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="40" selection-start="5091" selection-end="5091" vertical-scroll-proportion="-14.615385">
+              <folding>
+                <marker date="1364244422600" expanded="true" signature="736:794" placeholder="{...}" />
+                <marker date="1364244422600" expanded="true" signature="1981:1991" placeholder="{...}" />
+                <marker date="1364244422600" expanded="true" signature="2778:2788" placeholder="{...}" />
+                <marker date="1364244422600" expanded="true" signature="3050:3060" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GroupAssembler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/assembler/GroupAssembler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="0" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.0">
+            <state line="74" column="33" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserGroupEntity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/UserGroupEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="13" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupAdminModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/group/GroupAdminModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="26" selection-start="6511" selection-end="6511" vertical-scroll-proportion="-15.56">
-              <folding>
-                <element signature="method#filterCourses#0;class#GroupAdminModel#0" expanded="false" />
-                <element signature="method#filterUsers#0;class#GroupAdminModel#0" expanded="false" />
-                <element signature="method#addCourse#0;class#GroupAdminModel#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/GroupService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="17" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupServiceImpl.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/group/GroupServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="10" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.73170733">
-              <folding>
-                <element signature="e#2125#2134#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/common/BaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="44" selection-start="2662" selection-end="2662" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="method#search#0;class#BaseController#0" expanded="false" />
-                <element signature="method#count#0;class#BaseController#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -480,22 +466,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/config/ServerConfiguration.java" />
+        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/user/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/base/CRUDService.java" />
         <option value="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/base/SearchableService.java" />
-        <option value="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/UserService.java" />
-        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/base/BaseSearchableServiceImpl.java" />
-        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/group/GroupAdminModel.java" />
+        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/base/CRUDServiceImpl.java" />
+        <option value="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/CourseService.java" />
         <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/group/list/GroupsModel.java" />
-        <option value="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/dto/UserGroupDto.java" />
-        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/UserGroupEntity.java" />
-        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/security/UserAccount.java" />
-        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/common/GroupController.java" />
-        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/CourseController.java" />
-        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/CourseGroupController.java" />
-        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/ThemeController.java" />
-        <option value="$PROJECT_DIR$/ui-basic/pom.xml" />
-        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/common/BaseController.java" />
-        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/assembler/GroupAssembler.java" />
+        <option value="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/GroupService.java" />
         <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/group/GroupServiceImpl.java" />
+        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/common/BaseController.java" />
+        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/security/UserAccount.java" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/admin/group/group_card.xhtml" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/admin/user/user_list.xhtml" />
+        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/assembler/GroupAssembler.java" />
+        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/CourseGroupEntity.java" />
+        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/UserGroupEntity.java" />
       </list>
     </option>
   </component>
@@ -545,10 +531,8 @@
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-6" />
-    <option name="y" value="-6" />
-    <option name="width" value="1932" />
-    <option name="height" value="1052" />
+    <option name="width" value="953" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -677,26 +661,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website-org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website-org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -717,6 +681,370 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="group" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server-dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server-dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server-dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server-dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bsu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server-dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bsu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server-dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bsu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Favorites">
         <subPane subId="org.jgeek.website">
           <PATH>
@@ -732,10 +1060,11 @@
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -743,6 +1072,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -1152,7 +1482,11 @@
       <workItem from="1363881277795" duration="2564000" />
       <workItem from="1363887718711" duration="10798000" />
       <workItem from="1363899720807" duration="175000" />
-      <workItem from="1363900014150" duration="871000" />
+      <workItem from="1363900014150" duration="979000" />
+      <workItem from="1364232985119" duration="198000" />
+      <workItem from="1364234592492" duration="5534000" />
+      <workItem from="1364240199083" duration="3085000" />
+      <workItem from="1364243383294" duration="2603000" />
     </task>
     <task id="LOCAL-00001" summary="DB config migrated to server-dao">
       <created>1358197644961</created>
@@ -1202,11 +1536,23 @@
       <created>1363897613701</created>
       <updated>1363897613701</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="CroupCard: save done">
+      <created>1363900917550</created>
+      <updated>1363900917550</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Structure: global refactor">
+      <created>1364240150143</created>
+      <updated>1364240150143</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Structure: global refactor">
+      <created>1364242174545</created>
+      <updated>1364242174545</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46300000" />
+    <option name="totallyTimeSpent" value="57828000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1229,45 +1575,45 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1932" height="1052" extended-state="6" />
+    <frame x="0" y="0" width="953" height="1040" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46941045" sideWeight="0.49468893" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.475761" sideWeight="0.49468893" order="19" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33145434" sideWeight="0.4955654" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1664888" sideWeight="0.53052163" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26393142" sideWeight="0.6289753" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3214683" sideWeight="0.32230523" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45828697" sideWeight="0.67395943" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26393142" sideWeight="0.6289753" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32130778" sideWeight="0.32230523" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45828697" sideWeight="0.67395943" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2607362" sideWeight="0.0" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.44444445" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2925473" sideWeight="0.93916756" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2652044" sideWeight="0.46547884" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2607362" sideWeight="0.0" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.44444445" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29647437" sideWeight="0.46547884" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2919955" sideWeight="0.93916756" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2652044" sideWeight="0.46547884" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36302894" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22145145" sideWeight="0.5305895" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20437567" sideWeight="0.5305895" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22145145" sideWeight="0.5305895" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39984825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21184632" sideWeight="0.5305895" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32456934" sideWeight="0.6786922" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4435754" sideWeight="0.524239" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4371524" sideWeight="0.9981851" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25265554" sideWeight="0.56825936" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29647437" sideWeight="0.46547884" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36525613" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.61433446" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2457265" sideWeight="0.46547884" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="JPA Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2457265" sideWeight="0.46547884" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="JPA Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295838" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33147943" sideWeight="0.4955654" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3990981" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3990981" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1312,7 +1658,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="LAST_COMMIT_MESSAGE" value="Structure: global refactor" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1326,6 +1672,8 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="CroupCard: save done" />
+    <MESSAGE value="Structure: global refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1335,124 +1683,126 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/CourseController.java">
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/base/CRUDServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="706" selection-end="706" vertical-scroll-proportion="0.2140411">
+        <state line="18" column="22" selection-start="582" selection-end="582" vertical-scroll-proportion="0.3700121">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/base/CRUDService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="6" selection-start="214" selection-end="214" vertical-scroll-proportion="0.22261904">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/CourseGroupController.java">
+    <entry file="file://$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/CourseService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="120" selection-start="763" selection-end="763" vertical-scroll-proportion="-0.0051369863">
+        <state line="13" column="7" selection-start="257" selection-end="257" vertical-scroll-proportion="0.19744483">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/ThemeController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final-sources.jar!/javax/persistence/OneToMany.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.59246576">
+        <state line="114" column="4" selection-start="3961" selection-end="4189" vertical-scroll-proportion="0.72357726">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/user/UserAdminModel.java">
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/common/GroupController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="13" selection-start="1588" selection-end="1691" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="23" selection-start="784" selection-end="784" vertical-scroll-proportion="0.02910959">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/CourseAdmin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="25" selection-start="856" selection-end="856" vertical-scroll-proportion="0.37842464">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="519" selection-end="519" vertical-scroll-proportion="0.3622951">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/security/UserRole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="470" selection-end="470" vertical-scroll-proportion="0.3327869">
+        <state line="14" column="13" selection-start="308" selection-end="308" vertical-scroll-proportion="0.3063063">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/security/UserAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="18" selection-start="1310" selection-end="1310" vertical-scroll-proportion="-1.4491804">
+        <state line="19" column="51" selection-start="624" selection-end="624" vertical-scroll-proportion="0.16314779">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_10/src.zip!/java/util/AbstractSequentialList.java">
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/group/GroupServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="238" column="0" selection-start="8836" selection-end="8836" vertical-scroll-proportion="0.0">
+        <state line="36" column="75" selection-start="1441" selection-end="1441" vertical-scroll-proportion="0.029929578">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/group/GroupAdminModel.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final-sources.jar!/javax/persistence/CascadeType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="26" selection-start="6511" selection-end="6511" vertical-scroll-proportion="-15.56">
-          <folding>
-            <element signature="method#filterCourses#0;class#GroupAdminModel#0" expanded="false" />
-            <element signature="method#filterUsers#0;class#GroupAdminModel#0" expanded="false" />
-            <element signature="method#addCourse#0;class#GroupAdminModel#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/GroupService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="17" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0">
+        <state line="33" column="24" selection-start="786" selection-end="786" vertical-scroll-proportion="0.7007042">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/UserGroupEntity.java">
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/user/UserAdminModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/assembler/GroupAssembler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.0">
+        <state line="87" column="24" selection-start="3130" selection-end="3130" vertical-scroll-proportion="0.55348045">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/controller/common/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="44" selection-start="2662" selection-end="2662" vertical-scroll-proportion="0.0">
+        <state line="64" column="33" selection-start="2504" selection-end="2504" vertical-scroll-proportion="0.028862478">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/admin/user/user_list.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="40" selection-start="5091" selection-end="5091" vertical-scroll-proportion="-14.615385">
           <folding>
-            <element signature="method#search#0;class#BaseController#0" expanded="false" />
-            <element signature="method#count#0;class#BaseController#0" expanded="false" />
+            <marker date="1364244422600" expanded="true" signature="736:794" placeholder="{...}" />
+            <marker date="1364244422600" expanded="true" signature="1981:1991" placeholder="{...}" />
+            <marker date="1364244422600" expanded="true" signature="2778:2788" placeholder="{...}" />
+            <marker date="1364244422600" expanded="true" signature="3050:3060" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/group/GroupServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/assembler/GroupAssembler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="10" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.73170733">
+        <state line="74" column="33" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/admin/group/group_card.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="18" selection-start="6205" selection-end="6205" vertical-scroll-proportion="-4.2941175">
           <folding>
-            <element signature="e#2125#2134#0" expanded="true" />
+            <marker date="1364244371689" expanded="true" signature="1871:1881" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/CourseGroupEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="679" selection-end="679" vertical-scroll-proportion="0.3321033">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/UserGroupEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="20" selection-start="745" selection-end="745" vertical-scroll-proportion="0.4907749">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/group/list/GroupsModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="26" selection-start="3610" selection-end="3610" vertical-scroll-proportion="1.6222222">
+          <folding />
         </state>
       </provider>
     </entry>

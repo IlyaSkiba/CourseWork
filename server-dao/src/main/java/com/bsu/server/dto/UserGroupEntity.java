@@ -2,7 +2,6 @@ package com.bsu.server.dto;
 
 import com.bsu.server.dto.security.UserAccount;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
@@ -24,7 +23,7 @@ public class UserGroupEntity extends BaseEntity implements Serializable {
     @Column(name = "group_name")
     private String groupName;
 
-    @ManyToMany(cascade = CascadeType.REFRESH)
+    @ManyToMany
     private List<UserAccount> assignedUsers;
 
     @OneToMany(mappedBy = "group")

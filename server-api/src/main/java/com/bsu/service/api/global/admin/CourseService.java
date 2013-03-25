@@ -12,15 +12,6 @@ import java.util.List;
  * Time: 12:05
  */
 public interface CourseService extends SearchableService<CourseDto> {
-    /**
-     * @param id - valid course id
-     * @return course with a such id
-     */
-    CourseDto getById(Integer id);
-
-    CourseDto createOrUpdate(CourseDto modifiedCourse);
-
-    void delete(CourseDto dto);
 
     List<CourseDto> getCourses();
 }

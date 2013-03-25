@@ -14,14 +14,6 @@ import java.util.List;
  */
 public interface GroupService extends SearchableService<UserGroupDto> {
 
-    UserGroupDto create(UserGroupDto userGroup);
-
-    UserGroupDto update(UserGroupDto userGroupDto);
-
-    void delete(Integer id);
-
-    UserGroupDto getById(Integer id);
-
     UserGroupDto createGroup(UserGroupDto dto, List<CourseGroupDto> courses);
 
     List<UserDto> getSelectedUsers(UserGroupDto group);
