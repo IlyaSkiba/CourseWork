@@ -1,7 +1,9 @@
 package com.bsu.server.dto;
 
 import com.bsu.server.dto.security.UserAccount;
+import com.google.common.collect.Lists;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
@@ -23,11 +25,11 @@ public class UserGroupEntity extends BaseEntity implements Serializable {
     @Column(name = "group_name")
     private String groupName;
 
-    @ManyToMany
-    private List<UserAccount> assignedUsers;
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<UserAccount> assignedUsers = Lists.newArrayList();
 
-    @OneToMany(mappedBy = "group")
-    private List<CourseGroupEntity> courses;
+    @OneToMany(orphanRemoval = true, mappedBy = "group", cascade = CascadeType.ALL)
+    private List<CourseGroupEntity> courses = Lists.newArrayList();
 
     public String getGroupName() {
         return groupName;
@@ -42,7 +44,8 @@ public class UserGroupEntity extends BaseEntity implements Serializable {
     }
 
     public void setCourses(List<CourseGroupEntity> courses) {
-        this.courses = courses;
+        this.courses.clear();
+        this.courses.addAll(courses);
     }
 
     public List<UserAccount> getAssignedUsers() {
@@ -50,6 +53,7 @@ public class UserGroupEntity extends BaseEntity implements Serializable {
     }
 
     public void setAssignedUsers(List<UserAccount> assignedUsers) {
-        this.assignedUsers = assignedUsers;
+        this.assignedUsers.clear();
+        this.assignedUsers.addAll(assignedUsers);
     }
 }

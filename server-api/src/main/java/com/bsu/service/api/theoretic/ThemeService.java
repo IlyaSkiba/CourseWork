@@ -1,16 +1,17 @@
 package com.bsu.service.api.theoretic;
 
+import com.bsu.service.api.base.SearchableService;
+import com.bsu.service.api.dto.CourseDto;
 import com.bsu.service.api.dto.ThemeDto;
+import com.bsu.service.api.global.admin.dto.UserDto;
 
-import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author Ilya Skiba
  */
-public interface ThemeService extends Serializable {
-    public boolean update(ThemeDto themeDto);
+public interface ThemeService extends SearchableService<ThemeDto> {
+    List<ThemeDto> getThemesForCourse(CourseDto selectedCourse);
 
-    public void create(ThemeDto themeDto);
-
-    boolean delete(Integer themeId);
+    List<ThemeDto> getThemesForCourse(Integer selectedCourseId, UserDto user);
 }

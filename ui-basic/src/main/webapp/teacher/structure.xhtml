@@ -34,19 +34,19 @@
                 <div class="sidebar" id="sideLeft">
 
                     <h:form>
-                        <p:menu type="sliding" style="width:95%; height:300px;">
+                        <p:slideMenu type="sliding" style="width:98%; height:100%;">
                             <p:menuitem value="Главная" url="/teacher/main.xhtml"/>
-                            <p:submenu label="Теоретическое тестирование">
+                            <p:submenu label="Теоретическое тестирование" style="width:98%;">
                                 <p:menuitem value="Предложить тестовое задание" ajax="true"
                                             url="/teacher/teoretic.xhtml"
                                             actionListener="#{theoreticTeacher.load}"/>
                             </p:submenu>
-                            <p:submenu label="Тестирование задачи">
+                            <p:submenu label="Тестирование задачи" style="width:98%;">
                                 <p:menuitem value="Предложить задачу" update="content" ajax="false"/>
                                 <p:menuitem value="Просмотреть тесты к задаче" update="content" ajax="false"/>
                                 <p:menuitem value="Назначить задачу студенту" update="content" ajax="false"/>
                             </p:submenu>
-                            <p:submenu label="Управление темами">
+                            <p:submenu label="Управление темами" style="width:98%;">
                                 <p:menuitem value="Добавить тему" update="content" ajax="true"
                                             url="/teacher/topics/add_topic.xhtml"/>
                                 <p:menuitem value="Изменить тему" update="content" ajax="true"
@@ -54,11 +54,11 @@
                                 <p:menuitem value="Удалить тему" update="content" ajax="true"
                                             url="/teacher/topics/delete_topic.xhtml"/>
                             </p:submenu>
-                            <p:submenu label="Статистика">
+                            <p:submenu label="Статистика" style="width:98%;">
                                 <p:menuitem value="Результаты по курсу" url="http://www.prime.com.tr"/>
                                 <p:menuitem value="Статистика" url="http://www.primefaces.org"/>
                             </p:submenu>
-                        </p:menu>
+                        </p:slideMenu>
 
                     </h:form>
                 </div>

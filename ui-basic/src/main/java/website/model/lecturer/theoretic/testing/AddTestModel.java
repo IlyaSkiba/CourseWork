@@ -1,9 +1,9 @@
 package website.model.lecturer.theoretic.testing;
 
-import com.bsu.server.controller.CourseController;
-import com.bsu.server.controller.ThemeController;
-import com.bsu.server.dto.CourseEntity;
-import com.bsu.server.dto.ThemeEntity;
+import com.bsu.service.api.dto.CourseDto;
+import com.bsu.service.api.dto.ThemeDto;
+import com.bsu.service.api.global.admin.CourseService;
+import com.bsu.service.api.theoretic.ThemeService;
 import org.primefaces.event.FileUploadEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -25,40 +25,40 @@ import java.util.List;
 @Scope("session")
 @Named
 public class AddTestModel {
-    private List<CourseEntity> courses = new ArrayList<CourseEntity>();
-    private List<ThemeEntity> topics = new ArrayList<ThemeEntity>();
+    private List<CourseDto> courses = new ArrayList<>();
+    private List<ThemeDto> topics = new ArrayList<>();
     private Integer selectedCourse;
     private Integer selectedTopic;
     private String value;
     @Autowired
-    private CourseController courseController;
+    private CourseService courseController;
     @Autowired
-    private ThemeController themeController;
+    private ThemeService themeController;
     @Autowired
     private UserModel userModel;
 
     public void load() {
         if (courses == null || courses.isEmpty()) {
-            courses = courseController.loadCourseList(userModel.getUser().getId());
+            courses = courseController.loadCourseList(userModel.getUser());
         }
         topics.clear();
         if (selectedCourse != null) {
-            topics = themeController.getThemesForCourse(selectedCourse, userModel.getUser().getId());
+            topics = themeController.getThemesForCourse(selectedCourse, userModel.getUser());
         }
     }
 
-    public List<CourseEntity> getCourses() {
+    public List<CourseDto> getCourses() {
         if (courses.isEmpty()) {
             load();
         }
         return courses;
     }
 
-    public void setCourses(List<CourseEntity> courses) {
+    public void setCourses(List<CourseDto> courses) {
         this.courses = courses;
     }
 
-    public List<ThemeEntity> getTopics() {
+    public List<ThemeDto> getTopics() {
         load();
         return topics;
     }

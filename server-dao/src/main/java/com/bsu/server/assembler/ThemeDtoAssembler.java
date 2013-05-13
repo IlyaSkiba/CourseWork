@@ -1,7 +1,9 @@
 package com.bsu.server.assembler;
 
+import com.bsu.server.assembler.base.BaseConverter;
 import com.bsu.server.dto.ThemeEntity;
 import com.bsu.service.api.dto.ThemeDto;
+import org.springframework.stereotype.Component;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,9 +11,11 @@ import com.bsu.service.api.dto.ThemeDto;
  * Date: 30.08.12
  * Time: 22:27
  */
-public class ThemeDtoAssembler {
+@Component
+public class ThemeDtoAssembler extends BaseConverter<ThemeDto, ThemeEntity> {
 
-    public static ThemeDto assemble(ThemeEntity entity) {
+    @Override
+    public ThemeDto convert(ThemeEntity entity) {
         ThemeDto dto = new ThemeDto();
         dto.setId(entity.getId());
         dto.setName(entity.getName());
@@ -19,10 +23,11 @@ public class ThemeDtoAssembler {
         return dto;
     }
 
-    public static ThemeEntity disassemble(ThemeDto dto) {
+    @Override
+    public ThemeEntity convert(ThemeDto entity) {
         ThemeEntity newEntity = new ThemeEntity();
-        newEntity.setId(dto.getId());
-        newEntity.setName(dto.getName());
+        newEntity.setId(entity.getId());
+        newEntity.setName(entity.getName());
         return newEntity;
     }
 }

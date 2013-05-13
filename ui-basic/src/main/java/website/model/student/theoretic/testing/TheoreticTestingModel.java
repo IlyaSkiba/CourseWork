@@ -1,10 +1,10 @@
 package website.model.student.theoretic.testing;
 
-import com.bsu.server.controller.CourseController;
-import com.bsu.server.controller.ThemeController;
-import com.bsu.server.dto.CourseEntity;
-import com.bsu.server.dto.ThemeEntity;
-import com.bsu.server.theoretic.test.service.TheoreticTestServiceImpl;
+import com.bsu.service.api.dto.CourseDto;
+import com.bsu.service.api.dto.ThemeDto;
+import com.bsu.service.api.global.admin.CourseService;
+import com.bsu.service.api.theoretic.ThemeService;
+import com.bsu.service.api.theoretic.TheoreticTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import website.model.global.UserModel;
@@ -27,19 +27,19 @@ import java.util.List;
 public class TheoreticTestingModel {
     private static final String STUDENT_FOLDER = "/student/";
     private static final String TEMPLATE_URL = "teoretic_main.xhtml";
-    private List<CourseEntity> courses = new ArrayList<CourseEntity>();
-    private List<ThemeEntity> topics = new ArrayList<ThemeEntity>();
+    private List<CourseDto> courses = new ArrayList<>();
+    private List<ThemeDto> topics = new ArrayList<>();
     private Integer selectedCourse;
     private Integer selectedTopic;
     private List<StudentAnswer> allStudentAnswer;
     private List<Integer> idQuestionList;
     private Integer testId;
     @Autowired
-    private CourseController courseController;
+    private CourseService courseService;
     @Autowired
-    private ThemeController themeController;
+    private ThemeService themeService;
     @Autowired
-    private TheoreticTestServiceImpl testService;
+    private TheoreticTestService testService;
 
     private int cheaterState;
 
@@ -69,26 +69,26 @@ public class TheoreticTestingModel {
     public void load() {
 
         if (courses == null || courses.isEmpty()) {
-            courses = courseController.loadCourseList(userModel.getUser().getId());
+            courses = courseService.loadCourseList(userModel.getUser());
         }
         topics.clear();
         if (selectedCourse != null) {
-            topics = themeController.getThemesForCourse(selectedCourse, userModel.getUser().getId());
+            topics = themeService.getThemesForCourse(selectedCourse, userModel.getUser());
         }
     }
 
-    public List<CourseEntity> getCourses() {
+    public List<CourseDto> getCourses() {
         if (courses.isEmpty()) {
             load();
         }
         return courses;
     }
 
-    public void setCourses(List<CourseEntity> courses) {
+    public void setCourses(List<CourseDto> courses) {
         this.courses = courses;
     }
 
-    public List<ThemeEntity> getTopics() {
+    public List<ThemeDto> getTopics() {
         load();
         return topics;
     }

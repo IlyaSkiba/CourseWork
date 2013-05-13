@@ -1,16 +1,22 @@
 package com.bsu.service.api.global.admin.dto;
 
 import com.bsu.service.api.dto.base.BaseDto;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.HashSet;
 
 /**
  * @author Ilya SKiba
  * @created 23/11/12
  */
-public class UserDto extends BaseDto {
+public class UserDto extends BaseDto implements UserDetails {
     private String firstName;
     private String middleName;
     private String lastName;
     private String username;
+    private String password;
     private RoleDto roles;
 
 
@@ -66,8 +72,47 @@ public class UserDto extends BaseDto {
         this.roles = roles;
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        if (roles != null) {
+            HashSet<GrantedAuthority> res = new HashSet<>(1);
+            res.add(roles);
+            return res;
+        }
+        return null;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getUsername() {
         return username;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
     }
 
     public void setUsername(String username) {

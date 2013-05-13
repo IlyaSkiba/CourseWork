@@ -1,7 +1,7 @@
 package website.security;
 
-import com.bsu.server.dto.security.UserAccount;
-import com.bsu.server.dto.security.UserRole;
+import com.bsu.service.api.global.admin.dto.RoleDto;
+import com.bsu.service.api.global.admin.dto.UserDto;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 import org.springframework.stereotype.Service;
@@ -23,21 +23,19 @@ public class RedirectController extends SimpleUrlAuthenticationSuccessHandler {
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
             throws IOException, ServletException {
         if (authentication != null) {
-            UserAccount account = (UserAccount) authentication.getPrincipal();
-            for (UserRole role : account.getUserRoles()) {
-                if (role.getRoleName().equals("ROLE_STUDENT")) {
-                    setDefaultTargetUrl("/student/main.xhtml");
-                }
-                if (role.getRoleName().equals("ROLE_ADMIN")) {
-                    setDefaultTargetUrl("/admin/main.xhtml");
-                }
-                if (role.getRoleName().equals("ROLE_TEACHER")) {
-                    setDefaultTargetUrl("/teacher/main.xhtml");
-                }
-                if (role.getRoleName().equals("ROLE_LECTOR")) {
-                    setDefaultTargetUrl("/lecturer/main.xhtml");
-                }
-
+            UserDto account = (UserDto) authentication.getPrincipal();
+            RoleDto role = account.getRoles();
+            if (role.getName().equals("ROLE_STUDENT")) {
+                setDefaultTargetUrl("/student/main.xhtml");
+            }
+            if (role.getName().equals("ROLE_ADMIN")) {
+                setDefaultTargetUrl("/admin/main.xhtml");
+            }
+            if (role.getName().equals("ROLE_TEACHER")) {
+                setDefaultTargetUrl("/teacher/main.xhtml");
+            }
+            if (role.getName().equals("ROLE_LECTOR")) {
+                setDefaultTargetUrl("/lecturer/main.xhtml");
             }
 
             super.onAuthenticationSuccess(request, response, authentication);

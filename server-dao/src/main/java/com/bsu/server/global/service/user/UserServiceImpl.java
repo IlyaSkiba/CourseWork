@@ -63,7 +63,10 @@ public class UserServiceImpl extends BaseSearchableServiceImplImpl<UserDto, User
 
     @Override
     public UserDetails getUserByUserName(String username) {
-        return userController.getUserByUsername(username);
+        UserAccount account = userController.getUserByUsername(username);
+        UserDto dto = getConverter().convert(account);
+        dto.setPassword(account.getPassword());
+        return dto;
     }
 
     @Override
@@ -84,5 +87,10 @@ public class UserServiceImpl extends BaseSearchableServiceImplImpl<UserDto, User
             return getConverter().convert(getController().create(entity));
         }
         return getConverter().convert(getController().update(getConverter().convert(userDto)));
+    }
+
+    @Override
+    public void delete(UserDto userDto) {
+
     }
 }

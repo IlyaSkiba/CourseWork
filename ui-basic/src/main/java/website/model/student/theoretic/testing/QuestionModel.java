@@ -1,8 +1,8 @@
 package website.model.student.theoretic.testing;
 
-import com.bsu.server.theoretic.test.service.TheoreticTestServiceImpl;
 import com.bsu.service.api.dto.AnswerDto;
 import com.bsu.service.api.dto.QuestionDto;
+import com.bsu.service.api.theoretic.TheoreticTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
@@ -22,7 +22,7 @@ public class QuestionModel {
     @Autowired
     private TheoreticTestingModel model;
     @Autowired
-    private TheoreticTestServiceImpl testService;
+    private TheoreticTestService testService;
     private String question;
     private boolean answerType = false;
     private String answer;

@@ -29,6 +29,12 @@ public class ThemeEntity extends BaseEntity implements Serializable {
     @ManyToMany
     @JoinTable
     private List<CourseGroupEntity> assignedGroups;
+    @ManyToMany
+    @JoinTable
+    private List<ThemeEntity> parentThemes;
+
+    @Column(name = "significance")
+    private Significance significance = Significance.LOW;
 
     public CourseEntity getCourseEntity() {
         return courseEntity;
@@ -60,5 +66,25 @@ public class ThemeEntity extends BaseEntity implements Serializable {
 
     public void setAssignedGroups(List<CourseGroupEntity> assignedGroups) {
         this.assignedGroups = assignedGroups;
+    }
+
+    public List<ThemeEntity> getParentThemes() {
+        return parentThemes;
+    }
+
+    public void setParentThemes(List<ThemeEntity> parentThemes) {
+        this.parentThemes = parentThemes;
+    }
+
+    public Significance getSignificance() {
+        return significance;
+    }
+
+    public void setSignificance(Significance significance) {
+        this.significance = significance;
+    }
+
+    public static enum Significance {
+        LOW, AVERAGE, HIGH
     }
 }

@@ -1,6 +1,6 @@
 package website.model.global;
 
-import com.bsu.server.dto.security.UserAccount;
+import com.bsu.service.api.global.admin.dto.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -29,7 +29,7 @@ public class UserModel implements Serializable {
     private String newPassword;
 
     public void initializeByUsername() throws UsernameNotFoundException {
-        UserAccount userDto = (UserAccount) userService.loadUserByUsername(userName);
+        UserDto userDto = (UserDto) userService.loadUserByUsername(userName);
         firstName = userDto.getFirstName();
         middleName = userDto.getMiddleName();
         lastName = userDto.getLastName();
@@ -67,8 +67,8 @@ public class UserModel implements Serializable {
         this.lastName = lastName;
     }
 
-    public UserAccount getUser() {
-        return (UserAccount) userService.loadUserByUsername(userName);
+    public UserDto getUser() {
+        return (UserDto) userService.loadUserByUsername(userName);
     }
 
     public String getOldPassword() {

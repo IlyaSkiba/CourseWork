@@ -1,7 +1,7 @@
 package website.model.student.statistic;
 
-import com.bsu.server.theoretic.test.service.TheoreticTestServiceImpl;
 import com.bsu.service.api.dto.StudentResultDto;
+import com.bsu.service.api.theoretic.TheoreticTestService;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
@@ -32,7 +32,7 @@ public class TheoreticStatisticModel {
     private StreamedContent chart;
     private List<StatisticTable> result;
     @Inject
-    private TheoreticTestServiceImpl theoreticTestService;
+    private TheoreticTestService theoreticTestService;
     @Inject
     private UserModel userModel;
 

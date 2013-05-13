@@ -1,4 +1,4 @@
-package website.service;
+package com.bsu.server;
 
 import com.bsu.server.assembler.RoleAssembler;
 import com.bsu.server.controller.RoleController;

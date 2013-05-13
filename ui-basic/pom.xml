@@ -15,7 +15,7 @@
     <properties>
         <dbunit.dataTypeFactoryName>org.dbunit.dataset.datatype.DefaultDataTypeFactory</dbunit.dataTypeFactoryName>
         <dbunit.operation.type>CLEAN_INSERT</dbunit.operation.type>
-        <hibernate.dialect>org.hibernate.dialect.PostgreSQLDialect</hibernate.dialect>
+        <hibernate.dialect>org.hibernate.dialect.PostgreSQL82Dialect</hibernate.dialect>
         <hibernate.default_schema>public</hibernate.default_schema>
         <jdbc.groupId>postgresql</jdbc.groupId>
         <jdbc.artifactId>postgresql</jdbc.artifactId>
@@ -30,6 +30,7 @@
             <groupId>org.jgeek</groupId>
             <artifactId>server-dao</artifactId>
             <version>${project.version}</version>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.jgeek</groupId>

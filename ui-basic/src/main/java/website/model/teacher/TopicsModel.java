@@ -1,9 +1,9 @@
 package website.model.teacher;
 
-import com.bsu.server.controller.CourseController;
-import com.bsu.server.controller.ThemeController;
-import com.bsu.server.dto.CourseEntity;
-import com.bsu.server.dto.ThemeEntity;
+import com.bsu.service.api.dto.CourseDto;
+import com.bsu.service.api.dto.ThemeDto;
+import com.bsu.service.api.global.admin.CourseService;
+import com.bsu.service.api.theoretic.ThemeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import website.model.global.UserModel;
@@ -20,40 +20,44 @@ import java.util.List;
 @Scope("session")
 @Named("topicsChange")
 public class TopicsModel {
-    private List<CourseEntity> courses = new ArrayList<CourseEntity>();
-    private List<ThemeEntity> topics = new ArrayList<ThemeEntity>();
+    private List<CourseDto> courses = new ArrayList<>();
+    private List<ThemeDto> topics = new ArrayList<ThemeDto>();
     private Integer selectedCourse;
     private Integer selectedTopic;
-    private ThemeEntity changedTopic;
+    private ThemeDto changedTopic;
+
     @Autowired
-    private CourseController courseController;
+    private CourseService courseService;
     @Autowired
-    private ThemeController themeController;
+    private ThemeService themeService;
     @Autowired
     private UserModel userModel;
 
     public void load() {
+        CourseDto courseDto = new CourseDto();
         if (courses == null || courses.isEmpty()) {
-            courses = courseController.loadCourseList(userModel.getUser().getId());
+            courses = courseService.searchByOwnerId(userModel.getUser().getId());
+            //courses = courseController.loadCourseList(userModel.getUser().getId());
         }
         topics.clear();
         if (selectedCourse != null) {
-            topics = themeController.getThemesForCourse(selectedCourse, userModel.getUser().getId());
+            courseDto.setId(selectedCourse);
+            topics = themeService.getThemesForCourse(courseDto);
         }
     }
 
-    public List<CourseEntity> getCourses() {
+    public List<CourseDto> getCourses() {
         if (courses.isEmpty()) {
             load();
         }
         return courses;
     }
 
-    public void setCourses(List<CourseEntity> courses) {
+    public void setCourses(List<CourseDto> courses) {
         this.courses = courses;
     }
 
-    public List<ThemeEntity> getTopics() {
+    public List<ThemeDto> getTopics() {
         load();
         return topics;
     }
@@ -74,21 +78,24 @@ public class TopicsModel {
     public void setSelectedTopic(Integer selectedTopic) {
         this.selectedTopic = selectedTopic;
         if (selectedTopic != null) {
-            setChangedTopic(themeController.getById(selectedTopic));
+            setChangedTopic(themeService.getById(selectedTopic));
         }
     }
 
     public void saveTopic() {
+        if (selectedTopic != null) {
+
+        }
         /**@todo сохранить созданную тему
          * @todo сохранить измененную тему
          */
     }
 
-    public ThemeEntity getChangedTopic() {
+    public ThemeDto getChangedTopic() {
         return changedTopic;
     }
 
-    public void setChangedTopic(ThemeEntity changedTopic) {
+    public void setChangedTopic(ThemeDto changedTopic) {
         this.changedTopic = changedTopic;
     }
 

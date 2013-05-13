@@ -2,6 +2,7 @@ package com.bsu.service.api.global.admin;
 
 import com.bsu.service.api.base.SearchableService;
 import com.bsu.service.api.dto.CourseDto;
+import com.bsu.service.api.global.admin.dto.UserDto;
 
 import java.util.List;
 
@@ -14,4 +15,8 @@ import java.util.List;
 public interface CourseService extends SearchableService<CourseDto> {
 
     List<CourseDto> getCourses();
+
+    List<CourseDto> searchByOwnerId(Integer id);
+
+    List<CourseDto> loadCourseList(UserDto user);
 }

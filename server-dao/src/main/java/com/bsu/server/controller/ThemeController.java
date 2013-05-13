@@ -2,7 +2,10 @@ package com.bsu.server.controller;
 
 import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.dto.CourseGroupEntity;
+import com.bsu.server.dto.QThemeEntity;
 import com.bsu.server.dto.ThemeEntity;
+import com.mysema.query.jpa.JPQLQuery;
+import com.mysema.query.jpa.impl.JPAQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -37,5 +40,11 @@ public class ThemeController extends BaseController<ThemeEntity> {
     @Override
     protected Class<ThemeEntity> getEntityClass() {
         return ThemeEntity.class;
+    }
+
+    public List<ThemeEntity> getAllThemesInCourse(Integer courseId){
+        JPQLQuery query = new JPAQuery(em);
+        return query.from(QThemeEntity.themeEntity)
+                .where(QThemeEntity.themeEntity.courseEntity.id.eq(courseId)).list(QThemeEntity.themeEntity);
     }
 }

@@ -1,7 +1,7 @@
 package website.model.student.theoretic.testing;
 
-import com.bsu.server.theoretic.test.service.TheoreticTestServiceImpl;
 import com.bsu.service.api.dto.StudentAnswerDto;
+import com.bsu.service.api.theoretic.TheoreticTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import website.model.global.UserModel;
@@ -24,7 +24,7 @@ public class TheoreticTestingResultModel {
     @Autowired
     private UserModel currentUser;
     @Autowired
-    private TheoreticTestServiceImpl testService;
+    private TheoreticTestService testService;
     private int mark = 100;
 
     public int getMark() {

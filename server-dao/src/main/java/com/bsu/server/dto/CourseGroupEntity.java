@@ -3,6 +3,7 @@ package com.bsu.server.dto;
 import com.bsu.server.dto.security.UserAccount;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -27,6 +28,7 @@ public class CourseGroupEntity extends BaseEntity implements Serializable {
     private UserAccount groupOwner;
 
     @ManyToOne(optional = false)
+    @JoinColumn(name = "group_id", nullable = false, updatable = false)
     private UserGroupEntity group;
 
     public List<ThemeEntity> getAvailableThemes() {

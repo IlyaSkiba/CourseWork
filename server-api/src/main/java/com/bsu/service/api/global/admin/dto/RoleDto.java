@@ -1,12 +1,14 @@
 package com.bsu.service.api.global.admin.dto;
 
+import org.springframework.security.core.GrantedAuthority;
+
 import java.io.Serializable;
 
 /**
  * @author Ilya SKiba
  * @created 16/11/12
  */
-public class RoleDto implements Serializable {
+public class RoleDto implements Serializable, GrantedAuthority {
     private String id;
     private String name;
 
@@ -24,5 +26,10 @@ public class RoleDto implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String getAuthority() {
+        return name;
     }
 }

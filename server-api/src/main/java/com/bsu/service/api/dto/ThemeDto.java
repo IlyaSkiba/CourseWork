@@ -1,20 +1,17 @@
 package com.bsu.service.api.dto;
 
+import com.bsu.service.api.dto.base.BaseDto;
+
+import java.util.List;
+
 /**
  * @author Ilya Skiba
  */
-public class ThemeDto {
-    private Integer id;
+public class ThemeDto extends BaseDto {
     private String name;
     private String creatorName;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    private List<Integer> parentThemes;
+    private Integer significance;
 
     public String getName() {
         return name;
@@ -30,5 +27,21 @@ public class ThemeDto {
 
     public void setCreatorName(String creatorName) {
         this.creatorName = creatorName;
+    }
+
+    public List<Integer> getParentThemes() {
+        return parentThemes;
+    }
+
+    public void setParentThemes(List<Integer> parentThemes) {
+        this.parentThemes = parentThemes;
+    }
+
+    public Integer getSignificance() {
+        return significance;
+    }
+
+    public void setSignificance(Integer significance) {
+        this.significance = significance;
     }
 }
