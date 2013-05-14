@@ -1,5 +1,7 @@
 package com.bsu.service.api.dto;
 
+import com.bsu.service.api.dto.base.BaseDto;
+
 import java.util.List;
 
 /**
@@ -9,7 +11,7 @@ import java.util.List;
  * Time: 16:51
  * To change this template use File | Settings | File Templates.
  */
-public class QuestionDto {
+public class QuestionDto extends BaseDto {
     private Integer id;
     private String question;
     private Integer openType;

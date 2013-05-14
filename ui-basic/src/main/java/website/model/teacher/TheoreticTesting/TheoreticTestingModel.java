@@ -1,8 +1,11 @@
 package website.model.teacher.TheoreticTesting;
 
+import com.bsu.service.api.dto.AnswerDto;
 import com.bsu.service.api.dto.CourseDto;
+import com.bsu.service.api.dto.QuestionDto;
 import com.bsu.service.api.dto.ThemeDto;
 import com.bsu.service.api.global.admin.CourseService;
+import com.bsu.service.api.theoretic.QuestionService;
 import com.bsu.service.api.theoretic.ThemeService;
 import org.primefaces.event.FileUploadEvent;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,13 +32,81 @@ public class TheoreticTestingModel {
     private List<ThemeDto> topics = new ArrayList<>();
     private Integer selectedCourse;
     private Integer selectedTopic;
-    private String value;
+    private QuestionDto newQuestion;
+    private List<AnswerDto> answerList = new ArrayList<>();
+    private AnswerDto tmpAnswer;
     @Autowired
     private CourseService courseService;
     @Autowired
     private ThemeService themeService;
     @Autowired
     private UserModel userModel;
+    @Autowired
+    private QuestionService questionService;
+
+    public void initTmpAnswer() {
+        tmpAnswer = new AnswerDto();
+    }
+
+    public AnswerDto getTmpAnswer() {
+        return tmpAnswer;
+    }
+
+    public void setTmpAnswer(AnswerDto tmpAnswer) {
+        this.tmpAnswer = tmpAnswer;
+    }
+
+    public void init() {
+        FacesContext context = FacesContext.getCurrentInstance();
+        if (context.getPartialViewContext().isPartialRequest() &&
+                !context.getPartialViewContext().isExecuteAll()) {
+            return;
+        }
+        selectedCourse = null;
+        selectedTopic = null;
+        newQuestion = null;
+        answerList = new ArrayList<>();
+    }
+
+    public void saveQuestion() {
+        newQuestion.setAnswerDtos(answerList);
+        questionService.createOrUpdate(newQuestion);
+    }
+
+    public void saveAnswer() {
+        boolean flag = false;
+
+        for (int i = 0; i < answerList.size(); i++) {
+            if (tmpAnswer.getId() == null || tmpAnswer.getId() == 0) {
+                tmpAnswer.setId(null);
+                break;
+            }
+            if (answerList.get(i).getId().equals(tmpAnswer.getId())) {
+                answerList.remove(i);
+                answerList.add(i, tmpAnswer);
+                flag = true;
+            }
+        }
+        if (!flag) {
+            answerList.add(tmpAnswer);
+        }
+    }
+
+    public List<AnswerDto> getAnswerList() {
+        return answerList;
+    }
+
+    public void setAnswerList(List<AnswerDto> answerList) {
+        this.answerList = answerList;
+    }
+
+    public QuestionDto getNewQuestion() {
+        return newQuestion;
+    }
+
+    public void setNewQuestion(QuestionDto newQuestion) {
+        this.newQuestion = newQuestion;
+    }
 
     public void load() {
         CourseDto courseDto = new CourseDto();
@@ -80,14 +151,6 @@ public class TheoreticTestingModel {
 
     public void setSelectedTopic(Integer selectedTopic) {
         this.selectedTopic = selectedTopic;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
     }
 
     public void handleFileUpload(FileUploadEvent event) {

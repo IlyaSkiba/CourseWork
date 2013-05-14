@@ -1,5 +1,7 @@
 package com.bsu.server.theoretic.test.dto;
 
+import com.bsu.server.dto.BaseEntity;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -9,11 +11,8 @@ import java.util.List;
  */
 @Entity
 @Table(name = "question", schema = "public")
-public class QuestionEntity implements Serializable {
+public class QuestionEntity extends BaseEntity implements Serializable {
 
-    @Column(name = "id")
-    @Id
-    private Integer id;
     @Column(name = "content")
     private String question;
     @Column(name = "question_type")
@@ -47,10 +46,6 @@ public class QuestionEntity implements Serializable {
 
     public void setTest(TestDto test) {
         this.test = test;
-    }
-
-    public Integer getId() {
-        return id;
     }
 
     public Integer getQuestionType() {

@@ -1,5 +1,6 @@
 package com.bsu.server.theoretic.test.controller;
 
+import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.theoretic.test.dto.AnswerEntity;
 import com.bsu.server.theoretic.test.dto.QuestionEntity;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ import java.util.List;
  * @author Ilya Skiba
  */
 @Service
-public class QuestionController {
+public class QuestionController extends BaseController<QuestionEntity> {
 
     @PersistenceContext
     private EntityManager em;
@@ -55,5 +56,10 @@ public class QuestionController {
                 AnswerEntity.class);
         query.setParameter("questionId", questionId);
         return query.getResultList();
+    }
+
+    @Override
+    protected Class<QuestionEntity> getEntityClass() {
+        return QuestionEntity.class;
     }
 }
