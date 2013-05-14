@@ -50,9 +50,28 @@
                             <p:commandButton value="Submit" icon="ui-icon-disk" action="#{topicsChange.saveTopic}"/>
                         </div>
 
-                        <h3 style="margin-top:0">Измените порядок следования тем в курсе:</h3>
-                        <p:orderList value="#{topicsChange.topics}" var="topic" controlsLocation="none"
-                                     itemLabel="#{topic.name}" itemValue="#{topic.id}"/>
+                        <div>
+                            <h:outputText value="Темы, от которых зависит изминяемая:"/>
+                            <p:dataTable value="#{topicsChange.topics}"
+                                         var="topicGroup"
+                                         lazy="true"
+                                         paginator="true"
+                                         rows="20"
+                                         rowsPerPageTemplate="10,20,30,50"
+                                         selectionMode="checkbox"
+                                         selection="#{topicsChange.topicParents}">
+
+                                <p:column selectionMode="multiple" style="width:18px"/>
+
+                                <p:column sortBy="#{topicGroup.name}}">
+                                    <h:outputText value="#{topicGroup.name}"/>
+                                </p:column>
+                            </p:dataTable>
+                        </div>
+
+                        <!--<h3 style="margin-top:0">Измените порядок следования тем в курсе:</h3>-->
+                        <!--<p:orderList value="#{topicsChange.topics}" var="topic" controlsLocation="none"-->
+                                     <!--itemLabel="#{topic.name}" itemValue="#{topic.id}"/>-->
 
                         <p:commandButton value="Submit" action="#{topicsChange.saveTopic}"/>
                     </h:form>

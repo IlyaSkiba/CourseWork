@@ -8,9 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import website.model.global.UserModel;
 
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * User: HomeUser
@@ -21,10 +23,12 @@ import java.util.List;
 @Named("topicsChange")
 public class TopicsModel {
     private List<CourseDto> courses = new ArrayList<>();
-    private List<ThemeDto> topics = new ArrayList<ThemeDto>();
+    private List<ThemeDto> topics = new ArrayList<>();
+    private List<ThemeDto> topicParents = new ArrayList<>();
     private Integer selectedCourse;
     private Integer selectedTopic;
     private ThemeDto changedTopic;
+    private boolean create = false;
 
     @Autowired
     private CourseService courseService;
@@ -32,6 +36,39 @@ public class TopicsModel {
     private ThemeService themeService;
     @Autowired
     private UserModel userModel;
+
+    public boolean isCreate() {
+        return create;
+    }
+
+    public void setCreate(boolean create) {
+        this.create = create;
+    }
+
+    public void init() {
+        FacesContext context = FacesContext.getCurrentInstance();
+        if (context.getPartialViewContext().isPartialRequest() &&
+                !context.getPartialViewContext().isExecuteAll()) {
+            return;
+        }
+        selectedCourse = null;
+        create = false;
+        topicParents = null;
+        Map<String, String> requestParams = context.getExternalContext().getRequestParameterMap();
+        String formType = requestParams.get("formType");
+        if (formType.equals("create")) {
+            create = true;
+            changedTopic = new ThemeDto();
+        }
+    }
+
+    public List<ThemeDto> getTopicParents() {
+        return topicParents;
+    }
+
+    public void setTopicParents(List<ThemeDto> topicParents) {
+        this.topicParents = topicParents;
+    }
 
     public void load() {
         CourseDto courseDto = new CourseDto();
@@ -83,9 +120,9 @@ public class TopicsModel {
     }
 
     public void saveTopic() {
-        if (selectedTopic != null) {
-
-        }
+        changedTopic.setCreatorName(userModel.getUserName());
+        changedTopic.setCourseId(selectedCourse);
+        themeService.createOrUpdate(changedTopic);
         /**@todo сохранить созданную тему
          * @todo сохранить измененную тему
          */

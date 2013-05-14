@@ -6,12 +6,14 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:tags="http://auto.test.bsu.by/composite">
 <f:view contentType="text/html">
     <h:head>
         <title>Изменить тему</title>
     </h:head>
     <h:body>
+        <f:event type="preRenderView" listener="#{topicsChange.init}"/>
         <ui:decorate template="../structure.xhtml">
             <ui:define name="content">
                 <h:form>
@@ -27,7 +29,8 @@
                     </div>
 
                     <p:outputPanel id="topicsPanel"
-                                   rendered="#{topicsChange.selectedCourse!=null and topicsChange.selectedCourse!=''}"
+                                   rendered="#{!topicsChange.create and topicsChange.selectedCourse!=null and
+                                    topicsChange.selectedCourse!=''}"
                                    autoUpdate="true">
                         <div class="elementBlock">
                             <h:outputLabel for="topics">Выберите тему: </h:outputLabel>
@@ -40,21 +43,40 @@
                             </p:selectOneMenu>
                         </div>
                     </p:outputPanel>
-                    <h:form rendered="#{topicsChange.selectedTopic!=null and topicsChange.selectedTopic!=''}">
-                        <div>
-                            <h:outputText value="Измените название темы:"/>
-                        </div>
-                        <p:inputText id="input" value="#{topicsChange.changedTopic.name}"/>
+                    <h:form rendered="#{(!topicsChange.create and topicsChange.selectedTopic!=null and
+                     topicsChange.selectedTopic!='') or (topicsChange.create and topicsChange.selectedCourse!=null and
+                                    topicsChange.selectedCourse!='')}">
+
+                        <tags:textfield label="Название темы:" labelFor="themeName">
+                            <p:inputText id="themeName" required="true"
+                                         value="#{topicsChange.changedTopic.name}"/>
+                        </tags:textfield>
 
                         <div>
-                            <p:commandButton value="Submit" icon="ui-icon-disk" action="#{topicsChange.saveTopic}"/>
+                            <h:outputText value="Темы, от которых зависит созданная:"/>
+                            <p:dataTable value="#{topicsChange.topics}"
+                                         var="topicGroup"
+                                         lazy="false"
+                                         paginator="true"
+                                         rowKey="#{topicGroup.id}"
+                                         rows="20"
+                                         rowsPerPageTemplate="10,20,30,50"
+                                         selectionMode="checkbox"
+                                         selection="#{topicsChange.topicParents}">
+
+                                <p:column selectionMode="multiple" style="width:18px"/>
+
+                                <p:column sortBy="#{topicGroup.name}}">
+                                    <h:outputText value="#{topicGroup.name}"/>
+                                </p:column>
+                            </p:dataTable>
                         </div>
 
-                        <h3 style="margin-top:0">Измените порядок следования тем в курсе:</h3>
-                        <p:orderList value="#{topicsChange.topics}" var="topic" controlsLocation="none"
-                                     itemLabel="#{topic.name}" itemValue="#{topic.id}"/>
+                        <!--<h3 style="margin-top:0">Измените порядок следования тем в курсе:</h3>-->
+                        <!--<p:orderList value="#{topicsChange.topics}" var="topic" controlsLocation="none"-->
+                                     <!--itemLabel="#{topic.name}" itemValue="#{topic.id}"/>-->
 
-                        <p:commandButton value="Submit" action="#{topicsChange.saveTopic}"/>
+                        <p:commandButton value="Submit" icon="ui-icon-disk" action="#{topicsChange.saveTopic}"/>
                     </h:form>
 
                 </h:form>

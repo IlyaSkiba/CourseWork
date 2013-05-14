@@ -12,6 +12,7 @@ public class ThemeDto extends BaseDto {
     private String creatorName;
     private List<Integer> parentThemes;
     private Integer significance;
+    private Integer courseId;
 
     public String getName() {
         return name;
@@ -43,5 +44,13 @@ public class ThemeDto extends BaseDto {
 
     public void setSignificance(Integer significance) {
         this.significance = significance;
+    }
+
+    public Integer getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(Integer courseId) {
+        this.courseId = courseId;
     }
 }

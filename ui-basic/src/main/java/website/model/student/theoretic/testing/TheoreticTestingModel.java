@@ -114,7 +114,7 @@ public class TheoreticTestingModel {
     public void gotoTest() throws IOException {
         FacesContext.getCurrentInstance().getExternalContext().redirect("theoretic/test.xhtml");
         idQuestionList = testService.getQuestionIds(selectedTopic);
-        allStudentAnswer = new ArrayList<StudentAnswer>(idQuestionList.size());
+        allStudentAnswer = new ArrayList<>(idQuestionList.size());
     }
 
     public void redirectToStatistic() throws IOException {
