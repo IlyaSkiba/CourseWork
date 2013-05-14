@@ -10,16 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Trash\JSF\trunk\ui-basic\src\main\webapp\teacher\topics\add_topic.xhtml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/dto/ThemeDto.java" afterPath="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/dto/ThemeDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/assembler/ThemeDtoAssembler.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/assembler/ThemeDtoAssembler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/theme/ThemeServiceImpl.java" afterPath="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/theme/ThemeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/theoretic/testing/TheoreticTestingModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/theoretic/testing/TheoreticTestingModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TheoreticTesting/TheoreticTestingModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TheoreticTesting/TheoreticTestingModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TopicsModel.java" afterPath="$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TopicsModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/change_topic.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/change_topic.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/change_topic.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/change_topic.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/structure.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/structure.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/delete_topic.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/delete_topic.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui-basic/src/main/webapp/additional/header.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/additional/header.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Trash\JSF\trunk\ui-basic\src\main\webapp\lecturer\teoretic_approve.xhtml" afterPath="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/teoretic_approve.xhtml" />
     </list>
     <ignored path="$USER_HOME$/.griffon/" />
     <ignored path="$USER_HOME$/.grails/" />
@@ -61,7 +57,7 @@
     <file path="/UserDto.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368477313246" ignored="false" />
     <file path="/a.dummy" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368477536647" ignored="false" />
     <file path="/UserCardModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1358260896252" ignored="false" />
-    <file path="/Dummy.txt" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368532678900" ignored="false" />
+    <file path="/Dummy.txt" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368540752125" ignored="false" />
     <file path="/UserAdminModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364240055484" ignored="false" />
     <file path="/UserServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368477495734" ignored="false" />
     <file path="/UserService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364239491129" ignored="false" />
@@ -301,12 +297,12 @@
     <file path="/BaseConverter.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364238188936" ignored="false" />
     <file path="/BaseDto.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364241207510" ignored="false" />
     <file path="/CRUDServiceImpl.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1364242364888" ignored="false" />
-    <file path="/TopicsModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368540426573" ignored="false" />
+    <file path="/TopicsModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368542715132" ignored="false" />
     <file path="/ThemeService.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368476761741" ignored="false" />
     <file path="/ThemeDtoAssembler.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368539458441" ignored="false" />
     <file path="/ThemeDto.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368539400962" ignored="false" />
     <file path="/TheoreticStatisticModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368475941065" ignored="false" />
-    <file path="/TheoreticTestingModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368476745589" ignored="false" />
+    <file path="/TheoreticTestingModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368545117557" ignored="false" />
     <file path="/AddTestModel.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368476615353" ignored="false" />
     <file path="/RedirectController.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368476237900" ignored="false" />
     <file path="/RoleDto.java" changelist="79cc6b67-64d0-40b4-abaa-5068f8dfc75b" time="1368477132172" ignored="false" />
@@ -400,49 +396,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ThemeServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/theme/ThemeServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="16" selection-start="1588" selection-end="1588" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TopicsModel.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TopicsModel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TopicsModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="37" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.9529148">
+            <state line="76" column="32" selection-start="2269" selection-end="2269" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThemeDto.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/dto/ThemeDto.java">
+      <file leaf-file-name="teoretic.xhtml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/teoretic.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="34" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThemeEntity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/ThemeEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="55" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="change_topic.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/change_topic.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="64" selection-start="3458" selection-end="3458" vertical-scroll-proportion="-25.5">
+            <state line="53" column="98" selection-start="2897" selection-end="2897" vertical-scroll-proportion="0.45614034">
               <folding>
-                <marker date="1368539987226" expanded="true" signature="3811:3821" placeholder="{...}" />
+                <marker date="1335493391802" expanded="true" signature="2880:2895" placeholder="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="delete_topic.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/delete_topic.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="49" selection-start="614" selection-end="632" vertical-scroll-proportion="-9.807693">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -450,7 +428,7 @@
       <file leaf-file-name="structure.xhtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/structure.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="99" selection-start="2666" selection-end="2666" vertical-scroll-proportion="-12.961538">
+            <state line="52" column="99" selection-start="2666" selection-end="2666" vertical-scroll-proportion="-16.153847">
               <folding>
                 <marker date="1368537146693" expanded="true" signature="1239:1262" placeholder="{...}" />
                 <marker date="1368537146693" expanded="true" signature="1430:1440" placeholder="{...}" />
@@ -462,31 +440,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="group_card.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/admin/group/group_card.xhtml">
+      <file leaf-file-name="TheoreticTestingModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TheoreticTesting/TheoreticTestingModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="91" selection-start="1141" selection-end="1141" vertical-scroll-proportion="-9.153846">
+            <state line="62" column="34" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="change_topic.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/change_topic.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="116" selection-start="3736" selection-end="3736" vertical-scroll-proportion="-15.038462">
               <folding>
-                <marker date="1364244371689" expanded="true" signature="1871:1881" placeholder="{...}" />
+                <marker date="1368539987226" expanded="true" signature="3811:3821" placeholder="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="group_list.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/admin/group/group_list.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="76" selection-start="1824" selection-end="1824" vertical-scroll-proportion="-16.346153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupAdminModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/admin/group/GroupAdminModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="17" selection-start="3248" selection-end="3248" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -517,10 +486,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/course/CourseServiceImpl.java" />
-        <option value="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/dto/RoleDto.java" />
-        <option value="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/global/admin/dto/UserDto.java" />
-        <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/user/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/student/theoretic/testing/TheoreticTestingModel.java" />
         <option value="dbtable:/5e7eb20b/10d3cd24-466e-46e7-a71b-9bf9fdb2c446/course_work.public.theme" />
         <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/theme/ThemeServiceImpl.java" />
@@ -532,7 +497,11 @@
         <option value="$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/dto/ThemeDto.java" />
         <option value="$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/assembler/ThemeDtoAssembler.java" />
         <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/change_topic.xhtml" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/additional/header.xhtml" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/delete_topic.xhtml" />
         <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TopicsModel.java" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/teoretic_approve.xhtml" />
+        <option value="$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TheoreticTesting/TheoreticTestingModel.java" />
       </list>
     </option>
   </component>
@@ -863,11 +832,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="teacher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topics" />
+              <option name="myItemId" value="lecturer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -897,41 +862,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website-org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui-basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="group" />
+              <option name="myItemId" value="additional" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1022,6 +953,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="teacher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website-org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teacher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TheoreticTesting" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1232,17 +1205,18 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.jgeek.website.model" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.bsu.server" />
-      <recent name="com.bsu.config" />
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Trash\JSF\trunk\ui-basic\src\main\webapp\teacher" />
       <recent name="D:\Trash\JSF\trunk\ui-basic\src\main\webapp\resources\composite" />
       <recent name="D:\Trash\JSF\trunk\server-dao\src\main\resources" />
       <recent name="D:\DmitriySpace\Development\Workspaces\idea\org.jgeek.website\src\main\resources\META-INF" />
     </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.bsu.server" />
+      <recent name="com.bsu.config" />
     </key>
   </component>
   <component name="Regex">
@@ -1701,7 +1675,11 @@
       <created>1368477747836</created>
       <updated>1368477747836</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Theme creation">
+      <created>1368540789343</created>
+      <updated>1368540789343</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1731,18 +1709,18 @@
     <frame x="-6" y="-6" width="1932" height="1052" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4749722" sideWeight="0.423159" order="19" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24471635" sideWeight="0.423159" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19354838" sideWeight="0.4955654" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32177162" sideWeight="0.5250278" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26393142" sideWeight="0.6289753" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3147942" sideWeight="0.32230523" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29477197" sideWeight="0.32230523" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4749722" sideWeight="0.576841" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2607362" sideWeight="0.0" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.44444445" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.44444445" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29647437" sideWeight="0.46547884" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2914349" sideWeight="0.93916756" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1752,7 +1730,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39984825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32456934" sideWeight="0.6786922" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21344717" sideWeight="0.5250278" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21344717" sideWeight="0.75528365" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4371524" sideWeight="0.9981851" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25265554" sideWeight="0.56825936" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1811,7 +1789,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Structure: big refactoring done (no server-dao in ui-basic)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Theme creation" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1829,6 +1807,7 @@
     <MESSAGE value="Structure: global refactor" />
     <MESSAGE value="Structure: refactor to id on user" />
     <MESSAGE value="Structure: big refactoring done (no server-dao in ui-basic)" />
+    <MESSAGE value="Theme creation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1838,16 +1817,39 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/theme/ThemeServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/base/CRUDService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="16" selection-start="1588" selection-end="1588" vertical-scroll-proportion="0.0">
+        <state line="17" column="17" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/admin/group/group_list.xhtml">
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/base/CRUDServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="76" selection-start="1824" selection-end="1824" vertical-scroll-proportion="-16.346153">
+        <state line="32" column="27" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/assembler/base/BaseConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/admin/group/group_card.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="91" selection-start="1141" selection-end="1141" vertical-scroll-proportion="-9.153846">
+          <folding>
+            <marker date="1364244371689" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/assembler/ThemeDtoAssembler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="60" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1859,18 +1861,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/topics/change_topic.xhtml">
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/global/UserModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="84" selection-start="4177" selection-end="4177" vertical-scroll-proportion="-48.115383">
+        <state line="31" column="0" selection-start="872" selection-end="872" vertical-scroll-proportion="0.3322034">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/additional/header.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="40" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.5177305">
           <folding>
-            <marker date="1368535468018" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1368542270499" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/lecturer/teoretic.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="61" selection-start="993" selection-end="993" vertical-scroll-proportion="6.769231">
+          <folding>
+            <marker date="1337892992802" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/delete_topic.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="49" selection-start="614" selection-end="632" vertical-scroll-proportion="-9.807693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/teoretic_approve.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="31" selection-start="556" selection-end="556" vertical-scroll-proportion="-7.9615383">
+          <folding>
+            <marker date="1368544822444" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1368544822444" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1368544822444" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/structure.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="99" selection-start="2666" selection-end="2666" vertical-scroll-proportion="-12.961538">
+        <state line="52" column="99" selection-start="2666" selection-end="2666" vertical-scroll-proportion="-16.153847">
           <folding>
             <marker date="1368537146693" expanded="true" signature="1239:1262" placeholder="{...}" />
             <marker date="1368537146693" expanded="true" signature="1430:1440" placeholder="{...}" />
@@ -1881,84 +1917,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/resources/composite/textfield.xhtml">
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TheoreticTesting/TheoreticTestingModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="39" selection-start="406" selection-end="414" vertical-scroll-proportion="0.24113475">
+        <state line="62" column="34" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/admin/group/group_card.xhtml">
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TopicsModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="91" selection-start="1141" selection-end="1141" vertical-scroll-proportion="-9.153846">
-          <folding>
-            <marker date="1364244371689" expanded="true" signature="1871:1881" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/base/CRUDServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/global/UserModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="1754" selection-end="1754" vertical-scroll-proportion="0.3322034">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/global/service/user/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="19" selection-start="2673" selection-end="2673" vertical-scroll-proportion="0.42372882">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/base/CRUDService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="214" selection-end="214" vertical-scroll-proportion="0.31694916">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/assembler/ThemeDtoAssembler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="89" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.74915254">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-dao/src/main/java/com/bsu/server/dto/ThemeEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="55" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-api/src/main/java/com/bsu/service/api/dto/ThemeDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="34" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0">
+        <state line="76" column="32" selection-start="2269" selection-end="2269" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/topics/change_topic.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="64" selection-start="3458" selection-end="3458" vertical-scroll-proportion="-25.5">
+        <state line="65" column="116" selection-start="3736" selection-end="3736" vertical-scroll-proportion="-15.038462">
           <folding>
             <marker date="1368539987226" expanded="true" signature="3811:3821" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/java/website/model/teacher/TopicsModel.java">
+    <entry file="file://$PROJECT_DIR$/ui-basic/src/main/webapp/teacher/teoretic.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="37" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.9529148">
-          <folding />
+        <state line="53" column="98" selection-start="2897" selection-end="2897" vertical-scroll-proportion="0.45614034">
+          <folding>
+            <marker date="1335493391802" expanded="true" signature="2880:2895" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

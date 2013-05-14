@@ -4,6 +4,7 @@ import com.bsu.service.api.dto.CourseDto;
 import com.bsu.service.api.dto.ThemeDto;
 import com.bsu.service.api.global.admin.CourseService;
 import com.bsu.service.api.theoretic.ThemeService;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import website.model.global.UserModel;
@@ -52,11 +53,12 @@ public class TopicsModel {
             return;
         }
         selectedCourse = null;
+        selectedTopic = null;
         create = false;
         topicParents = null;
         Map<String, String> requestParams = context.getExternalContext().getRequestParameterMap();
         String formType = requestParams.get("formType");
-        if (formType.equals("create")) {
+        if (StringUtils.equals(formType,"create")) {
             create = true;
             changedTopic = new ThemeDto();
         }
@@ -123,9 +125,6 @@ public class TopicsModel {
         changedTopic.setCreatorName(userModel.getUserName());
         changedTopic.setCourseId(selectedCourse);
         themeService.createOrUpdate(changedTopic);
-        /**@todo сохранить созданную тему
-         * @todo сохранить измененную тему
-         */
     }
 
     public ThemeDto getChangedTopic() {
@@ -137,7 +136,8 @@ public class TopicsModel {
     }
 
     public void deleteTopic() {
-        // @todo удалить тему
+        changedTopic.setCreatorName(userModel.getUserName());
+        themeService.delete(changedTopic);
     }
 
 }

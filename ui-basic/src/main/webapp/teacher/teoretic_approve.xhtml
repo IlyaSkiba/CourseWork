@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html">
+    <h:head>
+        <title>Утвердить тестовое задание</title>
+    </h:head>
+    <h:body>
+        <ui:decorate template="structure.xhtml">
+            <ui:define name="content">
+                <h:form>
+                    <p:dataTable var="test" value="#{approveTestModel.proposedQuestions}">
+
+                        <p:column style="width:16px">
+                            <p:rowToggler/>
+                        </p:column>
+
+                        <p:column style="width:250px">
+                            <f:facet name="header">
+                                Преподаватель
+                            </f:facet>
+                            <h:outputText value="#{test.teacher}"/>
+                        </p:column>
+
+                        <p:column style="width:250px">
+                            <f:facet name="header">
+                                Дата
+                            </f:facet>
+                            <h:outputText value="#{test.data}"/>
+                        </p:column>
+
+                        <p:rowExpansion>
+                            <p:panel>
+                                <h:outputLabel value="#{test.questionText}"/>
+                            </p:panel>
+
+                            <div>
+                                <p:commandButton value="Утвердить" action="#{approveTestModel.approveQuestion}"/>
+                                <p:commandButton value="Отклонить" action="#{approveTestModel.rejectQuestion}"/>
+                                <p:commandButton value="Комментировать" action="#{approveTestModel.commentQuestion}"/>
+                            </div>
+                        </p:rowExpansion>
+                    </p:dataTable>
+
+                </h:form>
+            </ui:define>
+        </ui:decorate>
+    </h:body>
+</f:view>
+</html>

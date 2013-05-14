@@ -38,12 +38,14 @@ public class TheoreticTestingModel {
     private UserModel userModel;
 
     public void load() {
+        CourseDto courseDto = new CourseDto();
         if (courses == null || courses.isEmpty()) {
-            courses = courseService.loadCourseList(userModel.getUser());
+            courses = courseService.searchByOwnerId(userModel.getUser().getId());
         }
         topics.clear();
         if (selectedCourse != null) {
-            topics = themeService.getThemesForCourse(selectedCourse, userModel.getUser());
+            courseDto.setId(selectedCourse);
+            topics = themeService.getThemesForCourse(courseDto);
         }
     }
 
