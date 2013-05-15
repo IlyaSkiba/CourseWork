@@ -12,6 +12,7 @@ import com.bsu.service.api.global.admin.dto.UserDto;
 import com.bsu.service.api.theoretic.ThemeService;
 import com.google.common.base.Function;
 import com.google.common.collect.Lists;
+import org.apache.commons.lang.Validate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,6 +31,7 @@ public class ThemeServiceImpl extends BaseSearchableServiceImplImpl<ThemeDto, Th
     private ThemeDtoAssembler themeDtoAssembler;
 
     @Override
+    @Transactional
     public List<ThemeDto> getThemesForCourse(CourseDto selectedCourse) {
         return convertList(themeController.getAllThemesInCourse(selectedCourse.getId()));
     }
@@ -39,8 +41,10 @@ public class ThemeServiceImpl extends BaseSearchableServiceImplImpl<ThemeDto, Th
         return convertList(themeController.getThemesForCourse(selectedCourseId, user.getId()));
     }
 
+    @Override
     @Transactional(readOnly = false)
     public void updateThemeParents(ThemeDto theme, List<ThemeDto> selectedDtos) {
+        Validate.notNull(theme.getId());
         theme.setParentThemes(Lists.transform(selectedDtos, new Function<ThemeDto, Integer>() {
             @Override
             public Integer apply(ThemeDto input) {
@@ -48,7 +52,16 @@ public class ThemeServiceImpl extends BaseSearchableServiceImplImpl<ThemeDto, Th
             }
         }));
         validateUpdating(theme, theme.getId());
-        createOrUpdate(theme);
+        List<ThemeEntity> parents = Lists.transform(theme.getParentThemes(), new Function<Integer, ThemeEntity>() {
+            @Override
+            public ThemeEntity apply(Integer id) {
+                return getController().getById(id);
+            }
+        });
+        ThemeEntity entityToSave = getConverter().convert(theme);
+        entityToSave.getParentThemes().clear();
+        entityToSave.getParentThemes().addAll(parents);
+        getConverter().convert(getController().update(entityToSave));
     }
 
     private void validateUpdating(ThemeDto theme, Integer markedTheme) {

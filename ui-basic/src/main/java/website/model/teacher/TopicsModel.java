@@ -5,6 +5,7 @@ import com.bsu.service.api.dto.ThemeDto;
 import com.bsu.service.api.global.admin.CourseService;
 import com.bsu.service.api.theoretic.ThemeService;
 import org.apache.commons.lang.StringUtils;
+import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import website.model.global.UserModel;
@@ -118,13 +119,15 @@ public class TopicsModel {
         this.selectedTopic = selectedTopic;
         if (selectedTopic != null) {
             setChangedTopic(themeService.getById(selectedTopic));
+            setTopicParents(Lists.newArrayList(themeService.getBatchById(getChangedTopic().getParentThemes())));
         }
     }
 
     public void saveTopic() {
         changedTopic.setCreatorName(userModel.getUserName());
         changedTopic.setCourseId(selectedCourse);
-        themeService.createOrUpdate(changedTopic);
+        changedTopic = themeService.createOrUpdate(changedTopic);
+        themeService.updateThemeParents(changedTopic, topicParents);
     }
 
     public ThemeDto getChangedTopic() {

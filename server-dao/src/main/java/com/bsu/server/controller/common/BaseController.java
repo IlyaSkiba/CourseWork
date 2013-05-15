@@ -74,8 +74,8 @@ public abstract class BaseController<T extends BaseEntity> {
     }
 
     @Transactional(readOnly = false)
-    public T update(T newUser) {
-        return em.merge(newUser);
+    public T update(T entity) {
+        return em.merge(entity);
     }
 
     @Transactional(readOnly = false)
@@ -86,7 +86,7 @@ public abstract class BaseController<T extends BaseEntity> {
     public List<T> getList() {
         CriteriaBuilder builder = em.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(getEntityClass());
-        Root<T> root = query.from(getEntityClass());
+        query.from(getEntityClass());
         return em.createQuery(query).getResultList();
     }
 }

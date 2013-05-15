@@ -7,6 +7,7 @@ import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import org.apache.avro.reflect.Nullable;
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.Validate;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -32,13 +33,25 @@ public abstract class BaseSearchableServiceImplImpl<T extends BaseDto, D extends
                 first, pageSize), new TransformFunction());
     }
 
+    @Override
+    @Transactional(readOnly = true)
+    public List<T> getBatchById(Iterable<Integer> entityIds) {
+        List<T> resultList = Lists.newArrayList();
+        for (Integer entityId : entityIds) {
+            resultList.add(getById(entityId));
+        }
+        return resultList;
+    }
+
     protected List<T> convertList(List<D> entities) {
         return convertList(entities, new TransformFunction());
     }
 
     public <From, To> List<To> convertList(List<From> entities, Function<From, To> convertFunction) {
         List<To> result = Lists.transform(entities, convertFunction);
-        result.size();
+        for (To to : result) {
+            Validate.notNull(to);
+        }
         return result;
     }
 
