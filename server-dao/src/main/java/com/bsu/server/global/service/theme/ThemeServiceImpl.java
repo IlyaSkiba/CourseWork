@@ -6,6 +6,7 @@ import com.bsu.server.controller.ThemeController;
 import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.dto.ThemeEntity;
 import com.bsu.server.global.service.base.BaseSearchableServiceImplImpl;
+import com.bsu.server.theoretic.themes.controller.StudentStatusController;
 import com.bsu.service.api.dto.CourseDto;
 import com.bsu.service.api.dto.ThemeDto;
 import com.bsu.service.api.global.admin.dto.UserDto;
@@ -29,6 +30,8 @@ public class ThemeServiceImpl extends BaseSearchableServiceImplImpl<ThemeDto, Th
     private ThemeController themeController;
     @Autowired
     private ThemeDtoAssembler themeDtoAssembler;
+    @Autowired
+    private StudentStatusController studentStatusController;
 
     @Override
     @Transactional
@@ -37,8 +40,9 @@ public class ThemeServiceImpl extends BaseSearchableServiceImplImpl<ThemeDto, Th
     }
 
     @Override
-    public List<ThemeDto> getThemesForCourse(Integer selectedCourseId, UserDto user) {
-        return convertList(themeController.getThemesForCourse(selectedCourseId, user.getId()));
+    public List<ThemeDto> getThemesForCourse(Integer selectedCourseId, UserDto user, int significance) {
+        return convertList(studentStatusController.filterThemesByAccessibility(themeController.getThemesForCourse(selectedCourseId,
+                user.getId()), ThemeEntity.Significance.parse(significance)));
     }
 
     @Override

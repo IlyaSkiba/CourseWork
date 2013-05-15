@@ -79,6 +79,33 @@ public class ThemeEntity extends BaseEntity implements Serializable {
     }
 
     public static enum Significance {
-        LOW, AVERAGE, HIGH
+        LOW(1), AVERAGE(2), HIGH(3);
+        private int nonConverted;
+
+        private Significance(int val) {
+            nonConverted = val;
+        }
+
+        public boolean lower(Significance significance) {
+            if (significance == null) {
+                return false;
+            }
+            switch (significance) {
+                case LOW:
+                    return this == LOW;
+                case AVERAGE:
+                    return this == LOW || this == AVERAGE;
+            }
+            return true;
+        }
+
+        public static Significance parse(int significance) {
+            for (Significance significance1 : Significance.values()) {
+                if (significance1.nonConverted == significance) {
+                    return significance1;
+                }
+            }
+            return null;
+        }
     }
 }

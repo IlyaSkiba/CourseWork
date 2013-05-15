@@ -31,6 +31,7 @@ public class TheoreticTestingModel {
     private List<ThemeDto> topics = new ArrayList<>();
     private Integer selectedCourse;
     private Integer selectedTopic;
+    private Integer significance = 1;
     private List<StudentAnswer> allStudentAnswer;
     private List<Integer> idQuestionList;
     private Integer testId;
@@ -73,7 +74,7 @@ public class TheoreticTestingModel {
         }
         topics.clear();
         if (selectedCourse != null) {
-            topics = themeService.getThemesForCourse(selectedCourse, userModel.getUser());
+            topics = themeService.getThemesForCourse(selectedCourse, userModel.getUser(), significance);
         }
     }
 
@@ -135,5 +136,13 @@ public class TheoreticTestingModel {
 
     public void setCheaterState(int cheaterState) {
         this.cheaterState = cheaterState;
+    }
+
+    public Integer getSignificance() {
+        return significance;
+    }
+
+    public void setSignificance(Integer significance) {
+        this.significance = significance;
     }
 }
