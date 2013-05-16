@@ -2,11 +2,7 @@ package com.bsu.server.dto;
 
 import com.bsu.server.dto.security.UserAccount;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
@@ -18,7 +14,10 @@ import java.util.List;
 @Entity
 @Table(name = "course_group", schema = "public")
 public class CourseGroupEntity extends BaseEntity implements Serializable {
-    @ManyToMany(mappedBy = "assignedGroups")
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinTable(name = "theme_group",
+            joinColumns = {@JoinColumn(name = "course_group", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "theme", referencedColumnName = "id")})
     public List<ThemeEntity> availableThemes;
 
     @ManyToOne

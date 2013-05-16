@@ -2,6 +2,7 @@ package com.bsu.server.global.service.theme;
 
 import com.bsu.server.assembler.ThemeDtoAssembler;
 import com.bsu.server.assembler.base.BaseConverter;
+import com.bsu.server.controller.CourseGroupController;
 import com.bsu.server.controller.ThemeController;
 import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.dto.ThemeEntity;
@@ -32,6 +33,8 @@ public class ThemeServiceImpl extends BaseSearchableServiceImplImpl<ThemeDto, Th
     private ThemeDtoAssembler themeDtoAssembler;
     @Autowired
     private StudentStatusController studentStatusController;
+    @Autowired
+    private CourseGroupController courseGroupController;
 
     @Override
     @Transactional
@@ -85,5 +88,15 @@ public class ThemeServiceImpl extends BaseSearchableServiceImplImpl<ThemeDto, Th
     @Override
     protected BaseConverter<ThemeDto, ThemeEntity> getConverter() {
         return themeDtoAssembler;
+    }
+
+    @Override
+    @Transactional(readOnly = false)
+    public ThemeDto createOrUpdate(ThemeDto dto) {
+        ThemeDto result = super.createOrUpdate(dto);
+        if (dto.getId() == null) {
+            courseGroupController.addThemeToAllCourses(result);
+        }
+        return result;
     }
 }

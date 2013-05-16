@@ -18,10 +18,13 @@ public class ThemeEntity extends BaseEntity implements Serializable {
     private UserAccount creator;
     @Column(name = "theme_name")
     private String name;
-    @ManyToOne
+    @ManyToOne(targetEntity = CourseEntity.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "parent_course", referencedColumnName = "id")
     private CourseEntity courseEntity;
-    @ManyToMany
-    @JoinTable
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "theme_group",
+            joinColumns = {@JoinColumn(name = "theme", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "course_group", referencedColumnName = "id")})
     private List<CourseGroupEntity> assignedGroups;
     @ManyToMany
     @JoinTable
