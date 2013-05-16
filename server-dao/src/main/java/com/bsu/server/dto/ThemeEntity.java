@@ -95,6 +95,21 @@ public class ThemeEntity extends BaseEntity implements Serializable {
             }
             switch (significance) {
                 case LOW:
+                    return false;
+                case AVERAGE:
+                    return this == LOW;
+                case HIGH:
+                    return this == LOW || this == AVERAGE;
+            }
+            return true;
+        }
+
+        public boolean lowerEqual(Significance significance) {
+            if (significance == null) {
+                return false;
+            }
+            switch (significance) {
+                case LOW:
                     return this == LOW;
                 case AVERAGE:
                     return this == LOW || this == AVERAGE;
@@ -109,6 +124,10 @@ public class ThemeEntity extends BaseEntity implements Serializable {
                 }
             }
             return null;
+        }
+
+        public int getNonConverted() {
+            return nonConverted;
         }
     }
 }

@@ -45,7 +45,7 @@ public class ThemeServiceImpl extends BaseSearchableServiceImplImpl<ThemeDto, Th
     @Override
     public List<ThemeDto> getThemesForCourse(Integer selectedCourseId, UserDto user, int significance) {
         return convertList(studentStatusController.filterThemesByAccessibility(themeController.getThemesForCourse(selectedCourseId,
-                user.getId()), ThemeEntity.Significance.parse(significance)));
+                user.getId()), ThemeEntity.Significance.parse(significance), user.getId()));
     }
 
     @Override

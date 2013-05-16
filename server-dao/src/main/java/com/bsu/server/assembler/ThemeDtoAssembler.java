@@ -45,6 +45,7 @@ public class ThemeDtoAssembler extends BaseConverter<ThemeDto, ThemeEntity> {
         }
         parentIds.size();
         dto.setParentThemes(parentIds);
+        dto.setSignificance(entity.getSignificance().getNonConverted());
         dto.getParentThemes().size();
         return dto;
     }
@@ -58,6 +59,7 @@ public class ThemeDtoAssembler extends BaseConverter<ThemeDto, ThemeEntity> {
             newEntity.setCreator(userController.getUserByUsername(entity.getCreatorName()));
             newEntity.setCourseEntity(courseController.getById(entity.getCourseId()));
         }
+        newEntity.setSignificance(ThemeEntity.Significance.parse(entity.getSignificance()));
         newEntity.setName(entity.getName());
         return newEntity;
     }

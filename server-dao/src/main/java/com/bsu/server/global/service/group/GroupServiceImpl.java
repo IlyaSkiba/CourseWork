@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -51,6 +52,11 @@ public class GroupServiceImpl extends BaseSearchableServiceImplImpl<UserGroupDto
         for (CourseGroupDto courseDto : courses) {
             CourseGroupEntity courseEntity = courseGroupAssembler.convert(courseDto);
             courseEntity.setGroup(entity);
+            if (courseEntity.getAvailableThemes() != null) {
+                courseEntity.getAvailableThemes().addAll(courseEntity.getAssignedCourse().getThemes());
+            } else {
+                courseEntity.setAvailableThemes(new ArrayList<>(courseEntity.getAssignedCourse().getThemes()));
+            }
             courseGroupController.create(courseEntity);
         }
         return groupAssembler.convert(groupController.getById(entity.getId()));

@@ -52,6 +52,15 @@
                                          value="#{topicsChange.changedTopic.name}"/>
                         </tags:textfield>
 
+                        <tags:textfield label="Значимость темы:" labelFor="themeSignificance">
+                            <p:selectOneMenu id="themeSignificance" required="true"
+                                             value="#{topicsChange.changedTopic.significance}">
+                                <f:selectItem itemLabel="Низкая" itemValue="1"/>
+                                <f:selectItem itemLabel="Средняя" itemValue="2"/>
+                                <f:selectItem itemLabel="Высокая" itemValue="3"/>
+                            </p:selectOneMenu>
+                        </tags:textfield>
+
                         <div>
                             <h:outputText value="Темы, от которых зависит созданная:"/>
                             <p:dataTable value="#{topicsChange.topics}"
@@ -74,7 +83,7 @@
 
                         <!--<h3 style="margin-top:0">Измените порядок следования тем в курсе:</h3>-->
                         <!--<p:orderList value="#{topicsChange.topics}" var="topic" controlsLocation="none"-->
-                                     <!--itemLabel="#{topic.name}" itemValue="#{topic.id}"/>-->
+                        <!--itemLabel="#{topic.name}" itemValue="#{topic.id}"/>-->
 
                         <p:commandButton value="Submit" icon="ui-icon-disk" action="#{topicsChange.saveTopic}"/>
                     </h:form>
