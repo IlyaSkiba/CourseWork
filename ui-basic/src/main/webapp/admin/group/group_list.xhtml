@@ -25,15 +25,15 @@
                                  rowsPerPageTemplate="5,10,15"
                                  rowKey="#{tablegroup.id}">
 
-                        <p:column sortBy="#{tablegroup.name}">
+                        <p:column sortBy="#{tablegroup.name}" width="30%" headerText="Название">
                             <h:outputText value="#{tablegroup.name}"/>
                         </p:column>
 
-                        <p:column sortBy="#{tablegroup.displayCourses}">
+                        <p:column sortBy="#{tablegroup.displayCourses}" headerText="Список курсов">
                             <h:outputText value="#{tablegroup.displayCourses}"/>
                         </p:column>
 
-                        <p:column styleClass="group-list group-action-column">
+                        <p:column styleClass="group-list group-action-column" width="60">
                             <p:button id="editButton"
                                       outcome="/admin/group/group_card.xhtml"
                                       icon="ui-icon ui-icon-pencil">

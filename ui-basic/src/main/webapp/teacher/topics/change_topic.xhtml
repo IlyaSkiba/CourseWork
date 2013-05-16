@@ -10,7 +10,7 @@
       xmlns:tags="http://auto.test.bsu.by/composite">
 <f:view contentType="text/html">
     <h:head>
-        <title>Изменить тему</title>
+        <title>Управление темами</title>
     </h:head>
     <h:body>
         <f:event type="preRenderView" listener="#{topicsChange.init}"/>
@@ -18,14 +18,15 @@
             <ui:define name="content">
                 <h:form>
                     <div class="elementBlock">
-                        <h:outputLabel for="courses">Выберите курс: </h:outputLabel>
-                        <p:selectOneMenu id="courses" value="#{topicsChange.selectedCourse}">
-                            <f:selectItem itemLabel="" itemValue=""/>
-                            <f:selectItems value="#{topicsChange.courses}" var="course"
-                                           itemLabel="#{course.courseName}"
-                                           itemValue="#{course.id}"/>
-                            <p:ajax update="@form"/>
-                        </p:selectOneMenu>
+                        <tags:textfield label="Выберите курс:" labelFor="courses">
+                            <p:selectOneMenu id="courses" value="#{topicsChange.selectedCourse}">
+                                <f:selectItem itemLabel="" itemValue=""/>
+                                <f:selectItems value="#{topicsChange.courses}" var="course"
+                                               itemLabel="#{course.courseName}"
+                                               itemValue="#{course.id}"/>
+                                <p:ajax update="@form"/>
+                            </p:selectOneMenu>
+                        </tags:textfield>
                     </div>
 
                     <p:outputPanel id="topicsPanel"
@@ -33,14 +34,15 @@
                                     topicsChange.selectedCourse!=''}"
                                    autoUpdate="true">
                         <div class="elementBlock">
-                            <h:outputLabel for="topics">Выберите тему: </h:outputLabel>
-                            <p:selectOneMenu id="topics" widgetVar="topics" value="#{topicsChange.selectedTopic}">
-                                <f:selectItem itemLabel="" itemValue=""/>
-                                <f:selectItems value="#{topicsChange.topics}" var="topic"
-                                               itemLabel="#{topic.name}"
-                                               itemValue="#{topic.id}"/>
-                                <p:ajax update="@form" process="@this, courses"/>
-                            </p:selectOneMenu>
+                            <tags:textfield label="Выберите тему:" labelFor="topics">
+                                <p:selectOneMenu id="topics" widgetVar="topics" value="#{topicsChange.selectedTopic}">
+                                    <f:selectItem itemLabel="" itemValue=""/>
+                                    <f:selectItems value="#{topicsChange.topics}" var="topic"
+                                                   itemLabel="#{topic.name}"
+                                                   itemValue="#{topic.id}"/>
+                                    <p:ajax update="@form" process="@this, courses"/>
+                                </p:selectOneMenu>
+                            </tags:textfield>
                         </div>
                     </p:outputPanel>
                     <h:form rendered="#{(!topicsChange.create and topicsChange.selectedTopic!=null and
