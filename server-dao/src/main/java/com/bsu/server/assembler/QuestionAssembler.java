@@ -11,7 +11,7 @@ import com.bsu.service.api.dto.QuestionDto;
  * To change this template use File | Settings | File Templates.
  */
 public class QuestionAssembler {
-    public static final QuestionDto assemble(QuestionEntity entity) {
+    public static QuestionDto assemble(QuestionEntity entity) {
         return null;
     }
 }

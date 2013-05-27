@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html">
+    <h:head>
+        <title>Добавить тестовое задание</title>
+    </h:head>
+    <h:body>
+        <f:event type="preRenderView" listener="#{theoreticTeacher.init}"/>
+        <ui:decorate template="../structure.xhtml">
+            <ui:define name="content">
+                <h:form id="testForm">
+                    <div class="elementBlock">
+                        <h:outputLabel for="courses">Выберите курс:</h:outputLabel>
+                        <p:selectOneMenu id="courses" value="#{theoreticTeacher.selectedCourse}">
+                            <f:selectItem itemLabel="" itemValue=""/>
+                            <f:selectItems value="#{theoreticTeacher.courses}" var="course"
+                                           itemLabel="#{course.courseName}"
+                                           itemValue="#{course.id}"/>
+                            <p:ajax update="@form"/>
+                        </p:selectOneMenu>
+                    </div>
+
+                    <p:outputPanel id="topicsPanel"
+                                   rendered="#{theoreticTeacher.selectedCourse!=null and theoreticTeacher.selectedCourse!=''}"
+                                   autoUpdate="true">
+                        <div class="elementBlock">
+                            <h:outputLabel for="topics">Выберите тему:</h:outputLabel>
+                            <p:selectOneMenu id="topics" widgetVar="topics" value="#{theoreticTeacher.selectedTopic}">
+                                <f:selectItem itemLabel="" itemValue=""/>
+                                <f:selectItems value="#{theoreticTeacher.topics}" var="topic"
+                                               itemLabel="#{topic.name}"
+                                               itemValue="#{topic.id}"/>
+                                <p:ajax update="@form"/>
+                            </p:selectOneMenu>
+                        </div>
+                    </p:outputPanel>
+
+
+                    <p:outputPanel
+                            rendered="#{theoreticTeacher.selectedTopic!=null and theoreticTeacher.selectedTopic!=''}">
+
+                        <div>
+                            <h:outputText value="Добавьте задание одним из способов:"/>
+                        </div>
+
+                        <p:dataTable id="questionList"
+                                     value="#{theoreticTeacher.questions}"
+                                     emptyMessage="В тесте нет вопросов"
+                                     var="question">
+                            <f:facet name="header">
+                                <p:toolbar>
+                                    <p:toolbarGroup align="left">
+                                        <p:commandButton value="Добавить вопрос"
+                                                         action="#{theoreticTeacher.toQuestion}"
+                                                         process="@this" ajax="false"
+                                                         icon="ui-icon ui-icon-plusthick">
+                                            <f:setPropertyActionListener value="#{null}"
+                                                                         target="#{theoreticTeacher.newQuestion}"/>
+                                        </p:commandButton>
+
+                                    </p:toolbarGroup>
+
+                                </p:toolbar>
+                            </f:facet>
+                            <p:column headerText="Id">
+                                <h:outputText value="#{question.id}"/>
+                            </p:column>
+                            <p:column headerText="Текст вопроса">
+                                <h:outputText value="#{question.question}"/>
+                            </p:column>
+                            <p:column headerText="Доступные действия" width="50">
+                                <p:commandButton id="editButton" icon="ui-icon ui-icon-pencil"
+                                                 process="@this" action="#{theoreticTeacher.toQuestion}">
+                                    <f:setPropertyActionListener value="#{question}"
+                                                                 target="#{theoreticTeacher.newQuestion}"/>
+                                </p:commandButton>
+                            </p:column>
+                        </p:dataTable>
+
+                        <div>
+                            <h:outputText value="2. Загрузите файл с условием:"/>
+                        </div>
+                        <p:fileUpload fileUploadListener="#{theoreticTeacher.handleFileUpload}"
+                                      mode="advanced"
+                                      update="messages"
+                                      multiple="true"
+                                      allowTypes="/(\.|\/)(doc|docx)$/"/>
+
+                        <p:growl id="messages" showDetail="true"/>
+                    </p:outputPanel>
+                </h:form>
+            </ui:define>
+        </ui:decorate>
+    </h:body>
+</f:view>
+</html>

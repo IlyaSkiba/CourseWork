@@ -12,10 +12,10 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class QuestionDto extends BaseDto {
-    private Integer id;
     private String question;
     private Integer openType;
     private List<AnswerDto> answerDtos;
+    private Integer testId;
 
     public String getQuestion() {
         return question;
@@ -41,11 +41,11 @@ public class QuestionDto extends BaseDto {
         this.answerDtos = answerDtos;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getTestId() {
+        return testId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setTestId(Integer testId) {
+        this.testId = testId;
     }
 }

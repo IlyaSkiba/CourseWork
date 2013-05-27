@@ -3,9 +3,11 @@ package website.model.teacher.TheoreticTesting;
 import com.bsu.service.api.dto.AnswerDto;
 import com.bsu.service.api.dto.CourseDto;
 import com.bsu.service.api.dto.QuestionDto;
+import com.bsu.service.api.dto.TestDto;
 import com.bsu.service.api.dto.ThemeDto;
 import com.bsu.service.api.global.admin.CourseService;
 import com.bsu.service.api.theoretic.QuestionService;
+import com.bsu.service.api.theoretic.TestService;
 import com.bsu.service.api.theoretic.ThemeService;
 import org.primefaces.event.FileUploadEvent;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,7 @@ public class TheoreticTestingModel {
     private Integer selectedTopic;
     private QuestionDto newQuestion;
     private List<AnswerDto> answerList = new ArrayList<>();
+    private List<QuestionDto> questions = new ArrayList<>();
     private AnswerDto tmpAnswer;
     @Autowired
     private CourseService courseService;
@@ -43,6 +46,9 @@ public class TheoreticTestingModel {
     private UserModel userModel;
     @Autowired
     private QuestionService questionService;
+    @Autowired
+    private TestService testService;
+    private QuestionDto selectedQuestion;
 
     public void initTmpAnswer() {
         tmpAnswer = new AnswerDto();
@@ -68,9 +74,20 @@ public class TheoreticTestingModel {
         answerList = new ArrayList<>();
     }
 
-    public void saveQuestion() {
+    public String saveQuestion() {
+        TestDto dto;
+        if (testService.getByThemeId(selectedTopic) == null) {
+            dto = new TestDto();
+            dto.setThemeId(selectedTopic);
+            dto = testService.createOrUpdate(dto);
+        } else {
+            dto = testService.getByThemeId(selectedTopic);
+        }
+
         newQuestion.setAnswerDtos(answerList);
+        newQuestion.setTestId(dto.getId());
         questionService.createOrUpdate(newQuestion);
+        return "/teacher/test/theoretic.xhtml";
     }
 
     public void saveAnswer() {
@@ -113,10 +130,13 @@ public class TheoreticTestingModel {
         if (courses == null || courses.isEmpty()) {
             courses = courseService.searchByOwnerId(userModel.getUser().getId());
         }
-        topics.clear();
         if (selectedCourse != null) {
+            topics.clear();
             courseDto.setId(selectedCourse);
             topics = themeService.getThemesForCourse(courseDto);
+        }
+        if (selectedTopic != null) {
+            questions = questionService.getForTopic(selectedTopic);
         }
     }
 
@@ -156,5 +176,25 @@ public class TheoreticTestingModel {
     public void handleFileUpload(FileUploadEvent event) {
         FacesMessage msg = new FacesMessage("Succesful", event.getFile().getFileName() + " is uploaded.");
         FacesContext.getCurrentInstance().addMessage(null, msg);
+    }
+
+    public List<QuestionDto> getQuestions() {
+        load();
+        return questions;
+    }
+
+    public String toQuestion() {
+        if (newQuestion == null) {
+            newQuestion = new QuestionDto();
+        }
+        return "/teacher/test/theoretic.xhtml";
+    }
+
+    public void setSelectedQuestion(QuestionDto selectedQuestion) {
+        this.selectedQuestion = selectedQuestion;
+    }
+
+    public QuestionDto getSelectedQuestion() {
+        return selectedQuestion;
     }
 }

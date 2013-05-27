@@ -22,7 +22,7 @@ public class QuestionEntity extends BaseEntity implements Serializable {
     @Column(name = "weight")
     private Integer weight;
     @ManyToOne
-    private TestDto test;
+    private TestEntity test;
 
     public Integer getWeight() {
         return weight;
@@ -40,11 +40,11 @@ public class QuestionEntity extends BaseEntity implements Serializable {
         this.question = question;
     }
 
-    public TestDto getTest() {
+    public TestEntity getTest() {
         return test;
     }
 
-    public void setTest(TestDto test) {
+    public void setTest(TestEntity test) {
         this.test = test;
     }
 

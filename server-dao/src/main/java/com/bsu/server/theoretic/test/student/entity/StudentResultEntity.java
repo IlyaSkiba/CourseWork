@@ -1,7 +1,7 @@
 package com.bsu.server.theoretic.test.student.entity;
 
 import com.bsu.server.dto.security.UserAccount;
-import com.bsu.server.theoretic.test.dto.TestDto;
+import com.bsu.server.theoretic.test.dto.TestEntity;
 
 import javax.persistence.*;
 
@@ -20,7 +20,7 @@ public class StudentResultEntity {
     private Integer result;
 
     @ManyToOne
-    private TestDto testDto;
+    private TestEntity testEntity;
 
     @ManyToOne
     private UserAccount student;
@@ -37,12 +37,12 @@ public class StudentResultEntity {
         this.result = result;
     }
 
-    public TestDto getTestDto() {
-        return testDto;
+    public TestEntity getTestEntity() {
+        return testEntity;
     }
 
-    public void setTestDto(TestDto testDto) {
-        this.testDto = testDto;
+    public void setTestEntity(TestEntity testEntity) {
+        this.testEntity = testEntity;
     }
 
     public UserAccount getStudent() {

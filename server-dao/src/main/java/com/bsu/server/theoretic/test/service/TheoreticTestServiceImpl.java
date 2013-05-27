@@ -8,7 +8,7 @@ import com.bsu.server.theoretic.test.controller.QuestionController;
 import com.bsu.server.theoretic.test.controller.TestController;
 import com.bsu.server.theoretic.test.dto.AnswerEntity;
 import com.bsu.server.theoretic.test.dto.QuestionEntity;
-import com.bsu.server.theoretic.test.dto.TestDto;
+import com.bsu.server.theoretic.test.dto.TestEntity;
 import com.bsu.server.theoretic.test.student.controller.StudentAnswerController;
 import com.bsu.server.theoretic.test.student.controller.StudentResultController;
 import com.bsu.server.theoretic.test.student.entity.StudentAnswerEntity;
@@ -58,9 +58,9 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
             return Collections.emptyList();
         }
 
-        TestDto testDto = testController.getTest(testId);
-        testDto.getPointsCount();
-        return getQuestionIdList(questions, testDto.getPointsCount(), testDto.getQuestionCount());
+        TestEntity testEntity = testController.getById(testId);
+        testEntity.getPointsCount();
+        return getQuestionIdList(questions, testEntity.getPointsCount(), testEntity.getQuestionCount());
     }
 
 
@@ -134,12 +134,12 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
     public void saveResults(List<StudentAnswerDto> answerDtos, List<Integer> questionIds) {
         //TODO: refactor id
        /* studentAnswerController.cleanupTestResults(answerDtos.get(0).getStudent().getId(),
-                answerDtos.get(0).getQuestion().getTest().getId());
+                answerDtos.get(0).getQuestion().getById().getId());
         studentAnswerController.saveResults(answerDtos, answerDtos.get(0).getStudent().getId());
         /** Assemble test results
         StudentResultEntity testResult = new StudentResultEntity();
         testResult.setStudent(answerDtos.get(0).getStudent());
-        testResult.setTestDto(answerDtos.get(0).getQuestion().getTest());
+        testResult.setTestDto(answerDtos.get(0).getQuestion().getById());
         testResult.setResult(countResult(questionIds, answerDtos.get(0).getStudent().getId()));
         studentResultController.saveResult(testResult);                                        */
     }
