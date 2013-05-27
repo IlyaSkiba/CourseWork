@@ -34,6 +34,7 @@
                         <div class="elementBlock">
                             <tags:textfield label="Выберите значимость:" labelFor="significance">
                                 <p:selectOneMenu id="significance" value="#{theoretic.significance}">
+                                    <f:selectItem itemLabel="" itemValue=""/>
                                     <f:selectItem itemLabel="Низкая" itemValue="1"/>
                                     <f:selectItem itemLabel="Средняя" itemValue="2"/>
                                     <f:selectItem itemLabel="Высокая" itemValue="3"/>
@@ -41,7 +42,11 @@
                                 </p:selectOneMenu>
                             </tags:textfield>
                             <tags:textfield label="Выберите тему:" labelFor="topics">
-                                <p:selectOneMenu id="topics" widgetVar="topics" value="#{theoretic.selectedTopic}">
+                                <p:selectOneMenu id="topics"
+                                                 rendered="#{theoretic.selectedCourse!=null and theoretic.selectedCourse!=''
+                                                 and theoretic.significance!=null and theoretic.significance!=0}"
+                                                 widgetVar="topics"
+                                                 value="#{theoretic.selectedTopic}">
                                     <f:selectItem itemLabel="" itemValue=""/>
                                     <f:selectItems value="#{theoretic.topics}" var="topic"
                                                    itemLabel="#{topic.name}"

@@ -16,17 +16,19 @@
         <f:event type="preRenderView" listener="#{topicsChange.init}"/>
         <ui:decorate template="../structure.xhtml">
             <ui:define name="content">
-                <h:form>
+                <h:form id="themeForm">
                     <div class="elementBlock">
-                        <tags:textfield label="Выберите курс:" labelFor="courses">
-                            <p:selectOneMenu id="courses" value="#{topicsChange.selectedCourse}">
-                                <f:selectItem itemLabel="" itemValue=""/>
-                                <f:selectItems value="#{topicsChange.courses}" var="course"
-                                               itemLabel="#{course.courseName}"
-                                               itemValue="#{course.id}"/>
-                                <p:ajax update="@form"/>
-                            </p:selectOneMenu>
-                        </tags:textfield>
+                        <p:outputPanel id="coursePanel">
+                            <tags:textfield label="Выберите курс:" labelFor="courses">
+                                <p:selectOneMenu id="courses" value="#{topicsChange.selectedCourse}">
+                                    <f:selectItem itemLabel="" itemValue=""/>
+                                    <f:selectItems value="#{topicsChange.courses}" var="course"
+                                                   itemLabel="#{course.courseName}"
+                                                   itemValue="#{course.id}"/>
+                                    <p:ajax update="@form"/>
+                                </p:selectOneMenu>
+                            </tags:textfield>
+                        </p:outputPanel>
                     </div>
 
                     <p:outputPanel id="topicsPanel"
@@ -40,7 +42,7 @@
                                     <f:selectItems value="#{topicsChange.topics}" var="topic"
                                                    itemLabel="#{topic.name}"
                                                    itemValue="#{topic.id}"/>
-                                    <p:ajax update="@form" process="@this, courses"/>
+                                    <p:ajax update="@form" process="@this, :themeForm:coursePanel"/>
                                 </p:selectOneMenu>
                             </tags:textfield>
                         </div>

@@ -9,7 +9,7 @@
       xmlns:p="http://primefaces.org/ui">
 <f:view contentType="text/html">
     <h:head>
-        <title>Предложить тестовое задание</title>
+        <title>Управление тестовым заданием</title>
     </h:head>
     <h:body>
         <f:event type="preRenderView" listener="#{theoreticTeacher.init}"/>
@@ -122,7 +122,7 @@
                             </div>
 
                             <div class="field">
-                                <p:outputLabel for="isRight" value="Верный или неверный ответ:"/>
+                                <p:outputLabel for="isRight" value="Верный ответ:"/>
                                 <p:selectBooleanCheckbox id="isRight" value="#{theoreticTeacher.tmpAnswer.right}"/>
                             </div>
 

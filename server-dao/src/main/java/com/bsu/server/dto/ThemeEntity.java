@@ -1,6 +1,7 @@
 package com.bsu.server.dto;
 
 import com.bsu.server.dto.security.UserAccount;
+import com.bsu.server.theoretic.test.dto.TestDto;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -29,6 +30,8 @@ public class ThemeEntity extends BaseEntity implements Serializable {
     @ManyToMany
     @JoinTable
     private List<ThemeEntity> parentThemes;
+    @OneToOne(mappedBy = "relatedTheme", cascade = CascadeType.ALL, orphanRemoval = true, optional = true)
+    private TestDto relatedTest;
 
     @Column(name = "significance")
     private Significance significance = Significance.LOW;
@@ -81,6 +84,14 @@ public class ThemeEntity extends BaseEntity implements Serializable {
         this.significance = significance;
     }
 
+    public TestDto getRelatedTest() {
+        return relatedTest;
+    }
+
+    public void setRelatedTest(TestDto relatedTest) {
+        this.relatedTest = relatedTest;
+    }
+
     public static enum Significance {
         LOW(1), AVERAGE(2), HIGH(3);
         private int nonConverted;
@@ -129,5 +140,7 @@ public class ThemeEntity extends BaseEntity implements Serializable {
         public int getNonConverted() {
             return nonConverted;
         }
+
+
     }
 }
