@@ -19,6 +19,8 @@ public class ThemeEntity extends BaseEntity implements Serializable {
     private UserAccount creator;
     @Column(name = "theme_name")
     private String name;
+    @Column
+    private String informationURL;
     @ManyToOne(targetEntity = CourseEntity.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "parent_course", referencedColumnName = "id")
     private CourseEntity courseEntity;
@@ -90,6 +92,14 @@ public class ThemeEntity extends BaseEntity implements Serializable {
 
     public void setRelatedTest(TestDto relatedTest) {
         this.relatedTest = relatedTest;
+    }
+
+    public String getInformationURL() {
+        return informationURL;
+    }
+
+    public void setInformationURL(String informationURL) {
+        this.informationURL = informationURL;
     }
 
     public static enum Significance {

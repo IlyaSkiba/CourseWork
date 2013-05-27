@@ -35,6 +35,7 @@ public class TheoreticTestingModel {
     private List<StudentAnswer> allStudentAnswer;
     private List<Integer> idQuestionList;
     private Integer testId;
+    private ThemeDto currentTopic;
     @Autowired
     private CourseService courseService;
     @Autowired
@@ -59,6 +60,7 @@ public class TheoreticTestingModel {
         testId = null;
         allStudentAnswer = null;
         idQuestionList = null;
+        currentTopic = null;
     }
 
     public String initialize() {
@@ -110,6 +112,7 @@ public class TheoreticTestingModel {
     public void setSelectedTopic(Integer selectedTopic) {
         this.selectedTopic = selectedTopic;
         testId = testService.getTestId(selectedTopic, userModel.getUser().getId());
+        currentTopic = themeService.getById(selectedTopic);
     }
 
     public void gotoTest() throws IOException {
@@ -144,5 +147,13 @@ public class TheoreticTestingModel {
 
     public void setSignificance(Integer significance) {
         this.significance = significance;
+    }
+
+    public ThemeDto getCurrentTopic() {
+        return currentTopic;
+    }
+
+    public void setCurrentTopic(ThemeDto currentTopic) {
+        this.currentTopic = currentTopic;
     }
 }
