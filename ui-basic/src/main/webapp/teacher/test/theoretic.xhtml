@@ -48,7 +48,7 @@
                     </div>
 
                     <h:panelGrid columns="3" style="margin-top:10px">
-                        <p:commandButton id="submitButton" value="Submit" update="@form"
+                        <p:commandButton id="submitButton" value="Submit" ajax="false"
                                          action="#{theoreticTeacher.saveQuestion}"
                                          icon="ui-icon-disk"/>
                         <p:commandButton id="clearButton" type="button" value="Clear" onclick="editorVar.clear()"

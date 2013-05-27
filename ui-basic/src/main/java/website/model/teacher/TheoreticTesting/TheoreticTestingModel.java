@@ -18,6 +18,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -49,6 +50,7 @@ public class TheoreticTestingModel {
     @Autowired
     private TestService testService;
     private QuestionDto selectedQuestion;
+    private TestDto selectedTest;
 
     public void initTmpAnswer() {
         tmpAnswer = new AnswerDto();
@@ -88,6 +90,11 @@ public class TheoreticTestingModel {
         newQuestion.setTestId(dto.getId());
         questionService.createOrUpdate(newQuestion);
         return "/teacher/test/theoretic.xhtml";
+    }
+
+    public String save() {
+        testService.createOrUpdate(selectedTest);
+        return "/teacher/test/test_list.xhtml";
     }
 
     public void saveAnswer() {
@@ -158,7 +165,8 @@ public class TheoreticTestingModel {
 
     public void setSelectedCourse(Integer selectedCourse) {
         this.selectedCourse = selectedCourse;
-        selectedTopic = null;
+        setSelectedTopic(null);
+        topics = Collections.emptyList();
     }
 
     public Integer getSelectedCourse() {
@@ -171,6 +179,14 @@ public class TheoreticTestingModel {
 
     public void setSelectedTopic(Integer selectedTopic) {
         this.selectedTopic = selectedTopic;
+        if (selectedTopic != null) {
+            setSelectedTest(testService.getByThemeId(selectedTopic));
+            if (selectedTest == null) {
+                setSelectedTest(new TestDto());
+                selectedTest.setThemeId(selectedTopic);
+            }
+            questions = questionService.getForTopic(selectedTopic);
+        }
     }
 
     public void handleFileUpload(FileUploadEvent event) {
@@ -196,5 +212,13 @@ public class TheoreticTestingModel {
 
     public QuestionDto getSelectedQuestion() {
         return selectedQuestion;
+    }
+
+    public void setSelectedTest(TestDto selectedTest) {
+        this.selectedTest = selectedTest;
+    }
+
+    public TestDto getSelectedTest() {
+        return selectedTest;
     }
 }
