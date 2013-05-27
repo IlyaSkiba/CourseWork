@@ -6,7 +6,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui" xmlns:tags="http://auto.test.bsu.by/composite">
 <f:view contentType="text/html">
     <h:head>
         <title>Добавить тестовое задание</title>
@@ -18,6 +18,10 @@
 
                     <p:editor id="editor" widgetVar="editorVar" value="#{theoreticTeacher.newQuestion.question}"
                               width="600"/>
+                    <tags:textfield label="Вес вопроса:" labelFor="weight">
+                        <p:spinner id="weight" required="true" min="1" max="1000000"
+                                   value="#{theoreticTeacher.newQuestion.weight}"/>
+                    </tags:textfield>
 
                     <div>
                         <h:outputText value="Варианты ответа:"/>

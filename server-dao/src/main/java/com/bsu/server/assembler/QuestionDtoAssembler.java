@@ -24,6 +24,7 @@ public class QuestionDtoAssembler extends BaseConverter<QuestionDto, QuestionEnt
         questionDto.setQuestion(entity.getQuestion());
         questionDto.setOpenType(entity.getQuestionType());
         questionDto.setTestId(entity.getTest().getId());
+        questionDto.setWeight(entity.getWeight());
         //todo: setAnswerList
         return questionDto;
     }
@@ -35,6 +36,7 @@ public class QuestionDtoAssembler extends BaseConverter<QuestionDto, QuestionEnt
         questionEntity.setQuestion(entity.getQuestion());
         questionEntity.setQuestionType(entity.getOpenType());
         questionEntity.setTest(testController.getById(entity.getTestId()));
+        questionEntity.setWeight(entity.getWeight());
         //todo setAnswerList
         return questionEntity;
     }

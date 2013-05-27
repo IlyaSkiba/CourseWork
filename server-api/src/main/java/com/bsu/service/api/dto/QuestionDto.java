@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class QuestionDto extends BaseDto {
     private String question;
+    private Integer weight;
     private Integer openType;
     private List<AnswerDto> answerDtos;
     private Integer testId;
@@ -47,5 +48,13 @@ public class QuestionDto extends BaseDto {
 
     public void setTestId(Integer testId) {
         this.testId = testId;
+    }
+
+    public Integer getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Integer weight) {
+        this.weight = weight;
     }
 }
