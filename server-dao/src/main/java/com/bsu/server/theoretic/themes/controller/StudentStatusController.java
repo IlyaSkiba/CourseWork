@@ -84,10 +84,14 @@ public class StudentStatusController extends BaseController<StudentStatusEntity>
 
     private void updateParents(Integer themeId, Integer userId, boolean successMarker) {
         ThemeEntity root = themeController.getById(themeId);
+        StudentStatusEntity entity = getByThemeId(themeId, userId);
+        if (entity != null && entity.getStatus() == Status.FINISHED) {
+            return;
+        }
         List<ThemeEntity> childrenThemes = themeController.getChildrenThemes(root);
         boolean needUpdate = false;
         for (ThemeEntity childrenTheme : childrenThemes) {
-            StudentStatusEntity entity = getByThemeId(childrenTheme.getId(), userId);
+            entity = getByThemeId(childrenTheme.getId(), userId);
             boolean isSuccessful = entity == null || (entity.getStatus() != Status.IN_PROGRESS);
             needUpdate = needUpdate || (!(isSuccessful ^ successMarker));
             if (needUpdate) {

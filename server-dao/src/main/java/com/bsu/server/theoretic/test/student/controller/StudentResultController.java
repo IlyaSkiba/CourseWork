@@ -40,4 +40,16 @@ public class StudentResultController {
                 .student.id.eq(userId).and(QStudentResultEntity.studentResultEntity.testEntity.id.eq(testId)))
                 .singleResult(QStudentResultEntity.studentResultEntity);
     }
+
+    @Transactional(readOnly = false)
+    public void delete(Integer userId, Integer testId) {
+        JPQLQuery query = new JPAQuery(em);
+        for (StudentResultEntity entity : query.from(QStudentResultEntity.studentResultEntity)
+                .where(QStudentResultEntity.studentResultEntity.student.id.eq(userId)
+                        .and(QStudentResultEntity.studentResultEntity.testEntity.id.eq(testId)))
+                .list(QStudentResultEntity.studentResultEntity)) {
+            em.remove(entity);
+
+        }
+    }
 }

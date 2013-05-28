@@ -28,10 +28,10 @@ public class QuestionModel {
     private String answer;
     private List<String> selectedCheck;
     private List<String> allCheck;
-    private int questionNumber = 0;
+
 
     public int getQuestionNumber() {
-        return questionNumber;
+        return model.getQuestionNumber();
     }
 
     public void initializeQuestion(Integer questionId) {
@@ -74,7 +74,7 @@ public class QuestionModel {
 
     public String getQuestion() {
         if (question == null || question.isEmpty()) {
-            initializeQuestion(questionNumber);
+            initializeQuestion(getQuestionNumber());
         }
         return question;
     }
@@ -93,7 +93,7 @@ public class QuestionModel {
 
     private StudentAnswer saveAnswer() {
         StudentAnswer ans = new StudentAnswer();
-        ans.setQuestionId(model.getIdQuestionList().get(questionNumber));
+        ans.setQuestionId(model.getIdQuestionList().get(getQuestionNumber()));
         if (answerType) {
             ans.setAnsvStr(answer);
         } else {
@@ -103,33 +103,33 @@ public class QuestionModel {
     }
 
     public void gotoPrev() throws IOException {
-        if (model.getAllStudentAnswer().size() > questionNumber) {
-            model.getAllStudentAnswer().set(questionNumber, saveAnswer());
+        if (model.getAllStudentAnswer().size() > getQuestionNumber()) {
+            model.getAllStudentAnswer().set(getQuestionNumber(), saveAnswer());
         } else {
             model.getAllStudentAnswer().add(saveAnswer());
         }
-        questionNumber--;
-        initializeQuestion(questionNumber);
+        model.setQuestionNumber(getQuestionNumber() - 1);
+        initializeQuestion(getQuestionNumber());
         if (isAnswerType()) {
-            setAnswer(model.getAllStudentAnswer().get(questionNumber).getAnsvStr());
+            setAnswer(model.getAllStudentAnswer().get(getQuestionNumber()).getAnsvStr());
         } else {
-            setSelectedCheck(model.getAllStudentAnswer().get(questionNumber).getAnsvCheck());
+            setSelectedCheck(model.getAllStudentAnswer().get(getQuestionNumber()).getAnsvCheck());
         }
     }
 
     public void gotoNext() throws IOException {
-        if (model.getAllStudentAnswer().size() > questionNumber) {
-            model.getAllStudentAnswer().set(questionNumber, saveAnswer());
+        if (model.getAllStudentAnswer().size() > getQuestionNumber()) {
+            model.getAllStudentAnswer().set(getQuestionNumber(), saveAnswer());
         } else {
             model.getAllStudentAnswer().add(saveAnswer());
         }
-        questionNumber++;
-        initializeQuestion(questionNumber);
-        if (model.getAllStudentAnswer().size() > questionNumber) {
+        model.setQuestionNumber(getQuestionNumber() + 1);
+        initializeQuestion(getQuestionNumber());
+        if (model.getAllStudentAnswer().size() > getQuestionNumber()) {
             if (isAnswerType()) {
-                setAnswer(model.getAllStudentAnswer().get(questionNumber).getAnsvStr());
+                setAnswer(model.getAllStudentAnswer().get(getQuestionNumber()).getAnsvStr());
             } else {
-                setSelectedCheck(model.getAllStudentAnswer().get(questionNumber).getAnsvCheck());
+                setSelectedCheck(model.getAllStudentAnswer().get(getQuestionNumber()).getAnsvCheck());
             }
         } else {
             setAnswer(null);
@@ -139,12 +139,12 @@ public class QuestionModel {
     }
 
     public boolean isNoLast() {
-        return questionNumber != model.getIdQuestionList().size() - 1;
+        return getQuestionNumber() != model.getIdQuestionList().size() - 1;
     }
 
     public String gotoEnd() {
-        if (model.getAllStudentAnswer().size() > questionNumber) {
-            model.getAllStudentAnswer().set(questionNumber, saveAnswer());
+        if (model.getAllStudentAnswer().size() > getQuestionNumber()) {
+            model.getAllStudentAnswer().set(getQuestionNumber() , saveAnswer());
         } else {
             model.getAllStudentAnswer().add(saveAnswer());
         }

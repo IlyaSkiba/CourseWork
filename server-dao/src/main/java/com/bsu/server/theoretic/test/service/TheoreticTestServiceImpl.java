@@ -167,6 +167,7 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
         UserAccount user = userController.getById(answerDtos.get(0).getUserId());
         TestEntity testEntity = questionController.getById(answerDtos.get(0).getQuestionId()).getTest();
         studentAnswerController.cleanupTestResults(user.getId(), testEntity.getId());
+        studentResultController.delete(user.getId(), testEntity.getId());
         studentAnswerController.saveResults(Lists.transform(answerDtos, new Function<StudentAnswerDto, StudentAnswerEntity>() {
             @Nullable
             @Override

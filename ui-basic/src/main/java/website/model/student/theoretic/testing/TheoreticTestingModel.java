@@ -44,6 +44,7 @@ public class TheoreticTestingModel {
     private TheoreticTestService testService;
 
     private int cheaterState;
+    private int questionNumber = 0;
 
     @Autowired
     private UserModel userModel;
@@ -120,6 +121,15 @@ public class TheoreticTestingModel {
                 .getExternalContext().getRequestContextPath() + "/student/theoretic/test.xhtml");
         idQuestionList = testService.getQuestionIds(selectedTopic);
         allStudentAnswer = new ArrayList<>(idQuestionList.size());
+        questionNumber = 0;
+    }
+
+    public int getQuestionNumber() {
+        return questionNumber;
+    }
+
+    public void setQuestionNumber(int questionNumber) {
+        this.questionNumber = questionNumber;
     }
 
     public void redirectToStatistic() throws IOException {
