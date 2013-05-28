@@ -15,6 +15,8 @@ import com.bsu.server.theoretic.test.student.controller.StudentAnswerController;
 import com.bsu.server.theoretic.test.student.controller.StudentResultController;
 import com.bsu.server.theoretic.test.student.entity.StudentAnswerEntity;
 import com.bsu.server.theoretic.test.student.entity.StudentResultEntity;
+import com.bsu.server.theoretic.themes.controller.StudentStatusController;
+import com.bsu.server.theoretic.themes.entity.StudentStatusEntity;
 import com.bsu.service.api.dto.AnswerDto;
 import com.bsu.service.api.dto.QuestionDto;
 import com.bsu.service.api.dto.StudentAnswerDto;
@@ -36,6 +38,7 @@ import java.util.List;
  * @author Ilya Skiba
  */
 @Service
+@Transactional
 public class TheoreticTestServiceImpl implements TheoreticTestService {
 
     @Autowired
@@ -56,6 +59,8 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
     private AnswerAssembler answerAssembler;
     @Autowired
     private StudentAnswerAssembler studentAnswerAssembler;
+    @Autowired
+    private StudentStatusController studentStatusController;
 
     @Override
     public List<Integer> getQuestionIds(Integer themeId) {
@@ -111,7 +116,11 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
     public int countResult(List<Integer> questionIds, Integer studentId) {
         double result = 0;
         double maxResult = 0;
+        Integer themeId = null;
         for (Integer questionId : questionIds) {
+            if (themeId == null) {
+                themeId = questionController.getById(questionId).getTest().getRelatedTheme().getId();
+            }
             List<AnswerEntity> rightAnswers = questionController.getRightAnswers(questionId);
             double correctives = 0;
             List<StudentAnswerEntity> answerDtos = studentAnswerController.getAnswers(questionId, studentId);
@@ -135,30 +144,43 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
                         break;
                     }
                 }
+
             }
             result += correctives * questionController.getQuestionDto(questionId).getWeight();
             maxResult += questionController.getQuestionDto(questionId).getWeight();
         }
-        return (int) (result / maxResult * 100);
+
+        return (int) (result / maxResult * 100 * (themeId != null ? getCoefficient(studentId, themeId) : 1));
+    }
+
+    private double getCoefficient(Integer studentId, Integer themeId) {
+        StudentStatusEntity status = studentStatusController.getByThemeId(themeId, studentId);
+        if (status == null) {
+            return 1.0;
+        } else {
+            return Math.max(0.4, Math.pow(0.8, status.getCountOfTries() - 1));
+        }
     }
 
     @Override
     public void saveResults(List<StudentAnswerDto> answerDtos, List<Integer> questionIds) {
         UserAccount user = userController.getById(answerDtos.get(0).getUserId());
-        studentAnswerController.cleanupTestResults(user.getId(),
-                answerDtos.get(0).getQuestionId());
+        TestEntity testEntity = questionController.getById(answerDtos.get(0).getQuestionId()).getTest();
+        studentAnswerController.cleanupTestResults(user.getId(), testEntity.getId());
         studentAnswerController.saveResults(Lists.transform(answerDtos, new Function<StudentAnswerDto, StudentAnswerEntity>() {
             @Nullable
             @Override
             public StudentAnswerEntity apply(StudentAnswerDto input) {
                 return studentAnswerAssembler.disassemble(input);
             }
-        }), answerDtos.get(0).getUserId());
+        }), user.getId());
         /** Assemble test results      **/
         StudentResultEntity testResult = new StudentResultEntity();
         testResult.setStudent(user);
-        testResult.setTestEntity(questionController.getById(answerDtos.get(0).getQuestionId()).getTest());
+
+        testResult.setTestEntity(testEntity);
         testResult.setResult(countResult(questionIds, user.getId()));
+        studentStatusController.increaseTryCount(testEntity.getRelatedTheme().getId(), user.getId(), testResult.getResult());
         studentResultController.saveResult(testResult);
     }
 
@@ -176,11 +198,9 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
     public Integer getTestId(Integer themeId, Integer userId) {
         StudentResultEntity resultDto = studentResultController.
                 getStudentResult(userId, testController.getTestFromTheme(themeId).getId());
-        if (resultDto != null) {
+        if (resultDto != null && resultDto.getResult() >= 40) {
             return null;
         }
-
-
         return testController.getTestFromTheme(themeId).getId();
     }
 

@@ -42,9 +42,16 @@ public class ThemeController extends BaseController<ThemeEntity> {
         return ThemeEntity.class;
     }
 
-    public List<ThemeEntity> getAllThemesInCourse(Integer courseId){
+    public List<ThemeEntity> getAllThemesInCourse(Integer courseId) {
         JPQLQuery query = new JPAQuery(em);
         return query.from(QThemeEntity.themeEntity)
                 .where(QThemeEntity.themeEntity.courseEntity.id.eq(courseId)).list(QThemeEntity.themeEntity);
+    }
+
+    public List<ThemeEntity> getChildrenThemes(ThemeEntity parent) {
+        JPQLQuery query = new JPAQuery(em);
+        return query.from(QThemeEntity.themeEntity)
+                .where(QThemeEntity.themeEntity.parentThemes.any().id.eq(parent.getId()))
+                .list(QThemeEntity.themeEntity);
     }
 }

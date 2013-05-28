@@ -62,9 +62,10 @@ public abstract class BaseController<T extends BaseEntity> {
         CriteriaQuery<T> query = builder.createQuery(getEntityClass());
         Root<T> root = query.from(getEntityClass());
         query = query.where(root.get("id").in(id));
-        T result = em.createQuery(query).getSingleResult();
-
-        return result;
+        if (em.createQuery(query).getResultList().size() > 0) {
+            return em.createQuery(query).getSingleResult();
+        }
+        return null;
     }
 
     @Transactional(readOnly = false)
