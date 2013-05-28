@@ -43,14 +43,14 @@ public class ServerConfiguration {
         bean.setPersistenceUnitName("JGeekPU");
         bean.setJpaVendorAdapter(new HibernateJpaVendorAdapter() {
             {
-                setDatabasePlatform("org.hibernate.dialect.PostgreSQLDialect");
+                setDatabasePlatform(environment.getProperty("hibernate.dialect"));
                 setGenerateDdl(true);
-                setShowSql(false);
+                setShowSql(Boolean.parseBoolean(environment.getProperty("hibernate.format_sql")));
             }
         });
         bean.setJpaProperties(new Properties() {
             {
-                setProperty("hibernate.hbm2ddl.auto", "create");
+                setProperty("hibernate.hbm2ddl.auto", environment.getProperty("hibernate.hbm2ddl.auto"));
             }
         });
         bean.setPackagesToScan("com.bsu.server");
@@ -67,7 +67,7 @@ public class ServerConfiguration {
         dataSource.setMaxActive(1000);
         dataSource.setMaxWait(1000);
         dataSource.setDefaultReadOnly(false);
-        dataSource.setDefaultCatalog("public");
+        dataSource.setDefaultCatalog(environment.getProperty("hibernate.default_schema"));
         dataSource.setPoolPreparedStatements(true);
         dataSource.setDefaultAutoCommit(true);
         return dataSource;

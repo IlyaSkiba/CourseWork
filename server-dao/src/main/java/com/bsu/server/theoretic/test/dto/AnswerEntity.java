@@ -1,9 +1,9 @@
 package com.bsu.server.theoretic.test.dto;
 
+import com.bsu.server.dto.BaseEntity;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.io.Serializable;
@@ -13,12 +13,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "question_answer", schema = "public")
-public class AnswerEntity implements Serializable {
-
-    @Id
-    @GeneratedValue
-    @Column(name = "id")
-    private Integer id;
+public class AnswerEntity extends BaseEntity implements Serializable {
 
     @Column(name = "answer")
     private String textAnswer;
@@ -28,14 +23,6 @@ public class AnswerEntity implements Serializable {
 
     @ManyToOne
     private QuestionEntity questionEntity;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(final Integer id) {
-        this.id = id;
-    }
 
     public String getTextAnswer() {
         return textAnswer;
@@ -51,5 +38,13 @@ public class AnswerEntity implements Serializable {
 
     public void setRight(Boolean right) {
         isRight = right;
+    }
+
+    public QuestionEntity getQuestionEntity() {
+        return questionEntity;
+    }
+
+    public void setQuestionEntity(QuestionEntity questionEntity) {
+        this.questionEntity = questionEntity;
     }
 }

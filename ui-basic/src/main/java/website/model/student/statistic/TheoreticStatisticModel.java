@@ -2,22 +2,16 @@ package website.model.student.statistic;
 
 import com.bsu.service.api.dto.StudentResultDto;
 import com.bsu.service.api.theoretic.TheoreticTestService;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartUtilities;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.data.category.CategoryDataset;
-import org.jfree.data.category.DefaultCategoryDataset;
-import org.primefaces.model.DefaultStreamedContent;
-import org.primefaces.model.StreamedContent;
+import com.google.common.collect.Lists;
+import org.primefaces.model.chart.CartesianChartModel;
+import org.primefaces.model.chart.ChartSeries;
 import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.WebApplicationContext;
 import website.model.global.UserModel;
 
 import javax.inject.Inject;
 import javax.inject.Named;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,50 +20,42 @@ import java.util.List;
  * Date: 5.5.12
  * Time: 14.51
  */
-@Scope("session")
+@Scope(WebApplicationContext.SCOPE_REQUEST)
+@Component
 @Named("theorStatModel")
 public class TheoreticStatisticModel {
-    private StreamedContent chart;
-    private List<StatisticTable> result;
+    private List<StatisticTable> result = Lists.newArrayList();
     @Inject
     private TheoreticTestService theoreticTestService;
     @Inject
     private UserModel userModel;
-
-    public void dynamicImageController() {
-        JFreeChart jfreechart = ChartFactory.createLineChart("Статистика по теоретическим тестам", "Тесты", "Баллы", createDataset(), PlotOrientation.VERTICAL, false, true, false);
-        File chartFile = new File("dynamichart");
-        try {
-            ChartUtilities.saveChartAsPNG(chartFile, jfreechart, 600, 300);
-            chart = new DefaultStreamedContent(new FileInputStream(chartFile), "image/png");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public StreamedContent getChart() {
-        dynamicImageController();
-        return chart;
-    }
-
-    private CategoryDataset createDataset() {
-        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-        dataset.setValue(100, Integer.valueOf(1), "Тест1");
-        dataset.setValue(70, Integer.valueOf(1), "Тест2");
-        dataset.setValue(85, Integer.valueOf(1), "Тест3");
-        dataset.setValue(90, Integer.valueOf(1), "Тест4");
-        return dataset;
-    }
+    private CartesianChartModel marksModel = null;
 
     public List<StatisticTable> getResult() {
-        result = new ArrayList<StatisticTable>();
-        List<StudentResultDto> results = theoreticTestService.getStudentResults(userModel.getUser().getId());
-        for (StudentResultDto resultDto : results) {
-            StatisticTable stRes = new StatisticTable();
-            //stRes.setTest(resultDto.getTestDto().getRelatedTheme().getName());
-            //stRes.setResult(resultDto.getResult());
-            result.add(stRes);
+        if (result.size() == 0) {
+            result = new ArrayList<>();
+            List<StudentResultDto> results = theoreticTestService.getStudentResults(userModel.getUser().getId());
+            for (StudentResultDto resultDto : results) {
+                StatisticTable stRes = new StatisticTable();
+                stRes.setTest(resultDto.getTestName());
+                stRes.setResult(resultDto.getResultScore());
+                result.add(stRes);
+            }
         }
         return result;
+    }
+
+    public CartesianChartModel getMarksModel() {
+        if (marksModel == null) {
+            marksModel = new CartesianChartModel();
+            List<StatisticTable> results = getResult();
+            ChartSeries test = new ChartSeries();
+            test.setLabel("Результаты прохождения тестов");
+            for (StatisticTable statisticTable : results) {
+                test.set(statisticTable.getTest(), statisticTable.getResult());
+            }
+            marksModel.addSeries(test);
+        }
+        return marksModel;
     }
 }

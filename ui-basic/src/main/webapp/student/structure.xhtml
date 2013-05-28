@@ -36,9 +36,9 @@
                 <div class="sidebar" id="sideLeft">
 
                     <h:form>
-                        <p:slideMenu type="sliding" style="width:98%; height:100%;">
+                        <p:slideMenu style="width:95%; height:300px;">
                             <p:menuitem value="Главная" url="/student/main.xhtml"/>
-                            <p:menuitem label="Теоретическое тестирование" ajax="false"
+                            <p:menuitem value="Теоретическое тестирование" ajax="false"
                                         action="#{theoretic.initialize}"/>
                             <p:submenu label="Тестирование задачи">
                                 <p:menuitem value="Сдать задачу" ajax="true" url="/student/development.xhtml"/>

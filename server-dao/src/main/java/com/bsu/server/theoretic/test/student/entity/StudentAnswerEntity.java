@@ -1,9 +1,13 @@
 package com.bsu.server.theoretic.test.student.entity;
 
+import com.bsu.server.dto.BaseEntity;
 import com.bsu.server.dto.security.UserAccount;
 import com.bsu.server.theoretic.test.dto.QuestionEntity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
@@ -11,12 +15,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "student_answer", schema = "public")
-public class StudentAnswerEntity implements Serializable {
-
-    @Column(name = "id")
-    @Id
-    @GeneratedValue
-    private Integer id;
+public class StudentAnswerEntity extends BaseEntity implements Serializable {
 
     @Column(name = "answer_text")
     private String answerText;

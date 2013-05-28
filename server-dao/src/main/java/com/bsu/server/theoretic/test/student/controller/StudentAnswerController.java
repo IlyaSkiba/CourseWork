@@ -1,16 +1,20 @@
 package com.bsu.server.theoretic.test.student.controller;
 
 import com.bsu.server.controller.UserController;
+import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.dto.security.UserAccount;
+import com.bsu.server.theoretic.test.controller.QuestionController;
 import com.bsu.server.theoretic.test.dto.QuestionEntity;
+import com.bsu.server.theoretic.test.student.entity.QStudentAnswerEntity;
 import com.bsu.server.theoretic.test.student.entity.StudentAnswerEntity;
+import com.mysema.query.jpa.JPQLQuery;
+import com.mysema.query.jpa.impl.JPAQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,27 +22,29 @@ import java.util.List;
  * @author Ilya Skiba
  */
 @Service
-public class StudentAnswerController {
+@Transactional(readOnly = false)
+public class StudentAnswerController extends BaseController<StudentAnswerEntity> {
 
     @PersistenceContext
     private EntityManager em;
 
     @Autowired
     private UserController userController;
-
-    @Transactional(readOnly = true)
-    public List<StudentAnswerEntity> getAnswers(Integer questionId, Integer studentId) {
-        TypedQuery<StudentAnswerEntity> query = em.createQuery("from StudentAnswerEntity where question.id = :questionId and student.id = :studentId",
-                StudentAnswerEntity.class);
-        query.setParameter("questionId", questionId);
-        query.setParameter("studentId", studentId);
-        return query.getResultList();
-    }
+    @Autowired
+    private QuestionController questionController;
 
     @Transactional(readOnly = false)
+    public List<StudentAnswerEntity> getAnswers(Integer questionId, Integer studentId) {
+        JPQLQuery query = new JPAQuery(em);
+        return query.from(QStudentAnswerEntity.studentAnswerEntity)
+                .where(QStudentAnswerEntity.studentAnswerEntity.question.id.eq(questionId)
+                        .and(QStudentAnswerEntity.studentAnswerEntity.student.id.eq(studentId)))
+                .list(QStudentAnswerEntity.studentAnswerEntity);
+    }
+
     public void saveResults(List<StudentAnswerEntity> answers, Integer studentId) {
         UserAccount user = userController.getById(studentId);
-        List<StudentAnswerEntity> results = new ArrayList<StudentAnswerEntity>(answers);
+        List<StudentAnswerEntity> results = new ArrayList<>(answers);
         for (StudentAnswerEntity currAnswer : results) {
             currAnswer.setStudent(user);
             em.persist(currAnswer);
@@ -46,11 +52,8 @@ public class StudentAnswerController {
         em.flush();
     }
 
-    @Transactional(readOnly = false)
     public void cleanupTestResults(Integer studentId, Integer testId) {
-        TypedQuery<QuestionEntity> query = em.createQuery("from QuestionEntity where test.id=:testId", QuestionEntity.class);
-        query.setParameter("testId", testId);
-        List<QuestionEntity> questions = query.getResultList();
+        List<QuestionEntity> questions = questionController.getQuestionsForTest(testId);
         if (questions == null) {
             return;
         }
@@ -64,5 +67,10 @@ public class StudentAnswerController {
             }
         }
         em.flush();
+    }
+
+    @Override
+    protected Class<StudentAnswerEntity> getEntityClass() {
+        return StudentAnswerEntity.class;
     }
 }

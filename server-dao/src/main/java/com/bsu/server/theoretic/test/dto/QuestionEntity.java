@@ -1,8 +1,13 @@
 package com.bsu.server.theoretic.test.dto;
 
 import com.bsu.server.dto.BaseEntity;
+import com.google.common.collect.Lists;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.List;
 
@@ -16,7 +21,7 @@ public class QuestionEntity extends BaseEntity implements Serializable {
     @Column(name = "content")
     private String question;
     @Column(name = "question_type")
-    private Integer questionType;
+    private Integer questionType = 0;
     @OneToMany(mappedBy = "questionEntity")
     private List<AnswerEntity> answers;
     @Column(name = "weight")
@@ -57,6 +62,9 @@ public class QuestionEntity extends BaseEntity implements Serializable {
     }
 
     public List<AnswerEntity> getAnswers() {
+        if (answers == null) {
+            answers = Lists.newArrayList();
+        }
         return answers;
     }
 

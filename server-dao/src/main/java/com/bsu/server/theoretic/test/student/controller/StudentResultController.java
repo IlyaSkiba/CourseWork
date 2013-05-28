@@ -1,6 +1,9 @@
 package com.bsu.server.theoretic.test.student.controller;
 
+import com.bsu.server.theoretic.test.student.entity.QStudentResultEntity;
 import com.bsu.server.theoretic.test.student.entity.StudentResultEntity;
+import com.mysema.query.jpa.JPQLQuery;
+import com.mysema.query.jpa.impl.JPAQuery;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,15 +28,16 @@ public class StudentResultController {
 
     @Transactional(readOnly = true)
     public List<StudentResultEntity> getStudentResults(Integer userId) {
-        return em.createQuery("from StudentResultEntity where student.id=:studentId", StudentResultEntity.class)
-                .setParameter("studentId", userId).getResultList();
+        JPQLQuery query = new JPAQuery(em);
+        return query.from(QStudentResultEntity.studentResultEntity).where(QStudentResultEntity.studentResultEntity
+                .student.id.eq(userId)).list(QStudentResultEntity.studentResultEntity);
     }
 
     @Transactional(readOnly = true)
     public StudentResultEntity getStudentResult(Integer userId, Integer testId) {
-        return em.createQuery("from StudentResultEntity where student.id=:studentId and testDto.id=:testId",
-                StudentResultEntity.class)
-                .setParameter("studentId", userId)
-                .setParameter("testId", testId).getResultList().get(0);
+        JPQLQuery query = new JPAQuery(em);
+        return query.from(QStudentResultEntity.studentResultEntity).where(QStudentResultEntity.studentResultEntity
+                .student.id.eq(userId).and(QStudentResultEntity.studentResultEntity.testEntity.id.eq(testId)))
+                .singleResult(QStudentResultEntity.studentResultEntity);
     }
 }

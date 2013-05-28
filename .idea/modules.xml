@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/practic-check/practic-check.iml" filepath="$PROJECT_DIR$/practic-check/practic-check.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practic-check/practic-check.iml" filepath="$PROJECT_DIR$/practic-check/practic-check.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-api/server-api.iml" filepath="$PROJECT_DIR$/server-api/server-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-dao/server-dao.iml" filepath="$PROJECT_DIR$/server-dao/server-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/ui-basic/ui-basic.iml" filepath="$PROJECT_DIR$/ui-basic/ui-basic.iml" />

@@ -5,8 +5,7 @@ import com.bsu.server.theoretic.test.controller.QuestionController;
 import com.bsu.server.theoretic.test.student.entity.StudentAnswerEntity;
 import com.bsu.service.api.dto.StudentAnswerDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,7 +14,7 @@ import org.springframework.context.annotation.Scope;
  * Time: 11:49
  * To change this template use File | Settings | File Templates.
  */
-@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+@Component
 public class StudentAnswerAssembler {
     @Autowired
     private QuestionController questionController;

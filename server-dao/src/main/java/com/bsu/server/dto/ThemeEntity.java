@@ -1,9 +1,17 @@
 package com.bsu.server.dto;
 
 import com.bsu.server.dto.security.UserAccount;
-import com.bsu.server.theoretic.test.dto.TestDto;
+import com.bsu.server.theoretic.test.dto.TestEntity;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.List;
 
@@ -33,7 +41,7 @@ public class ThemeEntity extends BaseEntity implements Serializable {
     @JoinTable
     private List<ThemeEntity> parentThemes;
     @OneToOne(mappedBy = "relatedTheme", cascade = CascadeType.ALL, orphanRemoval = true, optional = true)
-    private TestDto relatedTest;
+    private TestEntity relatedTest;
 
     @Column(name = "significance")
     private Significance significance = Significance.LOW;
@@ -86,11 +94,11 @@ public class ThemeEntity extends BaseEntity implements Serializable {
         this.significance = significance;
     }
 
-    public TestDto getRelatedTest() {
+    public TestEntity getRelatedTest() {
         return relatedTest;
     }
 
-    public void setRelatedTest(TestDto relatedTest) {
+    public void setRelatedTest(TestEntity relatedTest) {
         this.relatedTest = relatedTest;
     }
 

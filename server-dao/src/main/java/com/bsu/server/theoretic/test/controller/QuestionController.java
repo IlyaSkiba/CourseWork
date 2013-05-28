@@ -2,13 +2,16 @@ package com.bsu.server.theoretic.test.controller;
 
 import com.bsu.server.controller.common.BaseController;
 import com.bsu.server.theoretic.test.dto.AnswerEntity;
+import com.bsu.server.theoretic.test.dto.QAnswerEntity;
+import com.bsu.server.theoretic.test.dto.QQuestionEntity;
 import com.bsu.server.theoretic.test.dto.QuestionEntity;
+import com.mysema.query.jpa.JPQLQuery;
+import com.mysema.query.jpa.impl.JPAQuery;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 import java.util.List;
 
 /**
@@ -21,41 +24,32 @@ public class QuestionController extends BaseController<QuestionEntity> {
     private EntityManager em;
 
     @Transactional(readOnly = false)
-    public List<Integer> getQuestionIds(Integer testId) {
-        TypedQuery<Integer> query = em.createQuery("select id from QuestionEntity where test.id = :themeId", Integer.class);
-        query.setParameter("themeId", testId);
-        return query.getResultList();
-    }
-
-    @Transactional(readOnly = false)
     public List<QuestionEntity> getQuestionsForTest(Integer testId) {
-        TypedQuery<QuestionEntity> query = em.createQuery("from QuestionEntity where test.id = :themeId", QuestionEntity.class);
-        query.setParameter("themeId", testId);
-        return query.getResultList();
+        JPQLQuery query = new JPAQuery(em);
+        query = query.from(QQuestionEntity.questionEntity).where(QQuestionEntity.questionEntity.test.id.eq(testId));
+        return query.list(QQuestionEntity.questionEntity);
     }
 
     @Transactional(readOnly = false)
     public QuestionEntity getQuestionDto(Integer questionId) {
-        TypedQuery<QuestionEntity> query = em.createQuery("from QuestionEntity where id = :questionId", QuestionEntity.class);
-        query.setParameter("questionId", questionId);
-        return query.getSingleResult();
+        JPQLQuery query = new JPAQuery(em);
+        query = query.from(QQuestionEntity.questionEntity).where(QQuestionEntity.questionEntity.id.eq(questionId));
+        return query.singleResult(QQuestionEntity.questionEntity);
     }
 
     @Transactional(readOnly = false)
     public List<AnswerEntity> getRightAnswers(Integer questionId) {
-        TypedQuery<AnswerEntity> query = em.createQuery("from AnswerEntity where questionDto.id = :questionId and isRight=:true",
-                AnswerEntity.class);
-        query.setParameter("questionId", questionId);
-        query.setParameter("true", true);
-        return query.getResultList();
+        JPQLQuery query = new JPAQuery(em);
+        query = query.from(QAnswerEntity.answerEntity).where(QAnswerEntity.answerEntity.questionEntity.id.eq(questionId)
+                .and(QAnswerEntity.answerEntity.isRight.eq(true)));
+        return query.list(QAnswerEntity.answerEntity);
     }
 
     @Transactional(readOnly = false)
     public List<AnswerEntity> getAnswers(Integer questionId) {
-        TypedQuery<AnswerEntity> query = em.createQuery("from AnswerEntity where questionDto.id = :questionId",
-                AnswerEntity.class);
-        query.setParameter("questionId", questionId);
-        return query.getResultList();
+        JPQLQuery query = new JPAQuery(em);
+        query = query.from(QAnswerEntity.answerEntity).where(QAnswerEntity.answerEntity.questionEntity.id.eq(questionId));
+        return query.list(QAnswerEntity.answerEntity);
     }
 
     @Override

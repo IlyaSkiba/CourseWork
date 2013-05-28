@@ -116,13 +116,15 @@ public class TheoreticTestingModel {
     }
 
     public void gotoTest() throws IOException {
-        FacesContext.getCurrentInstance().getExternalContext().redirect("theoretic/test.xhtml");
+        FacesContext.getCurrentInstance().getExternalContext().redirect(FacesContext.getCurrentInstance()
+                .getExternalContext().getRequestContextPath() + "/student/theoretic/test.xhtml");
         idQuestionList = testService.getQuestionIds(selectedTopic);
         allStudentAnswer = new ArrayList<>(idQuestionList.size());
     }
 
     public void redirectToStatistic() throws IOException {
-        FacesContext.getCurrentInstance().getExternalContext().redirect("./statistic/teoretic_stat.xhtml");
+        FacesContext.getCurrentInstance().getExternalContext().redirect(FacesContext.getCurrentInstance()
+                .getExternalContext().getRequestContextPath() + "/student/statistic/teoretic_stat.xhtml");
     }
 
     public List<Integer> getIdQuestionList() {

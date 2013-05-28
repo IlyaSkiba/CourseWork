@@ -1,6 +1,7 @@
 package com.bsu.service.api.theoretic;
 
 import com.bsu.service.api.base.SearchableService;
+import com.bsu.service.api.dto.AnswerDto;
 import com.bsu.service.api.dto.QuestionDto;
 
 import java.util.List;
@@ -12,4 +13,8 @@ import java.util.List;
  */
 public interface QuestionService extends SearchableService<QuestionDto> {
     List<QuestionDto> getForTopic(Integer selectedTopic);
+
+    void saveAnswers(QuestionDto question, List<AnswerDto> answerList);
+
+    List<AnswerDto> getAnswers(QuestionDto question);
 }

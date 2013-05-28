@@ -9,6 +9,7 @@ import com.bsu.service.api.global.admin.CourseService;
 import com.bsu.service.api.theoretic.QuestionService;
 import com.bsu.service.api.theoretic.TestService;
 import com.bsu.service.api.theoretic.ThemeService;
+import com.google.common.collect.Lists;
 import org.primefaces.event.FileUploadEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -88,8 +89,9 @@ public class TheoreticTestingModel {
 
         newQuestion.setAnswerDtos(answerList);
         newQuestion.setTestId(dto.getId());
-        questionService.createOrUpdate(newQuestion);
-        return "/teacher/test/theoretic.xhtml";
+        newQuestion = questionService.createOrUpdate(newQuestion);
+        questionService.saveAnswers(newQuestion, answerList);
+        return "/teacher/test/test_list.xhtml";
     }
 
     public String save() {
@@ -202,7 +204,11 @@ public class TheoreticTestingModel {
     public String toQuestion() {
         if (newQuestion == null) {
             newQuestion = new QuestionDto();
+            answerList = Lists.newArrayList();
+        } else {
+            answerList = Lists.newArrayList(questionService.getAnswers(newQuestion));
         }
+
         return "/teacher/test/theoretic.xhtml";
     }
 

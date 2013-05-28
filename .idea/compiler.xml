@@ -24,6 +24,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="practic-check" />
         <module name="server-api" />
         <module name="server-dao" />
         <module name="ui-basic" />

@@ -19,9 +19,9 @@ StudentTheoretic = function () {
             };
             // Is this a version of IE?
             if ($.browser.msie) {
-                $(window).bind('blur', blurFunc);
+                $(window).on('blur', blurFunc);
             } else {
-                $(document).bind('blur', blurFunc);
+                $(document).on('blur', blurFunc);
             }
         }
     }

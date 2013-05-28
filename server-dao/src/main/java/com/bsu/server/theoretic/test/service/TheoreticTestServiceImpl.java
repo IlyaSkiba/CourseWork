@@ -1,6 +1,7 @@
 package com.bsu.server.theoretic.test.service;
 
-import com.bsu.server.assembler.QuestionAssembler;
+import com.bsu.server.assembler.AnswerAssembler;
+import com.bsu.server.assembler.QuestionDtoAssembler;
 import com.bsu.server.controller.UserController;
 import com.bsu.server.dto.security.UserAccount;
 import com.bsu.server.theoretic.test.action.QuestionListAction;
@@ -9,6 +10,7 @@ import com.bsu.server.theoretic.test.controller.TestController;
 import com.bsu.server.theoretic.test.dto.AnswerEntity;
 import com.bsu.server.theoretic.test.dto.QuestionEntity;
 import com.bsu.server.theoretic.test.dto.TestEntity;
+import com.bsu.server.theoretic.test.student.assembler.StudentAnswerAssembler;
 import com.bsu.server.theoretic.test.student.controller.StudentAnswerController;
 import com.bsu.server.theoretic.test.student.controller.StudentResultController;
 import com.bsu.server.theoretic.test.student.entity.StudentAnswerEntity;
@@ -18,9 +20,13 @@ import com.bsu.service.api.dto.QuestionDto;
 import com.bsu.service.api.dto.StudentAnswerDto;
 import com.bsu.service.api.dto.StudentResultDto;
 import com.bsu.service.api.theoretic.TheoreticTestService;
+import com.google.common.base.Function;
+import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -44,6 +50,12 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
     private StudentResultController studentResultController;
     @Autowired
     private UserController userController;
+    @Autowired
+    private QuestionDtoAssembler questionDtoAssembler;
+    @Autowired
+    private AnswerAssembler answerAssembler;
+    @Autowired
+    private StudentAnswerAssembler studentAnswerAssembler;
 
     @Override
     public List<Integer> getQuestionIds(Integer themeId) {
@@ -92,7 +104,7 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
 
     @Override
     public QuestionDto getQuestion(Integer questionId) {
-        return QuestionAssembler.assemble(questionController.getQuestionDto(questionId));
+        return questionDtoAssembler.convert(questionController.getById(questionId));
     }
 
     @Override
@@ -132,50 +144,57 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
 
     @Override
     public void saveResults(List<StudentAnswerDto> answerDtos, List<Integer> questionIds) {
-        //TODO: refactor id
-       /* studentAnswerController.cleanupTestResults(answerDtos.get(0).getStudent().getId(),
-                answerDtos.get(0).getQuestion().getById().getId());
-        studentAnswerController.saveResults(answerDtos, answerDtos.get(0).getStudent().getId());
-        /** Assemble test results
+        UserAccount user = userController.getById(answerDtos.get(0).getUserId());
+        studentAnswerController.cleanupTestResults(user.getId(),
+                answerDtos.get(0).getQuestionId());
+        studentAnswerController.saveResults(Lists.transform(answerDtos, new Function<StudentAnswerDto, StudentAnswerEntity>() {
+            @Nullable
+            @Override
+            public StudentAnswerEntity apply(StudentAnswerDto input) {
+                return studentAnswerAssembler.disassemble(input);
+            }
+        }), answerDtos.get(0).getUserId());
+        /** Assemble test results      **/
         StudentResultEntity testResult = new StudentResultEntity();
-        testResult.setStudent(answerDtos.get(0).getStudent());
-        testResult.setTestDto(answerDtos.get(0).getQuestion().getById());
-        testResult.setResult(countResult(questionIds, answerDtos.get(0).getStudent().getId()));
-        studentResultController.saveResult(testResult);                                        */
+        testResult.setStudent(user);
+        testResult.setTestEntity(questionController.getById(answerDtos.get(0).getQuestionId()).getTest());
+        testResult.setResult(countResult(questionIds, user.getId()));
+        studentResultController.saveResult(testResult);
     }
 
     @Override
     public List<AnswerDto> getAnswers(Integer questionId) {
-        ArrayList<AnswerDto> result = new ArrayList<AnswerDto>();
+        ArrayList<AnswerDto> result = new ArrayList<>();
         List<AnswerEntity> dbResult = questionController.getAnswers(questionId);
         for (AnswerEntity entity : dbResult) {
-            AnswerDto answerDto = new AnswerDto();
-            result.add(answerDto);
+            result.add(answerAssembler.convert(entity));
         }
         return result;
     }
 
     @Override
     public Integer getTestId(Integer themeId, Integer userId) {
-        try {
-            StudentResultEntity resultDto = studentResultController.
-                    getStudentResult(userId, testController.getTestFromTheme(themeId).getId());
-            if (resultDto != null) {
-                return null;
-            }
-        } catch (Exception e) {
+        StudentResultEntity resultDto = studentResultController.
+                getStudentResult(userId, testController.getTestFromTheme(themeId).getId());
+        if (resultDto != null) {
+            return null;
         }
+
 
         return testController.getTestFromTheme(themeId).getId();
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<StudentResultDto> getStudentResults(Integer userId) {
         UserAccount user = userController.getById(userId);
-        ArrayList<StudentResultDto> result = new ArrayList<StudentResultDto>();
+        ArrayList<StudentResultDto> result = new ArrayList<>();
         List<StudentResultEntity> dbResult = studentResultController.getStudentResults(user.getId());
         for (StudentResultEntity entity : dbResult) {
             StudentResultDto answerDto = new StudentResultDto();
+            answerDto.setTestName(entity.getTestEntity().getRelatedTheme().getName());
+            answerDto.setResultScore(entity.getResult());
+            answerDto.setUserName(user.getUsername());
             result.add(answerDto);
         }
         return result;
