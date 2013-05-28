@@ -16,7 +16,8 @@
         <ui:decorate template="../structure.xhtml">
             <ui:define name="content">
                 <div class="statGraphic">
-                    <p:graphicImage value="#{theorStatModel.chart}"/>
+                    <p:barChart id="chart" value="#{theorStatModel.marksModel}" legendPosition="ne"
+                                title="Статистика прохождения теста" min="0" max="120" style="height:300px"/>
                 </div>
 
                 <h:form prependId="false">
