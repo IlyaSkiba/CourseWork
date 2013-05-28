@@ -45,7 +45,7 @@ public class ServerConfiguration {
             {
                 setDatabasePlatform("org.hibernate.dialect.PostgreSQLDialect");
                 setGenerateDdl(true);
-                setShowSql(true);
+                setShowSql(false);
             }
         });
         bean.setJpaProperties(new Properties() {

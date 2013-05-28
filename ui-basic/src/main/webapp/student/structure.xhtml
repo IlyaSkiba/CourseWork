@@ -36,14 +36,10 @@
                 <div class="sidebar" id="sideLeft">
 
                     <h:form>
-                        <p:menu type="sliding" style="width:95%; height:300px;">
+                        <p:slideMenu type="sliding" style="width:98%; height:100%;">
                             <p:menuitem value="Главная" url="/student/main.xhtml"/>
-                            <p:submenu label="Теоретическое тестирование">
-                                <p:menuitem value="Пройти тестирование" ajax="false"
-                                            action="#{theoretic.initialize}"/>
-                                <p:menuitem value="Дополнительная информация" url="/student/development.xhtml"
-                                            ajax="false"/>
-                            </p:submenu>
+                            <p:menuitem label="Теоретическое тестирование" ajax="false"
+                                        action="#{theoretic.initialize}"/>
                             <p:submenu label="Тестирование задачи">
                                 <p:menuitem value="Сдать задачу" ajax="true" url="/student/development.xhtml"/>
                             </p:submenu>
@@ -52,7 +48,7 @@
                                             url="/student/statistic/teoretic_stat.xhtml"/>
                                 <p:menuitem value="Статистика по задачам" ajax="true" url="/student/development.xhtml"/>
                             </p:submenu>
-                        </p:menu>
+                        </p:slideMenu>
 
                     </h:form>
                 </div>

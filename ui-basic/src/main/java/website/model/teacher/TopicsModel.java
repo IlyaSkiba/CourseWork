@@ -4,14 +4,15 @@ import com.bsu.service.api.dto.CourseDto;
 import com.bsu.service.api.dto.ThemeDto;
 import com.bsu.service.api.global.admin.CourseService;
 import com.bsu.service.api.theoretic.ThemeService;
-import org.apache.commons.lang.StringUtils;
 import com.google.common.collect.Lists;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import website.model.global.UserModel;
 
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ import java.util.Map;
  */
 @Scope("session")
 @Named("topicsChange")
-public class TopicsModel {
+public class TopicsModel implements Serializable {
     private List<CourseDto> courses = new ArrayList<>();
     private List<ThemeDto> topics = new ArrayList<>();
     private List<ThemeDto> topicParents = new ArrayList<>();
@@ -59,7 +60,7 @@ public class TopicsModel {
         topicParents = null;
         Map<String, String> requestParams = context.getExternalContext().getRequestParameterMap();
         String formType = requestParams.get("formType");
-        if (StringUtils.equals(formType,"create")) {
+        if (StringUtils.equals(formType, "create")) {
             create = true;
             changedTopic = new ThemeDto();
         }

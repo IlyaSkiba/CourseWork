@@ -72,7 +72,7 @@ public class TheoreticTestingModel {
         }
         selectedCourse = null;
         selectedTopic = null;
-        newQuestion = null;
+        newQuestion = new QuestionDto();
         answerList = new ArrayList<>();
     }
 

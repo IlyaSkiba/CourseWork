@@ -118,7 +118,7 @@ input {
 }
 
 #content {
-    padding: 0 0 0 270px;
+    padding: 10px 0 0 270px;
 }
 
 /* Sidebar Left
@@ -189,4 +189,9 @@ input {
 
 .courseContainer {
     width: 500px;
+}
+
+.ui-datatable thead th, .ui-datatable tbody tr.ui-widget-content  td, .ui-datatable tfoot td {
+    word-wrap: normal;
+    white-space: normal;
 }

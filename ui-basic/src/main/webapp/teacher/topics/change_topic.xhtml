@@ -10,22 +10,25 @@
       xmlns:tags="http://auto.test.bsu.by/composite">
 <f:view contentType="text/html">
     <h:head>
-        <title>Изменить тему</title>
+        <title>Управление темами</title>
     </h:head>
     <h:body>
         <f:event type="preRenderView" listener="#{topicsChange.init}"/>
         <ui:decorate template="../structure.xhtml">
             <ui:define name="content">
-                <h:form>
+                <h:form id="themeForm">
                     <div class="elementBlock">
-                        <h:outputLabel for="courses">Выберите курс: </h:outputLabel>
-                        <p:selectOneMenu id="courses" value="#{topicsChange.selectedCourse}">
-                            <f:selectItem itemLabel="" itemValue=""/>
-                            <f:selectItems value="#{topicsChange.courses}" var="course"
-                                           itemLabel="#{course.courseName}"
-                                           itemValue="#{course.id}"/>
-                            <p:ajax update="@form"/>
-                        </p:selectOneMenu>
+                        <p:outputPanel id="coursePanel">
+                            <tags:textfield label="Выберите курс:" labelFor="courses">
+                                <p:selectOneMenu id="courses" value="#{topicsChange.selectedCourse}">
+                                    <f:selectItem itemLabel="" itemValue=""/>
+                                    <f:selectItems value="#{topicsChange.courses}" var="course"
+                                                   itemLabel="#{course.courseName}"
+                                                   itemValue="#{course.id}"/>
+                                    <p:ajax update="@form"/>
+                                </p:selectOneMenu>
+                            </tags:textfield>
+                        </p:outputPanel>
                     </div>
 
                     <p:outputPanel id="topicsPanel"
@@ -33,14 +36,15 @@
                                     topicsChange.selectedCourse!=''}"
                                    autoUpdate="true">
                         <div class="elementBlock">
-                            <h:outputLabel for="topics">Выберите тему: </h:outputLabel>
-                            <p:selectOneMenu id="topics" widgetVar="topics" value="#{topicsChange.selectedTopic}">
-                                <f:selectItem itemLabel="" itemValue=""/>
-                                <f:selectItems value="#{topicsChange.topics}" var="topic"
-                                               itemLabel="#{topic.name}"
-                                               itemValue="#{topic.id}"/>
-                                <p:ajax update="@form" process="@this, courses"/>
-                            </p:selectOneMenu>
+                            <tags:textfield label="Выберите тему:" labelFor="topics">
+                                <p:selectOneMenu id="topics" widgetVar="topics" value="#{topicsChange.selectedTopic}">
+                                    <f:selectItem itemLabel="" itemValue=""/>
+                                    <f:selectItems value="#{topicsChange.topics}" var="topic"
+                                                   itemLabel="#{topic.name}"
+                                                   itemValue="#{topic.id}"/>
+                                    <p:ajax update="@form" process="@this, :themeForm:coursePanel"/>
+                                </p:selectOneMenu>
+                            </tags:textfield>
                         </div>
                     </p:outputPanel>
                     <h:form rendered="#{(!topicsChange.create and topicsChange.selectedTopic!=null and
@@ -59,6 +63,11 @@
                                 <f:selectItem itemLabel="Средняя" itemValue="2"/>
                                 <f:selectItem itemLabel="Высокая" itemValue="3"/>
                             </p:selectOneMenu>
+                        </tags:textfield>
+
+                        <tags:textfield label="Ссылка на дополнительную информацию по теме:" labelFor="themeInfo">
+                            <p:inputText id="themeInfo" required="false"
+                                         value="#{topicsChange.changedTopic.themeURL}"/>
                         </tags:textfield>
 
                         <div>

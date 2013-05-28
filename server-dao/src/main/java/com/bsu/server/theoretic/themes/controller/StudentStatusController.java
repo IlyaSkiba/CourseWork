@@ -35,6 +35,9 @@ public class StudentStatusController extends BaseController<StudentStatusEntity>
         List<ThemeEntity> themeEntities = Lists.newArrayList();
         for (ThemeEntity theme : filterData) {
             boolean isAcceptable = true;
+            if (theme.getRelatedTest() == null) {
+                continue;
+            }
             if (theme.getSignificance().lower(significance)) {
                 continue;
             }

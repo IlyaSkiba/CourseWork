@@ -2,7 +2,8 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:composite="http://java.sun.com/jsf/composite"
-      xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <composite:interface>
     <composite:attribute name="label"/>
@@ -17,7 +18,9 @@
             <p:outputLabel for="#{cc.attrs.labelFor}" value="#{cc.attrs.label}"/>
         </div>
         <div class="value">
-            <composite:insertChildren/>
+            <ui:fragment>
+                <composite:insertChildren/>
+            </ui:fragment>
         </div>
         <div class="cleanup"></div>
     </div>
