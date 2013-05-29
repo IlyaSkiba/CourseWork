@@ -122,6 +122,7 @@ public class TheoreticTestingModel {
         idQuestionList = testService.getQuestionIds(selectedTopic);
         allStudentAnswer = new ArrayList<>(idQuestionList.size());
         questionNumber = 0;
+        cheaterState = 0;
     }
 
     public int getQuestionNumber() {

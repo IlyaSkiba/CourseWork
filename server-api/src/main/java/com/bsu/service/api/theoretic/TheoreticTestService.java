@@ -4,6 +4,7 @@ import com.bsu.service.api.dto.AnswerDto;
 import com.bsu.service.api.dto.QuestionDto;
 import com.bsu.service.api.dto.StudentAnswerDto;
 import com.bsu.service.api.dto.StudentResultDto;
+import com.bsu.service.api.global.admin.dto.UserDto;
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ public interface TheoreticTestService {
 
     public int countResult(List<Integer> questionIds, Integer studentId);
 
-    public void saveResults(List<StudentAnswerDto> answerDtos, List<Integer> questionIds);
+    public void saveResults(List<StudentAnswerDto> answerDtos, List<Integer> questionIds, UserDto user);
 
     public List<AnswerDto> getAnswers(Integer questionId);
 

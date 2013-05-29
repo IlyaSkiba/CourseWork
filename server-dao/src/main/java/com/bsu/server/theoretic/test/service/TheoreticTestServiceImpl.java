@@ -21,6 +21,7 @@ import com.bsu.service.api.dto.AnswerDto;
 import com.bsu.service.api.dto.QuestionDto;
 import com.bsu.service.api.dto.StudentAnswerDto;
 import com.bsu.service.api.dto.StudentResultDto;
+import com.bsu.service.api.global.admin.dto.UserDto;
 import com.bsu.service.api.theoretic.TheoreticTestService;
 import com.google.common.base.Function;
 import com.google.common.collect.Lists;
@@ -163,9 +164,9 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
     }
 
     @Override
-    public void saveResults(List<StudentAnswerDto> answerDtos, List<Integer> questionIds) {
-        UserAccount user = userController.getById(answerDtos.get(0).getUserId());
-        TestEntity testEntity = questionController.getById(answerDtos.get(0).getQuestionId()).getTest();
+    public void saveResults(List<StudentAnswerDto> answerDtos, List<Integer> questionIds, UserDto userDto) {
+        UserAccount user = userController.getById(userDto.getId());
+        TestEntity testEntity = questionController.getById(questionIds.get(0)).getTest();
         studentAnswerController.cleanupTestResults(user.getId(), testEntity.getId());
         studentResultController.delete(user.getId(), testEntity.getId());
         studentAnswerController.saveResults(Lists.transform(answerDtos, new Function<StudentAnswerDto, StudentAnswerEntity>() {

@@ -28,7 +28,7 @@ public class TheoreticTestingResultModel {
     private int mark = 100;
 
     public int getMark() {
-        testService.saveResults(assembleResult(), theoreticTestingModel.getIdQuestionList());
+        testService.saveResults(assembleResult(), theoreticTestingModel.getIdQuestionList(), currentUser.getUser());
         return testService.countResult(theoreticTestingModel.getIdQuestionList(),
                 currentUser.getUser().getId());
 
