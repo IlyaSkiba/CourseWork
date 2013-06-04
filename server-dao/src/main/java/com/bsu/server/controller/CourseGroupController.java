@@ -73,4 +73,11 @@ public class CourseGroupController extends BaseController<CourseGroupEntity> {
         }
         em.flush();
     }
+
+    public List<CourseGroupEntity> getGroupsForCourse(Integer courseDtoId) {
+        JPQLQuery query = new JPAQuery(em);
+        return query.from(QCourseGroupEntity.courseGroupEntity)
+                .where(QCourseGroupEntity.courseGroupEntity.assignedCourse.id.eq(courseDtoId))
+                .list(QCourseGroupEntity.courseGroupEntity);
+    }
 }

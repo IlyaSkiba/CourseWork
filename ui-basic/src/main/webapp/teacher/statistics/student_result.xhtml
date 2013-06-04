@@ -6,91 +6,72 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui" xmlns:tags="http://auto.test.bsu.by/composite">
+      xmlns:p="http://primefaces.org/ui">
 <f:view contentType="text/html">
     <h:head>
-        <title>Добавить тестовое задание</title>
+        <title>Статистика</title>
+        <h:outputStylesheet library="css" name="global.css"/>
+        <f:event type="preRenderView" listener="#{teacherStudentStatistics.init}"/>
     </h:head>
     <h:body>
         <ui:decorate template="../structure.xhtml">
             <ui:define name="content">
                 <h:form id="testForm">
-
-                    <p:editor id="editor" widgetVar="editorVar" value="#{theoreticTeacher.newQuestion.question}"
-                              width="600"/>
-                    <tags:textfield label="Вес вопроса:" labelFor="weight">
-                        <p:spinner id="weight" required="true" min="1" max="1000000"
-                                   value="#{theoreticTeacher.newQuestion.weight}"/>
-                    </tags:textfield>
-
-                    <div>
-                        <h:outputText value="Варианты ответа:"/>
-                        <p:dataTable value="#{theoreticTeacher.answerList}"
-                                     id="answers"
-                                     var="answerGroup"
-                                     lazy="false"
-                                     paginator="false"
-                                     rowKey="#{answerGroup.answer}">
-
-                            <p:column sortBy="#{answerGroup.answer}}" headerText="Answer">
-                                <h:outputText value="#{answerGroup.answer}"/>
-                            </p:column>
-                            <p:column sortBy="#{answerGroup.right}}" headerText="Is right">
-                                <h:outputText value="#{answerGroup.right}"/>
-                            </p:column>
-                            <p:column headerText="Editing" width="50">
-                                <p:commandButton id="editButton" icon="ui-icon ui-icon-pencil"
-                                                 process="@this"
-                                                 update=":editAnswerForm:editAnswerDialog"
-                                                 oncomplete="editAnswer.show()">
-                                    <f:setPropertyActionListener value="#{answerGroup}"
-                                                                 target="#{theoreticTeacher.tmpAnswer}"/>
-                                </p:commandButton>
-                            </p:column>
-
-                        </p:dataTable>
+                    <div class="elementBlock">
+                        <h:outputLabel for="courses">Выберите курс:</h:outputLabel>
+                        <p:selectOneMenu id="courses" value="#{teacherStudentStatistics.selectedCourse}">
+                            <f:selectItem itemLabel="" itemValue=""/>
+                            <f:selectItems value="#{teacherStudentStatistics.courses}" var="course"
+                                           itemLabel="#{course.courseName}"
+                                           itemValue="#{course.id}"/>
+                            <p:ajax update="@form"/>
+                        </p:selectOneMenu>
                     </div>
 
-                    <h:panelGrid columns="3" style="margin-top:10px">
-                        <p:commandButton id="submitButton" value="Submit" ajax="false"
-                                         action="#{theoreticTeacher.saveQuestion}"
-                                         icon="ui-icon-disk"/>
-                        <p:commandButton id="clearButton" type="button" value="Clear" onclick="editorVar.clear()"
-                                         icon="ui-icon-close"/>
-                        <p:commandButton id="addButton" value="Add answer" process="@this"
-                                         update=":editAnswerForm:editAnswerDialog"
-                                         icon="ui-icon ui-icon-pencil" action="#{theoreticTeacher.initTmpAnswer}"
-                                         oncomplete="editAnswer.show()"/>
-                    </h:panelGrid>
-                </h:form>
-                <h:form id="editAnswerForm">
-                    <p:dialog widgetVar="editAnswer" header="Редактирование ответа" id="editAnswerDialog" modal="true"
-                              resizable="false"
-                              width="500"
-                              height="300" dynamic="true">
-                        <div class="answerContainer">
-                            <h:inputHidden value="#{theoreticTeacher.tmpAnswer.id}"/>
-
-                            <div class="field">
-                                <p:outputLabel for="questionText" value="Ответ:"/>
-                                <p:inputText id="questionText" required="true"
-                                             value="#{theoreticTeacher.tmpAnswer.answer}"/>
-                            </div>
-
-                            <div class="field">
-                                <p:outputLabel for="isRight" value="Верный ответ:"/>
-                                <p:selectBooleanCheckbox id="isRight" value="#{theoreticTeacher.tmpAnswer.right}"/>
-                            </div>
-
-                            <div class="form-submit">
-                                <p:commandButton id="save" process="@form" update="@this,:testForm:answers"
-                                                 value="Сохранить"
-                                                 oncomplete="editAnswer.hide();"
-                                                 action="#{theoreticTeacher.saveAnswer}"/>
-                            </div>
+                    <p:outputPanel id="topicsPanel"
+                                   rendered="#{teacherStudentStatistics.selectedCourse!=null and teacherStudentStatistics.selectedCourse!=''}"
+                                   autoUpdate="true">
+                        <div class="elementBlock">
+                            <h:outputLabel for="users">Выберите пользователя:</h:outputLabel>
+                            <p:selectOneMenu id="users" widgetVar="usersVar"
+                                             value="#{teacherStudentStatistics.selectedUser}">
+                                <f:selectItem itemLabel="" itemValue=""/>
+                                <f:selectItems value="#{teacherStudentStatistics.users}" var="user"
+                                               itemLabel="#{user.username}"
+                                               itemValue="#{user.id}"/>
+                                <p:ajax update="@form"/>
+                            </p:selectOneMenu>
                         </div>
-                    </p:dialog>
+                    </p:outputPanel>
+
+
+                    <p:outputPanel rendered="#{teacherStudentStatistics.selectedUser!=null}">
+
+                        <div class="statGraphic">
+                            <p:barChart id="chart" value="#{teacherStudentStatistics.model}" legendPosition="ne"
+                                        title="Статистика прохождения теста" min="0" max="120" style="height:300px"/>
+                        </div>
+
+                        <p:dataTable styleClass="statTable" id="basic" var="teoreticResult"
+                                     value="#{teacherStudentStatistics.tableData}">
+                            <p:column id="modelHeader">
+                                <f:facet name="header">
+                                    Тесты
+                                </f:facet>
+                                <h:outputText value="#{teoreticResult.test}"/>
+                            </p:column>
+
+                            <p:column>
+                                <f:facet name="header">
+                                    Баллы
+                                </f:facet>
+                                <h:outputText value="#{teoreticResult.result}"/>
+                            </p:column>
+                        </p:dataTable>
+
+                    </p:outputPanel>
                 </h:form>
+
             </ui:define>
         </ui:decorate>
     </h:body>
