@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html">
+    <h:head>
+        <title>Статистика</title>
+        <h:outputStylesheet library="css" name="global.css"/>
+        <f:event type="preRenderView" listener="#{teacherThemeStatitic.init}"/>
+    </h:head>
+    <h:body>
+        <ui:decorate template="../structure.xhtml">
+            <ui:define name="content">
+                <h:form id="testForm">
+                    <div class="elementBlock">
+                        <h:outputLabel for="courses">Выберите курс:</h:outputLabel>
+                        <p:selectOneMenu id="courses" value="#{teacherThemeStatitic.selectedCourse}">
+                            <f:selectItem itemLabel="" itemValue=""/>
+                            <f:selectItems value="#{teacherThemeStatitic.courses}" var="course"
+                                           itemLabel="#{course.courseName}"
+                                           itemValue="#{course.id}"/>
+                            <p:ajax update="@form"/>
+                        </p:selectOneMenu>
+                    </div>
+
+                    <p:outputPanel id="topicsPanel"
+                                   rendered="#{teacherThemeStatitic.selectedCourse!=null and teacherThemeStatitic.selectedCourse!=''}"
+                                   autoUpdate="true">
+                        <div class="elementBlock">
+                            <h:outputLabel for="topics">Выберите тему:</h:outputLabel>
+                            <p:selectOneMenu id="topics" widgetVar="topics"
+                                             value="#{teacherThemeStatitic.selectedTopic}">
+                                <f:selectItem itemLabel="" itemValue=""/>
+                                <f:selectItems value="#{teacherThemeStatitic.themes}" var="topic"
+                                               itemLabel="#{topic.name}"
+                                               itemValue="#{topic.id}"/>
+                                <p:ajax update="@form"/>
+                            </p:selectOneMenu>
+                        </div>
+                    </p:outputPanel>
+
+
+                    <p:outputPanel
+                            rendered="#{teacherThemeStatitic.selectedTopic!=null and teacherThemeStatitic.selectedTopic!=''}">
+
+                        <div class="statGraphic">
+                            <p:lineChart extender="chartExternal" value="#{teacherThemeStatitic.model}"
+                                         legendPosition="se" minX="0" animate="true"
+                                         min="0" max="120" xaxisLabel="Студенты" style="height:300px"
+                                         title="Статистика прохождения теста"/>
+                        </div>
+
+                        <p:dataTable styleClass="statTable" id="basic" var="result"
+                                     value="#{teacherThemeStatitic.tableData}">
+                            <p:column id="modelHeader" width="100">
+                                <f:facet name="header">
+                                    № пользователя
+                                </f:facet>
+                                <h:outputText value="#{result.userId}"/>
+                            </p:column>
+
+                            <p:column>
+                                <f:facet name="header">
+                                    Логин
+                                </f:facet>
+                                <h:outputText value="#{result.userName}"/>
+                            </p:column>
+
+                            <p:column>
+                                <f:facet name="header">
+                                    Баллы
+                                </f:facet>
+                                <h:outputText value="#{result.result}"/>
+                            </p:column>
+                        </p:dataTable>
+
+                    </p:outputPanel>
+                </h:form>
+
+                <script type="text/javascript">
+                    function chartExternal() {
+                        this.cfg.seriesDefaults = {
+                            showLine: false
+                        };
+                    }
+                </script>
+            </ui:define>
+        </ui:decorate>
+    </h:body>
+</f:view>
+</html>

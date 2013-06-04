@@ -30,5 +30,7 @@ public interface TheoreticTestService {
 
     public List<StudentResultDto> getStudentResults(Integer userId);
 
+    public List<StudentResultDto> getThemeResults(Integer themeId);
+
     public void addQuestion(QuestionDto questionDto);
 }

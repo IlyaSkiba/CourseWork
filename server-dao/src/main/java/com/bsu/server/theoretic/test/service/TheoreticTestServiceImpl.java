@@ -183,6 +183,7 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
         testResult.setTestEntity(testEntity);
         testResult.setResult(countResult(questionIds, user.getId()));
         studentStatusController.increaseTryCount(testEntity.getRelatedTheme().getId(), user.getId(), testResult.getResult());
+        testResult.setResult(countResult(questionIds, user.getId()));
         studentResultController.saveResult(testResult);
     }
 
@@ -217,6 +218,25 @@ public class TheoreticTestServiceImpl implements TheoreticTestService {
             answerDto.setTestName(entity.getTestEntity().getRelatedTheme().getName());
             answerDto.setResultScore(entity.getResult());
             answerDto.setUserName(user.getUsername());
+            result.add(answerDto);
+        }
+        return result;
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<StudentResultDto> getThemeResults(Integer themeId) {
+        ArrayList<StudentResultDto> result = new ArrayList<>();
+        TestEntity test = testController.getTestFromTheme(themeId);
+        if (test == null) {
+            return Collections.emptyList();
+        }
+        List<StudentResultEntity> dbResult = studentResultController.getResults(test.getId());
+        for (StudentResultEntity entity : dbResult) {
+            StudentResultDto answerDto = new StudentResultDto();
+            answerDto.setTestName(entity.getTestEntity().getRelatedTheme().getName());
+            answerDto.setResultScore(entity.getResult());
+            answerDto.setUserName(entity.getStudent().getUsername());
             result.add(answerDto);
         }
         return result;

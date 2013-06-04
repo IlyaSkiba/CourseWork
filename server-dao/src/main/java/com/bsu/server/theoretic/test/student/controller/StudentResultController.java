@@ -52,4 +52,12 @@ public class StudentResultController {
 
         }
     }
+
+    public List<StudentResultEntity> getResults(Integer testId) {
+        JPQLQuery query = new JPAQuery(em);
+        return query.from(QStudentResultEntity.studentResultEntity)
+                .where(QStudentResultEntity.studentResultEntity.testEntity.id.eq(testId))
+                .orderBy(QStudentResultEntity.studentResultEntity.result.asc())
+                .list(QStudentResultEntity.studentResultEntity);
+    }
 }
